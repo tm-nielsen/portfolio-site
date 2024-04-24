@@ -1,0 +1,69 @@
+body{
+  --bg-colour: #2a2d34;
+  --main-colour: #fff;
+  --accent-colour: #fae;
+
+  --main-colour-faded: #ccc;
+  --accent-colour-faded: #c9b;
+
+  display: flex;
+  margin: 2em;
+
+  background-color: var(--bg-colour);
+  color: var(--main-colour);
+
+  font-family: dm-sans;
+  font-size: min(2.5vw, 18px);
+}
+
+@font-face {
+  font-family: dm-sans;
+  src: url(../assets/DMSans.ttf);
+}
+
+div{
+  display: flex;
+  flex-direction: column;
+  max-width: 95vw;
+  height: fit-content;
+  margin: auto;
+  padding: 2em 0;
+
+  justify-content: space-around;
+}
+
+h1{
+  margin: 0em auto 0.5em;
+}
+
+h2{
+  margin: 0em 2em 0.5em;
+}
+
+p{
+  margin: auto;
+  padding: 0 2em;
+  max-width: 45vw;
+}
+
+a{
+  text-decoration: underline dashed;
+  font-weight: bold;
+  color: var(--accent-colour);
+}
+a:visited{
+  color: var(--accent-colour-faded);
+}
+
+img{
+  margin: auto;
+  height: fit-content;
+}
+
+
+.flex-row{
+  flex-direction: row;
+}
+.flex-column{
+  flex-direction: column;
+}
