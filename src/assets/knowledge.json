@@ -1,0 +1,54 @@
+{
+  "skills":
+  [
+    {
+      "name": "Peer Mentorship",
+      "description": "passion, club, game jams"
+    },
+    {
+      "name": "Project Management",
+      "description": "curl (grant, underlings), game jams"
+    },
+    {
+      "name": "Accessible Design",
+      "description": "My development of BCI video games has given me a precious first taste of what it means to design and develop something that a broader range of people can actually use, within and beyond the standards established by experts. In the future, I hope to expand this knowledge to it's more common applications, namely web accessibility."
+    },
+    {
+      "name": "Game Development",
+      "description": "My endeavors across and within numerous video game projects have fostered a dramatic degree of adaptability within me. Out of interest and necessity, I've learned digital art, 3d modelling, rigging, animation(2D and 3D), graphic design, audio engineering, multiple engines and programming languages, and the various ways to put them all together. It is a joyfully multidisciplinary nightmare."
+    }
+  ],
+  "technologies":
+  [
+    "React",
+    "Unity",
+    "Godot",
+    "Git",
+    "Visual Studio Code",
+    "Blender"
+  ],
+  "languages":
+  [
+    {
+      "tierName": "Proficient",
+      "languages":
+      [
+        "C#", "Javascript", "GDscript"
+      ]
+    },
+    {
+      "tierName": "Familiar",
+      "languages":
+      [
+        "Java", "Python", "C++"
+      ]
+    },
+    {
+      "tierName": "Acquainted",
+      "languages":
+      [
+        "C", "Lua"
+      ]
+    }
+  ]
+}
