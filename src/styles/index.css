@@ -7,7 +7,7 @@ body{
   --accent-colour-faded: #c9b;
 
   display: flex;
-  margin: 2em;
+  margin: 1em 2em 0;
 
   background-color: var(--bg-colour);
   color: var(--main-colour);
@@ -27,23 +27,26 @@ div{
   max-width: 95vw;
   height: fit-content;
   margin: auto;
-  padding: 2em 0;
+  padding: 0.5em 0;
 
   justify-content: space-around;
 }
 
 h1{
-  margin: 0em auto 0.5em;
+  margin: 0em auto;
 }
 
 h2{
-  margin: 0em 2em 0.5em;
+  margin: 1em 2em 0em;
+}
+h3{
+  margin: 1em 2em 0;
 }
 
 p{
   margin: auto;
   padding: 0 2em;
-  max-width: 45vw;
+  max-width: 70vw;
 }
 
 a{
@@ -60,10 +63,24 @@ img{
   height: fit-content;
 }
 
+ul{
+  margin: 0;
+}
+
 
 .flex-row{
   flex-direction: row;
 }
 .flex-column{
   flex-direction: column;
+}
+
+.subscript{
+  margin: 0 auto 1em;
+  color: var(--main-colour-faded);
+}
+
+.flat {
+  margin: 0;
+  padding: 0;
 }
