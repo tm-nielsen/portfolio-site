@@ -2,27 +2,27 @@
   "skills":
   [
     {
-      "name": "Peer Mentorship",
-      "description": "passion, club, game jams"
-    },
-    {
-      "name": "Project Management",
-      "description": "curl (grant, underlings), game jams"
+      "name": "Game Development (Adaptability)",
+      "description": "Making video games is practice in adaptability. I've learned parts of digital art, 3d modelling, rigging, animation (2D and 3D), graphic design, audio engineering, multiple game engines, frameworks and programming languages, and various ways to put them all together. It is a joyfully multidisciplinary nightmare."
     },
     {
       "name": "Accessible Design",
-      "description": "My development of BCI video games has given me a precious first taste of what it means to design and develop something that a broader range of people can actually use, within and beyond the standards established by experts. In the future, I hope to expand this knowledge to it's more common applications, namely web accessibility."
+      "description": "Developing BCI video games has given me unconventional insight into accessible development. In the future, I hope to expand this knowledge to more common areas, mainly web accessibility."
     },
     {
-      "name": "Game Development",
-      "description": "My endeavors across and within numerous video game projects have fostered a dramatic degree of adaptability within me. Out of interest and necessity, I've learned digital art, 3d modelling, rigging, animation(2D and 3D), graphic design, audio engineering, multiple engines and programming languages, and the various ways to put them all together. It is a joyfully multidisciplinary nightmare."
+      "name": "Project Management",
+      "description": "Curl! was a year of planning, writing, doing, and team management. I learned so much about managing myself and others through numerous mistakes. I have practised these lessons and learned many more across many, many game jams."
+    },
+    {
+      "name": "Peer Mentorship",
+      "description": "The University of Calgary Game Design club gave me the opportunity to learn from my peers and also to teach. I've spent countless hours guiding students through various tools and concepts across the many disciplines of game development."
     }
   ],
   "technologies":
   [
     "React",
-    "Unity",
     "Godot",
+    "Unity",
     "Git",
     "Visual Studio Code",
     "Blender"
@@ -33,21 +33,21 @@
       "tierName": "Proficient",
       "languages":
       [
-        "C#", "Javascript", "GDscript"
+        "Javascript", "C#" , "GDscript"
       ]
     },
     {
       "tierName": "Familiar",
       "languages":
       [
-        "Java", "Python", "C++"
+        "C++", "Python", "Java"
       ]
     },
     {
       "tierName": "Acquainted",
       "languages":
       [
-        "C", "Lua"
+        "C", "Typescript", "Lua"
       ]
     }
   ]
