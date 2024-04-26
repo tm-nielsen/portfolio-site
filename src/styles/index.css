@@ -7,7 +7,7 @@ body{
   --accent-colour-faded: #c9b;
 
   display: flex;
-  margin: 1em 2em 0;
+  margin: 2vw 2.5vw 0;
 
   background-color: var(--bg-colour);
   color: var(--main-colour);
@@ -34,6 +34,7 @@ div{
 
 h1{
   margin: 0em auto;
+  text-shadow: 0.1em 0.15em 2px black;
 }
 
 h2{
@@ -50,6 +51,7 @@ p{
 }
 
 a{
+  padding: 0 1em;
   text-decoration: underline dashed;
   font-weight: bold;
   color: var(--accent-colour);
