@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react"
-
-interface GameInfo {
-  title: string
-}
+import GameTile from "../components/GameTile"
+import '../styles/games.css'
 
 const Games = () => {
   const [gameList, setGameList] = useState([])
@@ -12,17 +10,17 @@ const Games = () => {
     .then((res) => {
       return res.json()
     }).then((data) => {
-      setGameList(data.games)
-      console.log(data)
+      setGameList(data)
+      // console.log(data)
     })
   }, [])
 
   return (
     <>
       <h1>Games</h1>
-      <ul>
+      <ul className='game-list'>
         {gameList? gameList.map((gameInfo: GameInfo, index) => {
-          return <li key={index}>{gameInfo.title}</li>
+          return GameTile(gameInfo, index)
         }): null}
       </ul>
     </>

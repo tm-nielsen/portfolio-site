@@ -1,0 +1,32 @@
+.game-list{
+  padding: 0;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(max(150px, 25vw), 1fr));
+  justify-content: space-between;
+}
+
+.game-tile{
+  flex: 1;
+  background-color: var(--bg-accent-colour);
+  padding: 0.5em;
+  margin: auto 0;
+}
+
+.game-cover{
+  display: fixed;
+  width: 100%;
+  height: auto;
+  margin: 0 0 auto;
+}
+
+.game-info{
+  margin: 0;
+  padding: 0;
+}
+
+.game-title{
+  font-size: min(2.5vw, 20px);
+  text-align: center;
+  padding: 0.5em;
+}
