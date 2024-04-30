@@ -1,0 +1,235 @@
+[
+  {
+    "title": "Jugghoul",
+    "tags": ["jam", "fun"],
+    "tools": ["Godot", "Piskel"],
+    "roles": ["programming", "pixel art", "animation", "design", "coordination"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "ET-Skate",
+    "tags": ["jam", "fun"],
+    "tools": ["Godot", "Blender"],
+    "roles": ["programming", "animation", "design", "coordination"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Golfo (Jam Version)",
+    "tags": ["jam", "ongoing"],
+    "tools": ["Godot", "Blender"],
+    "roles": ["programming", "modelling", "design", "coordination", "technical art"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Reese's Pup",
+    "tags": ["jam", "fun"],
+    "tools": ["Godot", "Piskel"],
+    "roles": ["programming", "pixel art", "animation"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Wavepool",
+    "tags": ["fun"],
+    "tools": ["MonoGame"],
+    "roles": ["programming", "design"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Drum Pit",
+    "tags": ["fun"],
+    "tools": ["Unity", "Piskel", "Reaper"],
+    "roles": ["programming", "pixel art", "animation", "design", "audio", "technical art"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Schlupus",
+    "tags": ["jam"],
+    "tools": ["Unity", "Blender"],
+    "roles": ["programming", "modelling"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Drawscii",
+    "tags": ["jam"],
+    "tools": ["Godot"],
+    "roles": ["programming", "design"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Dashed",
+    "tags": ["jam"],
+    "tools": ["Godot", "Blender"],
+    "roles": ["programming", "modelling", "design"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Howard",
+    "tags": ["jam", "bad"],
+    "tools": ["Unity", "Blender"],
+    "roles": ["programming", "modelling"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Slug Rider",
+    "tags": ["jam"],
+    "tools": ["Unity", "Blender", "Pencil2D"],
+    "roles": ["programming", "animation"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Surreal Taxi",
+    "tags": ["jam", "fun"],
+    "tools": ["Unity", "Blender"],
+    "roles": ["programming", "modelling"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Bulby's Domino Adventure",
+    "cover_override": "../bulby_cover_override.png",
+    "tags": ["jam"],
+    "tools": ["Unity"],
+    "roles": ["programming", "animation", "coordination"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Snail Bail",
+    "tags": ["jam", "fun"],
+    "tools": ["Godot"],
+    "roles": ["programming", "coordination"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Monke Return",
+    "tags": ["jam"],
+    "tools": ["Piskel"],
+    "roles": ["pixel art", "animation"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Rythmic Time Strategy",
+    "tags": ["jam", "fun"],
+    "tools": ["Piskel"],
+    "roles": ["pixel art"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Meat Cute",
+    "tags": ["jam"],
+    "tools": ["Unity"],
+    "roles": ["programming"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "BadgerGoGo",
+    "tags": ["jam", "bad"],
+    "tools": [".NET"],
+    "roles": ["programming"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "QuadSense",
+    "tags": ["jam", "bad"],
+    "tools": ["Godot"],
+    "roles": ["programming", "technical art"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Herding Cats",
+    "tags": ["jam"],
+    "tools": ["Unity", "Piskel"],
+    "roles": ["pixel art", "animation"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Bungee Buster",
+    "tags": ["jam", "fun"],
+    "tools": ["Unity", "Piskel"],
+    "roles": ["programming", "pixel art", "animation"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Space Storm Pizza Panic",
+    "tags": ["jam", "bad"],
+    "tools": ["Unity"],
+    "roles": ["programming"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Bow Practice",
+    "tags": ["fun"],
+    "tools": ["Unity", "Piskel"],
+    "roles": ["programming", "pixel art", "animation"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Counter Castle [Demo]",
+    "tags": [],
+    "tools": ["Unity", "Piskel"],
+    "roles": ["programming", "pixel art", "animation", "design"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Skatboard Rat",
+    "tags": [],
+    "tools": ["Unity", "Blender"],
+    "roles": ["programming", "animation"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "BiggyFishy",
+    "tags": ["jam"],
+    "tools": ["Godot", "Piskel"],
+    "roles": ["pixel art"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Kusa",
+    "tags": ["jam", "bad"],
+    "tools": ["Unity", "Piskel"],
+    "roles": ["pixel art"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "Big Boy Beach Ball",
+    "tags": ["ongoing"],
+    "tools": ["Processing", "Godot"],
+    "roles": ["programming", "design"],
+    "description": "",
+    "learning": ""
+  },
+  {
+    "title": "YUT YUT",
+    "tags": ["fun", "bad"],
+    "tools": ["Processing"],
+    "roles": ["programming", "design", "coordination"],
+    "description": "",
+    "learning": ""
+  }
+]
