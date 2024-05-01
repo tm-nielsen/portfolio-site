@@ -1,13 +1,20 @@
-export default function GameTile(gameInfo: GameInfo, isFocused: boolean, grabFocus: (gameTitle: string) => void) {
-  const grabFocusWithTitle = () => grabFocus(gameInfo.title)
+interface GameTileProps {
+  title: string,
+  coverUrl: string,
+  isFocused: boolean,
+  grabFocus: (gameTile: string) => void
+}
+
+export default function GameTile(props: GameTileProps) {
+  const {title, coverUrl, isFocused, grabFocus} = props
+  const grabFocusWithTitle = () => grabFocus(title)
 
   return (
     <button className={`game-tile${isFocused? ' focused-tile': ''}`}
-    key={gameInfo.title} onClick={grabFocusWithTitle}>
-      <img src={gameInfo.cover_url} alt="" className='game-cover' />
+    key={title} onClick={grabFocusWithTitle}>
+      <img src={coverUrl} alt="" className='game-cover' />
       <div className='game-info'>
-        <h3 className='game-title'>{gameInfo.title}</h3>
-        {/* <p>{gameInfo.short_text}</p> */}
+        <h3 className='game-title'>{title}</h3>
       </div>
     </button>
   )

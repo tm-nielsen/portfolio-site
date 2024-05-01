@@ -14,7 +14,6 @@ export default function Games() {
       return res.json()
     }).then((data): void => {
       setGameList(supplementGameList(data))
-      // console.log(data)
     })
   }, [])
 
@@ -33,9 +32,13 @@ export default function Games() {
     <>
       <h1>Games</h1>
       <ul className='game-list'>
-        {gameList? gameList.map((gameInfo: SupplementedGameInfo, index) => {
-          return GameTile(gameInfo, gameInfo.title === focusedGame, setFocusedGame)
-        }): null}
+        {
+          gameList?
+          gameList.map((gameInfo: SupplementedGameInfo) =>
+            <GameTile title={gameInfo.title} coverUrl={gameInfo.cover_url}
+              isFocused={gameInfo.title === focusedGame} grabFocus={setFocusedGame} />)
+          : null
+        }
       </ul>
     </>
   )
