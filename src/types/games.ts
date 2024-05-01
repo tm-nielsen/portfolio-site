@@ -48,10 +48,24 @@ export class FocusedGameTileProps {
   learning: string = ''
   tools: string[] = []
   roles: string[] = []
+  linkProps: GameLinkProps
 
   constructor(source: SupplementedGameInfo) {
     Object.assign(this, source)
     this.shortText = source.short_text
     this.coverUrl = source.cover_url
+    this.linkProps = new GameLinkProps(source)
+  }
+}
+
+export class GameLinkProps {
+  url: string = ''
+  hasWebBuild: boolean = false
+  tags: string[] = []
+
+  constructor(source: SupplementedGameInfo) {
+    this.url = source.url
+    this.hasWebBuild = source.p_web
+    this.tags = source.tags
   }
 }

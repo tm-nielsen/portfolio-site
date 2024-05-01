@@ -1,4 +1,5 @@
 import { FocusedGameTileProps } from "../types/games"
+import GameLink from "./GameLink"
 
 export default function FocusedGameTile(props: FocusedGameTileProps) {
   const {title, coverUrl, shortText, description, learning, tools, roles} = props
@@ -17,7 +18,8 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
           className='game-cover focused-cover' />
         <div>
           <h2 className="game-title focused-title">{title}</h2>
-          <p>{shortText}</p>
+          <p style={{padding: '0 0 0 1em'}}>{shortText}</p>
+          {GameLink(props.linkProps)}
         </div>
       </div>
       <div style={{width: '100%'}}>

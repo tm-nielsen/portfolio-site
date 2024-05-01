@@ -37,8 +37,9 @@
   border-radius: 0.5em 0.5em 0 0;
 }
 .focused-cover{
-  border-top-right-radius: 0;
-  width: 60%;
+  width: min(400px, 40vw);
+  margin: auto;
+  border-radius: 0.5em;
 }
 
 .game-info{
@@ -62,6 +63,26 @@
   margin: 0.5em 0;
 }
 .focused-title{
-  font-size: 2em;
+  font-size: 1.5em;
+  margin: 0.25em;
+}
+
+.game-link {
+  color: var(--accent-colour);
+  margin: 1em auto 0;
+  padding: 0.5em;
+  width: min(150px, 18vw);
+  justify-content: space-around;
+  border-radius: 0.5em;
+  border: thick solid var(--main-colour);
+}.game-link:hover{
+  color: var(--main-colour);
+  border: thick solid var(--accent-colour);
+}
+.game-link-text {
   margin: 0.5em;
+}
+.game-link-icon {
+  height: auto;
+  width: auto;
 }
