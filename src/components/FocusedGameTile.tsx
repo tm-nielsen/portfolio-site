@@ -20,7 +20,7 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
           <p>{shortText}</p>
         </div>
       </div>
-      <div>
+      <div style={{width: '100%'}}>
         <h3>About</h3>
         {splitJsonText(description)}
         <h3>What I learned</h3>
