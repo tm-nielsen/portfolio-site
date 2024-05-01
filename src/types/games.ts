@@ -18,12 +18,40 @@ export class SupplementedGameInfo extends GameInfo {
   tools: string[] = []
   roles: string[] = []
   description: string = ''
-  learned: string = ''
+  learning: string = ''
 
   constructor(gameInfo: GameInfo, extraGameInfo: object) {
     super()
     Object.assign(this, gameInfo, extraGameInfo)
     if ('cover_override' in extraGameInfo)
       this.cover_url = extraGameInfo.cover_override as string
+  }
+}
+
+export class GameTileProps {
+  title: string = ''
+  coverUrl: string = ''
+  grabFocus: (gameTitle: string) => void
+
+  constructor(source: SupplementedGameInfo, grabFocus: (gameTitle: string) => void) {
+    this.title = source.title
+    this.coverUrl = source.cover_url
+    this.grabFocus = grabFocus
+  }
+}
+
+export class FocusedGameTileProps {
+  title: string = ''
+  shortText: string = ''
+  coverUrl: string = ''
+  description: string = ''
+  learning: string = ''
+
+  constructor(source: SupplementedGameInfo) {
+    this.title = source.title
+    this.shortText = source.short_text
+    this.coverUrl = source.cover_url
+    this.description = source.description
+    this.learning = source.learning
   }
 }

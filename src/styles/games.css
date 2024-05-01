@@ -13,14 +13,20 @@
   padding: 0.5em 0.5em 0;
   margin: auto 0;
   border-radius: 1em;
+  border: thick solid var(--main-colour);
 }
 .game-tile:hover{
   color: var(--accent-colour);
-  border: medium solid var(--accent-colour);
+  border: thick solid var(--accent-colour);
 }
 .focused-tile{
   grid-column-start: 1;
   grid-column-end: -1;
+  padding: 1em;
+}
+.focused-tile:hover{
+  color: var(--main-colour);
+  border: thick solid var(--main-colour)
 }
 
 .game-cover{
@@ -29,6 +35,10 @@
   height: auto;
   margin: 0 0 auto;
   border-radius: 0.5em 0.5em 0 0;
+}
+.focused-cover{
+  border-top-right-radius: 0;
+  width: 60%;
 }
 
 .game-info{
@@ -40,4 +50,7 @@
   font-size: min(2.5vw, 20px);
   text-align: center;
   margin: 0.5em 0;
+}
+.focused-title{
+  font-size: 1em;
 }

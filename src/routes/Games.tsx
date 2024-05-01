@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
+import {GameInfo, SupplementedGameInfo, FocusedGameTileProps, GameTileProps} from "../types/games"
+import FocusedGameTile from "../components/FocusedGameTile"
 import GameTile from "../components/GameTile"
 import extraGameInfo from "../assets/extra_game_info.json"
-import {GameInfo, SupplementedGameInfo} from "../types/games"
 import '../styles/games.css'
 
 export default function Games() {
@@ -35,8 +36,9 @@ export default function Games() {
         {
           gameList?
           gameList.map((gameInfo: SupplementedGameInfo) =>
-            <GameTile title={gameInfo.title} coverUrl={gameInfo.cover_url}
-              isFocused={gameInfo.title === focusedGame} grabFocus={setFocusedGame} />)
+            gameInfo.title === focusedGame?
+              FocusedGameTile(new FocusedGameTileProps(gameInfo))
+              : GameTile(new GameTileProps(gameInfo, setFocusedGame)))
           : null
         }
       </ul>
