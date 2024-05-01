@@ -17,8 +17,8 @@ export class SupplementedGameInfo extends GameInfo {
   tags: string[] = []
   tools: string[] = []
   roles: string[] = []
-  description: string = ''
-  learning: string = ''
+  description: string = 'No site description yet.'
+  learning: string = 'Yet to be written.'
 
   constructor(gameInfo: GameInfo, extraGameInfo: object) {
     super()
