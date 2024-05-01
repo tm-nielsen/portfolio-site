@@ -1,7 +1,7 @@
 import { FocusedGameTileProps } from "../types/games"
 
 export default function FocusedGameTile(props: FocusedGameTileProps) {
-  const {title, coverUrl, shortText, description, learning} = props
+  const {title, coverUrl, shortText, description, learning, tools, roles} = props
 
   function splitJsonText(sourceText: string):JSX.Element[] {
     return sourceText.split('\n').map(
@@ -25,6 +25,10 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
         {splitJsonText(description)}
         <h3>What I learned</h3>
         {splitJsonText(learning)}
+        <div style={{padding: '1em 0 0'}}>
+          <p className="footer-text">Roles: {roles.join(', ')}</p>
+          <p className="footer-text">Tools: {tools.join(', ')}</p>
+        </div>
       </div>
     </div>
   )

@@ -46,12 +46,12 @@ export class FocusedGameTileProps {
   coverUrl: string = ''
   description: string = ''
   learning: string = ''
+  tools: string[] = []
+  roles: string[] = []
 
   constructor(source: SupplementedGameInfo) {
-    this.title = source.title
+    Object.assign(this, source)
     this.shortText = source.short_text
     this.coverUrl = source.cover_url
-    this.description = source.description
-    this.learning = source.learning
   }
 }
