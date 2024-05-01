@@ -1,7 +1,7 @@
 import profile from '../assets/thumb_pfp.png'
 import knowledge from '../assets/knowledge.json'
 
-const Home = () => {
+export default function Home() {
   return (
     <>
       <div className="flex-row">
@@ -58,5 +58,3 @@ const Home = () => {
     </>
   )
 }
-
-export default Home

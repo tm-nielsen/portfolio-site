@@ -1,6 +1,4 @@
-import { FC } from "react"
-
-const GameTile = (gameInfo: GameInfo, isFocused: boolean, grabFocus: (gameTitle: string) => void) => {
+export default function GameTile(gameInfo: GameInfo, isFocused: boolean, grabFocus: (gameTitle: string) => void) {
   const grabFocusWithTitle = () => grabFocus(gameInfo.title)
 
   return (
@@ -14,5 +12,3 @@ const GameTile = (gameInfo: GameInfo, isFocused: boolean, grabFocus: (gameTitle:
     </button>
   )
 }
-
-export default GameTile

@@ -4,7 +4,7 @@ import extraGameInfo from "../assets/extra_game_info.json"
 import {GameInfo, SupplementedGameInfo} from "../types/games"
 import '../styles/games.css'
 
-const Games = () => {
+export default function Games() {
   const [gameList, setGameList] = useState<SupplementedGameInfo[]>([])
   const [focusedGame, setFocusedGame] = useState<string>('')
 
@@ -40,5 +40,3 @@ const Games = () => {
     </>
   )
 }
-
-export default Games

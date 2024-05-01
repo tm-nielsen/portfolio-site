@@ -1,7 +1,5 @@
-const MissingPage = () => {
+export default function MissingPage() {
   return (
     <>page does not exist</>
   )
 }
-
-export default MissingPage

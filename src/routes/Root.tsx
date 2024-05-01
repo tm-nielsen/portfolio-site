@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 import Header from "../components/Header"
 
-const Root = () => {
+export default function Root() {
   return (
     <div style={{width: '90vw'}}>
       <Header />
@@ -9,5 +9,3 @@ const Root = () => {
     </div>
   )
 }
-
-export default Root
