@@ -46,6 +46,11 @@
   padding: 0;
 }
 
+.body-text{
+  padding-top: 1em;
+  width: 100%;
+}
+
 .game-title{
   font-size: min(2.5vw, 20px);
   text-align: center;
