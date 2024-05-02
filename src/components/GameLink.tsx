@@ -21,7 +21,7 @@ export default function GameLink(props: GameLinkProps) {
   }
 
   return (
-    <a className="flex-row game-link" href={url} target="_blank">
+    <a className="flex row game-link" href={url} target="_blank">
       Play Now
       {getIcon()}
     </a>

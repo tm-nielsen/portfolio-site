@@ -4,9 +4,9 @@ import knowledge from '../assets/knowledge.json'
 export default function Home() {
   return (
     <>
-      <div className="flex-row">
+      <div className="row">
         <img src={profile} alt="placeholder identification picture" />
-        <div className='flex-column'>
+        <div>
           <p>Hey there, I'm</p>
           <h1>Twig Nielsen</h1>
           <i className='subscript'>
@@ -32,7 +32,7 @@ export default function Home() {
           })}
         </ul>
         <h2>Some Technologies I am Familiar With</h2>
-        <ul className='flex-row'>
+        <ul className='row'>
           {knowledge.technologies.map((entry, index) =>
             <li key={index}>
               <p>{entry}</p>
@@ -44,7 +44,7 @@ export default function Home() {
           return (
             <div className='flat' key={index}>
               <h3>{languageTier.tierName}</h3>
-              <ul className='flex-row'>
+              <ul className='row'>
                   {languageTier.languages.map((language, index) =>
                     <li key={index}>
                       <p>{language}</p>

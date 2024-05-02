@@ -13,7 +13,7 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
 
   return (
     <div className="game-tile focused-tile" key={title}>
-      <div className="flex-row flat">
+      <div className="flex row flat">
         <img src={coverUrl} alt="promotional image for focused game"
           className='game-cover focused-cover' />
         <div>

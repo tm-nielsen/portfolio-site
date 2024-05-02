@@ -70,13 +70,13 @@ ul{
   margin: 0;
 }
 
-
-.flex-row{
+.flex{
   display: flex;
+}
+.row{
   flex-direction: row;
 }
-.flex-column{
-  display: flex;
+.column{
   flex-direction: column;
 }
 
