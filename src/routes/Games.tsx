@@ -3,6 +3,7 @@ import {GameInfo, SupplementedGameInfo, FocusedGameTileProps, GameTileProps} fro
 import FocusedGameTile from "../components/FocusedGameTile"
 import GameTile from "../components/GameTile"
 import DropDown, { GameSortingMethod } from "../components/GameSortingDropDown"
+import GameListFilters from "../components/GameListFilters"
 import extraGameInfo from "../assets/extra_game_info.json"
 import '../styles/games.css'
 
@@ -47,6 +48,7 @@ export default function Games() {
       <h1>Games</h1>
       <div className="row">
         {DropDown(updateSortingMethod)}
+        {GameListFilters()}
       </div>
       <ul className='game-list'>
         {

@@ -54,14 +54,16 @@ export default function GameSortingDropDown(sendUpdatedSortingMethod: (m: GameSo
 
   return (
     <div className="drop-down-root row">
-      <label htmlFor="game-sorters">Sort By</label>
-      <select id="game-sorters" defaultValue={'title'}
-      onChange={(event) => selectSortingMethod(event.target.value)}>
+      <label>
         Sort By: 
-        {Object.keys(sortingMethods).map(methodName =>
-          <option key={methodName} value={methodName}>{methodName}</option>)
-        }
-      </select>
+        <select defaultValue={'title'}
+        onChange={(event) => selectSortingMethod(event.target.value)}>
+          Sort By: 
+          {Object.keys(sortingMethods).map(methodName =>
+            <option key={methodName} value={methodName}>{methodName}</option>)
+          }
+        </select>
+      </label>
       <button onClick={swapSortOrder}>
         {
           isDescending? <FaCaretDown />
