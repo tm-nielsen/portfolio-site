@@ -2,11 +2,13 @@ import { useState, useEffect } from "react"
 import {GameInfo, SupplementedGameInfo, FocusedGameTileProps, GameTileProps} from "../types/games"
 import FocusedGameTile from "../components/FocusedGameTile"
 import GameTile from "../components/GameTile"
+import DropDown, { GameSortingMethod } from "../components/GameSortingDropDown"
 import extraGameInfo from "../assets/extra_game_info.json"
 import '../styles/games.css'
 
 export default function Games() {
   const [gameList, setGameList] = useState<SupplementedGameInfo[]>([])
+  const [gameSortingMethod, setGameSortingMethod] = useState<GameSortingMethod>()
   const [focusedGame, setFocusedGame] = useState<string>('')
 
   useEffect(() => {
@@ -29,13 +31,26 @@ export default function Games() {
     return findResult? findResult: {}
   }
 
+
+  function updateSortingMethod(sortingMethod: GameSortingMethod) {
+    setGameSortingMethod(() => sortingMethod)
+  }
+
+  function getDisplayList(): SupplementedGameInfo[] {
+    let sortedGames = gameList.sort(gameSortingMethod)
+    return sortedGames
+  }
+
   return (
     <>
       <h1>Games</h1>
+      <div className="row">
+        {DropDown(updateSortingMethod)}
+      </div>
       <ul className='game-list'>
         {
           gameList?
-          gameList.map((gameInfo: SupplementedGameInfo) =>
+            getDisplayList().map((gameInfo: SupplementedGameInfo) =>
             gameInfo.title === focusedGame?
               FocusedGameTile(new FocusedGameTileProps(gameInfo))
               : GameTile(new GameTileProps(gameInfo, setFocusedGame)))
