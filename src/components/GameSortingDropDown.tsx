@@ -3,19 +3,19 @@ import { FaCaretUp, FaCaretDown } from "react-icons/fa6"
 import { SupplementedGameInfo } from "../types/games"
 
 export type GameSortingMethod = (a: SupplementedGameInfo, b: SupplementedGameInfo) => number
-type SortingMethodCollection = {[key: string]: {method: GameSortingMethod, descendByDefault: boolean}}
+type SortingMethodCollection = {[key: string]: GameSortingMethod}
 const sortingMethods: SortingMethodCollection = {
-  title: {method: sortByTitle, descendByDefault: false},
-  date: {method: sortByDate, descendByDefault: true},
-  views: {method: sortByViews, descendByDefault: true},
-  downloads: {method: sortByDownloads, descendByDefault: true}
+  title: sortByTitle,
+  date: sortByDate,
+  views: sortByViews,
+  downloads: sortByDownloads
 }
 
 function sortByTitle(a: SupplementedGameInfo, b: SupplementedGameInfo): number {
   if (a.title > b.title)
-    return 1
-  else if (a.title < b.title)
     return -1
+  else if (a.title < b.title)
+    return 1
   return 0
 }
 function sortByDate(a: SupplementedGameInfo, b: SupplementedGameInfo): number {
@@ -31,12 +31,11 @@ function sortByDownloads(a: SupplementedGameInfo, b: SupplementedGameInfo): numb
 export default function GameSortingDropDown(sendUpdatedSortingMethod: (m: GameSortingMethod) => void) 
 {
   const [currentMethodName, setCurrentMethodName] = useState<string>('title')
-  const [isDescending, setIsDescending] = useState<boolean>(false)
+  const [isDescending, setIsDescending] = useState<boolean>(true)
 
   function selectSortingMethod(selectedMethodName: string) {
     setCurrentMethodName(selectedMethodName)
-    const {descendByDefault: isNowDescending} = sortingMethods[selectedMethodName]
-    updateSortingMethod(selectedMethodName, isNowDescending)
+    updateSortingMethod(selectedMethodName, true)
   }
 
   function swapSortOrder() {
@@ -45,12 +44,12 @@ export default function GameSortingDropDown(sendUpdatedSortingMethod: (m: GameSo
   }
 
   function updateSortingMethod(methodName: string, descending: boolean): void {
-    let {method} = sortingMethods[methodName]
+    const newSortingMethod = sortingMethods[methodName]
     setIsDescending(descending)
     if (descending)
-      sendUpdatedSortingMethod((a, b) => -method(a, b))
+      sendUpdatedSortingMethod((a, b) => -newSortingMethod(a, b))
     else
-      sendUpdatedSortingMethod(method)
+      sendUpdatedSortingMethod(newSortingMethod)
   }
 
   return (

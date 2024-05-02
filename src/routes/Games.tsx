@@ -34,6 +34,7 @@ export default function Games() {
 
   function updateSortingMethod(sortingMethod: GameSortingMethod) {
     setGameSortingMethod(() => sortingMethod)
+    setFocusedGame('')
   }
 
   function getDisplayList(): SupplementedGameInfo[] {
