@@ -42,18 +42,26 @@ export default function GameListFilters() {
   }
 
   return (
-    <label className="flex row">
-      Filters
-      {
-        // aggregatedTagList.keys.map(key =>
-        //   <label>
-        //     {key}
-        //     {aggregatedTagList[key].map(tag =>
-        //       <button>{tag}</button>
-        //     )}
-        //   </label>
-        // )
-      }
-    </label>
+    <div className="filter-root">
+      <h3>Filters:</h3>
+      <div className="row">
+        {
+          Object.keys(propertyAttributes).map(category =>
+            <div className="filter-category" key={category}>
+              <h4 className="filter-category-header">{category}</h4>
+              {
+                Object.keys(propertyAttributes[category]).map(tag => {
+                  const {enabled, count} = propertyAttributes[category][tag]
+                  return <button key={tag} className="filter-button">
+                      {tag + ': ' + count}
+                      {enabled? <FaSquareCheck />: <FaSquare />}
+                    </button>
+                }
+              )}
+            </div>
+          )
+        }
+      </div>
+    </div>
   )
 }
