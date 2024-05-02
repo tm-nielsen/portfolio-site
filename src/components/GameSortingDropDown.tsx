@@ -1,13 +1,14 @@
 import { useState } from "react"
+import { FaCaretUp, FaCaretDown } from "react-icons/fa6"
 import { SupplementedGameInfo } from "../types/games"
 
 export type GameSortingMethod = (a: SupplementedGameInfo, b: SupplementedGameInfo) => number
-type SortingMethodCollection = {[key: string]: GameSortingMethod}
+type SortingMethodCollection = {[key: string]: {method: GameSortingMethod, descendByDefault: boolean}}
 const sortingMethods: SortingMethodCollection = {
-  title: sortByTitle,
-  date: sortByDate,
-  views: sortByViews,
-  downloads: sortByDownloads
+  title: {method: sortByTitle, descendByDefault: false},
+  date: {method: sortByDate, descendByDefault: true},
+  views: {method: sortByViews, descendByDefault: true},
+  downloads: {method: sortByDownloads, descendByDefault: true}
 }
 
 function sortByTitle(a: SupplementedGameInfo, b: SupplementedGameInfo): number {
@@ -17,48 +18,39 @@ function sortByTitle(a: SupplementedGameInfo, b: SupplementedGameInfo): number {
     return -1
   return 0
 }
-
 function sortByDate(a: SupplementedGameInfo, b: SupplementedGameInfo): number {
   return Date.parse(a.created_at) - Date.parse(b.created_at)
 }
-
 function sortByViews(a: SupplementedGameInfo, b: SupplementedGameInfo): number {
   return a.views_count - b.views_count
 }
-
 function sortByDownloads(a: SupplementedGameInfo, b: SupplementedGameInfo): number {
   return a.downloads_count - b.downloads_count
 }
 
-
-export default function GameSortingDropDown(updateSortingMethod: (m: GameSortingMethod) => void) 
+export default function GameSortingDropDown(sendUpdatedSortingMethod: (m: GameSortingMethod) => void) 
 {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
   const [currentMethodName, setCurrentMethodName] = useState<string>('title')
-  const [isAscending, setIsAscending] = useState<boolean>(false)
+  const [isDescending, setIsDescending] = useState<boolean>(false)
 
   function selectSortingMethod(selectedMethodName: string) {
-    console.log(selectedMethodName)
     setCurrentMethodName(selectedMethodName)
-    let newSortingMethod = getSortingMethod(selectedMethodName)
-    console.log(newSortingMethod)
-    updateSortingMethod(newSortingMethod)
+    const {descendByDefault: isNowDescending} = sortingMethods[selectedMethodName]
+    updateSortingMethod(selectedMethodName, isNowDescending)
   }
 
   function swapSortOrder() {
-    setIsAscending(!isAscending)
-    updateSortingMethod(getSortingMethod())
+    const isNowDescending = !isDescending
+    updateSortingMethod(currentMethodName, isNowDescending)
   }
 
-  function getSortingMethod(methodName: string = currentMethodName): GameSortingMethod{
-    let selectedSortingMethod = sortingMethods[methodName]
-    if (isAscending)
-      return wrapAscendingSortingMethod(selectedSortingMethod)
-    return selectedSortingMethod
-  }
-
-  function wrapAscendingSortingMethod(baseMethod: GameSortingMethod): GameSortingMethod{
-    return (a: SupplementedGameInfo, b: SupplementedGameInfo) => -baseMethod(a, b)
+  function updateSortingMethod(methodName: string, descending: boolean): void {
+    let {method} = sortingMethods[methodName]
+    setIsDescending(descending)
+    if (descending)
+      sendUpdatedSortingMethod((a, b) => -method(a, b))
+    else
+      sendUpdatedSortingMethod(method)
   }
 
   return (
@@ -66,10 +58,17 @@ export default function GameSortingDropDown(updateSortingMethod: (m: GameSorting
       <label htmlFor="game-sorters">Sort By</label>
       <select id="game-sorters" defaultValue={'title'}
       onChange={(event) => selectSortingMethod(event.target.value)}>
+        Sort By: 
         {Object.keys(sortingMethods).map(methodName =>
           <option key={methodName} value={methodName}>{methodName}</option>)
         }
       </select>
+      <button onClick={swapSortOrder}>
+        {
+          isDescending? <FaCaretDown />
+          : <FaCaretUp />
+        }
+      </button>
     </div>
   )
 }
