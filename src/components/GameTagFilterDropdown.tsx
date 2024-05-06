@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaSquare, FaSquareCheck, FaCaretDown } from "react-icons/fa6";
 import { SupplementedGameInfo } from "../types/games";
 import extraGameInfo from '../assets/extra_game_info.json'
+import useOutsideClick from "../hooks/useOutsideClick";
 
 type Dictionary = {[key: string]: any}
 interface CategorizedTagInfo {
@@ -55,6 +56,8 @@ export default function GameTagFilterDropdown(sendUpdatedFilterer: (f: GameInfoT
     setFilterTags(getFilterTags())
   }, [])
 
+  const ref = useOutsideClick(() => setOpen(false))
+
   function getFilterTags() {
     let properties: CategorizedTagInfo = {tags: {}, tools: {}, roles: {}}
     extraGameInfo.forEach((gameInfo: Dictionary) => {
@@ -79,7 +82,7 @@ export default function GameTagFilterDropdown(sendUpdatedFilterer: (f: GameInfoT
   }
 
   return (
-    <div className="dropdown-root">
+    <div className="dropdown-root" ref={ref}>
       <label>
         Filter By:
         <button className="dropdown-button"
