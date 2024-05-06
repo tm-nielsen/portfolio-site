@@ -13,7 +13,7 @@ class TagAttributes {
   count: number = 1
 }
 
-export class GameInfoTagFilterer {
+export class GameTagFilterer {
   categorizedTags: {[category: string]: string[]} = {}
 
   filterGameList(gameList: SupplementedGameInfo[]) {
@@ -48,7 +48,7 @@ export class GameInfoTagFilterer {
 }
 
 
-export default function GameTagFilterDropdown(sendUpdatedFilterer: (f: GameInfoTagFilterer) => void) {
+export default function GameTagFilterDropdowns(sendUpdatedFilterer: (f: GameTagFilterer) => void) {
   const [filterTags, setFilterTags] = useState<CategorizedTagInfo>({})
 
   useEffect(() =>{
@@ -75,7 +75,7 @@ export default function GameTagFilterDropdown(sendUpdatedFilterer: (f: GameInfoT
     let newFilterTags = {...filterTags}
     newFilterTags[category][tag].enabled = !newFilterTags[category][tag].enabled
     setFilterTags(newFilterTags)
-    sendUpdatedFilterer(new GameInfoTagFilterer(newFilterTags))
+    sendUpdatedFilterer(new GameTagFilterer(newFilterTags))
   }
 
   function makeOnCheckboxClicked(category: string, tag:string){
