@@ -6,6 +6,7 @@ import DropDown, { GameSortingMethod } from "../components/GameSortingDropdown"
 import GameTagFilterDropdown, { GameInfoTagFilterer } from "../components/GameTagFilterDropdown"
 import extraGameInfo from "../assets/extra_game_info.json"
 import '../styles/games.css'
+import '../styles/dropdown.css'
 
 export default function Games() {
   const [gameList, setGameList] = useState<SupplementedGameInfo[]>([])

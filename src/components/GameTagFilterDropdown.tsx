@@ -79,10 +79,11 @@ export default function GameTagFilterDropdown(sendUpdatedFilterer: (f: GameInfoT
   }
 
   return (
-    <div className="filter-root">
+    <div className="dropdown-root">
       <label>
         Filter By:
-        <button onClick={() => setOpen(!open)}>
+        <button className="dropdown-button"
+        onClick={() => setOpen(!open)}>
           Tags
           <FaCaretDown />
         </button>
@@ -91,15 +92,17 @@ export default function GameTagFilterDropdown(sendUpdatedFilterer: (f: GameInfoT
         open? <div className="dropdown-body row">
           {
             Object.keys(filterTags).map(category =>
-              <div className="filter-category" key={category}>
-                <h4 className="filter-category-header">{category}</h4>
+              <div className="dropdown-category" key={category}>
+                <h4 className="dropdown-category-header">{category}</h4>
                 {
                   Object.keys(filterTags[category]).map(tag => {
                     const {enabled, count} = filterTags[category][tag]
-                    return <button key={tag} className="filter-button"
+                    return <button key={tag} className="dropdown-item"
                       onClick={() => toggleTagFilter(category, tag)}>
                         {tag + ': ' + count}
-                        {enabled? <FaSquareCheck />: <FaSquare />}
+                        <div className="flat" style={{margin: 'auto 0 auto 0.5em'}}>
+                          {enabled? <FaSquareCheck />: <FaSquare />}
+                        </div>
                       </button>
                   }
                 )}
@@ -109,26 +112,6 @@ export default function GameTagFilterDropdown(sendUpdatedFilterer: (f: GameInfoT
         </div>
         : null
       }
-      {/* <h3>Filters:</h3>
-      <div className="row">
-        {
-          Object.keys(filterTags).map(category =>
-            <div className="filter-category" key={category}>
-              <h4 className="filter-category-header">{category}</h4>
-              {
-                Object.keys(filterTags[category]).map(tag => {
-                  const {enabled, count} = filterTags[category][tag]
-                  return <button key={tag} className="filter-button"
-                    onClick={() => toggleTagFilter(category, tag)}>
-                      {tag + ': ' + count}
-                      {enabled? <FaSquareCheck />: <FaSquare />}
-                    </button>
-                }
-              )}
-            </div>
-          )
-        }
-      </div> */}
     </div>
   )
 }
