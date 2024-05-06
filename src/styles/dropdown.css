@@ -24,8 +24,8 @@
   padding: 0.5em;
   width: max-content;
   top: 100%;
-  right: 50%;
-  translate: 50%;
+  left: 0;
+  z-index: 1;
 }
 
 .dropdown-category{
@@ -40,7 +40,7 @@
 
 .dropdown-item {
   display: flex;
-  margin-left: auto;
+  padding-right: auto;
   background-color: transparent;
   color: var(--main-colour-faded);
   border: none;

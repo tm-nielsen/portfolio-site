@@ -90,12 +90,12 @@ export default function GameTagFilterDropdown(sendUpdatedFilterer: (f: GameInfoT
       const {enabled, count} = filterTags[category][tag]
       return {
         contents: <>
-          {tag + ': ' + count}
-          <div className="flat" style={{margin: 'auto 0 auto 0.5em'}}>
+          <div className="flat" style={{margin: 'auto 0.5em auto 0'}}>
             {enabled? 
             <FaSquareCheck onClick={makeOnCheckboxClicked(category, tag)}/>
             : <FaSquare onClick={makeOnCheckboxClicked(category, tag)}/>}
           </div>
+          {tag + ': ' + count}
         </>,
         callback: () => toggleTagFilter(category, tag)
       }

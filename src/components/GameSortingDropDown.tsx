@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { FaCaretUp, FaCaretDown } from "react-icons/fa6"
+import Dropdown from "./Dropdown"
 import { SupplementedGameInfo } from "../types/games"
 
 export type GameSortingMethod = (a: SupplementedGameInfo, b: SupplementedGameInfo) => number
@@ -52,22 +53,19 @@ export default function GameSortingDropdown(sendUpdatedSortingMethod: (m: GameSo
       sendUpdatedSortingMethod(newSortingMethod)
   }
 
-  return (
-    <div className="drop-down-root row">
-      <label>
-        Sort By: 
-        <select defaultValue={'title'} onChange={(event) => selectSortingMethod(event.target.value)}>
-          {Object.keys(sortingMethods).map(methodName =>
-            <option key={methodName} value={methodName}>{methodName}</option>)
-          }
-        </select>
-      </label>
-      <button onClick={swapSortOrder}>
-        {
-          isDescending? <FaCaretDown />
-          : <FaCaretUp />
-        }
-      </button>
-    </div>
-  )
+  function getDropdownItems() {
+    let dropDownItems = [{
+      contents: <>swap order</>,
+      callback: swapSortOrder
+    }]
+    Object.keys(sortingMethods).forEach(methodName =>
+      dropDownItems.push({
+        contents: <>{methodName}</>,
+        callback: () => selectSortingMethod(methodName)
+      })
+    )
+    return dropDownItems
+  }
+
+  return <Dropdown label="Sort " items={getDropdownItems()} />
 }
