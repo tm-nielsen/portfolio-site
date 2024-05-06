@@ -3,14 +3,14 @@ import {GameInfo, SupplementedGameInfo, FocusedGameTileProps, GameTileProps} fro
 import FocusedGameTile from "../components/FocusedGameTile"
 import GameTile from "../components/GameTile"
 import DropDown, { GameSortingMethod } from "../components/GameSortingDropDown"
-import GameListFilters, { GameInfoFilterer } from "../components/GameListFilters"
+import GameTagFilterDropdown, { GameInfoTagFilterer } from "../components/GameTagFilterDropdown"
 import extraGameInfo from "../assets/extra_game_info.json"
 import '../styles/games.css'
 
 export default function Games() {
   const [gameList, setGameList] = useState<SupplementedGameInfo[]>([])
   const [gameSortingMethod, setGameSortingMethod] = useState<GameSortingMethod>()
-  const [gameFilterer, setGameFilterer] = useState<GameInfoFilterer>()
+  const [gameFilterer, setGameFilterer] = useState<GameInfoTagFilterer>()
   const [focusedGame, setFocusedGame] = useState<string>('')
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function Games() {
     setFocusedGame('')
   }
 
-  function updateFilterer(filterer: GameInfoFilterer) {
+  function updateFilterer(filterer: GameInfoTagFilterer) {
     setGameFilterer(filterer)
     setFocusedGame('')
   }
@@ -56,7 +56,7 @@ export default function Games() {
       <h1>Games</h1>
       <div className="row">
         {DropDown(updateSortingMethod)}
-        {GameListFilters(updateFilterer)}
+        {GameTagFilterDropdown(updateFilterer)}
       </div>
       <ul className='game-list'>
         {

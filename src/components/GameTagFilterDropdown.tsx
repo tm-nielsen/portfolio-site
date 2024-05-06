@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { FaSquare, FaSquareCheck } from "react-icons/fa6";
+import { FaSquare, FaSquareCheck, FaCaretDown } from "react-icons/fa6";
 import { SupplementedGameInfo } from "../types/games";
 import extraGameInfo from '../assets/extra_game_info.json'
 
 type Dictionary = {[key: string]: any}
-interface CategorizedFilterTags {
+interface CategorizedTagInfo {
   [category: string]: {[tag: string]: TagAttributes}
 }
 class TagAttributes {
@@ -12,21 +12,19 @@ class TagAttributes {
   count: number = 1
 }
 
-export class GameInfoFilterer {
-  tagFilters: {[category: string]: string[]} = {}
-  flagFilters: string[] = []
+export class GameInfoTagFilterer {
+  categorizedTags: {[category: string]: string[]} = {}
 
   filterGameList(gameList: SupplementedGameInfo[]) {
     return gameList.filter(gameInfo =>
-      this.gameFitsCategorizedTagFilters(gameInfo)
-      && this.gameFitsFlagFilters(gameInfo)
+      this.gameHasAllCategorizedTags(gameInfo)
     )
   }
 
-  gameFitsCategorizedTagFilters(gameInfo: SupplementedGameInfo): boolean {
-    for (const category in this.tagFilters) {
+  gameHasAllCategorizedTags(gameInfo: SupplementedGameInfo): boolean {
+    for (const category in this.categorizedTags) {
       let fitsCategory = true
-      this.tagFilters[category].forEach(tag => {
+      this.categorizedTags[category].forEach(tag => {
           if (!(gameInfo as Dictionary)[category].includes(tag))
             fitsCategory = false
         }
@@ -37,37 +35,28 @@ export class GameInfoFilterer {
     return true
   }
 
-  gameFitsFlagFilters(gameInfo: Dictionary): boolean {
-    for (const propertyName in this.flagFilters) {
-      if (!gameInfo[propertyName])
-        return false
-    }
-    return true
-  }
-
-  constructor(tags: CategorizedFilterTags) {
-    this.tagFilters = {}
+  constructor(tags: CategorizedTagInfo) {
+    this.categorizedTags = {}
     for (const category in tags) {
-      this.tagFilters[category] = []
+      this.categorizedTags[category] = []
       for (const tag in tags[category])
         if (tags[category][tag].enabled)
-          this.tagFilters[category].push(tag)
+          this.categorizedTags[category].push(tag)
     }
-
-    this.flagFilters = []
   }
 }
 
 
-export default function GameListFilters(sendUpdatedFilterer: (f: GameInfoFilterer) => void) {
-  const [filterTags, setFilterTags] = useState<CategorizedFilterTags>({})
+export default function GameTagFilterDropdown(sendUpdatedFilterer: (f: GameInfoTagFilterer) => void) {
+  const [filterTags, setFilterTags] = useState<CategorizedTagInfo>({})
+  const [open, setOpen] = useState<boolean>(false)
 
   useEffect(() =>{
     setFilterTags(getFilterTags())
   }, [])
 
   function getFilterTags() {
-    let properties: CategorizedFilterTags = {tags: {}, tools: {}, roles: {}}
+    let properties: CategorizedTagInfo = {tags: {}, tools: {}, roles: {}}
     extraGameInfo.forEach((gameInfo: Dictionary) => {
       for (const category in properties) {
         if (gameInfo.hasOwnProperty(category))
@@ -79,8 +68,6 @@ export default function GameListFilters(sendUpdatedFilterer: (f: GameInfoFiltere
           });
       }
     })
-
-    console.log(properties)
     return properties
   }
 
@@ -88,12 +75,41 @@ export default function GameListFilters(sendUpdatedFilterer: (f: GameInfoFiltere
     let newFilterTags = {...filterTags}
     newFilterTags[category][tag].enabled = !newFilterTags[category][tag].enabled
     setFilterTags(newFilterTags)
-    sendUpdatedFilterer(new GameInfoFilterer(newFilterTags))
+    sendUpdatedFilterer(new GameInfoTagFilterer(newFilterTags))
   }
 
   return (
     <div className="filter-root">
-      <h3>Filters:</h3>
+      <label>
+        Filter By:
+        <button onClick={() => setOpen(!open)}>
+          Tags
+          <FaCaretDown />
+        </button>
+      </label>
+      {
+        open? <div className="dropdown-body row">
+          {
+            Object.keys(filterTags).map(category =>
+              <div className="filter-category" key={category}>
+                <h4 className="filter-category-header">{category}</h4>
+                {
+                  Object.keys(filterTags[category]).map(tag => {
+                    const {enabled, count} = filterTags[category][tag]
+                    return <button key={tag} className="filter-button"
+                      onClick={() => toggleTagFilter(category, tag)}>
+                        {tag + ': ' + count}
+                        {enabled? <FaSquareCheck />: <FaSquare />}
+                      </button>
+                  }
+                )}
+              </div>
+            )
+          }
+        </div>
+        : null
+      }
+      {/* <h3>Filters:</h3>
       <div className="row">
         {
           Object.keys(filterTags).map(category =>
@@ -112,7 +128,7 @@ export default function GameListFilters(sendUpdatedFilterer: (f: GameInfoFiltere
             </div>
           )
         }
-      </div>
+      </div> */}
     </div>
   )
 }
