@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { FaSquare, FaSquareCheck, FaCaretDown } from "react-icons/fa6";
+import { FaSquare, FaSquareCheck } from "react-icons/fa6";
+import Dropdown from "./Dropdown";
 import { SupplementedGameInfo } from "../types/games";
 import extraGameInfo from '../assets/extra_game_info.json'
-import useOutsideClick from "../hooks/useOutsideClick";
 
 type Dictionary = {[key: string]: any}
 interface CategorizedTagInfo {
@@ -50,13 +50,10 @@ export class GameInfoTagFilterer {
 
 export default function GameTagFilterDropdown(sendUpdatedFilterer: (f: GameInfoTagFilterer) => void) {
   const [filterTags, setFilterTags] = useState<CategorizedTagInfo>({})
-  const [open, setOpen] = useState<boolean>(false)
 
   useEffect(() =>{
     setFilterTags(getFilterTags())
   }, [])
-
-  const ref = useOutsideClick(() => setOpen(false))
 
   function getFilterTags() {
     let properties: CategorizedTagInfo = {tags: {}, tools: {}, roles: {}}
@@ -81,39 +78,37 @@ export default function GameTagFilterDropdown(sendUpdatedFilterer: (f: GameInfoT
     sendUpdatedFilterer(new GameInfoTagFilterer(newFilterTags))
   }
 
+  function makeOnCheckboxClicked(category: string, tag:string){
+    return (e: React.MouseEvent<SVGElement, MouseEvent>) => {
+      e.stopPropagation()
+      toggleTagFilter(category, tag)
+    }
+  }
+
+  function getDropdownItemsForTagCategory(category: string){
+    return Object.keys(filterTags[category]).map(tag => {
+      const {enabled, count} = filterTags[category][tag]
+      return {
+        contents: <>
+          {tag + ': ' + count}
+          <div className="flat" style={{margin: 'auto 0 auto 0.5em'}}>
+            {enabled? 
+            <FaSquareCheck onClick={makeOnCheckboxClicked(category, tag)}/>
+            : <FaSquare onClick={makeOnCheckboxClicked(category, tag)}/>}
+          </div>
+        </>,
+        callback: () => toggleTagFilter(category, tag)
+      }
+    })
+  }
+
   return (
-    <div className="dropdown-root" ref={ref}>
-      <label>
-        Filter By:
-        <button className="dropdown-button"
-        onClick={() => setOpen(!open)}>
-          Tags
-          <FaCaretDown />
-        </button>
-      </label>
+    <div className="row">
+      <h2 className="flat">Filters</h2>
       {
-        open? <div className="dropdown-body row">
-          {
-            Object.keys(filterTags).map(category =>
-              <div className="dropdown-category" key={category}>
-                <h4 className="dropdown-category-header">{category}</h4>
-                {
-                  Object.keys(filterTags[category]).map(tag => {
-                    const {enabled, count} = filterTags[category][tag]
-                    return <button key={tag} className="dropdown-item"
-                      onClick={() => toggleTagFilter(category, tag)}>
-                        {tag + ': ' + count}
-                        <div className="flat" style={{margin: 'auto 0 auto 0.5em'}}>
-                          {enabled? <FaSquareCheck />: <FaSquare />}
-                        </div>
-                      </button>
-                  }
-                )}
-              </div>
-            )
-          }
-        </div>
-        : null
+        Object.keys(filterTags).map(category =>
+          <Dropdown label={category} items={getDropdownItemsForTagCategory(category)} />
+        )
       }
     </div>
   )

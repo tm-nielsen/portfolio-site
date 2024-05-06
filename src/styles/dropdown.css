@@ -1,13 +1,14 @@
 .dropdown-root{
   position: relative;
-  padding: 0 1em;
+  margin: 0 0.25em;
+  padding: 0;
 }
 
 .dropdown-button{
+  display: flex;
   background-color: var(--bg-accent-colour);
   color: var(--main-colour);
   padding: 0.25em 1em;
-  margin-left: 0.5em;
   font-size: 1em;
   border-radius: 1em;
   border: thick solid var(--main-colour);
@@ -20,10 +21,11 @@
 .dropdown-body{
   position: absolute;
   background-color: var(--bg-accent-colour);
-  top: 100%;
-  right: -50%;
-  margin: 0 4em;
   padding: 0.5em;
+  width: max-content;
+  top: 100%;
+  right: 50%;
+  translate: 50%;
 }
 
 .dropdown-category{
