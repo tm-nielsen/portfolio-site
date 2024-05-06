@@ -90,7 +90,7 @@ export default function GameTagFilterDropdowns(sendUpdatedFilterer: (f: GameTagF
       const {enabled, count} = filterTags[category][tag]
       return {
         contents: <>
-          <div className="flat" style={{margin: 'auto 0.5em auto 0'}}>
+          <div className="dropdown-icon-container">
             {enabled? 
             <FaSquareCheck onClick={makeOnCheckboxClicked(category, tag)}/>
             : <FaSquare onClick={makeOnCheckboxClicked(category, tag)}/>}

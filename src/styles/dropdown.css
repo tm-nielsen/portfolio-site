@@ -50,3 +50,8 @@
   background-color: var(--main-colour-faded);
   color: var(--bg-colour);
 }
+
+.dropdown-icon-container{
+  padding: 0;
+  margin: auto 0.5em auto 0;
+}

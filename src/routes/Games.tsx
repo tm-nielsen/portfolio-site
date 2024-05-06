@@ -4,13 +4,15 @@ import FocusedGameTile from "../components/FocusedGameTile"
 import GameTile from "../components/GameTile"
 import GameSortingDropdown, { GameSortingMethod } from "../components/GameSortingDropdown"
 import GameTagFilterDropdowns, { GameTagFilterer } from "../components/GameTagFilterDropdowns"
+import GamePlatformFilterDropdown, { GameFilterMethod } from "../components/GamePlatformFilterDropdown"
 import extraGameInfo from "../assets/extra_game_info.json"
 import '../styles/games.css'
 
 export default function Games() {
   const [gameList, setGameList] = useState<SupplementedGameInfo[]>([])
-  const [gameSortingMethod, setGameSortingMethod] = useState<GameSortingMethod>()
-  const [gameFilterer, setGameFilterer] = useState<GameTagFilterer>()
+  const [sortingMethod, setSortingMethod] = useState<GameSortingMethod>()
+  const [tagFilterer, setTagFilterer] = useState<GameTagFilterer>()
+  const [platformFilterMethod, setPlatformFilterMethod] = useState<GameFilterMethod>()
   const [focusedGame, setFocusedGame] = useState<string>('')
 
   useEffect(() => {
@@ -35,19 +37,26 @@ export default function Games() {
 
 
   function updateSortingMethod(sortingMethod: GameSortingMethod) {
-    setGameSortingMethod(() => sortingMethod)
+    setSortingMethod(() => sortingMethod)
     setFocusedGame('')
   }
 
-  function updateFilterer(filterer: GameTagFilterer) {
-    setGameFilterer(filterer)
+  function updateTagFilterer(filterer: GameTagFilterer) {
+    setTagFilterer(filterer)
+    setFocusedGame('')
+  }
+
+  function updatePlatformFilterMethod(filterMethod: GameFilterMethod) {
+    setPlatformFilterMethod(() => filterMethod)
     setFocusedGame('')
   }
 
   function getDisplayList(): SupplementedGameInfo[] {
-    let sortedGames = gameList.sort(gameSortingMethod)
-    if (gameFilterer)
-      return gameFilterer.filterGameList(sortedGames)
+    let sortedGames = gameList.sort(sortingMethod)
+    if (platformFilterMethod)
+      sortedGames = sortedGames.filter(platformFilterMethod)
+    if (tagFilterer)
+      return tagFilterer.filterGameList(sortedGames)
     return sortedGames
   }
 
@@ -56,7 +65,8 @@ export default function Games() {
       <h1>Games</h1>
       <div className="row">
         {GameSortingDropdown(updateSortingMethod)}
-        {GameTagFilterDropdowns(updateFilterer)}
+        {GameTagFilterDropdowns(updateTagFilterer)}
+        {GamePlatformFilterDropdown(updatePlatformFilterMethod)}
       </div>
       <ul className='game-list'>
         {

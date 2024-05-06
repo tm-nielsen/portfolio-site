@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { FaCaretUp, FaCaretDown } from "react-icons/fa6"
+import { FaCaretRight } from "react-icons/fa6"
 import Dropdown from "./Dropdown"
 import { SupplementedGameInfo } from "../types/games"
 
@@ -60,7 +60,13 @@ export default function GameSortingDropdown(sendUpdatedSortingMethod: (m: GameSo
     }]
     Object.keys(sortingMethods).forEach(methodName =>
       dropDownItems.push({
-        contents: <>{methodName}</>,
+        contents: <>
+          {currentMethodName === methodName? 
+            <div className="dropdown-icon-container">
+              <FaCaretRight />
+            </div>: null}
+          {methodName}
+        </>,
         callback: () => selectSortingMethod(methodName)
       })
     )
