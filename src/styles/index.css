@@ -14,7 +14,7 @@ body{
   color: var(--main-colour);
 
   font-family: dm-sans;
-  font-size: min(2.5vw, 18px);
+  font-size: min(max(2vw, 16px), 22px);
 }
 
 @font-face {
@@ -39,7 +39,7 @@ h1{
 }
 
 h2{
-  margin: 1em 2em 0em;
+  margin: 1em auto 0em;
 }
 h3{
   margin: 1em 2em 0;
@@ -78,6 +78,11 @@ ul{
 }
 .column{
   flex-direction: column;
+}
+
+.centred-text{
+  margin-inline: auto;
+  text-align: center;
 }
 
 .subscript{

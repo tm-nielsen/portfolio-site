@@ -71,7 +71,7 @@
   color: var(--accent-colour);
   margin: 1em auto 0;
   padding: 0.5em;
-  width: min(150px, 18vw);
+  width: 9ch;
   justify-content: space-around;
   border-radius: 0.5em;
   border: thick solid var(--main-colour);

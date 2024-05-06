@@ -4,20 +4,22 @@ import knowledge from '../assets/knowledge.json'
 export default function Home() {
   return (
     <>
-      <div className="row">
-        <img src={profile} alt="placeholder identification picture" />
-        <div>
-          <p>Hey there, I'm</p>
-          <h1>Twig Nielsen</h1>
-          <i className='subscript'>
-            <p>B.Sc. in Software Engineering</p>
-            <p style={{textAlign: 'center'}}>(she/her)</p>
-          </i>
-          <p style={{maxWidth: '45vw'}}>
+      <div>
+        <div className="row">
+          <img src={profile} alt="placeholder identification picture" />
+          <div>
+            <p>Hey there, I'm</p>
+            <h1>Twig Nielsen</h1>
+            <i className='subscript'>
+              <p className='centred-text'>B.Sc. in Software Engineering</p>
+              <p className='centred-text'>(she/her)</p>
+            </i>
+          </div>
+        </div>
+          <p>
             A capable developer passionate about creating engaging and accessible experiences.
             Most of the projects I've made and learned from have been games, but I've built few competent websites along the way using React.
           </p>
-        </div>
       </div>
       <div>
         <h2>Some Skills I've Acquired</h2>
