@@ -37,8 +37,9 @@
   border-radius: 0.5em 0.5em 0 0;
 }
 .focused-cover{
-  width: min(400px, 40vw);
+  max-width: 400px;
   margin: auto;
+  margin-right: 0.5em;
   border-radius: 0.5em;
 }
 
@@ -48,8 +49,7 @@
 }
 
 .body-text{
-  padding-top: 1em;
-  width: 100%;
+  padding: 0.25em 1em;
 }
 .footer-text{
   color: var(--main-colour-faded);
@@ -58,13 +58,18 @@
 }
 
 .game-title{
-  font-size: min(2.5vw, 20px);
+  font-size: 1em;
   text-align: center;
   margin: 0.5em 0;
 }
 .focused-title{
   font-size: 1.5em;
-  margin: 0.25em;
+  margin: 0em;
+}
+
+.game-short-text{
+  text-align: center;
+  padding: 1em;
 }
 
 .game-link {

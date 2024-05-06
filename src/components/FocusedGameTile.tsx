@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react"
 import { FocusedGameTileProps } from "../types/games"
 import GameLink from "./GameLink"
 
+const NARROW_WINDOW_SIZE = 500
+
 export default function FocusedGameTile(props: FocusedGameTileProps) {
   const {title, coverUrl, shortText, description, learning, tools, roles} = props
+  const [windowIsNarrow, setWindowIsNarrow] = useState<boolean>(window.innerHeight < NARROW_WINDOW_SIZE)
 
   function splitJsonText(sourceText: string):JSX.Element[] {
     return sourceText.split('\n').map(
@@ -11,6 +15,15 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
       )
   }
 
+  useEffect(() => {
+    const mql = window.matchMedia(`(min-width: ${NARROW_WINDOW_SIZE}px)`)
+    const handler = (e: MediaQueryListEvent) => setWindowIsNarrow(!e.matches)
+    mql.addEventListener('change', handler)
+    return () => mql.removeEventListener('change', handler)
+  }, [])
+
+  const shortTextElement = <p className="game-short-text">{shortText}</p>
+
   return (
     <div className="game-tile focused-tile" key={title}>
       <div className="flex row flat">
@@ -18,10 +31,11 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
           className='game-cover focused-cover' />
         <div>
           <h2 className="game-title focused-title">{title}</h2>
-          <p style={{padding: '0 0 0 1em'}}>{shortText}</p>
+          {windowIsNarrow? null: shortTextElement}
           {GameLink(props.linkProps)}
         </div>
       </div>
+      {windowIsNarrow? shortTextElement: null}
       <div style={{width: '100%'}}>
         <h3>About</h3>
         {splitJsonText(description)}

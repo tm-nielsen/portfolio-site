@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, createElement } from "react"
 import {GameInfo, SupplementedGameInfo, FocusedGameTileProps, GameTileProps} from "../types/games"
 import FocusedGameTile from "../components/FocusedGameTile"
 import GameTile from "../components/GameTile"
@@ -64,7 +64,7 @@ export default function Games() {
           gameList?
             getDisplayList().map((gameInfo: SupplementedGameInfo) =>
             gameInfo.title === focusedGame?
-              FocusedGameTile(new FocusedGameTileProps(gameInfo))
+              createElement(FocusedGameTile, new FocusedGameTileProps(gameInfo))
               : GameTile(new GameTileProps(gameInfo, setFocusedGame)))
           : null
         }
