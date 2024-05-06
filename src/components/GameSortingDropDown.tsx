@@ -28,7 +28,7 @@ function sortByDownloads(a: SupplementedGameInfo, b: SupplementedGameInfo): numb
   return a.downloads_count - b.downloads_count
 }
 
-export default function GameSortingDropDown(sendUpdatedSortingMethod: (m: GameSortingMethod) => void) 
+export default function GameSortingDropdown(sendUpdatedSortingMethod: (m: GameSortingMethod) => void) 
 {
   const [currentMethodName, setCurrentMethodName] = useState<string>('title')
   const [isDescending, setIsDescending] = useState<boolean>(true)

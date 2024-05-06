@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import {GameInfo, SupplementedGameInfo, FocusedGameTileProps, GameTileProps} from "../types/games"
 import FocusedGameTile from "../components/FocusedGameTile"
 import GameTile from "../components/GameTile"
-import DropDown, { GameSortingMethod } from "../components/GameSortingDropDown"
+import DropDown, { GameSortingMethod } from "../components/GameSortingDropdown"
 import GameTagFilterDropdown, { GameInfoTagFilterer } from "../components/GameTagFilterDropdown"
 import extraGameInfo from "../assets/extra_game_info.json"
 import '../styles/games.css'
