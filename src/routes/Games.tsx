@@ -6,8 +6,15 @@ import GameListSieve, { SieveMethod } from "../components/GameListSieve"
 import extraGameInfo from "../assets/extra_game_info.json"
 import '../styles/games.css'
 
+const statusCodes = {
+  LOADING: 'loading',
+  LOADED: 'loaded',
+  ERROR: 'error'
+}
+
 export default function Games() {
   const [gameList, setGameList] = useState<SupplementedGameInfo[]>([])
+  const [status, setStatus] = useState<string>(statusCodes.LOADING)
   const [sieveMethod, setSieveMethod] = useState<SieveMethod>()
   const [focusedGame, setFocusedGame] = useState<string>('')
 
@@ -17,6 +24,10 @@ export default function Games() {
       return res.json()
     }).then((data): void => {
       setGameList(supplementGameList(data))
+      setStatus(statusCodes.LOADED)
+    }).catch(error => {
+      setStatus(statusCodes.ERROR)
+      console.log(error.message)
     })
   }, [])
 
@@ -42,20 +53,29 @@ export default function Games() {
     return gameList
   }
 
+  function getStatusMessage() {
+    switch (status){
+      case statusCodes.LOADING: return 'Loading'
+      case statusCodes.ERROR: return 'Server Offline'
+    }
+  }
+
+const displayList = gameList? getDisplayList(): []
+
   return (
     <>
       <h1>Games</h1>
       {GameListSieve(updateSieveMethod)}
-      <ul className='game-list'>
-        {
-          gameList?
-            getDisplayList().map((gameInfo: SupplementedGameInfo) =>
+      {status === statusCodes.LOADED?
+        displayList.length > 0? <ul className='game-list'>
+          {
+            displayList.map((gameInfo: SupplementedGameInfo) =>
             gameInfo.title === focusedGame?
               createElement(FocusedGameTile, new FocusedGameTileProps(gameInfo))
               : GameTile(new GameTileProps(gameInfo, setFocusedGame)))
-          : null
-        }
-      </ul>
+          }
+        </ul> : <h2>No Matching Games</h2>
+      : <h2>{getStatusMessage()}</h2>}
     </>
   )
 }
