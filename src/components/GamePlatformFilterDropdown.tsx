@@ -16,21 +16,19 @@ export default function GamePlatformFilterDropdown(sendUpdatedFilterMethod: (m: 
   const [currentPlatformFilter, setCurrentPlatformFilter] = useState<string>('all')
 
   function selectPlatformFilter(propertyName: string){
-    console.log('new platform filter selected: ', propertyName, propertyName === 'all')
     setCurrentPlatformFilter(propertyName)
     
     if (propertyName === 'all') {
       sendUpdatedFilterMethod((_gameInfo: GameInfo) => true)
       return
     }
-    type Dictionary = {[key: string]: any}
-    const filterMethod = (gameInfo: GameInfo) => (gameInfo as Dictionary)[propertyName]
+    const filterMethod = (gameInfo: GameInfo) => (gameInfo as {[key: string]: any})[propertyName]
     sendUpdatedFilterMethod(filterMethod)
   }
 
-  return <Dropdown label='platform' items={
-    Object.keys(filterNames).map(propertyName =>
-      {return {
+  function getDropdownItems() {
+    return Object.keys(filterNames).map(propertyName =>
+      { return {
         contents: <>
           {currentPlatformFilter === propertyName?
             <div className="dropdown-icon-container">
@@ -42,5 +40,7 @@ export default function GamePlatformFilterDropdown(sendUpdatedFilterMethod: (m: 
         callback: () => selectPlatformFilter(propertyName)
       }}
     )
-  } />
+  }
+
+  return <Dropdown label='platform' items={getDropdownItems()} />
 }
