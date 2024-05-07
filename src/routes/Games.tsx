@@ -2,17 +2,13 @@ import { useState, useEffect, createElement } from "react"
 import {GameInfo, SupplementedGameInfo, FocusedGameTileProps, GameTileProps} from "../types/games"
 import FocusedGameTile from "../components/FocusedGameTile"
 import GameTile from "../components/GameTile"
-import GameSortingDropdown, { GameSortingMethod } from "../components/GameSortingDropdown"
-import GameTagFilterDropdowns, { GameTagFilterer } from "../components/GameTagFilterDropdowns"
-import GamePlatformFilterDropdown, { GameFilterMethod } from "../components/GamePlatformFilterDropdown"
+import GameListSieve, { SieveMethod } from "../components/GameListSieve"
 import extraGameInfo from "../assets/extra_game_info.json"
 import '../styles/games.css'
 
 export default function Games() {
   const [gameList, setGameList] = useState<SupplementedGameInfo[]>([])
-  const [sortingMethod, setSortingMethod] = useState<GameSortingMethod>()
-  const [tagFilterer, setTagFilterer] = useState<GameTagFilterer>()
-  const [platformFilterMethod, setPlatformFilterMethod] = useState<GameFilterMethod>()
+  const [sieveMethod, setSieveMethod] = useState<SieveMethod>()
   const [focusedGame, setFocusedGame] = useState<string>('')
 
   useEffect(() => {
@@ -35,39 +31,21 @@ export default function Games() {
     return findResult? findResult: {}
   }
 
-
-  function updateSortingMethod(sortingMethod: GameSortingMethod) {
-    setSortingMethod(() => sortingMethod)
-    setFocusedGame('')
-  }
-
-  function updateTagFilterer(filterer: GameTagFilterer) {
-    setTagFilterer(filterer)
-    setFocusedGame('')
-  }
-
-  function updatePlatformFilterMethod(filterMethod: GameFilterMethod) {
-    setPlatformFilterMethod(() => filterMethod)
+  function updateSieveMethod(newSieveMethod: SieveMethod) {
+    setSieveMethod(() => newSieveMethod)
     setFocusedGame('')
   }
 
   function getDisplayList(): SupplementedGameInfo[] {
-    let sortedGames = gameList.sort(sortingMethod)
-    if (platformFilterMethod)
-      sortedGames = sortedGames.filter(platformFilterMethod)
-    if (tagFilterer)
-      return tagFilterer.filterGameList(sortedGames)
-    return sortedGames
+    if (sieveMethod)
+      return sieveMethod(gameList)
+    return gameList
   }
 
   return (
     <>
       <h1>Games</h1>
-      <div className="row">
-        {GameSortingDropdown(updateSortingMethod)}
-        {GameTagFilterDropdowns(updateTagFilterer)}
-        {GamePlatformFilterDropdown(updatePlatformFilterMethod)}
-      </div>
+      {GameListSieve(updateSieveMethod)}
       <ul className='game-list'>
         {
           gameList?

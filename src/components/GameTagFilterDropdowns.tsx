@@ -102,14 +102,6 @@ export default function GameTagFilterDropdowns(sendUpdatedFilterer: (f: GameTagF
     })
   }
 
-  return (
-    <div className="row">
-      <h2 className="flat">Filters</h2>
-      {
-        Object.keys(filterTags).map(category =>
-          <Dropdown label={category} items={getDropdownItemsForTagCategory(category)} />
-        )
-      }
-    </div>
-  )
+  return Object.keys(filterTags).map(category =>
+    <Dropdown label={category} items={getDropdownItemsForTagCategory(category)} />)
 }

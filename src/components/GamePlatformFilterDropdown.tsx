@@ -3,7 +3,6 @@ import Dropdown from "./Dropdown";
 import { FaCaretRight } from "react-icons/fa6"
 import { GameInfo } from "../types/games";
 
-type Dictionary = {[key: string]: any}
 export type GameFilterMethod = (a: GameInfo) => boolean
 const filterNames: {[key: string]: string} = {
   all: 'All',
@@ -24,6 +23,7 @@ export default function GamePlatformFilterDropdown(sendUpdatedFilterMethod: (m: 
       sendUpdatedFilterMethod((_gameInfo: GameInfo) => true)
       return
     }
+    type Dictionary = {[key: string]: any}
     const filterMethod = (gameInfo: GameInfo) => (gameInfo as Dictionary)[propertyName]
     sendUpdatedFilterMethod(filterMethod)
   }
