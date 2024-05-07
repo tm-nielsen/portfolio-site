@@ -5,12 +5,27 @@ import '../styles/dropdown.css'
 
 interface DropdownProps {
   label: string,
-  items: {contents: JSX.Element | JSX.Element[], callback: () => void}[]
+  items: DropdownItemProps[]
+}
+export interface DropdownItemProps {
+  contents: JSX.Element | JSX.Element[],
+  callback: () => void,
+  closeOnClick?: boolean
 }
 
-export default function Dropdown({label, items}: DropdownProps){
+export default function Dropdown({label, items}: DropdownProps) {
   const [open, setOpen] = useState<boolean>(false)
   const ref = useOutsideClick(() => setOpen(false))
+
+  function wrapCallback(itemCallback: () => void, closeOnClick = false) {
+    if (closeOnClick) {
+      return () => {
+        itemCallback()
+        setOpen(false)
+      }
+    }
+    return itemCallback
+  }
 
   return (
     <div className="dropdown-root" ref={ref}>
@@ -26,7 +41,7 @@ export default function Dropdown({label, items}: DropdownProps){
           {
             items.map((item, index) =>
               <button key={index} className="dropdown-item"
-              onClick={item.callback}>
+              onClick={wrapCallback(item.callback, item.closeOnClick)}>
                 {item.contents}
               </button>
             )

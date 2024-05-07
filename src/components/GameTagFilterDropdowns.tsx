@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaSquare, FaSquareCheck } from "react-icons/fa6";
-import Dropdown from "./Dropdown";
+import Dropdown, { DropdownItemProps } from "./Dropdown";
 import { SupplementedGameInfo } from "../types/games";
 import extraGameInfo from '../assets/extra_game_info.json'
 
@@ -95,9 +95,10 @@ export default function GameTagFilterDropdowns(sendUpdatedFilterer: (f: GameTagF
   }
 
   function getDropdownItemsForTagCategory(category: string) {
-    let dropdownItems = [{
+    let dropdownItems: DropdownItemProps[] = [{
       contents: <>- clear -</>,
-      callback: () => clearCategoryFilters(category)
+      callback: () => clearCategoryFilters(category),
+      closeOnClick: true
     }]
     Object.keys(filterTags[category]).map(tag => {
       const {enabled, count} = filterTags[category][tag]
