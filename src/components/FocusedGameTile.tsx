@@ -1,9 +1,15 @@
+import { useRef, useEffect } from "react"
 import { FocusedGameTileProps } from "../types/games"
 import GameLink from "./GameLink"
 import useDetectNarrowWindow from "../hooks/useDetectNarrowWindow"
 
 export default function FocusedGameTile(props: FocusedGameTileProps) {
   const {title, coverUrl, shortText, description, learning, tools, roles} = props
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    scrollRef.current?.scrollIntoView({behavior: 'smooth', block: 'nearest'})
+  }, [title])
 
   function splitJsonText(sourceText: string):JSX.Element[] {
     return sourceText.split('\n').map(
@@ -17,7 +23,7 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
 
   return (
     <div className="game-tile focused-tile">
-      <div className="flex row flat">
+      <div className="flex row flat" ref={scrollRef}>
         <img src={coverUrl} alt="promotional image for focused game"
           className='game-cover focused-cover' />
         <div>
