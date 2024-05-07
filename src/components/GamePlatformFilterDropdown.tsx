@@ -42,5 +42,5 @@ export default function GamePlatformFilterDropdown(sendUpdatedFilterMethod: (m: 
     )
   }
 
-  return <Dropdown label='platform' items={getDropdownItems()} />
+  return <Dropdown key='platforms' label='platform' items={getDropdownItems()} />
 }

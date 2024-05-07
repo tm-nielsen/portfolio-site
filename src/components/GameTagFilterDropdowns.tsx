@@ -118,5 +118,5 @@ export default function GameTagFilterDropdowns(sendUpdatedFilterer: (f: GameTagF
   }
 
   return Object.keys(filterTags).map(category =>
-    <Dropdown label={category} items={getDropdownItemsForTagCategory(category)} />)
+    <Dropdown key={`tags: ${category}`} label={category} items={getDropdownItemsForTagCategory(category)} />)
 }
