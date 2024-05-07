@@ -45,9 +45,9 @@ export default function GameListSieve(onUpdate: (sieveMethod: SieveMethod) => vo
     }
   }
 
-  return <div className="row">
+  return <div className="dropdown-sieve-group">
     {GameSortingDropdown(updateSortingMethod)}
-    {GameTagFilterDropdowns(updateTagFilterer)}
     {GamePlatformFilterDropdown(updatePlatformFilterMethod)}
+    {GameTagFilterDropdowns(updateTagFilterer)}
   </div>
 }

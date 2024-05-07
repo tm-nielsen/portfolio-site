@@ -28,7 +28,7 @@ export default function GamePlatformFilterDropdown(sendUpdatedFilterMethod: (m: 
     sendUpdatedFilterMethod(filterMethod)
   }
 
-  return <Dropdown label='Platform' items={
+  return <Dropdown label='platform' items={
     Object.keys(filterNames).map(propertyName =>
       {return {
         contents: <>

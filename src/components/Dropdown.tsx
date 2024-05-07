@@ -17,7 +17,7 @@ export default function Dropdown({label, items}: DropdownProps){
         <button className="dropdown-button"
         onClick={() => setOpen(!open)}>
           {label}
-          <div style={{padding: '0'}}>
+          <div style={{padding: '0', marginInline: 'auto 0'}}>
             <FaCaretDown  />
           </div>
         </button>

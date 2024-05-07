@@ -1,6 +1,6 @@
 .dropdown-root{
   position: relative;
-  margin: 0 0.25em;
+  margin: 0;
   padding: 0;
 }
 
@@ -54,4 +54,10 @@
 .dropdown-icon-container{
   padding: 0;
   margin: auto 0.5em auto 0;
+}
+
+.dropdown-sieve-group{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12ch, 1fr));
+  grid-gap: 0.25em;
 }

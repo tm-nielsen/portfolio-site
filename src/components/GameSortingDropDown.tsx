@@ -73,5 +73,5 @@ export default function GameSortingDropdown(sendUpdatedSortingMethod: (m: GameSo
     return dropDownItems
   }
 
-  return <Dropdown label="Sort " items={getDropdownItems()} />
+  return <Dropdown label="sort" items={getDropdownItems()} />
 }
