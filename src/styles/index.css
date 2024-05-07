@@ -60,6 +60,9 @@ a{
 a:visited{
   color: var(--accent-colour-faded);
 }
+a:hover{
+  color: var(--main-colour);
+}
 
 img{
   margin: auto;

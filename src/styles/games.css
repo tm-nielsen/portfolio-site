@@ -7,7 +7,6 @@
 }
 
 .game-tile{
-  color: var(--main-colour);
   flex: 1;
   background-color: var(--bg-accent-colour);
   padding: 0.5em 0.5em 0;
@@ -16,7 +15,6 @@
   border: thick solid var(--main-colour);
 }
 .game-tile:hover{
-  color: var(--accent-colour);
   border: thick solid var(--accent-colour);
 }
 .focused-tile{
@@ -73,7 +71,6 @@
 }
 
 .game-link {
-  color: var(--accent-colour);
   margin: 1em auto 0;
   padding: 0.5em;
   width: 9ch;
@@ -81,7 +78,6 @@
   border-radius: 0.5em;
   border: thick solid var(--main-colour);
 }.game-link:hover{
-  color: var(--main-colour);
   border: thick solid var(--accent-colour);
 }
 .game-link-text {
