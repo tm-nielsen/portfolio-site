@@ -78,17 +78,30 @@ export default function GameTagFilterDropdowns(sendUpdatedFilterer: (f: GameTagF
     sendUpdatedFilterer(new GameTagFilterer(newFilterTags))
   }
 
-  function makeOnCheckboxClicked(category: string, tag:string){
+  function makeOnCheckboxClicked(category: string, tag:string) {
     return (e: React.MouseEvent<SVGElement, MouseEvent>) => {
       e.stopPropagation()
       toggleTagFilter(category, tag)
     }
   }
 
-  function getDropdownItemsForTagCategory(category: string){
-    return Object.keys(filterTags[category]).map(tag => {
+  function clearCategoryFilters(category: string) {
+    let newFilterTags = {...filterTags}
+    Object.keys(newFilterTags[category]).forEach(tag =>
+      newFilterTags[category][tag].enabled = false
+    )
+    setFilterTags(newFilterTags)
+    sendUpdatedFilterer(new GameTagFilterer(newFilterTags))
+  }
+
+  function getDropdownItemsForTagCategory(category: string) {
+    let dropdownItems = [{
+      contents: <>- clear -</>,
+      callback: () => clearCategoryFilters(category)
+    }]
+    Object.keys(filterTags[category]).map(tag => {
       const {enabled, count} = filterTags[category][tag]
-      return {
+      dropdownItems.push({
         contents: <>
           <div className="dropdown-icon-container">
             {enabled? 
@@ -98,8 +111,9 @@ export default function GameTagFilterDropdowns(sendUpdatedFilterer: (f: GameTagF
           {tag + ': ' + count}
         </>,
         callback: () => toggleTagFilter(category, tag)
-      }
+      })
     })
+    return dropdownItems
   }
 
   return Object.keys(filterTags).map(category =>
