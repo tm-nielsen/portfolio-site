@@ -1,5 +1,6 @@
 import { useState, useEffect, createElement } from "react"
-import {GameInfo, SupplementedGameInfo, FocusedGameTileProps, GameTileProps} from "../types/games"
+import { useParams, useNavigate } from "react-router-dom"
+import { GameInfo, SupplementedGameInfo, FocusedGameTileProps } from "../types/games"
 import FocusedGameTile from "../components/FocusedGameTile"
 import GameTile from "../components/GameTile"
 import GameListSieve, { SieveMethod } from "../components/GameListSieve"
@@ -16,7 +17,9 @@ export default function Games() {
   const [gameList, setGameList] = useState<SupplementedGameInfo[]>([])
   const [status, setStatus] = useState<string>(statusCodes.LOADING)
   const [sieveMethod, setSieveMethod] = useState<SieveMethod>()
-  const [focusedGame, setFocusedGame] = useState<string>('')
+
+  const {focusedGame} = useParams()
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch('http://localhost:8080/games')
@@ -44,7 +47,8 @@ export default function Games() {
 
   function updateSieveMethod(newSieveMethod: SieveMethod) {
     setSieveMethod(() => newSieveMethod)
-    setFocusedGame('')
+    if (focusedGame)
+      navigate('/games')
   }
 
   function getDisplayList(): SupplementedGameInfo[] {
@@ -60,10 +64,10 @@ export default function Games() {
     }
   }
 
-const displayList = gameList? getDisplayList(): []
+  const displayList = gameList? getDisplayList(): []
 
   return (
-    <>
+    <div className="flat">
       <h1>Games</h1>
       {GameListSieve(updateSieveMethod)}
       {status === statusCodes.LOADED?
@@ -71,11 +75,11 @@ const displayList = gameList? getDisplayList(): []
           {
             displayList.map((gameInfo: SupplementedGameInfo) =>
             gameInfo.title === focusedGame?
-              createElement(FocusedGameTile, new FocusedGameTileProps(gameInfo))
-              : GameTile(new GameTileProps(gameInfo, setFocusedGame)))
+              createElement(FocusedGameTile, {...new FocusedGameTileProps(gameInfo), key: 'focused-game'})
+              : GameTile(gameInfo.title, gameInfo.cover_url))
           }
         </ul> : <h2>No Matching Games</h2>
       : <h2>{getStatusMessage()}</h2>}
-    </>
+    </div>
   )
 }

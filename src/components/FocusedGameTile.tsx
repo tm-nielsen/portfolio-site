@@ -16,7 +16,7 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
   const shortTextElement = <p className="game-short-text">{shortText}</p>
 
   return (
-    <div className="game-tile focused-tile" key={title}>
+    <div className="game-tile focused-tile">
       <div className="flex row flat">
         <img src={coverUrl} alt="promotional image for focused game"
           className='game-cover focused-cover' />

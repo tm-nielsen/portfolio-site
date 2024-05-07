@@ -1,15 +1,12 @@
-import { GameTileProps } from "../types/games"
+import { Link } from "react-router-dom"
 
-export default function GameTile(props: GameTileProps) {
-  const {title, coverUrl, grabFocus} = props
-  const grabFocusWithTitle = () => grabFocus(title)
-
+export default function GameTile(title: string, coverUrl: string) {
   return (
-    <button className={'game-tile'} key={title} onClick={grabFocusWithTitle}>
+    <Link className={'game-tile'} to={'/games/' + title} key={title}>
       <img src={coverUrl} alt="promotional image for listed game" className='game-cover' />
       <div className='game-info'>
         <h2 className='game-title'>{title}</h2>
       </div>
-    </button>
+    </Link>
   )
 }

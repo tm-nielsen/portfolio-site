@@ -28,18 +28,6 @@ export class SupplementedGameInfo extends GameInfo {
   }
 }
 
-export class GameTileProps {
-  title: string = ''
-  coverUrl: string = ''
-  grabFocus: (gameTitle: string) => void
-
-  constructor(source: SupplementedGameInfo, grabFocus: (gameTitle: string) => void) {
-    this.title = source.title
-    this.coverUrl = source.cover_url
-    this.grabFocus = grabFocus
-  }
-}
-
 export class FocusedGameTileProps {
   title: string = ''
   shortText: string = ''
