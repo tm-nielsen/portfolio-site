@@ -1,15 +1,11 @@
-import { useRef, useEffect } from "react"
+import useDetectNarrowWindow from "../hooks/useDetectNarrowWindow"
+import useAutoScroll from "../hooks/useAutoScroll"
 import { FocusedGameTileProps } from "../types/games"
 import GameLink from "./GameLink"
-import useDetectNarrowWindow from "../hooks/useDetectNarrowWindow"
 
 export default function FocusedGameTile(props: FocusedGameTileProps) {
   const {title, coverUrl, shortText, description, learning, tools, roles} = props
-  const scrollRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    scrollRef.current?.scrollIntoView({behavior: 'smooth', block: 'nearest'})
-  }, [title])
+  const scrollRef = useAutoScroll([title])
 
   function splitJsonText(sourceText: string):JSX.Element[] {
     return sourceText.split('\n').map(

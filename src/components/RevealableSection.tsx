@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useAutoScroll from "../hooks/useAutoScroll";
 import { FaCaretDown } from "react-icons/fa6";
 
 interface RevealableSectionProps {
@@ -9,6 +10,7 @@ interface RevealableSectionProps {
 
 export default function RevealableSection({title, children, HeadingLevel = 'h2'}: RevealableSectionProps){
   const [open, setOpen] = useState<boolean>(false)
+  const scrollRef = useAutoScroll([open])
 
   return <>
     <label className="revealable-section-label">
@@ -18,7 +20,7 @@ export default function RevealableSection({title, children, HeadingLevel = 'h2'}
         </button>
       </HeadingLevel>
     </label>
-    {open? <div className="revealable-section-content">
+    {open? <div className="revealable-section-content" ref={scrollRef}>
       {children}
     </div>: null}
   </>
