@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import RevealableSection from '../components/RevealableSection'
 import profile from '../assets/thumb_pfp.png'
 import knowledge from '../assets/knowledge.json'
@@ -22,6 +23,9 @@ export default function Home() {
             A capable developer passionate about creating engaging and accessible experiences. Most of the projects I've made and learned from have been games, but I've built few competent websites along the way using React.
           </p>
       </div>
+      <p className='games-link-body'>
+        You should check out my <Link to='/games' className='flat'>Games</Link>
+      </p>
       <div>
         <RevealableSection title="Some Skills I've Acquired">
           <ul>
