@@ -23,8 +23,19 @@ export class SupplementedGameInfo extends GameInfo {
   constructor(gameInfo: GameInfo, extraGameInfo: object) {
     super()
     Object.assign(this, gameInfo, extraGameInfo)
+    this.checkForCoverOverrides(extraGameInfo)
+  }
+
+  checkForCoverOverrides(extraGameInfo: object) {
     if ('cover_override' in extraGameInfo)
       this.cover_url = extraGameInfo.cover_override as string
+    else if (window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+    {
+      if ('static_cover_url' in extraGameInfo)
+        this.cover_url = extraGameInfo.static_cover_url as string
+      else if (this.cover_url.endsWith('.gif'))
+        this.cover_url = '/no_static_alternative.png'
+    }
   }
 }
 

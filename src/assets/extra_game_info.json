@@ -1,6 +1,7 @@
 [
   {
     "title": "Jugghoul",
+    "static_cover_url": "https://img.itch.zone/aW1nLzE0ODc1NzEwLmdpZg==/315x250%23cm/pyz10L.gif",
     "tags": ["jam", "fun"],
     "tools": ["Godot", "Piskel"],
     "roles": ["programming", "pixel art", "animation", "design", "coordination"],
@@ -51,6 +52,7 @@
   },
   {
     "title": "Drum Pit",
+    "static_cover_url": "https://img.itch.zone/aW1nLzc4ODkxNDguZ2lm/315x250%23cm/%2FSuKf2.gif",
     "tags": ["fun"],
     "tools": ["Unity", "Piskel", "Reaper"],
     "roles": ["programming", "pixel art", "animation", "design", "audio", "technical art"],
@@ -61,6 +63,7 @@
   },
   {
     "title": "Schlupus",
+    "static_cover_url": "https://img.itch.zone/aW1nLzc4MDExMzkuZ2lm/315x250%23cm/57b1BS.gif",
     "tags": ["jam"],
     "tools": ["Unity", "Blender"],
     "roles": ["programming", "modelling"],
@@ -81,6 +84,7 @@
   },
   {
     "title": "Dashed",
+    "static_cover_url": "https://img.itch.zone/aW1nLzczOTE4NTAuZ2lm/315x250%23cm/MmN7B0.gif",
     "tags": ["jam"],
     "tools": ["Godot", "Blender"],
     "roles": ["programming", "modelling", "design"],
@@ -91,6 +95,7 @@
   },
   {
     "title": "Howard",
+    "static_cover_url": "https://img.itch.zone/aW1nLzcxMzM4NzkuZ2lm/315x250%23cm/%2F%2FPTaY.gif",
     "tags": ["jam", "bad"],
     "tools": ["Unity", "Blender"],
     "roles": ["programming", "modelling", "technical art"],
@@ -101,6 +106,7 @@
   },
   {
     "title": "Slug Rider",
+    "static_cover_url": "https://img.itch.zone/aW1nLzY5Njk3NDQuZ2lm/315x250%23cm/jFUzfJ.gif",
     "tags": ["jam"],
     "tools": ["Unity", "Blender", "Pencil2D"],
     "roles": ["programming", "animation"],
@@ -192,6 +198,7 @@
   },
   {
     "title": "Herding Cats",
+    "static_cover_url": "https://img.itch.zone/aW1nLzQ1OTA4MzYuZ2lm/315x250%23cm/W3ZC9q.gif",
     "tags": ["jam"],
     "tools": ["Unity", "Piskel"],
     "roles": ["pixel art", "animation"],
@@ -222,6 +229,7 @@
   },
   {
     "title": "Bow Practice",
+    "static_cover_url": "https://img.itch.zone/aW1nLzM3MjAzODYuZ2lm/315x250%23cm/7ItfBG.gif",
     "tags": ["fun"],
     "tools": ["Unity", "Piskel"],
     "roles": ["programming", "pixel art", "animation"],
@@ -232,6 +240,7 @@
   },
   {
     "title": "Counter Castle [Demo]",
+    "static_cover_url": "https://img.itch.zone/aW1nLzM1ODI1OTQuZ2lm/315x250%23cm/tc8bd0.gif",
     "tags": [],
     "tools": ["Unity", "Piskel"],
     "roles": ["programming", "pixel art", "animation", "design"],
