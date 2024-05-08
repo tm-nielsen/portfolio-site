@@ -14,7 +14,7 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
   function splitJsonText(sourceText: string):JSX.Element[] {
     return sourceText.split('\n').map(
       (paragraph, index) =>
-        <p key={index} className="body-text">{paragraph}</p>
+        <p key={index}>{paragraph}</p>
       )
   }
 

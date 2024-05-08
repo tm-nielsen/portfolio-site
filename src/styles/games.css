@@ -46,9 +46,6 @@
   padding: 0;
 }
 
-.body-text{
-  padding: 0.25em 1em;
-}
 .footer-text{
   color: var(--main-colour-faded);
   width: 85%;

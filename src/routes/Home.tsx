@@ -7,64 +7,63 @@ import '../styles/home.css'
 export default function Home() {
   return (
     <>
-      <div>
-        <div className="row">
-          <img src={profile} alt="placeholder identification picture" />
-          <div>
-            <p>Hey there, I'm</p>
-            <h1>Twig Nielsen</h1>
-            <i className='subscript'>
-              <p className='centred-text'>B.Sc. in Software Engineering</p>
-              <p className='centred-text'>(she/her)</p>
-            </i>
-          </div>
+      <div className="row">
+        <img src={profile} alt="placeholder identification picture" />
+        <div>
+          <p>Hey there, I'm</p>
+          <h1>Twig Nielsen</h1>
+          <i className='subscript'>
+            <p className='centred-text'>B.Sc. in Software Engineering</p>
+            <p className='centred-text'>(she/her)</p>
+          </i>
         </div>
-          <p>
-            A capable developer passionate about creating engaging and accessible experiences. Most of the projects I've made and learned from have been games, but I've built few competent websites along the way using React.
-          </p>
       </div>
       <p className='games-link-body'>
         You should check out my <Link to='/games' className='flat'>Games</Link>
       </p>
-      <div>
-        <RevealableSection title="Some Skills I've Acquired">
-          <ul>
-            {knowledge.skills.map((skillInfo, index) => {
-              return (
-              <li key={index}>
-                <h3 style={{marginLeft: '0.5em'}}>{skillInfo.name}</h3>
-                <p>{skillInfo.description}</p>
-              </li>
-              )
-            })}
-          </ul>
-        </RevealableSection>
-        <RevealableSection title="Some Technologies I am Familiar With">
-          <ul className='row'>
-            {knowledge.technologies.map((entry, index) =>
-              <li key={index}>
-                <p>{entry}</p>
-              </li>
-            )}
-          </ul>
-        </RevealableSection>
-        <RevealableSection title="Some Programming Languages I Know">
-          {knowledge.languages.map((languageTier, index) => {
+      <RevealableSection title="About Me">
+        <p>
+          I'm a capable developer passionate about creating engaging and accessible experiences. Most of the projects I've made and learned from have been games, but I've built few competent websites along the way using React.
+        </p>
+      </RevealableSection>
+      <RevealableSection title="Skills I have Acquired">
+        <ul className='flat-list'>
+          {knowledge.skills.map((skillInfo, index) => {
             return (
-              <div className='flat' key={index}>
-                <h3>{languageTier.tierName}</h3>
-                <ul className='row'>
-                    {languageTier.languages.map((language, index) =>
-                      <li key={index}>
-                        <p>{language}</p>
-                      </li>
-                    )}
-                </ul>
-              </div>
+            <li key={index}>
+              <RevealableSection title={skillInfo.name} HeadingLevel='h3'>
+                <p className='flat'>{skillInfo.description}</p>
+              </RevealableSection>
+            </li>
             )
           })}
-        </RevealableSection>
-      </div>
+        </ul>
+      </RevealableSection>
+      <RevealableSection title="Technologies I am Familiar With">
+        <ul className='row'>
+          {knowledge.technologies.map((entry, index) =>
+            <li key={index}>
+              <p className='flat'>{entry}</p>
+            </li>
+          )}
+        </ul>
+      </RevealableSection>
+      <RevealableSection title="Programming Languages I Know">
+        {knowledge.languages.map((languageTier, index) => {
+          return (
+            <div className='flat' key={index}>
+              <h3>{languageTier.tierName}</h3>
+              <ul className='row'>
+                  {languageTier.languages.map((language, index) =>
+                    <li key={index}>
+                      <p className='flat'>{language}</p>
+                    </li>
+                  )}
+              </ul>
+            </div>
+          )
+        })}
+      </RevealableSection>
     </>
   )
 }
