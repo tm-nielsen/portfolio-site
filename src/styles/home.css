@@ -1,0 +1,26 @@
+.revealable-section-label{
+  display: flex;
+  flex-direction: row;
+}
+.revealable-section-label:hover{
+  color: var(--accent-colour)
+}
+
+.revealable-section-button{
+  display: flex;
+  margin: auto;
+  background-color: transparent;
+  border: none;
+  color: var(--main-colour);
+  font-size: 2em;
+}
+.revealable-section-button:hover{
+  color: var(--accent-colour);
+}
+
+.revealable-section-content{
+  background-color: var(--bg-accent-colour);
+  padding: 1em;
+  margin: 0;
+  border-radius: 0.5em;
+}
