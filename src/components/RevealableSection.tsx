@@ -5,7 +5,7 @@ import { FaCaretDown } from "react-icons/fa6";
 interface RevealableSectionProps {
   title: string,
   children: JSX.Element | JSX.Element[],
-  HeadingLevel?: 'h1' | 'h2' | 'h3' | 'h4'
+  HeadingLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
 export default function RevealableSection({title, children, HeadingLevel = 'h2'}: RevealableSectionProps){

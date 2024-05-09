@@ -1,44 +1,44 @@
-# Curl!
+## Curl!
 Curl! is a game.
 
-## Game Jam
+### Game Jam
 started as jam game
 
-## Grant
+### Grant
 got a grant
 
-## The Game
+### The Game
 I made it with help
 
-## Emotiv Plugin
+### Emotiv Plugin
 I made cool thing
 
 
-# Websites
+## Websites
 I've made some websites too
 
-## This one
+### This one
 you're here
 
-### Custom Markdown Tokenizer
+#### Custom Markdown Tokenizer
 I wrote this to nest stuff
 
-### Games Page
+#### Games Page
 there is a games page
 
-## Curl! Website
+### Curl! Website
 there is a curl website
 
-## Wart dot Gay
+### Wart dot Gay
 lol
 
-## Capstone Project
+### Capstone Project
 literal joke of a project
 
 
-# BCI Game Jam 2022
-## What I made
+## BCI Game Jam 2022
+### What I made
 mutant clash
 
-## Work on Minigame collection
+### Work on Minigame collection
 I also helped with that
