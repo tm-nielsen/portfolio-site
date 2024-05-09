@@ -1,3 +1,4 @@
+import { Fragment } from "react/jsx-runtime"
 import RevealableSection from "../components/RevealableSection"
 import { tokenizeMarkdown, nestMarkdownTokensByHeading, NestedMarkdownToken, HeadingElement } from "../utils/markdownParsing"
 import projectsMarkdown from '../assets/projects.md?raw'
@@ -8,26 +9,29 @@ export default function Projects() {
     const tokens = tokenizeMarkdown(markdownText)
     const nestedTokens = nestMarkdownTokensByHeading(tokens)
 
-    return nestedTokens.map(token => 
-      buildContentFromToken(token)
+    return nestedTokens.map((token, index) => 
+      buildContentFromToken(token, index.toString())
     )
   }
 
-  function buildContentFromToken(token: NestedMarkdownToken): JSX.Element {
+  function buildContentFromToken(token: NestedMarkdownToken, indexString: string): JSX.Element {
     if (['h1', 'h2', 'h3'].includes(token.element)) {
-      return <RevealableSection title={token.body} HeadingLevel={token.element as HeadingElement}>
-        {buildChildren(token)}
+      return <RevealableSection title={token.body} key={indexString} HeadingLevel={token.element as HeadingElement}>
+        {buildChildren(token, indexString)}
       </RevealableSection>
     }
-    return <>
-      <token.element>
+    return <Fragment key={indexString + '-fragment'}>
+      <token.element key={indexString}>
         {token.body}
       </token.element>
-      {buildChildren(token)}
-    </>
+      {buildChildren(token, indexString)}
+    </Fragment>
   }
-  function buildChildren(token: NestedMarkdownToken): JSX.Element {
-    return <>{token.children.map(child => buildContentFromToken(child))}</>
+  function buildChildren(token: NestedMarkdownToken, indexString: string): JSX.Element {
+    return <>
+      {token.children.map((child, index) =>
+        buildContentFromToken(child, `${indexString}:${index}`))}
+    </>
   }
 
   return (
