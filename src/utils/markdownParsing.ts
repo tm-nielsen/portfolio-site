@@ -58,7 +58,6 @@ export function tokenizeMarkdown(mdText: string): MarkdownToken[] {
   }
   const links = getIndexedLinks(mdLines)
   bindLinksToTokens(tokens, links)
-  console.log(tokens)
   return tokens
 }
 
@@ -81,14 +80,13 @@ function getTokenForLine(line: string): MarkdownToken | null {
   return getBodyToken(line)
 }
 
-// TODO: fix inline tokens generating nested
 function getBodyToken(line: string): MarkdownToken {
-  let regex = /(.*?)\[(.+?)\]\s*\[(\d+)\](.*)/g
+  let regex = /(.*?)\[(.+?)\]\s*\[(\d+)\](.*)/
   let regexResult = regex.exec(line)
   if (regexResult) {
     let [_lineCopy, leadingBody, linkBody, linkIndexString, trailingBody] = regexResult
-    
     let linkToken = new MarkdownLinkToken(linkBody, parseInt(linkIndexString))
+    
     if (leadingBody || trailingBody)
     {
       let inlineToken = new InlineMarkdownToken(leadingBody)
@@ -99,9 +97,12 @@ function getBodyToken(line: string): MarkdownToken {
         if (regexResult) {
           [_lineCopy, leadingBody, linkBody, linkIndexString, trailingBody] = regexResult
           if (leadingBody) inlineToken.addSection(new MarkdownToken(leadingBody))
-          continue
+          inlineToken.addSection(new MarkdownLinkToken(linkBody, parseInt(linkIndexString)))
         }
-        inlineToken.addSection(new MarkdownToken(trailingBody))
+        else {
+          inlineToken.addSection(new MarkdownToken(trailingBody))
+          trailingBody = ''
+        }
       }
       return inlineToken
     }
