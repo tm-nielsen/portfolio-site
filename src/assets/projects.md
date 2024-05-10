@@ -11,7 +11,7 @@ got a grant
 I made it with help
 
 ### Emotiv Plugin
-I made cool thing
+I made cool thing [here][0] with [documentation] [1], too
 
 
 ## Websites
@@ -27,10 +27,10 @@ I wrote this to nest stuff
 there is a games page
 
 ### Curl! Website
-there is a curl website
+there is [a curl website] [2]
 
 ### Wart dot Gay
-lol
+[lol][3]
 
 ### Capstone Project
 literal joke of a project
@@ -42,3 +42,8 @@ mutant clash
 
 ### Work on Minigame collection
 I also helped with that
+
+[0]: https://github.com/tm-nielsen/CortexPlugin
+[1]: https://bonspiel-games.gitbook.io/cortex-unity-plugin/
+[2]: https://teamcurl.ca
+[3]: https://wart.gay

@@ -1,11 +1,19 @@
 type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6
 export type HeadingElement = `h${HeadingLevel}`
-type SupportedElement = HeadingElement | 'p'
+type SupportedElement =  'p' | HeadingElement | 'a' | 'img'
 
-export class SimpleMarkdownToken {
+export class MarkdownToken {
   element: SupportedElement = 'p'
   body: string = ''
-  headingLevel: HeadingLevel | 0 = 0
+
+  constructor(body: string = '') {
+    this.body = body
+  }
+}
+
+export class MarkdownHeadingToken extends MarkdownToken {
+  element: HeadingElement = 'h1'
+  headingLevel: HeadingLevel = 1
 
   setHeadingLevel(n: HeadingLevel) {
     this.headingLevel = n
@@ -13,73 +21,175 @@ export class SimpleMarkdownToken {
   }
 
   constructor(body: string = '', hashCount: number = 0) {
-    this.body = body
-    if (hashCount > 0)
-      this.setHeadingLevel(hashCount as HeadingLevel)
+    super(body)
+    this.setHeadingLevel(hashCount as HeadingLevel)
   }
 }
 
-export function tokenizeMarkdown(mdText: string) {
-  let tokenArray = []
+export class MarkdownLinkToken extends MarkdownToken {
+  element: SupportedElement = 'a' 
+  linkIndex: number = 0
+  url: string = ''
+
+  constructor(body: string = '', linkIndex: number = 0) {
+    super(body)
+    this.linkIndex = linkIndex
+  }
+}
+export class MarkdownImageToken extends MarkdownLinkToken {
+  element: SupportedElement = 'img'
+}
+
+export class InlineMarkdownToken extends MarkdownToken {
+  sections: MarkdownToken[] = []
+
+  addSection(token: MarkdownToken) {
+    this.sections.push(token)
+  }
+}
+
+export function tokenizeMarkdown(mdText: string): MarkdownToken[] {
+  let tokens = []
 
   const mdLines = mdText.split('\r\n')
   for (const line of mdLines) {
-    if (line === '')
-      continue
-
-    const regExpResult = new RegExp(/(#+) (.+)/g).exec(line)
-    if (regExpResult) {
-      let [_lineCopy, hashes, body] = regExpResult
-      tokenArray.push(new SimpleMarkdownToken(body, hashes.length))
-    }
-    else
-      tokenArray.push(new SimpleMarkdownToken(line))
+    let newToken = getTokenForLine(line)
+    if (newToken) tokens.push(newToken)
   }
-  return tokenArray
+  const links = getIndexedLinks(mdLines)
+  bindLinksToTokens(tokens, links)
+  console.log(tokens)
+  return tokens
+}
+
+function getTokenForLine(line: string): MarkdownToken | null {
+  if (line === '' || /\[\d+\]: .+/g.test(line))
+    return null
+
+  // header
+  let regexResult = /(#+) (.+)\s*/g.exec(line)
+  if (regexResult) {
+    let [_lineCopy, hashes, body] = regexResult
+    return new MarkdownHeadingToken(body, hashes.length)
+  }
+  // image
+  regexResult = /^!\s*\[(.+)\]\s*\[(\d+)\]\s*$/g.exec(line)
+  if (regexResult) {
+    let [_lineCopy, body, indexString] = regexResult
+    return new MarkdownImageToken(body, parseInt(indexString))
+  }
+  return getBodyToken(line)
+}
+
+// TODO: fix inline tokens generating nested
+function getBodyToken(line: string): MarkdownToken {
+  let regex = /(.*?)\[(.+?)\]\s*\[(\d+)\](.*)/g
+  let regexResult = regex.exec(line)
+  if (regexResult) {
+    let [_lineCopy, leadingBody, linkBody, linkIndexString, trailingBody] = regexResult
+    
+    let linkToken = new MarkdownLinkToken(linkBody, parseInt(linkIndexString))
+    if (leadingBody || trailingBody)
+    {
+      let inlineToken = new InlineMarkdownToken(leadingBody)
+      inlineToken.addSection(linkToken)
+
+      while (trailingBody) {
+        regexResult = regex.exec(trailingBody)
+        if (regexResult) {
+          [_lineCopy, leadingBody, linkBody, linkIndexString, trailingBody] = regexResult
+          if (leadingBody) inlineToken.addSection(new MarkdownToken(leadingBody))
+          continue
+        }
+        inlineToken.addSection(new MarkdownToken(trailingBody))
+      }
+      return inlineToken
+    }
+    return linkToken
+  }
+  return new MarkdownToken(line)
+}
+
+function getIndexedLinks(mdLines: string[]) {
+  let links: string[] = []
+  
+  for (const line of mdLines) {
+    let regexResult = /\[(\d+)\]: (.+)/g.exec(line)
+    if (regexResult) {
+      let [_lineCopy, indexString, url] = regexResult
+      const linkIndex = parseInt(indexString)
+      links[linkIndex] = url
+    }
+  }
+  return links
+}
+
+function bindLinksToTokens(tokens: MarkdownToken[], links: string[]) {
+  for (let token of tokens) {
+    if (token instanceof MarkdownLinkToken) {
+      bindLinkToToken(token, links)
+    }
+    else if (token instanceof InlineMarkdownToken) {
+      for (let inlineSection of token.sections)
+        if (inlineSection instanceof MarkdownLinkToken)
+          bindLinkToToken(inlineSection, links)
+    }
+  }
+}
+function bindLinkToToken(token: MarkdownLinkToken, links: string[]) {
+  const linkIndex = token.linkIndex
+  if (linkIndex < links.length && links[linkIndex])
+    token.url = links[linkIndex]
+  else
+    console.log('Markdown Error: missing link definition for index ' + linkIndex)
 }
 
 
-export class NestedMarkdownToken extends SimpleMarkdownToken {
-  children: NestedMarkdownToken[] = []
+export class NestedMarkdownToken extends MarkdownHeadingToken {
+  children: MarkdownToken[] = []
 
-  addChild(newChild: NestedMarkdownToken) {
+  addChild(newChild: MarkdownToken) {
     this.children.push(newChild)
   }
 
-  constructor(simpleToken: SimpleMarkdownToken) {
-    super(simpleToken.body, simpleToken.headingLevel)
+  constructor(source: MarkdownHeadingToken) {
+    super(source.body, source.headingLevel)
   }
 }
 
-export function nestMarkdownTokensByHeading(mdTokens: SimpleMarkdownToken[]) {
-  let result = []
+export function nestMarkdownTokensByHeading(mdTokens: MarkdownToken[], nestingDepth: number = 3) {
+  let rootTokens = []
   let index = 0
   let overflowCount = 0
   
   while (index < mdTokens.length && overflowCount < 500) {
-    const [childNest, newIndex] = nest(mdTokens, index)
-    result.push(childNest)
+    const [rootToken, newIndex] = nest(mdTokens, index, nestingDepth)
+    rootTokens.push(rootToken)
     index = newIndex
     overflowCount++
   }
-  return result
+  return rootTokens
 }
 
-function nest(tokens: SimpleMarkdownToken[], index: number): [NestedMarkdownToken, number]
+function nest(tokens: MarkdownToken[], index: number, nestingDepth: number): [MarkdownToken, number]
 {
-  const rootToken = new NestedMarkdownToken(tokens[index])
+  const indexedToken = tokens[index]
   index++
+  if (!(indexedToken instanceof MarkdownHeadingToken))
+    return [indexedToken, index]
+
+  let rootToken = new NestedMarkdownToken(indexedToken)
 
   while (index < tokens.length) {
-    const nextToken = new NestedMarkdownToken(tokens[index])
+    const nextToken = tokens[index]
 
-    if (nextToken.headingLevel > 0) {
+    if (nextToken instanceof MarkdownHeadingToken && nextToken.headingLevel <= nestingDepth) {
       if (nextToken.headingLevel <= rootToken.headingLevel) {
         return [rootToken, index]
       }
       else {
-        const [childNest, newIndex] = nest(tokens, index)
-        rootToken.addChild(childNest)
+        const [childToken, newIndex] = nest(tokens, index, nestingDepth)
+        rootToken.addChild(childToken)
         index = newIndex
       }
     }
