@@ -5,17 +5,18 @@ import FocusedGameTile from "../components/FocusedGameTile"
 import GameTile from "../components/GameTile"
 import GameListSieve, { SieveMethod } from "../components/GameListSieve"
 import extraGameInfo from "../assets/extra_game_info.json"
+import offlineGameInfo from '../assets/offline_game_info.json'
 import '../styles/games.css'
 
 const statusCodes = {
-  LOADING: 'loading',
-  LOADED: 'loaded',
-  ERROR: 'error'
+  LOADING: 1,
+  LOADED: 0,
+  OFFLINE: 2
 }
 
 export default function Games() {
   const [gameList, setGameList] = useState<SupplementedGameInfo[]>([])
-  const [status, setStatus] = useState<string>(statusCodes.LOADING)
+  const [status, setStatus] = useState<number>(statusCodes.LOADING)
   const [sieveMethod, setSieveMethod] = useState<SieveMethod>()
 
   const {focusedGame} = useParams()
@@ -29,7 +30,8 @@ export default function Games() {
       setGameList(supplementGameList(data))
       setStatus(statusCodes.LOADED)
     }).catch(error => {
-      setStatus(statusCodes.ERROR)
+      setGameList(supplementGameList(offlineGameInfo as any))
+      setStatus(statusCodes.OFFLINE)
       console.log(error.message)
     })
   }, [])
@@ -60,7 +62,7 @@ export default function Games() {
   function getStatusMessage() {
     switch (status){
       case statusCodes.LOADING: return 'Loading'
-      case statusCodes.ERROR: return 'Server Offline'
+      case statusCodes.OFFLINE: return 'Server Offline'
     }
   }
 
@@ -70,8 +72,9 @@ export default function Games() {
     <div className="flat">
       <h1>Games</h1>
       {GameListSieve(updateSieveMethod)}
-      {status === statusCodes.LOADED?
-        displayList.length > 0? <ul className='game-list'>
+      {status === statusCodes.LOADING?
+        <h2>Loading</h2>
+      : displayList.length > 0? <ul className='game-list'>
           {
             displayList.map((gameInfo: SupplementedGameInfo) =>
             gameInfo.title === focusedGame?
@@ -79,7 +82,13 @@ export default function Games() {
               : GameTile(gameInfo.title, gameInfo.cover_url))
           }
         </ul> : <h2>No Matching Games</h2>
-      : <h2>{getStatusMessage()}</h2>}
+      }
+      {status === statusCodes.OFFLINE?
+        <>
+          <h2>Back End Offline.</h2>
+          <p>This version of the games list was loaded by a manual backup and is thus outdated.</p>
+        </>: null
+      }
     </div>
   )
 }
