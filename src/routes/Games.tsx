@@ -23,7 +23,7 @@ export default function Games() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('http://localhost:8080/games')
+    fetch(import.meta.env.VITE_BACKEND_PATH)
     .then((res) => {
       return res.json()
     }).then((data): void => {
