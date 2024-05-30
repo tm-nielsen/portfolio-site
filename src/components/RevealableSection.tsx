@@ -5,10 +5,11 @@ import { FaCaretDown } from "react-icons/fa6";
 interface RevealableSectionProps {
   title: string,
   children: JSX.Element | JSX.Element[],
-  HeadingLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  HeadingLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6',
+  contentPadding?: number
 }
 
-export default function RevealableSection({title, children, HeadingLevel = 'h2'}: RevealableSectionProps){
+export default function RevealableSection({title, children, HeadingLevel = 'h2', contentPadding=1}: RevealableSectionProps){
   const [open, setOpen] = useState<boolean>(false)
   const scrollRef = useAutoScroll([open])
 
@@ -20,7 +21,7 @@ export default function RevealableSection({title, children, HeadingLevel = 'h2'}
         </button>
       </HeadingLevel>
     </label>
-    {open? <div className="revealable-section-content" ref={scrollRef}>
+    {open? <div className="revealable-section-content" style={{padding: `${contentPadding}em`}} ref={scrollRef}>
       {children}
     </div>: null}
   </>

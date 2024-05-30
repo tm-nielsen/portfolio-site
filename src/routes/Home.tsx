@@ -31,7 +31,7 @@ export default function Home() {
           {knowledge.skills.map((skillInfo, index) => {
             return (
             <li key={index}>
-              <RevealableSection title={skillInfo.name} HeadingLevel='h3'>
+              <RevealableSection title={skillInfo.name} HeadingLevel='h3' contentPadding={0.5}>
                 <p className='flat'>{skillInfo.description}</p>
               </RevealableSection>
             </li>

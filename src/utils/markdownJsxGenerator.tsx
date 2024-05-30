@@ -8,15 +8,16 @@ export function generateNestedMarkdownJsx(sourceText: string, nestingDepth: numb
   const nestedTokens = nestMarkdownTokensByHeading(tokens, nestingDepth)
 
   return nestedTokens.map((token, index) => 
-    generateTokenJsx(token, index.toString())
+    generateTokenJsx(token, index.toString(), nestingDepth)
   )
 }
 
-export function generateTokenJsx(token: MarkdownToken, indexString: string) {
+export function generateTokenJsx(token: MarkdownToken, indexString: string, nestingDepth: number) {
   if (token instanceof NestedMarkdownToken) {
-    return <RevealableSection title={token.body} key={indexString} HeadingLevel={token.element}>
+    return <RevealableSection title={token.body} key={indexString}
+        HeadingLevel={token.element} contentPadding={token.headingLevel >= nestingDepth? 0.5: 1}>
       {token.children.map((child, index) =>
-        generateTokenJsx(child, `${indexString}:${index}`))
+        generateTokenJsx(child, `${indexString}:${index}`, nestingDepth))
       }
     </RevealableSection>
   }
