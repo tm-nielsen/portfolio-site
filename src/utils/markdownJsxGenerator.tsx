@@ -21,11 +21,12 @@ export function generateTokenJsx(token: MarkdownToken, indexString: string) {
     </RevealableSection>
   }
   if (token instanceof InlineMarkdownToken) {
-    return <p key={indexString}>
+    return <p key={indexString} className='custom-markdown'>
       {token.body}
       {token.sections.map((section, index) => {
         if (section instanceof MarkdownLinkToken) {
-          return <a href={section.url} target='_blank' key={`${indexString}:${index}`}>
+          return <a href={section.url} target='_blank' className='custom-markdown'
+              key={`${indexString}:${index}`}>
             {section.body}
           </a>
         }
@@ -35,22 +36,15 @@ export function generateTokenJsx(token: MarkdownToken, indexString: string) {
   }
   
   if (token instanceof MarkdownImageToken)
-    return <img src={token.url} key={indexString} />
+    return <img src={token.url} key={indexString} className='custom-markdown' />
   
   if (token instanceof MarkdownLinkToken) {
-    return <a href={token.url} target='_blank' key={indexString}>
+    return <a href={token.url} target='_blank' key={indexString} className='custom-markdown'>
       {token.body}
     </a>
   }
   
-  return <token.element key={indexString} >
+  return <token.element key={indexString} className='custom-markdown'>
     {token.body}
   </token.element>
 }
-
-// function buildChildren(children: MarkdownToken[], indexString: string): JSX.Element {
-//   return <>
-//     {children.map((child, index) =>
-//       generateTokenJsx(child, `${indexString}:${index}`))}
-//   </>
-// }
