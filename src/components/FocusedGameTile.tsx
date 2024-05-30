@@ -10,7 +10,7 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
   function splitJsonText(sourceText: string):JSX.Element[] {
     return sourceText.split('\n').map(
       (paragraph, index) =>
-        <p key={index}>{paragraph}</p>
+        <p key={index} className="game-description-body">{paragraph}</p>
       )
   }
 
@@ -30,9 +30,9 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
       </div>
       {windowIsNarrow? shortTextElement: null}
       <div style={{width: '100%'}}>
-        <h3>About</h3>
+        <h3 className="game-description-header">About</h3>
         {splitJsonText(description)}
-        <h3>What I learned</h3>
+        <h3 className="game-description-header">What I learned</h3>
         {splitJsonText(learning)}
         <div style={{padding: '1em 0 0'}}>
           <p className="footer-text">Roles: {roles.join(', ')}</p>

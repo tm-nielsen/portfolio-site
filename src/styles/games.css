@@ -35,7 +35,7 @@
   border-radius: 0.5em 0.5em 0 0;
 }
 .focused-cover{
-  max-width: 400px;
+  max-width: min(50%, 400px);
   margin: auto;
   margin-right: 0.5em;
   border-radius: 0.5em;
@@ -48,7 +48,6 @@
 
 .footer-text{
   color: var(--main-colour-faded);
-  width: 85%;
   text-align: center;
 }
 
@@ -65,6 +64,13 @@
 .game-short-text{
   text-align: center;
   padding: 1em;
+}
+
+.game-description-header{
+  margin: 1.5em 0.5em 0.5em;
+}
+.game-description-body{
+  padding: 0 0 0.75em;
 }
 
 .game-link {
