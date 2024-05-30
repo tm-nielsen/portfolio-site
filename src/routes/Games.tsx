@@ -59,13 +59,6 @@ export default function Games() {
     return gameList
   }
 
-  function getStatusMessage() {
-    switch (status){
-      case statusCodes.LOADING: return 'Loading'
-      case statusCodes.OFFLINE: return 'Server Offline'
-    }
-  }
-
   const displayList = gameList? getDisplayList(): []
 
   return (
