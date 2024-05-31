@@ -29,3 +29,9 @@
 .games-link-body{
   margin: 0 auto 2em;
 }
+
+.profile-picture{
+  max-width: 20vw;
+  height: auto;
+  border-radius: 35%;
+}

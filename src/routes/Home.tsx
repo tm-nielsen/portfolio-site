@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import RevealableSection from '../components/RevealableSection'
-import profile from '../assets/thumb_pfp.png'
+import profile from '../assets/profile_picture.png'
 import knowledge from '../assets/knowledge.json'
 import '../styles/home.css'
 
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div className="row">
-        <img src={profile} alt="placeholder identification picture" />
+        <img src={profile} alt="placeholder identification picture" className='profile-picture' />
         <div>
           <p>Hey there, I'm</p>
           <h1>Twig Nielsen</h1>
