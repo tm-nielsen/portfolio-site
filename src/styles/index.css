@@ -101,3 +101,13 @@ ul{
   list-style: none;
   padding: 0;
 }
+
+.flat-top {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.flat-bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

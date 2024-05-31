@@ -7,9 +7,9 @@ import '../styles/home.css'
 export default function Home() {
   return (
     <>
-      <div className="row">
+      <div className="row flat-bottom">
         <img src={profile} alt="placeholder identification picture" className='profile-picture' />
-        <div>
+        <div className='flat-bottom'>
           <p>Hey there, I'm</p>
           <h1>Twig Nielsen</h1>
           <i className='subscript'>
@@ -17,6 +17,14 @@ export default function Home() {
             <p className='centred-text'>(she/her)</p>
           </i>
         </div>
+      </div>
+      <div className='flat-top flat-bottom'>
+        <a href="mailto: tmnielsen33@gmail.com" target="_blank" className='centred-text'>
+          tmnielsen33@gmail.com
+        </a>
+        <a href="http://github.com/tm-nielsen" target="_blank" className='centred-text'>
+          Github: tm-nielsen
+        </a>
       </div>
       <p className='games-link-body'>
         You should check out my <Link to='/games' className='flat'>Games</Link>
