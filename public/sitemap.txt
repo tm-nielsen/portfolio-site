@@ -1,3 +1,4 @@
 https://twigsite.ca
-https://twigsite.ca/projects
-https://twigsite.ca/games
+https://twigsite.ca/?/projects
+https://twigsite.ca/?/games
+https://twigsite.ca/?/games/*
