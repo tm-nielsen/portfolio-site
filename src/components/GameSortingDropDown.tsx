@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { FaCaretRight } from "react-icons/fa6"
 import Dropdown from "./Dropdown"
 import { SupplementedGameInfo } from "../types/games"
@@ -29,10 +29,15 @@ function sortByDownloads(a: SupplementedGameInfo, b: SupplementedGameInfo): numb
   return a.downloads_count - b.downloads_count
 }
 
-export default function GameSortingDropdown(sendUpdatedSortingMethod: (m: GameSortingMethod) => void) 
+export default function GameSortingDropdown(sendUpdatedSortingMethod: (m: GameSortingMethod, r?: boolean) => void) 
 {
-  const [currentMethodName, setCurrentMethodName] = useState<string>('title')
+  const [currentMethodName, setCurrentMethodName] = useState<string>('date')
   const [isDescending, setIsDescending] = useState<boolean>(true)
+
+  useEffect(() => {
+    setCurrentMethodName('date')
+    sendUpdatedSortingMethod((a, b) => -sortingMethods.date(a, b), false)
+  }, [])
 
   function selectSortingMethod(selectedMethodName: string) {
     setCurrentMethodName(selectedMethodName)

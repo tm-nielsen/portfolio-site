@@ -47,9 +47,9 @@ export default function Games() {
     return findResult? findResult: {}
   }
 
-  function updateSieveMethod(newSieveMethod: SieveMethod) {
+  function updateSieveMethod(newSieveMethod: SieveMethod, shouldResetSelection: boolean = true) {
     setSieveMethod(() => newSieveMethod)
-    if (focusedGame)
+    if (shouldResetSelection && focusedGame)
       navigate('/games')
   }
 
