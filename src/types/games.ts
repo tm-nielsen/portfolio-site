@@ -13,6 +13,21 @@ export class GameInfo {
   p_linux: boolean = false
 }
 
+export class ExtraGameInfo {
+  title: string = ""
+  cover_override: string = ""
+  static_cover_url: string = ""
+  tags: {[key: string]: string[]} = {}
+  markdownBodyText: string = "No site description yet."
+
+  constructor(parsedProperties: {[key: string]: string},
+      parsedTags: {[key: string]: string[]}, bodyText: string) {
+    Object.assign(this, parsedProperties)
+    this.tags = parsedTags
+    this.markdownBodyText = bodyText;
+  }
+}
+
 export class SupplementedGameInfo extends GameInfo {
   tags: string[] = []
   tools: string[] = []
