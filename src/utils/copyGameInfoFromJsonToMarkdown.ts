@@ -17,5 +17,5 @@ for (const index in extraGameInfo) {
   if ("static_cover_url" in infoObject)
     writeableGameInfo.static_cover_url = infoObject.static_cover_url as string
 
-  writeExtraGameInfo(writeableGameInfo, `src/assets/game_info/${infoObject.title}.md`)
+  writeExtraGameInfo(writeableGameInfo, `public/game_info/${infoObject.title}.md`)
 }
