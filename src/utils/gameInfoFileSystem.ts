@@ -2,8 +2,11 @@ import * as fs from "fs"
 import { ExtraGameInfo } from "../types/games"
 
 
-export function parseExtraGameInfo(mdText: string): ExtraGameInfo
+export async function parseExtraGameInfo(filePath: string): Promise<ExtraGameInfo>
 {
+  let fileResponse = await fetch(filePath)
+  const mdText = await fileResponse.text()
+
   const mdLines = mdText.split('\r\n')
   let readingHeader = false
   let currentCategory = ""
@@ -21,7 +24,6 @@ export function parseExtraGameInfo(mdText: string): ExtraGameInfo
       let propertyRegexResult = /\s*(\w+):\s*(.+)/g.exec(line)
       if (propertyRegexResult) {
         const [_lineCopy, propertyName, propertyValue] = propertyRegexResult
-        console.log(`${propertyName}: ${propertyValue}`)
         properties[propertyName] = propertyValue
       }
       else {
@@ -60,7 +62,7 @@ export function writeExtraGameInfo(extraGameInfo: ExtraGameInfo, filePath: strin
       fileContent += ` - ${extraGameInfo.tags[tagCategory][tagIndex]}\r\n`
   }
   fileContent += "---\r\n\r\n"
-  fileContent += extraGameInfo.markdownBodyText
+  fileContent += extraGameInfo.markdown_body_text
 
   fs.writeFile(filePath, fileContent, error => {
     if (error) {

@@ -1,10 +1,10 @@
 import { useState, useEffect, createElement } from "react"
 import { useParams, useNavigate } from "react-router-dom"
-import { GameInfo, SupplementedGameInfo, FocusedGameTileProps } from "../types/games"
+import { GameInfo, SupplementedGameInfo, FocusedGameTileProps, ExtraGameInfo } from "../types/games"
+import { parseExtraGameInfo } from "../utils/gameInfoFileSystem"
 import FocusedGameTile from "../components/FocusedGameTile"
 import GameTile from "../components/GameTile"
 import GameListSieve, { SieveMethod } from "../components/GameListSieve"
-import extraGameInfo from "../assets/extra_game_info.json"
 import offlineGameInfo from '../assets/offline_game_info.json'
 import '../styles/games.css'
 
@@ -27,24 +27,34 @@ export default function Games() {
     .then((res) => {
       return res.json()
     }).then((data): void => {
-      setGameList(supplementGameList(data))
+      supplementGameList(data).then(supplementedGameList =>
+        setGameList(supplementedGameList)
+      )
       setStatus(statusCodes.LOADED)
     }).catch(error => {
-      setGameList(supplementGameList(offlineGameInfo as any))
+      supplementGameList(offlineGameInfo as any).then(supplementedGameList =>
+        setGameList(supplementedGameList)
+      )
       setStatus(statusCodes.OFFLINE)
       console.log(error.message)
     })
   }, [])
 
-  function supplementGameList(gameList: [GameInfo]): SupplementedGameInfo[]{
-    return gameList.map((gameInfo): SupplementedGameInfo => 
-      new SupplementedGameInfo(gameInfo, getExtraGameInfo(gameInfo.title))
-    )
+  async function supplementGameList(gameList: [GameInfo]): Promise<SupplementedGameInfo[]>{
+    let supplementedGameList = gameList.map(async (gameInfo): Promise<SupplementedGameInfo> => {
+      let extraGameInfo = await getExtraGameInfo(gameInfo.title)
+      return new SupplementedGameInfo(gameInfo, extraGameInfo)
+    })
+    return await Promise.all(supplementedGameList)
   }
 
-  function getExtraGameInfo(gameTitle: string): object {
-    let findResult = extraGameInfo.find(element => element.title === gameTitle)
-    return findResult? findResult: {}
+  async function getExtraGameInfo(gameTitle: string): Promise<ExtraGameInfo> {
+    const filePath = `/game_info/${gameTitle}.md`
+
+    let fileHeaderResponse = await fetch(filePath, {method: "HEAD"})
+    if (fileHeaderResponse.headers.get("Content-Type") == "text/markdown")
+      return await parseExtraGameInfo(filePath)
+    return new ExtraGameInfo({}, {}, "No site description yet.")
   }
 
   function updateSieveMethod(newSieveMethod: SieveMethod, shouldResetSelection: boolean = true) {
@@ -64,7 +74,7 @@ export default function Games() {
   return (
     <div className="flat">
       <h1>Games</h1>
-      {GameListSieve(updateSieveMethod)}
+      {GameListSieve(updateSieveMethod, gameList)}
       {status === statusCodes.LOADING?
         <h2>Loading</h2>
       : displayList.length > 0? <ul className='game-list'>

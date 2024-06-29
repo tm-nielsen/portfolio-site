@@ -2,9 +2,7 @@ import { useEffect, useState } from "react";
 import { FaSquare, FaSquareCheck } from "react-icons/fa6";
 import Dropdown, { DropdownItemProps } from "./Dropdown";
 import { SupplementedGameInfo } from "../types/games";
-import extraGameInfo from '../assets/extra_game_info.json'
 
-type Dictionary = {[key: string]: any}
 interface CategorizedTagInfo {
   [category: string]: {[tag: string]: TagAttributes}
 }
@@ -26,7 +24,7 @@ export class GameTagFilterer {
     for (const category in this.categorizedTags) {
       let fitsCategory = true
       this.categorizedTags[category].forEach(tag => {
-          if (!(gameInfo as Dictionary)[category].includes(tag))
+          if (!gameInfo.tags.hasOwnProperty(category) || !gameInfo.tags[category].includes(tag))
             fitsCategory = false
         }
       )
@@ -48,24 +46,30 @@ export class GameTagFilterer {
 }
 
 
-export default function GameTagFilterDropdowns(sendUpdatedFilterer: (f: GameTagFilterer) => void) {
-  const [filterTags, setFilterTags] = useState<CategorizedTagInfo>({})
+export default function GameTagFilterDropdowns(
+    sendUpdatedFilterer: (f: GameTagFilterer) => void,
+    supplementedGameInfoList: SupplementedGameInfo[]) {
+  const [filterTags, setFilterTags] = useState<CategorizedTagInfo>(getFilterTags())
 
   useEffect(() =>{
     setFilterTags(getFilterTags())
-  }, [])
+  }, [supplementedGameInfoList])
 
   function getFilterTags() {
-    let properties: CategorizedTagInfo = {tags: {}, tools: {}, roles: {}}
-    extraGameInfo.forEach((gameInfo: Dictionary) => {
-      for (const category in properties) {
-        if (gameInfo.hasOwnProperty(category))
-          gameInfo[category].forEach((tag: string) => {
-            if (properties[category].hasOwnProperty(tag))
-              properties[category][tag].count++
-            else
-              properties[category][tag] = new TagAttributes()
-          });
+    let properties: CategorizedTagInfo = {}
+
+    supplementedGameInfoList.forEach(gameInfo => {
+      const gameTags = gameInfo.tags
+      for (const category in gameTags) {
+        if (!properties.hasOwnProperty(category))
+          properties[category] = {}
+
+        gameTags[category].forEach((tag: string) => {
+          if (properties[category].hasOwnProperty(tag))
+            properties[category][tag].count++
+          else
+            properties[category][tag] = new TagAttributes()
+        })
       }
     })
     return properties

@@ -1,7 +1,8 @@
 import RevealableSection from '../components/RevealableSection'
 import { tokenizeMarkdown, nestMarkdownTokensByHeading,
   MarkdownToken, NestedMarkdownToken, InlineMarkdownToken,
-  MarkdownLinkToken, MarkdownImageToken } from './markdownParsing'
+  MarkdownLinkToken, MarkdownImageToken, 
+  MarkdownHeadingToken} from './markdownParsing'
 
 export function generateNestedMarkdownJsx(sourceText: string, nestingDepth: number = 3) {
   const tokens = tokenizeMarkdown(sourceText)
@@ -12,7 +13,23 @@ export function generateNestedMarkdownJsx(sourceText: string, nestingDepth: numb
   )
 }
 
-export function generateTokenJsx(token: MarkdownToken, indexString: string, nestingDepth: number) {
+export function generateMarkdownJsx(sourceText: string, headingOffset: number = 0) {
+  let tokens = tokenizeMarkdown(sourceText)
+
+  if (headingOffset != 0) {
+    tokens.forEach(token => {
+      if (token instanceof MarkdownHeadingToken) {
+        token.setHeadingLevel(token.headingLevel + headingOffset)
+      }
+    })
+  }
+    
+  return tokens.map((token, index) =>
+    generateTokenJsx(token, index.toString())
+  )
+}
+
+export function generateTokenJsx(token: MarkdownToken, indexString: string, nestingDepth: number = 0) {
   if (token instanceof NestedMarkdownToken) {
     return <RevealableSection title={token.body} key={indexString}
         HeadingLevel={token.element} contentPadding={token.headingLevel >= nestingDepth? 0.5: 1}>

@@ -18,36 +18,33 @@ export class ExtraGameInfo {
   cover_override: string = ""
   static_cover_url: string = ""
   tags: {[key: string]: string[]} = {}
-  markdownBodyText: string = "No site description yet."
+  markdown_body_text: string = "No site description yet."
 
   constructor(parsedProperties: {[key: string]: string},
       parsedTags: {[key: string]: string[]}, bodyText: string) {
     Object.assign(this, parsedProperties)
     this.tags = parsedTags
-    this.markdownBodyText = bodyText;
+    this.markdown_body_text = bodyText;
   }
 }
 
 export class SupplementedGameInfo extends GameInfo {
-  tags: string[] = []
-  tools: string[] = []
-  roles: string[] = []
-  description: string = 'No site description yet.'
-  learning: string = 'Yet to be written.'
+  tags: {[key: string]: string[]} = {}
+  markdown_body_text: string = 'No site description yet.'
 
-  constructor(gameInfo: GameInfo, extraGameInfo: object) {
+  constructor(gameInfo: GameInfo, extraGameInfo: ExtraGameInfo) {
     super()
-    Object.assign(this, gameInfo, extraGameInfo)
+    Object.assign(this, extraGameInfo, gameInfo)
     this.checkForCoverOverrides(extraGameInfo)
   }
 
-  checkForCoverOverrides(extraGameInfo: object) {
-    if ('cover_override' in extraGameInfo)
-      this.cover_url = extraGameInfo.cover_override as string
+  checkForCoverOverrides(extraGameInfo: ExtraGameInfo) {
+    if (extraGameInfo.cover_override)
+      this.cover_url = extraGameInfo.cover_override
     else if (window.matchMedia('(prefers-reduced-motion: reduce)').matches)
     {
-      if ('static_cover_url' in extraGameInfo)
-        this.cover_url = extraGameInfo.static_cover_url as string
+      if (extraGameInfo.static_cover_url)
+        this.cover_url = extraGameInfo.static_cover_url
       else if (this.cover_url.endsWith('.gif'))
         this.cover_url = '/no_static_alternative.png'
     }
@@ -58,8 +55,7 @@ export class FocusedGameTileProps {
   title: string = ''
   shortText: string = ''
   coverUrl: string = ''
-  description: string = ''
-  learning: string = ''
+  rawBodyText: string = ''
   tools: string[] = []
   roles: string[] = []
   linkProps: GameLinkProps
@@ -68,6 +64,13 @@ export class FocusedGameTileProps {
     Object.assign(this, source)
     this.shortText = source.short_text
     this.coverUrl = source.cover_url
+    this.rawBodyText = source.markdown_body_text
+    
+    if ("tools" in source.tags)
+      this.tools = source.tags.tools
+    if ("roles" in source.tags)
+      this.roles = source.tags.roles
+
     this.linkProps = new GameLinkProps(source)
   }
 }
@@ -80,6 +83,7 @@ export class GameLinkProps {
   constructor(source: SupplementedGameInfo) {
     this.url = source.url
     this.hasWebBuild = source.p_web
-    this.tags = source.tags
+    if ("tags" in source.tags)
+      this.tags = source.tags.tags
   }
 }

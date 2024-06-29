@@ -15,14 +15,15 @@ export class MarkdownHeadingToken extends MarkdownToken {
   element: HeadingElement = 'h1'
   headingLevel: HeadingLevel = 1
 
-  setHeadingLevel(n: HeadingLevel) {
-    this.headingLevel = n
-    this.element = `h${n}`
+  setHeadingLevel(n: number) {
+    const headingLevel = n as HeadingLevel
+    this.headingLevel = headingLevel
+    this.element = `h${headingLevel}`
   }
 
   constructor(body: string = '', hashCount: number = 0) {
     super(body)
-    this.setHeadingLevel(hashCount as HeadingLevel)
+    this.setHeadingLevel(hashCount)
   }
 }
 

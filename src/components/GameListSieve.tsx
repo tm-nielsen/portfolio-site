@@ -6,7 +6,9 @@ import { SupplementedGameInfo } from "../types/games";
 
 export type SieveMethod = (gameList: SupplementedGameInfo[]) => SupplementedGameInfo[]
 
-export default function GameListSieve(onUpdate: (sieveMethod: SieveMethod, shouldResetSelection?: boolean) => void) {
+export default function GameListSieve(
+    onUpdate: (sieveMethod: SieveMethod, shouldResetSelection?: boolean) => void,
+    supplementedGameInfoList: SupplementedGameInfo[]) {
   const [currentSortingMethod, setCurrentSortingMethod] = useState<GameSortingMethod>()
   const [currentTagFilterer, setCurrentTagFilterer] = useState<GameTagFilterer>()
   const [currentPlatformFilterMethod, setCurrentPlatformFilterMethod] = useState<GameFilterMethod>()
@@ -48,6 +50,6 @@ export default function GameListSieve(onUpdate: (sieveMethod: SieveMethod, shoul
   return <div className="dropdown-sieve-group">
     {GameSortingDropdown(updateSortingMethod)}
     {GamePlatformFilterDropdown(updatePlatformFilterMethod)}
-    {GameTagFilterDropdowns(updateTagFilterer)}
+    {GameTagFilterDropdowns(updateTagFilterer, supplementedGameInfoList)}
   </div>
 }
