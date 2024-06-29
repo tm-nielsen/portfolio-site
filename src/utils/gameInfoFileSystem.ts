@@ -33,7 +33,7 @@ export async function parseExtraGameInfo(filePath: string): Promise<ExtraGameInf
           tags[currentCategory] = []
         }
         else {
-          let tagRegexResult = /\s*-\s*([\w ]+)/g.exec(line)
+          let tagRegexResult = /\s*-\s*(.+)/g.exec(line)
           if (tagRegexResult)
             tags[currentCategory].push(tagRegexResult[1])
         }
