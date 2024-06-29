@@ -3,6 +3,7 @@ import useAutoScroll from "../hooks/useAutoScroll"
 import { generateMarkdownJsx } from "../utils/markdownJsxGenerator"
 import { FocusedGameTileProps } from "../types/games"
 import GameLink from "./GameLink"
+import { cloneElement } from "react"
 
 export default function FocusedGameTile(props: FocusedGameTileProps) {
   const {title, coverUrl, shortText, rawBodyText, tools, roles} = props
@@ -10,6 +11,13 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
 
   const windowIsNarrow = useDetectNarrowWindow()
   const shortTextElement = <p className="game-short-text">{shortText}</p>
+
+  function getBody(): JSX.Element[] {
+    let elements = generateMarkdownJsx(rawBodyText, 2)
+    return elements.map(element => 
+      cloneElement(element, {className: "game-description"})
+    )
+  }
 
   return (
     <div className="game-tile focused-tile">
@@ -24,7 +32,7 @@ export default function FocusedGameTile(props: FocusedGameTileProps) {
       </div>
       {windowIsNarrow? shortTextElement: null}
       <div style={{width: '100%'}}>
-        {generateMarkdownJsx(rawBodyText, 2)}
+        {getBody()}
         <div style={{padding: '1em 0 0'}}>
           <p className="footer-text">Roles: {roles.join(', ')}</p>
           <p className="footer-text">Tools: {tools.join(', ')}</p>
