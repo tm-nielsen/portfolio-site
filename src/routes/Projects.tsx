@@ -7,7 +7,7 @@ export default function Projects() {
     <>
       <h1>Projects</h1>
       <p>I <b>have</b> made a few things that aren't games.</p>
-      {generateNestedMarkdownJsx(projectsMarkdown)}
+      {generateNestedMarkdownJsx(projectsMarkdown, 3, 1)}
     </>
   )
 }

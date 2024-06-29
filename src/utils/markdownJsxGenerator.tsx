@@ -4,8 +4,10 @@ import { tokenizeMarkdown, nestMarkdownTokensByHeading,
   MarkdownLinkToken, MarkdownImageToken, 
   MarkdownHeadingToken} from './markdownParsing'
 
-export function generateNestedMarkdownJsx(sourceText: string, nestingDepth: number = 3) {
-  const tokens = tokenizeMarkdown(sourceText)
+export function generateNestedMarkdownJsx(sourceText: string,
+    nestingDepth: number = 3, headingOffset: number = 0) {
+  let tokens = tokenizeMarkdown(sourceText)
+  tokens = offsetTokenHeadingLevels(tokens, headingOffset)
   const nestedTokens = nestMarkdownTokensByHeading(tokens, nestingDepth)
 
   return nestedTokens.map((token, index) => 
@@ -15,18 +17,22 @@ export function generateNestedMarkdownJsx(sourceText: string, nestingDepth: numb
 
 export function generateMarkdownJsx(sourceText: string, headingOffset: number = 0) {
   let tokens = tokenizeMarkdown(sourceText)
-
-  if (headingOffset != 0) {
-    tokens.forEach(token => {
-      if (token instanceof MarkdownHeadingToken) {
-        token.setHeadingLevel(token.headingLevel + headingOffset)
-      }
-    })
-  }
+  tokens = offsetTokenHeadingLevels(tokens, headingOffset)
     
   return tokens.map((token, index) =>
     generateTokenJsx(token, index.toString())
   )
+}
+
+function offsetTokenHeadingLevels(tokens: MarkdownToken[], headingOffset: number): MarkdownToken[] {
+  if (headingOffset == 0)
+    return tokens
+  
+  tokens.forEach(token => {
+    if (token instanceof MarkdownHeadingToken)
+      token.setHeadingLevel(token.headingLevel + headingOffset)
+  })
+  return tokens
 }
 
 export function generateTokenJsx(token: MarkdownToken, indexString: string, nestingDepth: number = 0) {

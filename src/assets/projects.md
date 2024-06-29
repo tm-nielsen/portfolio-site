@@ -1,7 +1,7 @@
-## Curl!
+# Curl!
 Curl is a video game that can be played with a brain computer interface. This enabled people with limited reliable control of their muscles and bodies to play. The project implements an integrated training scenario along with menus and gameplay built around switch access.
 
-### Game Jam
+## Game Jam
 Curl started as a project for the 2021 BCI Game Jam, designed and prototyped in 48 hours. The event was put on by BCI4Kids, a local pediatric research program focused on improving the lives of children with limited motor control using Brain-Computer Interface technology. They had run the even once before, but this was my introduction to the organization, technology, and event.
 
 Initially titled Kerl, the game was built to be controlled with a single button and featured no integrated bci elements. Ideating on a theme of multiplayer, my small team of students looked mainly for an idea that would work with the control scheme. From what we'd seen, building something playable with one button would be the most straightforward, and simplified considerations of local multiplayer. Also notable was the reliability and response time of the input mechanism.
@@ -13,13 +13,13 @@ The final product starts with a join menu, where up to four players can press a 
 Personally, I handled character modelling, programming/engine work, and team organization. We won several categories in the gam, including prize money and an actual BCI headset that would both be used for the project as it grew.
 
 
-### Grant
+## Grant
 Following the jam, I was contacted by the primary organizer about the prospect of developing out little jam project into something more substantial. This was a very exciting concept. Shorty graduating university, I would even have the time to properly follow through on it. First, I had to figure out where I could actually go with this. Very helpfully, a contact I made through the Calgary Game Developer's association put me on to a local city arts grant that was open to video games. I set to work formulating a proper proposal with the same team from the jam. We put together written parts of the proposal, a proper design document, budget, project timeline, and other less formal plans. With a letter of support from the experts at BCI4Kids that organized the game jam where this all started, we secured what funding we could get and the project was underway in the summer through to the end of the year.
 
 Two students stayed on with me through the project, providing valuable contributions in audio and secondary development. Beyond that, it came down to me as the one to model, animate, and implement most of the expanded game, along with organizing others on the project. We wrapped up the grant period with the game released into early access on Steam, happily able to report the accomplishment of our goals in the expected time-frame with only minor deviations.
 
 
-### The Game
+## The Game
 Expansion of the initial game project focused on three main areas: presentation, integration, and multiplayer. 
 
 Most noticeable of these, presentation consisted of new and multiple character models, new maps, and a whole set of new menus to choose from these options and more. I modelled, rigged, animated, and implemented the characters and maps, and took the lead on menus as well with a team member providing the technical implementation of the switch-grid menu system we designed as a team, which is used in multiple places. This category of development would also include a vast array of general polish in both menus and gameplay.
@@ -31,7 +31,7 @@ Lastly, we aimed to implement peer-to-peer online multiplayer. This was a bit am
 The project has largely gone untouched following release due to my own mental health issues and focus on other projects. It received one significant update in the form of a properly advanced settings menu mirroring what I built for the 2022 BCI game jam compilation project, which you can read about lower down on this page. I'd really like to return to the project one day, to see it through to be a quality video game that genuinely disrupts what people understand as feasible for accessibility. Hats and all. For now, I can't make any promises.
 
 
-### Emotiv Plugin
+## Emotiv Plugin
 As part of the "integration" area of development, I ended up segmenting what I could of my work into a modular [Unity package][0]. Consulting with the experts I had met at the game jam, integration of Emotiv devices with their dedicated Cortex application seemed the most feasible. What ended up being the package started from the official support. I looked through what was already built, which was notable but lacking two major areas I considered vital.
 
 Firstly, it couldn't support multiple headsets simultaneously. While this scenario would be largely impractical given training and setup considerations, it was a deal breaker to the spirit of the project. Secondly, I didn't at all like the structure of the code. Accessing methods and information was wrapped up in all sorts of different places and most functionality couldn't effect in engine objects as it was triggered off the main thread by a websocket connection. It was reasonably built, but impractical to use. Additionally, it was distributed as a git submodule. This is, again, reasonable. However, for a package build specifically to add functionality to a Unity project, it made much more sense to distribute as a Unity package.
@@ -41,10 +41,10 @@ To address these design decisions that were issues for me, I rewrote a mirror of
 In hopes that others might actually be able to use this tool, if that were ever to happen, I wrote mediocre but extant [documentation][1] to accompany the package.
 
 
-## Web Projects
+# Web Projects
 Along with my games, I've made a few websites. Purposes vary, but I built all of them in React because I learned that for my University capstone project and it worked to I kept using it. Back ends are similar but for Express.
 
-### Portfolio Site
+## Portfolio Site
 Hello and welcome!
 (you're already here)
 
@@ -52,7 +52,7 @@ I started the first iteration of this site in the final year of my degree, wanti
 
 The site exists for the Games page and, secondarily, the projects. The main page is obligatory. This order of priority is naturally reflected in the complexity of and effort put into each page. Like anything I make, I also wanted to learn something and have a little fun with it. To this end, I also used the project as an excuse to learn typescript, which ended up being really straightforward and also pretty cool.
 
-#### Custom Markdown Tokenizer
+### Custom Markdown Tokenizer
 This page is formatted a bit strangely.
 
 I started writing it out in jsx, but realized quickly that the amount of text I wanted to include would make that format unreasonable. I pivoted towards markdown, as it is so wonderfully easy to write in. There are a wealth of tools available to convert the raw text directly into jsx. However, like most of my art (if you will grant me that this remotely counts), I was presented with a vision of what this page could be, then had to find a way to make it like that.
@@ -63,7 +63,7 @@ I Looked through available packages. Naturally, There wasn't anything directly a
 
 Ultimately, I could've applied the same nesting algorithm to an existing markdown package. The entire problem was entirely unnecessary and probably made the site worse, but that doesn't conflict with my goals for the project.
 
-#### Games Page
+### Games Page
 The games page is why this website exists. I poked around a bit when I was younger, but started properly making games in 2018, my first year of University. Since then I've made many, many games, most of which are available on [itch.io][2], a wonderful platform for sharing and selling games. It also has an API. The original conceit of this project was to make a nice display for that API response. I believe I've accomplished that.
 
 In addition to the base information provided: title, release date, cover image, summary description, platforms, and a bit more, I wanted to include a bit of writing on each title with a longer description and what I learned from making it. This serves a dual purpose, effectively displaying the notable extent of technical and professional development I've gained from such projects, and a little personal scrapbook.
@@ -75,7 +75,7 @@ Custom tags are also included in the extra json data, specifying my roles on a p
 Static alternatives are also provided in the json for games with animated cover images, to respect motion preferences. Apparently, you can check for that in a line or two with a media query, so that's pretty cool. The site has a very simple back end, which hides my API key and slightly cleans the base API response.
 
 
-### Curl! Website
+## Curl! Website
 There is [a website for Curl][3], which I made as part of the greater grant project, but mainly to have [somewhere][4] to point people to for a better explanation of BCI. When trying to explain what I was working on, I often found it difficult to get across the reality of the project. It's really cool, but I really can't read your mind. There is a degree of technological impotency that tends to be ignored by most popular understandings of scientific advancement.
 
 To this end, the ["About BCI" page][4] hosts three separate explanations of our integration of BCI technology in the project. One explanation is very simple and only a few sentences long, the next is a few short paragraphs and is closer to verbal explanations I've given. Both include explanations of BCI technology as a whole. The last explanation: "as much detail as I can muster", attempts to accomplish the promise of the label. It focuses on implementation, design considerations, and a number of specific input schemes. All three explanations are toggled between, listed in order of complexity.
@@ -87,7 +87,7 @@ This was the first proper website I made. It learned me good on actually using R
 Recently, I went through a proper accessibility audit of the site with help from a friend. Fixed a few semantic issues, font sizes, and respected motion preferences. Wasn't as bad as I thought it would be, but I'm glad to have shaped it up a bit either way.
 
 
-### Wart dot Gay
+## Wart dot Gay
 I love making art and learning new things, but it can be hard to find "reasons" to do so. In the fall of 2020, I started running a weekly art prompt for the student Game Design club at the UofC. This was an excellent excuse for me to make a little something every week, learning new tools and mediums. Also, supposedly, other people could do it to.
 
 Initially from a random word generator, I switched to selecting prompts from suggestions on a google doc with a python script (I manually copied into a text file, the least fancy). Suboptimal. After handing the activity off for a bit after graduating, I decided to revive the activity in fall 2023.
@@ -103,7 +103,7 @@ Overall, I'm very happy with how the site turned out and how easy it was to use.
 This was an excellent excuse to finally give the server a proper home. I touched up some admin methods to make the restoration of the database a bit easier, but the work was mostly in migration. The back end now lives in a docker container on a raspberry pi.
 
 
-### Capstone Project
+## Capstone Project
 To finish off their degree, every student in the UofC engineering undergraduate program participates in a year long pseudo-professional project; a capstone.
 
 For many students, this project represents a serious achievement and a worthwhile display of their capabilities. This was not the case for me. I lucked into a team who already had a project, able to do the software side of an electrical engineering project. What little technical work I had was finished in less than a work week, spread over the course of the project.
@@ -113,7 +113,7 @@ The project isn't worth describing. My contributions were worthwhile, and there 
 Also a major factor was the sheer volume of extracurricular projects I'd been actively working on throughout my entire degree. Mostly in the form of games. I genuinely felt comically ahead in all software oriented classes, just learning the common terms for concepts I was already familiar with, until technical electives in the final year when I got to learn some really cool stuff I didn't already know.
 
 
-### Back End Setup
+## Back End Setup
 If you got here via twig.skin, you were redirected from the device I'm currently using to host any of my web project's back ends.
 
 Wanting to give the proper home to the WArt backend after doing a little prank on myself (deleting the wart prompts database), I started looking into alternatives. Web hosting would likely be more professionally applicable, but self hosting has always been so much more interesting to me. I managed to get an old pi from a friend that sealed the deal.
@@ -137,8 +137,8 @@ A whole adventure.
 At some point along the way, I realized I could just have a single "back end domain name" and direct to specific services as subdomains. The whole setup is wonderful, I can manage the reverse proxy through a web interface over the local network, ssh into the pi, and update or deploy a new service with two commands (and maybe a little setup for a dockerfile and whatnot). It's awesome.
 
 
-## BCI Game Jam 2022
-### What I Made
+# BCI Game Jam 2022
+## What I Made
 There was another BCI game jam in 2022, the same event where Curl started. I was there partly involved with the organizers but also hoping to participate. I gave a short talk on how I'd integrated BCI with Curl, showed some people the game, and helped facilitate an online match between a player in Calgary and Edmonton at different jam sites.
 
 I also managed to find a bit of time to throw together something small. The whole theme of the jam, after-all, was "mini-games". The intention, and final outcome, was to collect all the jam games into a single project so that device setup and training could be done in one place and used for multiple short sessions of different games.
@@ -148,7 +148,7 @@ With ample experience with a control scheme based on motor imagery, I wanted to 
 "Mutant Clash" is a simple strategy game where two players send units down three lanes, attempting to reach the other player's side to score points. There are four units to choose from, each having a movement speed, health, damage, and delay before you can summon the next unit. I hoped this could provide some depth to the gameplay, but didn't really get the chance to balance the game at all. To make up for this, I made sure to make the characters bounce around all dramatically when they get pushed over. Cover up the lack of substance with a nice bit of juice.
 
 
-### Work on Mini-Game collection
+## Work on Mini-Game collection
 After the game jam, the organizers had a collection of games they wanted to coagulate into one "BCI mega-game". Integration of the games themselves into the Unity project was done by others, but I was brought onto a short contract to help get some ui set up in engine and make everything look a bit nicer.
 
 I got some good experience doing requirements elicitation and am proud of the work that I did. Using what I learned working on Curl, I made everything that I could switch-accessible. Created game tiles, menus, and a training environment that are comfortable and legible; useable and pretty.
