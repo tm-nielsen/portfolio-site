@@ -67,7 +67,7 @@ function getTokenForLine(line: string): MarkdownToken | null {
     return null
 
   // header
-  let regexResult = /(#+) (.+)\s*/g.exec(line)
+  let regexResult = /^(#+) (.+)\s*/g.exec(line)
   if (regexResult) {
     let [_lineCopy, hashes, body] = regexResult
     return new MarkdownHeadingToken(body, hashes.length)
