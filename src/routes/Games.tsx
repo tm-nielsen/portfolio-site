@@ -1,5 +1,5 @@
 import { useState, useEffect, createElement } from "react"
-import { useParams, useNavigate } from "react-router-dom"
+import { useParams, useNavigate, Link } from "react-router-dom"
 import { GameInfo, SupplementedGameInfo, FocusedGameTileProps, ExtraGameInfo } from "../types/games"
 import { parseExtraGameInfo } from "../utils/gameInfoFileSystem"
 import FocusedGameTile from "../components/FocusedGameTile"
@@ -72,6 +72,14 @@ export default function Games() {
   return (
     <div className="flat">
       <h1>Games</h1>
+      <p className="centred-text">
+        Below is a dynamic list of all my projects on{"\ "}
+        <a className="flat" href="https://klungore.itch.io" target="_blank">Itch.io</a>.
+      </p>
+      <p className="centred-text">
+        Others are on the <Link className="flat" to="/projects">Projects page</Link>.
+      </p>
+      <div/>
       {GameListSieve(updateSieveMethod, gameList)}
       {status === statusCodes.LOADING?
         <h2>Loading</h2>
