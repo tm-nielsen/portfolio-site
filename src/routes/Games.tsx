@@ -29,14 +29,12 @@ export default function Games() {
     }).then((data): void => {
       supplementGameList(data).then(supplementedGameList =>
         setGameList(supplementedGameList)
-      )
-      setStatus(statusCodes.LOADED)
+      ).then(() => setStatus(statusCodes.LOADED))
     }).catch(error => {
+      console.log(error.message)
       supplementGameList(offlineGameInfo as any).then(supplementedGameList =>
         setGameList(supplementedGameList)
-      )
-      setStatus(statusCodes.OFFLINE)
-      console.log(error.message)
+      ).then(() => setStatus(statusCodes.OFFLINE))
     })
   }, [])
 
