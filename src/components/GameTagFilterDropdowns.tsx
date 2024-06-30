@@ -10,6 +10,7 @@ class TagAttributes {
   enabled: boolean = false
   count: number = 1
 }
+const DEFAULT_TAG_INFO: CategorizedTagInfo = {tags: {}, tools: {}, roles: {}}
 
 export class GameTagFilterer {
   categorizedTags: {[category: string]: string[]} = {}
@@ -49,7 +50,7 @@ export class GameTagFilterer {
 export default function GameTagFilterDropdowns(
     sendUpdatedFilterer: (f: GameTagFilterer) => void,
     supplementedGameInfoList: SupplementedGameInfo[]) {
-  const [filterTags, setFilterTags] = useState<CategorizedTagInfo>(getFilterTags())
+  const [filterTags, setFilterTags] = useState<CategorizedTagInfo>(DEFAULT_TAG_INFO)
 
   useEffect(() =>{
     setFilterTags(getFilterTags())
@@ -72,7 +73,10 @@ export default function GameTagFilterDropdowns(
         })
       }
     })
-    return properties
+    if (Object.keys(properties).length > 0)
+      return properties
+    else
+     return DEFAULT_TAG_INFO
   }
 
   function toggleTagFilter(category: string, tag: string) {
