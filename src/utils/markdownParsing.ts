@@ -52,7 +52,7 @@ export class InlineMarkdownToken extends MarkdownToken {
 export function tokenizeMarkdown(mdText: string): MarkdownToken[] {
   let tokens = []
 
-  const mdLines = mdText.split('\r\n')
+  const mdLines = mdText.replace('\r\n', '\n').split('\n')
   for (const line of mdLines) {
     let newToken = getTokenForLine(line)
     if (newToken) tokens.push(newToken)

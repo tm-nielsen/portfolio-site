@@ -47,11 +47,14 @@ export default function Games() {
   }
 
   async function getExtraGameInfo(gameTitle: string): Promise<ExtraGameInfo> {
-    const filePath = `/game_info/${gameTitle}.md`
+    const filePath = import.meta.env.VITE_GAME_INFO_PATH + gameTitle + ".md"
 
     let fileHeaderResponse = await fetch(filePath, {method: "HEAD"})
-    if (fileHeaderResponse.headers.get("Content-Type") == "text/markdown")
-      return await parseExtraGameInfo(filePath)
+    if (fileHeaderResponse.ok) {
+      const contentTypeHeader = fileHeaderResponse.headers.get("Content-Type") 
+      if (contentTypeHeader?.includes("text/plain") || contentTypeHeader?.includes("text/markdown"))
+        return await parseExtraGameInfo(filePath)
+    }
     return new ExtraGameInfo({}, {}, "No site description yet.")
   }
 

@@ -4,9 +4,9 @@ import { ExtraGameInfo } from "../types/games"
 export async function parseExtraGameInfo(filePath: string): Promise<ExtraGameInfo>
 {
   let fileResponse = await fetch(filePath)
-  const mdText = await fileResponse.text()
+  const mdText = (await fileResponse.text()).replace('\r\n', '\n')
 
-  const mdLines = mdText.split('\r\n')
+  const mdLines = mdText.split('\n')
   let readingHeader = false
   let currentCategory = ""
   let properties: {[key: string]: string} = {}
@@ -42,7 +42,7 @@ export async function parseExtraGameInfo(filePath: string): Promise<ExtraGameInf
 
   let firstTagHeaderIndex = mdText.indexOf("---")
   let bodyStartIndex = mdText.indexOf("---", firstTagHeaderIndex + 3)
-  bodyStartIndex += "---\r\n\r\n".length
+  bodyStartIndex += "---\r\n".length
   const bodyText = mdText.substring(bodyStartIndex)
 
   return new ExtraGameInfo(properties, tags, bodyText)
