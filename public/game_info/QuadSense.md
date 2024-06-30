@@ -10,7 +10,7 @@ roles:
  - technical art
 ---
 
-# Description
+# About
 A weird puzzle game where you have to use unconventional methods to navigate a maze. Made for Global Game Jam 2021.
 
 # What I Learned

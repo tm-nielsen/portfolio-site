@@ -12,7 +12,7 @@ roles:
  - design
 ---
 
-# Description
+# About
 A local multiplayer boat racing game inspired by Hydro Thunder, made for the 2021 Games Den Quick Game Jam. The boat driving is complicated by the addition of planing into the handling model: at a certain speed, the boat will flatten on the surface of the water and go much faster.
 
 # What I Learned

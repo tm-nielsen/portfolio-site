@@ -15,7 +15,7 @@ roles:
  - coordination
 ---
 
-# Description
+# About
 A bite sized rage game about juggling, made for Global Game Jam 2024. A culmination of my legacy of evil games spanning all the way back to YUT YUT.
 
 # What I Learned

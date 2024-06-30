@@ -9,7 +9,7 @@ roles:
  - programming
 ---
 
-# Description
+# About
 A local multiplayer spaceship driving game where both player's controls are periodically randomized. Practically impossible to play, let alone beat. The core idea came from the thought of having to play finger twister with someone on a single keyboard. Made for the 2020 GMTK Game Jam.
 
 # What I Learned

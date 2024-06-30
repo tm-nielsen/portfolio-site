@@ -9,7 +9,7 @@ roles:
  - design
 ---
 
-# Description
+# About
 A little toy paint program made to draw ascii art. Made with Love2D for the University of Calgary Game Design Club's text-based game jam.
 
 # What I Learned

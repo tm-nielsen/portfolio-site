@@ -12,7 +12,7 @@ roles:
  - animation
 ---
 
-# Description
+# About
 A little rougelike built in two weeks for the 2020 Lowres jam. I made this with a friend with comparable experience, splitting tasks based on interest and need.
 
 # What I Learned

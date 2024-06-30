@@ -8,7 +8,7 @@ roles:
  - programming
 ---
 
-# Description
+# About
 A weird take on a matching game where you have to attach limbs to bodies then match limbed bodies together for points using a fired projectile to select.
 
 # What I Learned

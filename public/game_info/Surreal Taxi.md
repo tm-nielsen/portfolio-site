@@ -12,7 +12,7 @@ roles:
  - coordination
 ---
 
-# Description
+# About
 An arcade driving game with obvious inspirations, in this game you have to ferry hat goblins around in a strange geometric plain. If you get airborne, you can perform tricks for extra money that means nothing. Customers speak gibberish supplied by a markov chain of copypastas. Most excitingly, the game has a killer dynamic soundtrack that will respond to being stopped or airborne. Made for lame jam 9.
 
 # What I Learned

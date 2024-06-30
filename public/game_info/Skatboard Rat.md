@@ -9,7 +9,7 @@ roles:
  - animation
 ---
 
-# Description
+# About
 A dinosaur game clone with a rat on a skateboard.
 
 # What I Learned

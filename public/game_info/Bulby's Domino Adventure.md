@@ -11,7 +11,7 @@ roles:
  - coordination
 ---
 
-# Description
+# About
 A simple 3D platformer. Run around as a cute little character and knock over dominoes. There was plans of a more complex puzzle game with coloured lights, but most all complexity got cut. Made for the 2021 Alberta Game Jam
 
 # What I Learned

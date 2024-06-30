@@ -9,7 +9,7 @@ roles:
  - design
 ---
 
-# Description
+# About
 A relaxing digital instrument built to recreate and expand upon a toy application I made when I first started making games. A grid of dots is disturbed dynamically by mouse clicks. In this version, a simple "radial instrument" has been added that can play 4 different not samples at different pitches, switching between major and minor by clicking in the middle. This is something I keep on my desktop to fiddle around with when I need it. Made for the 2022 Games Den Quicker game jam.
 
 # What I Learned

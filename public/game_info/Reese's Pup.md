@@ -13,7 +13,7 @@ roles:
  - coordination
 ---
 
-# Description
+# About
 A top down dog themed dungeon crawler with a dodge roll where you have to fight chocolate. Made for the 2023 Inn From the Cold Game Jam hosted by the University of Calgary Game Design Club.
 
 # What I Learned

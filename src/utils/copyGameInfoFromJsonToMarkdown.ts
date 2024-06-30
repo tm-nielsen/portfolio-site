@@ -7,7 +7,7 @@ for (const index in extraGameInfo) {
   const infoObject = extraGameInfo[index]
   
   let aggregatedTags = {tags: infoObject.tags, tools: infoObject.tools, roles: infoObject.roles}
-  let bodyText = `# Description\r\n${infoObject.description}\r\n\r\n`
+  let bodyText = `# About\r\n${infoObject.description}\r\n\r\n`
   bodyText += `# What I Learned\r\n${infoObject.learning}`
   let writeableGameInfo = new ExtraGameInfo({}, aggregatedTags, bodyText)
   

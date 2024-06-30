@@ -13,7 +13,7 @@ roles:
  - technical art
 ---
 
-# Description
+# About
 A buggy physics sandbox about trying to balance an island in the sea.
 
 # What I Learned

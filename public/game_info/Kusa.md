@@ -10,7 +10,7 @@ roles:
  - pixel art
 ---
 
-# Description
+# About
 A terrible game that nobody should play where you are a patch of grass and have to avoid the worst drawing of a sheep that I've ever seen.
 
 # What I Learned

@@ -9,7 +9,7 @@ roles:
  - programming
 ---
 
-# Description
+# About
 A short text based adventure in which you are a badger. Made for the University of Calgary Game Design Club's 2021 text based game jam.
 
 # What I Learned

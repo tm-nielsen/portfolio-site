@@ -11,7 +11,7 @@ roles:
  - modelling
 ---
 
-# Description
+# About
 A tiny nothing game about a silly little guy stacking boxes. Made for lame jam 12.
 
 # What I Learned

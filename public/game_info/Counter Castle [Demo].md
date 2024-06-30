@@ -12,7 +12,7 @@ roles:
  - design
 ---
 
-# Description
+# About
 A short little game built around the first iteration of the 2D combat system I would use in later projects, primarily Drum Pit. The excuse to play the game consists of a box of enemies that you lock yourself in to earn money to buy upgrades to fight the boss and go to the next floor. Movement is fairly simple, slightly augmented by two special directional attacks you can do in the air. Key to the combat, the parry slows down time but speeds up your attacks, and can be upgraded to heal you. Direct ancestor of Drum Pit.
 
 # What I Learned

@@ -12,7 +12,7 @@ roles:
  - animation
 ---
 
-# Description
+# About
 A very simple skateboarding games using 2D sprites in a 3D environment. Spiritual successor to Skatboard Rat and ancestor to ET-Skate.
 
 # What I Learned

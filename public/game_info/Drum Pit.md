@@ -16,7 +16,7 @@ roles:
  - technical art
 ---
 
-# Description
+# About
 Drum Pit is a game about hitting things with a stick, the culmination of several experiments in animation and systems design. It is a 2D combat platformer with rougelike dungeon generation and progression, discoverable upgrades, multiple weapon types with complex attack trees, a complex final boss, fully remapable controls, absurd graphical settings including the ability to remap the palette to custom colours and a posterization slider, and a wide range of custom foley. I am very proud of most every aspect of this project, but the level, enemies, and boss do not compliment the depth of the player's combat abilities very well. They're just there to have something to do, which is why I added them.
 
 # What I Learned

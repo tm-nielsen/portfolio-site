@@ -9,7 +9,7 @@ roles:
  - pixel art
 ---
 
-# Description
+# About
 A comfy aquarium game, made for the 2020 Out of Hibernation Game Jam hosted by the University of Alberta Games Den
 
 # What I Learned

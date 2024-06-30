@@ -12,7 +12,7 @@ roles:
  - animation
 ---
 
-# Description
+# About
 A short study of juice, made in a few days. I had a larger idea about a multiplayer version where players would fight with and over a single arrow with significant emphasis on movement for getting and dodging the arrow. Thankfully I cut the idea way down to this simple study.
 
 # What I Learned
