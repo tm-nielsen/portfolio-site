@@ -1,4 +1,3 @@
-import * as fs from "fs"
 import { ExtraGameInfo } from "../types/games"
 
 
@@ -47,26 +46,4 @@ export async function parseExtraGameInfo(filePath: string): Promise<ExtraGameInf
   const bodyText = mdText.substring(bodyStartIndex)
 
   return new ExtraGameInfo(properties, tags, bodyText)
-}
-
-export function writeExtraGameInfo(extraGameInfo: ExtraGameInfo, filePath: string) {
-  let fileContent = "---\r\n"
-  fileContent += `title: ${extraGameInfo.title}\r\n`
-  if (extraGameInfo.cover_override)
-    fileContent += `cover_override: ${extraGameInfo.cover_override}\r\n`
-  if (extraGameInfo.static_cover_url)
-    fileContent += `static_cover_url: ${extraGameInfo.static_cover_url}\r\n`
-  for (const tagCategory in extraGameInfo.tags) {
-    fileContent += `${tagCategory}:\r\n`
-    for (const tagIndex in extraGameInfo.tags[tagCategory])
-      fileContent += ` - ${extraGameInfo.tags[tagCategory][tagIndex]}\r\n`
-  }
-  fileContent += "---\r\n\r\n"
-  fileContent += extraGameInfo.markdown_body_text
-
-  fs.writeFile(filePath, fileContent, error => {
-    if (error) {
-      console.error(error)
-    }
-  })
 }

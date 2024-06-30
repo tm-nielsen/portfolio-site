@@ -1,7 +1,7 @@
 import { useState, useEffect, createElement } from "react"
 import { useParams, useNavigate, Link } from "react-router-dom"
 import { GameInfo, SupplementedGameInfo, FocusedGameTileProps, ExtraGameInfo } from "../types/games"
-import { parseExtraGameInfo } from "../utils/gameInfoFileSystem"
+import { parseExtraGameInfo } from "../utils/gameInfoParser"
 import FocusedGameTile from "../components/FocusedGameTile"
 import GameTile from "../components/GameTile"
 import GameListSieve, { SieveMethod } from "../components/GameListSieve"
