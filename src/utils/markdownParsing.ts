@@ -63,7 +63,7 @@ export function tokenizeMarkdown(mdText: string): MarkdownToken[] {
 }
 
 function getTokenForLine(line: string): MarkdownToken | null {
-  if (line === '' || /\[\d+\]: .+/g.test(line))
+  if (/^[\r\n]*$/g.test(line) || /\[\d+\]: .+/g.test(line))
     return null
 
   // header
