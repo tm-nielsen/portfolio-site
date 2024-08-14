@@ -25,6 +25,9 @@ export default function Home() {
         <a href="http://github.com/tm-nielsen" target="_blank" className='centred-text'>
           Github: tm-nielsen
         </a>
+        <a href="Twig Nielsen CV.pdf" download={true} className='centred-text'>
+          Download my CV
+        </a>
       </div>
       <p className='games-link-body'>
         You should check out my <Link to='/games' className='flat'>Games</Link>
