@@ -1,6 +1,5 @@
 ---
 title: Boy Maker
-static_cover_url: no_static_alternative.png
 tags:
  - back burner
 tools:
