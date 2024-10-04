@@ -1,6 +1,6 @@
 ---
 title: Big Boy Beach Ball
-static_cover_url: no_static_alternative.png
+static_cover_url: https://img.itch.zone/aW1nLzE3OTAyMDI3LmdpZg==/315x250%23cm/bAdrV2.gif
 tags:
  - fun
  - arcade
