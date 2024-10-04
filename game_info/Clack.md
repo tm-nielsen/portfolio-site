@@ -4,7 +4,8 @@ static_cover_url: https://img.itch.zone/aW1nLzE2NDI0MjQwLmdpZg==/315x250%23cm/Q4
 tags:
  - jam
  - fun
- - current
+ - back burner
+ - arcade
 tools:
  - Godot
  - Piskel
@@ -40,6 +41,11 @@ Being my 20-something-ith game jam, knowing what I was doing, barely having to c
 I kinda went off with this one. I used tools I already knew, implementing the same solutions to problems I've solved so many times already. Made art in ways I already know. Though no revelation, the project was another step forward in my design ability. The foremost consideration of an arcade game: unconventional controls, high-scores, grabbing attention, that special kind of looks easy but really grinds you down once you get going, calibrating a difficulty curve to accommodate a first playthrough and a twentieth. A very good fit for my direct, percussive inclinations.
 
 # The Future
-I am thankful to have received such a heartening wash of positive feedback for the project both at the jam and after. Such rave reviews 've got me thinking that maybe I should take this thing a little further. Everything is still just in the planning stages, if that. Trying to set the project up for success and all that. But the game is fun, we had aught'a make more of it.
+I am thankful to have received such a heartening wash of positive feedback for the project both at the jam and after. Such rave reviews 've got me thinking that maybe I should take this thing a little further. The game is fun, we had aught to make more of it.
+
+# Arcade Port
+Following the jam, I implemented a number of refinements in preparation for the game's long term deployment on unmoderated cabinets. After drafting a proper plan for an extended production project, I dedicated a short sprint to this work. This largely consisted of visual or mechanical polish, with special attention paid to the proper function of the project on the cabinets. No playable content was added.
+
+On top of experience planning a project, this latest sprint was good practice in establishing modular and scalable solutions for a long term project.
 
 [0]: https://roboplomat.bandcamp.com
