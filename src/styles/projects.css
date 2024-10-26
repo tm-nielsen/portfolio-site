@@ -1,6 +1,19 @@
+.project-link-list {
+  padding: 1em;
+  display: grid;
+  text-align: center;
+  text-wrap: balance;
+  grid-gap: 0.15em;
+}
+
 p.custom-markdown {
   margin: 0;
   padding: 0 0 0.75em;
+}
+
+h3.custom-markdown {
+  margin-left: 1em;
+  text-wrap: balance;
 }
 
 h4.custom-markdown {

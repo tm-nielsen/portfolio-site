@@ -21,6 +21,10 @@ const router = createBrowserRouter([
         element: <Projects />
       },
       {
+        path: 'projects/:selectedProject',
+        element: <Projects />
+      },
+      {
         path: 'games',
         element: <Games />
       },
