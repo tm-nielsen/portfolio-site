@@ -7,11 +7,11 @@ I started the first iteration of this site in the final year of my degree, wanti
 The site exists for the Games page and, secondarily, the projects. The main page is obligatory. This order of priority is naturally reflected in the complexity of and effort put into each page. Like anything I make, I also wanted to learn something and have a little fun with it. To this end, I also used the project as an excuse to learn typescript, which ended up being really straightforward and also pretty cool.
 
 ## Custom Markdown Tokenizer
-This page is formatted a bit strangely.
+This page used to be formatted a bit strangely, but is now more useable.
 
 I started writing it out in jsx, but realized quickly that the amount of text I wanted to include would make that format unreasonable. I pivoted towards markdown, as it is so wonderfully easy to write in. There are a wealth of tools available to convert the raw text directly into jsx. However, like most of my art (if you will grant me that this remotely counts), I was presented with a vision of what this page could be, then had to find a way to make it like that.
 
-I wanted everything in collapsed sections, hoping that way you could read only what you want and not have the rest of it to scroll past. I don't think this was or is a great design decision for anyone. I do think it would be somewhat dishonest to fix it now. This was a problem, as I would need to nest sections as children of their headers. Additionally, I only wanted a certain tier of header to capture "children" is a collapsed section.
+I wanted everything in collapsed sections, hoping that way you could read only what you want and not have the rest of it to scroll past. I don't think this was or is a great design decision for anyone, so I fixed it. But it presented an interesting design problem, as I would need to nest sections as children of their headers. Additionally, I only wanted a certain tier of header to capture "children" is a collapsed section.
 
 I Looked through available packages. Naturally, There wasn't anything directly applicable to the task, but many things very close. A number of markdown tokenizers presented themselves as useful, but were too featured for my uses. It would be very possible to just not use all the data they provided, but they seemed a bit confusing. I could do this myself, right? I wrote my own simplified tokenizer, which ended up being a fair bit of work with the requisite helping of grief but generally straightforward overall, especially in typescript. Along with this I wrote a simple algorithm to nest a list of tokens into trees as I desired. This all gets turned into jsx in a similarly scaled down manner.
 
