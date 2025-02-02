@@ -4,8 +4,8 @@ static_cover_url: https://img.itch.zone/aW1nLzE2NDI0MjQwLmdpZg==/315x250%23cm/Q4
 tags:
  - jam
  - fun
- - back burner
  - arcade
+ - current
 tools:
  - Godot
  - Piskel
