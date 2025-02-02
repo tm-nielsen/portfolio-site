@@ -1,34 +1,22 @@
-.revealable-section-label{
-  display: flex;
-  flex-direction: row;
-  margin: 0.5em auto 0.5em 0;
-}
-.revealable-section-label:hover{
-  color: var(--accent-colour)
+h2.featured{
+    margin-top: 2em;
 }
 
-.revealable-section-button{
-  display: flex;
-  margin: auto;
-  background-color: transparent;
-  border: none;
-  color: var(--main-colour);
-  font-size: 1em;
-}
-.revealable-section-button:hover{
-  color: var(--accent-colour);
+a.featured{
+    margin: 0 auto;
 }
 
-.revealable-section-content{
-  background-color: var(--bg-accent-colour);
-  padding: 1em;
-  margin: 0;
-  border-radius: 0.5em;
+.professional-summary{
+    margin: 1em auto 0;
+    max-width: 35em;
+    text-align: center;
+    padding: 0;
 }
 
-.games-link-body{
-  margin: 0.25em auto 1em;
+.games-link{
+  margin: 1em auto;
   font-size: 2em;
+  text-align: center;
 }
 
 .profile-picture{
