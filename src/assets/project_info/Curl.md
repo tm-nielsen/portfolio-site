@@ -1,5 +1,5 @@
 # Curl!
-Curl is a video game that can be played with a brain computer interface. This enabled people with limited reliable control of their muscles and bodies to play. The project implements an integrated training scenario along with menus and gameplay built around switch access.
+[Curl is a video game that can be played with a brain computer interface][0]. This enables people with limited reliable control of their muscles and bodies to play. The project implements an integrated training scenario along with menus and gameplay built around switch access.
 
 ## Game Jam
 Curl started as a project for the 2021 BCI Game Jam, designed and prototyped in 48 hours. The event was put on by BCI4Kids, a local pediatric research program focused on improving the lives of children with limited motor control using Brain-Computer Interface technology. They had run the even once before, but this was my introduction to the organization, technology, and event.
@@ -32,14 +32,15 @@ The project has largely gone untouched following release due to my own mental he
 
 
 ## Emotiv Plugin
-As part of the "integration" area of development, I ended up segmenting what I could of my work into a modular [Unity package][0]. Consulting with the experts I had met at the game jam, integration of Emotiv devices with their dedicated Cortex application seemed the most feasible. What ended up being the package started from the official support. I looked through what was already built, which was notable but lacking two major areas I considered vital.
+As part of the "integration" area of development, I ended up segmenting what I could of my work into a modular [Unity package][1]. Consulting with the experts I had met at the game jam, integration of Emotiv devices with their dedicated Cortex application seemed the most feasible. What ended up being the package started from the official support. I looked through what was already built, which was notable but lacking two major areas I considered vital.
 
 Firstly, it couldn't support multiple headsets simultaneously. While this scenario would be largely impractical given training and setup considerations, it was a deal breaker to the spirit of the project. Secondly, I didn't at all like the structure of the code. Accessing methods and information was wrapped up in all sorts of different places and most functionality couldn't effect in engine objects as it was triggered off the main thread by a websocket connection. It was reasonably built, but impractical to use. Additionally, it was distributed as a git submodule. This is, again, reasonable. However, for a package build specifically to add functionality to a Unity project, it made much more sense to distribute as a Unity package.
 
 To address these design decisions that were issues for me, I rewrote a mirror of the same tool, implementing a differently limited wrapper of the Cortex websocket API. My version of the Emotiv Cortex package is structured slightly differently in such a way that it doesn't provide the same restriction on multiple simultaneous headsets. Additionally, methods and data subscription are accessed through a static class, making the whole thing much easier to use. This was a change made in the official support shortly after I made my own work public. Completely unrelated to my own work, I just thought it was humorous that the same conclusion was reached. Additionally, I wrote functionality to buffer websocket messaged into the main thread as events to remove the restriction on functionality. My implementation is suboptimal. I took messages from the websocket into dedicated functions which I then buffered into access methods. In hindsight, it would be simpler to buffer all websocket messages into the main thread before handling them directly.
 
-In hopes that others might actually be able to use this tool, if that were ever to happen, I wrote mediocre but extant [documentation][1] to accompany the package.
+In hopes that others might actually be able to use this tool, if that were ever to happen, I wrote mediocre but extant [documentation][2] to accompany the package.
 
 
-[0]: https://github.com/tm-nielsen/CortexPlugin
-[1]: https://bonspiel-games.gitbook.io/cortex-unity-plugin/
+[0]: https://teamcurl.ca
+[1]: https://github.com/tm-nielsen/CortexPlugin
+[2]: https://bonspiel-games.gitbook.io/cortex-unity-plugin/
