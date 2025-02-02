@@ -1,7 +1,5 @@
 ---
 title: Big Boy Beach Ball
-tags:
- - back burner
 tools:
  - Processing
  - Godot

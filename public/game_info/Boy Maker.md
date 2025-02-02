@@ -1,7 +1,5 @@
 ---
 title: Boy Maker
-tags:
- - back burner
 tools:
  - Godot
 roles:

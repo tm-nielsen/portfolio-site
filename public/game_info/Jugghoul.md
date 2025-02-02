@@ -5,7 +5,6 @@ tags:
  - jam
  - fun
  - arcade
- - current
 tools:
  - Godot
  - Piskel
@@ -28,8 +27,8 @@ Following Clack and Big Boy Beach Ball, this was the next most exciting candidat
 
 Inspiration!
 
-And so, the game got a little tricker, a lot sillier, and a whole lot harder to explain. On the arcade machines, players will juggle pins by spinning the trackball to manually throw each time. It's hilarious, and adds a deliciously kinetic aspect to the frantic gameplay.
+And so, the game got a little tricker, a lot sillier, and a whole lot harder to explain. On the arcade machines, players juggle pins by spinning the trackball to manually throw each time. It's hilarious, and adds a deliciously kinetic aspect to the frantic gameplay.
 
-I've focused mainly on project planning/management as well as implementing polish, but our overall priority is the tutorial.
+I focused mainly on project planning/management as well as implementing polish, but our overall priority was the tutorial.
 
-Still a work in progress, but we are hopeful to have it on the cabinets for the November deadline.
+I am extremely excited to have the game on ther cabinets.
