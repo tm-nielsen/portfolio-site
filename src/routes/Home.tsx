@@ -12,7 +12,6 @@ export default function Home() {
           <p>Hey there, I'm</p>
           <h1>Twig</h1>
           <i className='subscript'>
-            <p className='centred-text'>B.Sc. in Software Engineering</p>
             <p className='centred-text'>(she/her)</p>
           </i>
         </div>
@@ -29,6 +28,9 @@ export default function Home() {
         </a> */}
       </div>
       <p className='professional-summary'>...a capable developer passionate about creating engaging and accessible experiences. Most of the projects I've made and learned from have been games, but I've built few competent websites along the way using React.</p>
+      <i className='subscript'>
+        <p className='centred-text'>Currently working as a Developer (Software, BCI, Gaming) at the University of Calgary</p>
+      </i>
       <h2 className='featured'>Featured Projects</h2>
       <ul className='flat'>
         {featuredProjects.map(({title, link, description}, index) =>
