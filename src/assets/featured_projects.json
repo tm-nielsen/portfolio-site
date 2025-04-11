@@ -5,13 +5,13 @@
         "description": "It's just really fun."
     },
     {
-        "title": "Jeffrey",
-        "link": "https://klungore.itch.io/jeffrey",
-        "description": "Most recent game jam project."
-    },
-    {
         "title": "Curl!",
         "link": "/projects/Curl",
         "description": "BCI video game!"
+    },
+    {
+        "title": "BCI Essentials",
+        "link": "https://github.com/kirtonBCIlab/bci-essentials-unity",
+        "description": "What I do for work."
     }
 ]
