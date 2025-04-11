@@ -20,7 +20,7 @@ a.featured{
 }
 
 .profile-picture{
-  max-width: 20vw;
+  max-width: 6em;
   height: auto;
   border-radius: 35%;
 }
