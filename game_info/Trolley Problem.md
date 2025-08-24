@@ -2,21 +2,23 @@
 title: Trolley Problem
 tags:
  - jam
- - current
+ - fun
  - arcade
 tools:
  - Godot
+ - Blender
 roles:
  - programming
  - design
  - coordination
+ - technical art
 ---
 
 # About
 Made for the 2025 Calgary Game Developers Association Arcade Game Jam.
-DO NOT PLAY THIS GAME!
-...YET.
-The current builds up on the itch page are pretty busted and not even reflective of what we showcased at the end of the jam. Planning to return to get things patched up and probably even polished later in the summer.
+
+YOU CAN PLAY THIS NOW!
+I fixed it and it works now.
 
 # The Story
 This silly little game with garbage SEO is a perfect culmination of the artful and delicious idea stew resulting from the in person vomit funnel. This is a terrible name for a simple and effective collaborative conceptualization process I have been using for years now, most notably during game jams.
@@ -38,4 +40,4 @@ So I had a build up by Saturday night, but we still ended up scrambling just to 
 
 It's fun and funny, but I'm glad it doesn't have legs.
 
-Will fix up for the arcades, just enough to make it accessible enough to be fun, but I already have way too many projects "that I should really make into a full game". This one doesn't make the grade. It's fun but doesn't really have anywhere to go other than polish. I am very happy with that.
+I've since fixed it up for the arcades: resolving perfomance issues, addind a "tutorial", and implementing a range of silly little sound effects. Already have way too many projects "that I should really make into a full game". This one doesn't make the grade. It's fun but doesn't really have anywhere to go other than polish. I am very happy with that.
