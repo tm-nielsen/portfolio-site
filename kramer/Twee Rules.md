@@ -95,7 +95,10 @@ As part of character progression, the facilitator may offer you the option to sp
 ##### I Know A Guy
 Once per Session - Name and conjure an individual fit to tackle the issue at hand.
 
-Roll a number of d6s determined by the facilitator based on their potential helpfulness. The lowest die value decides your relationship with this individual.
+Roll a number of d6s determined by the facilitator based on their potential helpfulness.  
+The lowest die value decides your relationship with this individual.
 ##### Confrontational
-Action - In addition to a match, you may also clash with colours adjacent to your swing on the colour wheel. Deals +2 damage rather than double. Ties function normally.  
+Action - In addition to a match, you may also clash with colours adjacent to your swing on the colour wheel.
+
+Deals +2 damage rather than double. Ties function normally.  
 *Could be levelled up to deal normal clash damage.*
