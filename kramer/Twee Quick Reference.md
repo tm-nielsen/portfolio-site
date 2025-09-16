@@ -3,6 +3,7 @@
 - Select one to act with
 	- *add attribute level*
 - Lock it in as your new ***Swing***
+
 ## Clash *(same colour swing)*
 - Roll matching dice
 - Success -> double damage
@@ -23,6 +24,7 @@
 - Restore health to full
 - **+1 experience**
 - Exit the scene?
+
 ## Death's Door
 - 5 health
 - Single colourless attribute

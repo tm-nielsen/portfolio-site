@@ -1,10 +1,10 @@
-*Please create your character **before** attending a session.*
+*Please create your character **before** attending a session.*  
 *All gameplay materials will be provided.*
 # Kramer County
 is a high lethality sitcom role-playing game orbiting *Kramer County Community College*. A story-first campaign, play focuses on character and narrative over mechanics. Players navigate silly situations and awkward social dynamics while prodded by the facilitator.
 
 ## Scheduling
-Kramer County is run as an ***Open Table***.
+Kramer County is run as an ***Open Table***.  
 This means there is no fixed schedule, group of players, or commitment beyond a single session. When you want to play, reach out to other players and find a time that works for all of you, then check with the facilitator. The facilitator may also propose session times filled on a first come first serve basis.
 - [The Open Table Manifesto](https://thealexandrian.net/wordpress/38643/roleplaying-games/open-table-manifesto)
 - [West Marches](https://arsludi.lamemage.com/index.php/78/grand-experiments-west-marches)
@@ -28,7 +28,7 @@ To create your character, you must invent and name these three ***Attributes***.
 > ***Attribute*** colours are entirely vibe-based, though a rough guide is provided in the *Colour Words* graphic. Each ***Attribute*** must be a different colour. Attempting to balance or concentrate a character around the wheel may help guide their formation, but take care to avoid using one of the guiding colour words as an ***Attribute***. While allowed, you won't have much fun playing a boring character!
 
 ### Guiding Questions
-*I don't need your answers to these questions, and neither do you.
+*I don't need your answers to these questions, and neither do you.  
 They are meant to get the process started.*
 - What does your character smell like?
 - How old is their phone?
@@ -45,21 +45,25 @@ They are meant to get the process started.*
 	- Would they like to?
 
 ### Examples
-*Do you disagree with any of these?
-Good.
+*Do you disagree with any of these?  
+Good.  
 Use the spite as creative fuel.*
+
 #### Gus Pysch
 - 🟦 Pharmaceutical Salesman
 - 🟨 🙄
 - 🟥 "Did you hear about Pluto?"
+
 #### Lucy Ricardo
 - 🟩 Housewife
 - 🟨 Desperate for the Stage
 - 🟪 Schemes 💅
+
 #### Jeff Community
 - 🟥 Speech
 - 🟪 Fake Lawyer
 - 🟧 Crossing his Arms While Looking at Someone Sarcastically
+
 #### Jake Peralta
 - 🟧 Man Child
 - 🟩 Daddy Issues
