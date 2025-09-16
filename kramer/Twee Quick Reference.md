@@ -8,11 +8,13 @@
 - Success -> double damage
 - Failure -> free action for target
 - Tie -> bank damage and reroll
+
 # Roll to Die
 - Select an ***Attribute***
 - Roll single die
 	- *add attribute level*
 - Lock it in as your new ***Swing***
+
 # Wound
 - Select the most relevant ***Attribute*** to wound
 	- *normally current **Swing***

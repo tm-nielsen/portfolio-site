@@ -3,23 +3,26 @@ is a character-rich story-focused de-make of the [***Sentiment***](https://www.p
 ## Attributes
 Every character consists of three unique stats, each with a name and colour.
 These ***Attributes*** are your character's core personality traits, convictions, features, and interests.
+
 ### Names
 You may name ***Attributes*** in any way, from 'Crystal Girlie' to 'Beatboxing' to 'My old Co-Worker Brendan'. Poetry, Unicode characters, drawings, or anything else you can think of to meaningfully represent an aspect of your character are also valid.
 
 These names are critically important, as all three represent your character entirely!
 Whatever you choose, have a clear idea of what these ***Attributes*** represent, and how to communicate that with your facilitator as needed.
 *The name of an attribute is permanent and cannot be changed without undergoing significant narrative and mechanical character growth.*
-### Colours <img src="colour words.png" align="right" style="max-width: 12rem;" />
+
+### Colours <img src="colour words.png" align="right" style="max-height: 12rem;" />
 ***Attribute*** colours are entirely vibe-based, though a rough guide is provided in the *Colour Words* graphic. Each ***Attribute*** must be a different colour. Attempting to balance or concentrate a character around the wheel may help guide their formation, but take care to avoid using one of the guiding colour words as an ***Attribute***. While allowed, you won't have much fun playing a boring character!
 
 ### Levels
  Each ***Attribute*** has an associated level, which adds a bonus value to a roll when you lock it in as your ***Swing***. As a character progresses through multiple sessions, you may spend ***Experience*** points to increase these bonuses individually. ***Attribute*** levels can be tracked on your character sheet next to the relevant dice slots. The bonus is equal to the level, starting at 0.
-
+ 
 ## Dice
 Each ***Attribute*** is represented by a coloured d6 which are used to act on or react to the world around you. Normally living in their home slots on your character sheet, performing a roll using an ***Attribute*** dice will bring it to the forefront. This die is placed in the ***Swing*** slot.
 *You are encouraged to roleplay your character as embodying their active attribute.*
 
 Rolls are largely self-determined by player intention, but the facilitator will regularly call strays as they are caught in freeform dialogue.
+
 ### Roll to ***Do***
 Whenever you perform an action or influence something in the world, you ***Roll to Do***.
 This could be anything from lifting a box to hitting someone or hitting on them.
@@ -41,6 +44,7 @@ If you ***Roll to Do*** using a die the same colour as your target's current ***
 - A successful defence grants a free action as a counter.
 - A tie banks the damage and prompts a reroll. This banked damage will be dealt to the losing party along with the value of the winning roll.
 	- *Damage banked by successive tied clashes can stack indefinitely.*
+
 ### Roll to ***Die***
 When acted against, you ***Roll to Die***.
 This is your roll to weather external action, influence, or attack.
@@ -48,11 +52,13 @@ This is your roll to weather external action, influence, or attack.
 - Roll single die
 	- *add attribute level*
 - Lock it in as your new ***Swing***
+
 ### Roll to ***Discern***
 At any point outside of a fixed turn order, roll your ***Attributes*** to examine your character's inner thoughts or feelings. The values presented by the dice can help guide character or roleplay decisions. A higher value in one stat might mean a certain tendency or viewpoint is acting up while a lower value could indicate a lack of confidence.
 - Roll all ***Attribute*** dice
 - Assess the vibe
 - Lock one in as a ***Swing***
+
 ### Health, Damage, and Wounds
 A successful ***Roll to Do*** deals damage equal to your ***Swing*** *(die value + attribute level)*.
 Each character starts with 10 health points.
