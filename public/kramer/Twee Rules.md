@@ -19,7 +19,7 @@ Whatever you choose, have a clear idea of what these ***Attributes*** represent,
 Each ***Attribute*** has an associated level, which adds a bonus value to a roll when you lock it in as your ***Swing***. As a character progresses through multiple sessions, you may spend ***Experience*** points to increase these bonuses individually. ***Attribute*** levels can be tracked on your character sheet next to the relevant dice slots. The bonus is equal to the level, starting at 0.
  
 ## Dice
-Each ***Attribute*** is represented by a coloured d6 which are used to act on or react to the world around you. Normally living in their home slots on your character sheet, performing a roll using an ***Attribute*** dice will bring it to the forefront. This die is placed in the ***Swing*** slot.  
+Each ***Attribute*** is represented by a coloured d6 which are used to act on or react to the world around you. Normally living in their home slots on your character sheet, performing a roll using an ***Attribute*** dice will bring it to the forefront. This die is physically placed in the ***Swing*** slot of your character sheet.  
 *You are encouraged to roleplay your character as embodying their active attribute.*
 
 Rolls are largely self-determined by player intention, but the facilitator will regularly call strays as they are caught in freeform dialogue.
@@ -39,7 +39,7 @@ When rolling against another character, you will be contesting a roll to die.
 The ***Roll to Do* must exceed the *Roll to Die*** in order to succeed, dealing damage equal to your Swing (die value + attribute level).  
 In other situations, you may simply roll against a static threshold determined by the facilitator.
 #### Clashes
-If you ***Roll to Do*** using a die the same colour as your target's current ***Swing***, it becomes a clash. This matching die must then be rolled in response.
+If you ***Roll to Do*** using a die the same colour as your target's current ***Swing***, it becomes a clash.
 - A successful attack deals double damage.
 - A successful defence grants a free action as a counter.
 - A tie banks the damage and prompts a reroll. This banked damage will be dealt to the losing party along with the value of the winning roll.
@@ -48,10 +48,8 @@ If you ***Roll to Do*** using a die the same colour as your target's current ***
 ### Roll to ***Die***
 When acted against, you ***Roll to Die***.  
 This is your roll to weather external action, influence, or attack.
-- Select an ***Attribute***
-- Roll single die
+- Reroll your ***Swing***
 	- *add attribute level*
-- Lock it in as your new ***Swing***
 
 ### Roll to ***Discern***
 At any point outside of a fixed turn order, roll your ***Attributes*** to examine your character's inner thoughts or feelings. The values presented by the dice can help guide character or roleplay decisions. A higher value in one stat might mean a certain tendency or viewpoint is acting up while a lower value could indicate a lack of confidence.
@@ -63,30 +61,30 @@ At any point outside of a fixed turn order, roll your ***Attributes*** to examin
 A successful ***Roll to Do*** deals damage equal to your ***Swing*** *(die value + attribute level)*.  
 Each character starts with 10 health points.  
 When all health is lost, your character is ***Wounded***
-- Select the most relevant attribute to ***Wound***
+- Select the most relevant ***Attribute***  *(defaults to **Swing**)*
 	- discard ***Attribute*** die
 	- *completely unusable until healed*
 - Restore health to full
-- **Mark a point of *Experience***
+- Select a new ***Swing***
+- **Mark a point of *Experience***  
+*experience is also gained for dealing a wound.*
 
-*You are encouraged to roleplay what your character would be like in the complete absence of one of their core characteristics.*
+*You are encouraged to roleplay what your character would be like in the complete absence of this core characteristic.*
 
-Whenever a character is ***Wounded***, they may choose to exit the scene. *(giving up, running away, fainting, crashing out)*.
+When a character ***Wounds*** their second last ***Attribute***, they may choose to yield. Such a character may remain present or exit the scene but loses the ability to deal damage, take damage, or gain experience until they are healed.
 #### Death's Door
-Upon wounding your last ***Attribute***, you may choose to continue on ***Death's Door*** with 5 health points and a final colourless die with which to act. Upon loosing all health in this state, your character will be narratively obliterated and removed from play.
-
-A character on ***Death's Door*** may not leave a scene in conflict.  
-*Continuing on death's door grants 1 point of experience.*  
-*Surviving a hit on death's door grants 2 points of experience.*
+A character who continues with only a single remaining ***Attribute*** is said to be on ***Death's Door***. Upon loosing all health in this state, your character will be narratively obliterated and removed from play.  
+Entering this state grants a point of experience in addition to that from the wound. Surviving a hit on ***Death's Door*** grants 2 points of experience.  
+A character on ***Death's Door*** may not leave a scene in conflict.
 
 ## Progression
-During play, ***Experience*** points are awarded for character moments like achievements or personal growth. The most consistent way to gain ***Experience*** is by taking ***Wounds***. These can be spent at the end of session on the following:
+During play, ***Experience*** points are awarded for character moments like achievements or personal growth. The most consistent way to gain ***Experience*** is by taking or dealing ***Wounds***. These can be spent at the end of session on the following:
 
-| Action | Cost                                 | Description                              |
-| ------ | ------------------------------------ | ---------------------------------------- |
-| Heal   | 1                                    | Restore all ***Wounded Attributes***     |
-| Bulk   | 2, 4, 6...                           | Increase max health by 5                 |
-| Level  | 1, 3, 5... *(1 + 2 x current level)* | Increase an ***Attribute***'s level by 1 |
+| Action | Cost                     | Description                              |
+| ------ | ------------------------ | ---------------------------------------- |
+| Heal   | 1                        | Restore all ***Wounded Attributes***     |
+| Bulk   | 4, 6, 8...               | Increase max health by 5                 |
+| Level  | 2, 4, 6... *(2 x level)* | Increase an ***Attribute***'s level by 1 |
 
 *Attributes may also be healed, levelled, and altered in combination at a discount representative of character growth if it can be narratively justified to the facilitator.*
 ### Gifts
