@@ -1,0 +1,19 @@
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-remote-theme
+minima:
+  skin: auto
+
+defaults:
+  - 
+    scope:
+      path: ""
+    values:
+      layout: base
+  -
+    scope:
+      path: kramer
+    values:
+      layout: kramer-page
+      title: Kramer County
+      description: Resources for a high lethality sitcom role-playing game.
