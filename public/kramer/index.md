@@ -2,15 +2,41 @@
 layout: base
 ---
 
-# Kramer County Resources
-- [Onboarding][0] *(~3 min)*
-- [System Rules][1] *(~6 min)*
-    - [Quick Reference][2] *(~1 min)*
-    - [Example of Play][3] *(~4 min)*
-- [Character Sheet][4] *(2 s)*
+# Kramer County
+A high lethality sitcom role-playing game orbiting *Kramer County Community College*, players navigate silly situations and awkward social dynamics while prodded by a facilitator. Character and narrative are centred over mechanics in this laughs-first open table campaign.  
 
-[0]: Onboarding
-[1]: Twee%20Rules
-[2]: Twee%20Quick%20Reference
-[3]: Play%20Example
-[4]: character%20sheet.png
+## Getting Started
+- [ ] [Create a Character](Character Creation)
+- [ ] Read over the [System Rules](Twee Rules)
+- [ ] Schedule a session
+    - [ ] find 1-3 other players
+    - [ ] confirm with facilitator
+- [ ] Tell facilitator who you'll be playing
+    - Name + Pronouns
+    - Attributes
+    - Connection to the College
+
+*All gameplay materials will be provided.*
+
+## Resources
+- [Character Creation](Character Creation) *(~3 min + time to stew)*
+- [System Rules](Twee Rules) *(~6 min)*
+    - [Quick Reference](Twee Quick Reference) *(~1 min)*
+    - [Example of Play](Play Example) *(~4 min)*
+- [Character Sheet](character sheet.png) *(2 s)*
+
+## Scheduling
+Kramer County is run as an ***Open Table***.  
+This means there is no fixed schedule, group of players, or commitment beyond a single session. When you want to play, reach out to other players and find a time that works for all of you, then check with the facilitator. The facilitator may also propose session times filled on a first come first serve basis.
+
+## Additional Reading
+This game and the system is runs on have been massively *(though unintentionally)* influenced by the Old School Renaissance philosophy of rpg design. [This primer][0] may help introduce players to the underlying approach to play.
+- [OSR Primer][0]
+- [The Open Table Manifesto][1]
+- [West Marches][2]
+- [Open Table Resource Collection][3]
+
+[0]: https://lithyscaphe.blogspot.com/p/principia-apocrypha.html?m=1
+[1]: https://thealexandrian.net/wordpress/38643/roleplaying-games/open-table-manifesto
+[2]: https://arsludi.lamemage.com/index.php/78/grand-experiments-west-marches
+[3]: https://www.kenthedm.com/blog/2017/7/22/west-marches-repository
