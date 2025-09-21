@@ -9,14 +9,18 @@
     <meta name="theme-color" content="#2a2d34" />
     <meta name="description" content="Resources for a high lethality sitcom role-playing game." />
     <title>Kramer County</title>
-</head></head>
+</head><style>
+            ul ul {margin-bottom: 0;}
+        </style>
+    </head>
 
     <body>
         <main class="page-content">
             <div class="wrapper">
                 <a href="/kramer">Kramer County Home</a>
 <hr/>
-<h1 id="roll-to-do">Roll to Do:</h1>
+<h1 id="twee-quick-reference">Twee Quick Reference</h1>
+<h2 id="roll-to-do">Roll to Do:</h2>
 <ul>
   <li>Roll all <strong><em>Attribute</em></strong> dice</li>
   <li>Select one to act with
@@ -27,51 +31,49 @@
   <li>Lock it in as your new <strong><em>Swing</em></strong></li>
 </ul>
 
-<h2 id="clash-same-colour-swing">Clash <em>(same colour swing)</em></h2>
+<h3 id="clash-same-colour-dice">Clash <em>(same colour dice)</em></h3>
 <ul>
-  <li>Roll matching dice</li>
   <li>Success -&gt; double damage</li>
   <li>Failure -&gt; free action for target</li>
   <li>Tie -&gt; bank damage and reroll</li>
 </ul>
 
-<h1 id="roll-to-die">Roll to Die</h1>
+<h2 id="roll-to-die">Roll to Die</h2>
 <ul>
-  <li>Select an <strong><em>Attribute</em></strong></li>
-  <li>Roll single die
+  <li>Reroll your <strong><em>Swing</em></strong>
     <ul>
       <li><em>add attribute level</em></li>
     </ul>
   </li>
-  <li>Lock it in as your new <strong><em>Swing</em></strong></li>
 </ul>
 
-<h1 id="wound">Wound</h1>
+<h2 id="wound">Wound</h2>
 <ul>
-  <li>Select the most relevant <strong><em>Attribute</em></strong> to wound
+  <li>Select the most relevant <strong><em>Attribute</em></strong> <em>(defaults to <strong>Swing</strong>)</em>
     <ul>
-      <li><em>normally current <strong>Swing</strong></em></li>
-      <li><em>discard attribute die</em></li>
-      <li><em>becomes completely unusable until healed</em></li>
+      <li>discard <strong><em>Attribute</em></strong> die</li>
+      <li><em>completely unusable until healed</em></li>
     </ul>
   </li>
   <li>Restore health to full</li>
+  <li>Select new <strong><em>Swing</em></strong></li>
   <li><strong>+1 experience</strong></li>
-  <li>Exit the scene?</li>
 </ul>
 
-<h2 id="deaths-door">Death’s Door</h2>
+<h3 id="deaths-door-last-attribute">Death’s Door <em>(last attribute)</em></h3>
 <ul>
-  <li>5 health</li>
-  <li>Single colourless attribute</li>
   <li><strong>+1 experience</strong></li>
   <li><strong>+2 experience / hit survived</strong></li>
-  <li>Can’t run</li>
   <li>Character deleted if health reaches 0</li>
+  <li>Can’t run</li>
 </ul>
 
             </div>
         </main>
+        <script type="text/javascript" defer>
+            document.querySelectorAll('input[type="checkbox"]')
+            .forEach(checkbox => checkbox.removeAttribute('disabled'))
+        </script>
     </body>
 </html>
 

@@ -278,7 +278,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll
-  minima
   wdm
   webrick
 

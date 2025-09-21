@@ -2,6 +2,9 @@
 <html lang="en">
     <head>
         {%- include head.html -%}
+        <style>
+            ul ul {margin-bottom: 0;}
+        </style>
     </head>
 
     <body>
@@ -10,6 +13,10 @@
                 {{ content }}
             </div>
         </main>
+        <script type="text/javascript" defer>
+            document.querySelectorAll('input[type="checkbox"]')
+            .forEach(checkbox => checkbox.removeAttribute('disabled'))
+        </script>
     </body>
 </html>
 
