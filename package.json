@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && rm -r dist/_site && rm -rf dist/.jekyll-cache",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
