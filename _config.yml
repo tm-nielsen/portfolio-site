@@ -4,9 +4,6 @@ plugins:
 minima:
   skin: auto
 
-exclude:
-  - game_info
-
 defaults:
   - 
     scope:
