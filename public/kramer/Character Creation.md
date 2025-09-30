@@ -1,10 +1,23 @@
 # Character Creation
+- [ ] Connection to the College
 - [ ] Attributes:
 	- [ ] ???
 	- [ ] ???
 	- [ ] ???
 - [ ] Name + Pronouns
-- [ ] Connection to the College
+
+## Backgrounds
+One way or another, your character needs to be at Kramer County Community College. While any halfway plausible explanation you might think of is valid, you can also roll for a general character background. *(or just something to use as a starting point)*
+
+Pick a category *(or roll 1d8)*, then roll 1d8 to select a discipline.
+
+<ol>
+{% for category in site.data.kramer.backgrounds %}
+    <li>
+        {% include detail-list.html title=category.title items=category.items %}
+    </li>
+{% endfor %}
+</ol>
 
 ## Attributes
 > Every character consists of three unique stats, each with a name and a colour. These ***Attributes*** are your character's core personality traits, convictions, features, and interests.
