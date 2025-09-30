@@ -14,7 +14,7 @@ roles:
 ---
 
 # About
-Made for the 2025 Alberta Game Jam.
+My 30th jam game, made for the 2025 Alberta Game Jam.
 
 Spent a weekend screeching monkey noises into my laptop so that you could too.
 
