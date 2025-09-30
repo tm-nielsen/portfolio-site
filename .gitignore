@@ -25,5 +25,7 @@ dist-ssr
 
 # Jekyll
 public/.jekyll-cache
+public/.jekyll-metadata
+public/.sass-cache/
 public/_site
 public/Gemfile.lock
