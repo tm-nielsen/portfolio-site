@@ -16,7 +16,7 @@
                 checkbox => {
                     checkbox.removeAttribute('disabled')
                     
-                    let cookieLabel = checkbox.parentElement.textContent
+                    let cookieLabel = checkbox.parentElement.textContent.trim()
                     cookieStore.get(cookieLabel).then(
                         cookie => checkbox.checked = cookie
                     )
@@ -30,7 +30,7 @@
             document.querySelectorAll('input[type="text"]')
             .forEach(
                 input => {
-                    let cookieLabel = input.parentElement.textContent
+                    let cookieLabel = input.parentElement.textContent.trim()
                     cookieStore.get(cookieLabel).then(
                         cookie => {
                             if (cookie) input.defaultValue = cookie.value
