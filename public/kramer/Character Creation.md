@@ -1,9 +1,8 @@
 # Character Creation
 - [ ] Connection to the College
-- [ ] Attributes:
-	- [ ] 1
-	- [ ] 2
-	- [ ] 3
+- <label>Attribute 1<input type="text"/></label>
+- <label>Attribute 2<input type="text"/></label>
+- <label>Attribute 3<input type="text"/></label>
 - [ ] Name + Pronouns
 
 ## Backgrounds

@@ -29,6 +29,22 @@
                     }
                 }
             )
+
+            document.querySelectorAll('input[type="text"]')
+            .forEach(
+                input => {
+                    let cookieLabel = input.parentElement.textContent
+                    cookieStore.get(cookieLabel).then(
+                        cookie => {
+                            if (cookie) input.defaultValue = cookie.value
+                        }
+                    )
+                    input.onchange = event => {
+                        let value = event.target.value
+                        cookieStore.set(cookieLabel, String(value))
+                    }
+                }
+            )
         </script>
     </body>
 </html>
