@@ -12,7 +12,7 @@ These names are critically important, as all three represent your character enti
 Whatever you choose, have a clear idea of what these ***Attributes*** represent, and how to communicate that with your facilitator as needed.  
 *The name of an attribute is permanent and cannot be changed without undergoing significant narrative and mechanical character growth.*
 
-### Colours <img src="colour words.png" align="right" style="max-height: 12rem;" />
+### Colours<img src="colour words.png" align="right" style="max-height: 12rem;" />
 ***Attribute*** colours are entirely vibe-based, though a rough guide is provided in the *Colour Words* graphic. Each ***Attribute*** must be a different colour. Attempting to balance or concentrate a character around the wheel may help guide their formation, but take care to avoid using one of the guiding colour words as an ***Attribute***. While allowed, you won't have much fun playing a boring character!
 
 ### Levels
