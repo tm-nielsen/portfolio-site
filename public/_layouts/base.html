@@ -15,7 +15,20 @@
         </main>
         <script type="text/javascript" defer>
             document.querySelectorAll('input[type="checkbox"]')
-            .forEach(checkbox => checkbox.removeAttribute('disabled'))
+            .forEach(
+                checkbox => {
+                    checkbox.removeAttribute('disabled')
+                    
+                    let cookieLabel = checkbox.parentElement.textContent
+                    cookieStore.get(cookieLabel).then(
+                        cookie => checkbox.checked = cookie
+                    )
+                    checkbox.onchange = event => {
+                        let value = event.target.checked
+                        cookieStore.set(cookieLabel, value)
+                    }
+                }
+            )
         </script>
     </body>
 </html>

@@ -1,9 +1,9 @@
 # Character Creation
 - [ ] Connection to the College
 - [ ] Attributes:
-	- [ ] ???
-	- [ ] ???
-	- [ ] ???
+	- [ ] 1
+	- [ ] 2
+	- [ ] 3
 - [ ] Name + Pronouns
 
 ## Backgrounds
