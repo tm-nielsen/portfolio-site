@@ -41,7 +41,7 @@ In other situations, you may simply roll against a static threshold determined b
 #### Clashes
 If you ***Roll to Do*** using a die the same colour as your target's current ***Swing***, it becomes a clash.
 - A successful attack deals double damage.
-- A successful defence grants a free action as a counter.
+- A successful defence deals normal damage.
 - A tie banks the damage and prompts a reroll. This banked damage will be dealt to the losing party along with the value of the winning roll.
 	- *Damage banked by successive tied clashes can stack indefinitely.*
 

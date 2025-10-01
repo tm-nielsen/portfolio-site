@@ -7,7 +7,7 @@
 
 ### Clash *(same colour dice)*
 - Success -> double damage
-- Failure -> free action for target
+- Failure -> take damage
 - Tie -> bank damage and reroll
 
 ## Roll to Die
