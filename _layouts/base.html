@@ -2,9 +2,6 @@
 <html lang="en">
     <head>
         {%- include head.html -%}
-        <style>
-            ul ul {margin-bottom: 0;}
-        </style>
     </head>
 
     <body>
@@ -15,7 +12,36 @@
         </main>
         <script type="text/javascript" defer>
             document.querySelectorAll('input[type="checkbox"]')
-            .forEach(checkbox => checkbox.removeAttribute('disabled'))
+            .forEach(
+                checkbox => {
+                    checkbox.removeAttribute('disabled')
+                    
+                    let cookieLabel = checkbox.parentElement.textContent.trim()
+                    cookieStore.get(cookieLabel).then(
+                        cookie => checkbox.checked = cookie
+                    )
+                    checkbox.onchange = event => {
+                        let value = event.target.checked
+                        cookieStore.set(cookieLabel, value)
+                    }
+                }
+            )
+
+            document.querySelectorAll('input[type="text"]')
+            .forEach(
+                input => {
+                    let cookieLabel = input.parentElement.textContent.trim()
+                    cookieStore.get(cookieLabel).then(
+                        cookie => {
+                            if (cookie) input.defaultValue = cookie.value
+                        }
+                    )
+                    input.onchange = event => {
+                        let value = event.target.value
+                        cookieStore.set(cookieLabel, String(value))
+                    }
+                }
+            )
         </script>
     </body>
 </html>
