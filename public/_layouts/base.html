@@ -11,12 +11,14 @@
             </div>
         </main>
         <script type="text/javascript" defer>
-            document.querySelectorAll('input[type="checkbox"]')
-            .forEach(
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]')
+            const textInputs = document.querySelectorAll('input[type="text"]')
+
+            checkboxes.forEach(checkbox => checkbox.removeAttribute('disabled'))
+
+            checkboxes.forEach(
                 checkbox => {
-                    checkbox.removeAttribute('disabled')
-                    
-                    let cookieLabel = checkbox.parentElement.textContent.trim()
+                    const cookieLabel = checkbox.parentElement.textContent.trim()
                     cookieStore.get(cookieLabel).then(
                         cookie => {
                             if(cookie)
@@ -30,10 +32,9 @@
                 }
             )
 
-            document.querySelectorAll('input[type="text"]')
-            .forEach(
+            textInputs.forEach(
                 input => {
-                    let cookieLabel = input.parentElement.textContent.trim()
+                    const cookieLabel = input.parentElement.textContent.trim()
                     cookieStore.get(cookieLabel).then(
                         cookie => {
                             if (cookie)
