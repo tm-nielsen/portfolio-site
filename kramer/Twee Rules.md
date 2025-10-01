@@ -12,7 +12,7 @@ These names are critically important, as all three represent your character enti
 Whatever you choose, have a clear idea of what these ***Attributes*** represent, and how to communicate that with your facilitator as needed.  
 *The name of an attribute is permanent and cannot be changed without undergoing significant narrative and mechanical character growth.*
 
-### Colours <img src="colour words.png" align="right" style="max-height: 12rem;" />
+### Colours<img src="colour words.png" align="right" style="max-height: 12rem;" />
 ***Attribute*** colours are entirely vibe-based, though a rough guide is provided in the *Colour Words* graphic. Each ***Attribute*** must be a different colour. Attempting to balance or concentrate a character around the wheel may help guide their formation, but take care to avoid using one of the guiding colour words as an ***Attribute***. While allowed, you won't have much fun playing a boring character!
 
 ### Levels
@@ -41,7 +41,7 @@ In other situations, you may simply roll against a static threshold determined b
 #### Clashes
 If you ***Roll to Do*** using a die the same colour as your target's current ***Swing***, it becomes a clash.
 - A successful attack deals double damage.
-- A successful defence grants a free action as a counter.
+- A successful defence deals normal damage.
 - A tie banks the damage and prompts a reroll. This banked damage will be dealt to the losing party along with the value of the winning roll.
 	- *Damage banked by successive tied clashes can stack indefinitely.*
 
