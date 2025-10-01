@@ -18,7 +18,10 @@
                     
                     let cookieLabel = checkbox.parentElement.textContent.trim()
                     cookieStore.get(cookieLabel).then(
-                        cookie => checkbox.checked = cookie
+                        cookie => {
+                            if(cookie)
+                            checkbox.checked = cookie.value === 'true'
+                        }
                     )
                     checkbox.onchange = event => {
                         let value = event.target.checked
@@ -33,7 +36,8 @@
                     let cookieLabel = input.parentElement.textContent.trim()
                     cookieStore.get(cookieLabel).then(
                         cookie => {
-                            if (cookie) input.defaultValue = cookie.value
+                            if (cookie)
+                            input.defaultValue = cookie.value
                         }
                     )
                     input.onchange = event => {
