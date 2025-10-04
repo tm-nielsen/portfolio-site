@@ -8,7 +8,7 @@ body {
   --accent-colour-faded: #c9b;
 
   display: flex;
-  margin: 2vw 2.5vw 0;
+  padding: 2vw 2.5vw;
 
   background-color: var(--bg-colour);
   color: var(--main-colour);
@@ -23,36 +23,22 @@ body {
 }
 
 main {
-  max-width: 95vw;
+  max-width: min(1080px, 95vw);
   margin: auto;
-  padding: 0.5em 0;
 }
 
 h1 {
-  margin: 0em auto;
   text-shadow: 0.1em 0.15em 2px black;
 }
-h2 {
-  margin: 1em auto 0em;
-}
-h3 {
-  margin: 1em 2em 0;
-}
 
-p {
-  margin: auto;
-  padding: 0.25em 1em;
-}
-
-sub {
-  color: var(--main-colour-faded);
+ul, ol {
+  padding-left: 2em;
 }
 
 a{
-  padding: 0 1em;
+  color: var(--accent-colour);
   text-decoration: underline dashed;
   font-weight: bold;
-  color: var(--accent-colour);
 }
 a:visited{
   color: var(--accent-colour-faded);
@@ -62,6 +48,6 @@ a:hover{
 }
 
 img{
-  margin: auto;
   height: fit-content;
+  margin: auto;
 }
