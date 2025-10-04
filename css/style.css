@@ -1,4 +1,4 @@
-body{
+body {
   --bg-colour: #2a2d34;
   --main-colour: #fff;
   --accent-colour: #fae;
@@ -22,32 +22,30 @@ body{
   src: url(../assets/DMSans.ttf);
 }
 
-div{
-  display: flex;
-  flex-direction: column;
+main {
   max-width: 95vw;
-  height: fit-content;
   margin: auto;
   padding: 0.5em 0;
-
-  justify-content: space-around;
 }
 
-h1{
+h1 {
   margin: 0em auto;
   text-shadow: 0.1em 0.15em 2px black;
 }
-
-h2{
+h2 {
   margin: 1em auto 0em;
 }
-h3{
+h3 {
   margin: 1em 2em 0;
 }
 
-p{
+p {
   margin: auto;
   padding: 0.25em 1em;
+}
+
+sub {
+  color: var(--main-colour-faded);
 }
 
 a{
@@ -66,48 +64,4 @@ a:hover{
 img{
   margin: auto;
   height: fit-content;
-}
-
-ul{
-  margin: 0;
-}
-
-.flex{
-  display: flex;
-}
-.row{
-  flex-direction: row;
-}
-.column{
-  flex-direction: column;
-}
-
-.centred-text{
-  margin-inline: auto;
-  text-align: center;
-}
-
-.subscript{
-  margin: 0 auto 1em;
-  color: var(--main-colour-faded);
-}
-
-.flat {
-  margin: 0;
-  padding: 0;
-}
-
-.flat-list {
-  list-style: none;
-  padding: 0;
-}
-
-.flat-top {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.flat-bottom {
-  margin-bottom: 0;
-  padding-bottom: 0;
 }

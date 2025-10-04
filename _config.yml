@@ -10,6 +10,8 @@ defaults:
       path: ""
     values:
       layout: base
+      title: Twig Site
+      description: I make video games.
   -
     scope:
       path: kramer
