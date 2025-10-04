@@ -35,6 +35,15 @@ ul, ol {
   padding-left: 2em;
 }
 
+blockqoute, sub {
+  color: var(--main-colour-faded);
+}
+blockquote {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 2px solid;
+}
+
 a{
   color: var(--accent-colour);
   text-decoration: underline dashed;
