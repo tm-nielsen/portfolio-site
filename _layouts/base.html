@@ -1,51 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        {%- include head.html -%}
-    </head>
-
+    <head>{%- include head.html -%}</head>
     <body>
-        <main>
-            {{ content }}
-        </main>
-        <script type="text/javascript" defer>
-            const checkboxes = document.querySelectorAll('input[type="checkbox"]')
-            const textInputs = document.querySelectorAll('input[type="text"]')
-
-            checkboxes.forEach(checkbox => checkbox.removeAttribute('disabled'))
-
-            checkboxes.forEach(
-                checkbox => {
-                    const cookieLabel = checkbox.parentElement.textContent.trim()
-                    cookieStore.get(cookieLabel).then(
-                        cookie => {
-                            if(cookie)
-                            checkbox.checked = cookie.value === 'true'
-                        }
-                    )
-                    checkbox.onchange = event => {
-                        let value = event.target.checked
-                        cookieStore.set(cookieLabel, value)
-                    }
-                }
-            )
-
-            textInputs.forEach(
-                input => {
-                    const cookieLabel = input.parentElement.textContent.trim()
-                    cookieStore.get(cookieLabel).then(
-                        cookie => {
-                            if (cookie)
-                            input.defaultValue = cookie.value
-                        }
-                    )
-                    input.onchange = event => {
-                        let value = event.target.value
-                        cookieStore.set(cookieLabel, String(value))
-                    }
-                }
-            )
-        </script>
+        <main>{{ content }}</main>
+        <script src="/scripts/input_cookies.js" defer></script>
     </body>
 </html>
 
