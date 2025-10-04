@@ -1,3 +1,7 @@
+---
+permalink: :path/system
+---
+
 # Twee
 is a character-rich story-focused de-make of the [***Sentiment***](https://www.patreon.com/sentimentttrpg) ttrpg system.
 

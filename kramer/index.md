@@ -6,8 +6,8 @@ layout: base
 A high lethality sitcom role-playing game orbiting *Kramer County Community College*, players navigate silly situations and awkward social dynamics while prodded by a facilitator. Character and narrative are centred over mechanics in this laughs-first open table campaign.  
 
 ## Getting Started
-- [ ] [Create a Character](Character Creation)
-- [ ] Read over the [System Rules](Twee Rules)
+- [ ] [Create a Character](character-creation)
+- [ ] Read over the [System Rules](system)
 - [ ] Schedule a session
     - [ ] find 1-3 other players
     - [ ] confirm with facilitator
@@ -19,10 +19,10 @@ A high lethality sitcom role-playing game orbiting *Kramer County Community Coll
 *All gameplay materials will be provided.*
 
 ## Resources
-- [Character Creation](Character Creation) *(~3 min + time to stew)*
-- [System Rules](Twee Rules) *(~6 min)*
-    - [Quick Reference](Twee Quick Reference) *(~1 min)*
-    - [Example of Play](Play Example) *(~4 min)*
+- [Character Creation](character-creation) *(~3 min + time to stew)*
+- [System Rules](system) *(~6 min)*
+    - [Quick Reference](system-reference) *(~1 min)*
+    - [Example of Play](play-example) *(~4 min)*
 - [Character Sheet](character sheet.png) *(2 s)*
 
 ## Scheduling

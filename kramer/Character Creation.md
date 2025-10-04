@@ -1,3 +1,7 @@
+---
+permalink: :path/character-creation
+---
+
 # Character Creation
 - [ ] Connection to the College
 - <label>Attribute 1: <input type="text"/></label>
@@ -18,18 +22,18 @@ Pick a category *(or roll 1d8)*, then roll 1d8 to select a discipline.
 {% endfor %}
 </ol>
 
-## [Attributes](Twee Rules#attributes)
+## [Attributes](system#attributes)
 > Every character consists of three unique stats, each with a name and a colour. These ***Attributes*** are your character's core personality traits, convictions, features, and interests.
 
 To create your character, you must invent and name these three ***Attributes***.
 
-### [Attribute Names](Twee Rules#names)
+### [Attribute Names](system#names)
 > You may name ***Attributes*** in any way, from 'Crystal Girlie' to 'Beatboxing' to 'My old Co-Worker Brendan'. Poetry, Unicode characters, drawings, or anything else you can think of to meaningfully represent an aspect of your character are also valid.
 
 > These names are critically important, as all three represent your character entirely!
 > Whatever you choose, have a clear idea of what these ***Attributes*** represent, and how to communicate that with your facilitator as needed.
 
-### [Attribute Colours](Twee Rules#colours) <img src="colour words.png" align="right" style="max-height: 12rem;" />
+### [Attribute Colours](system#colours) <img src="colour words.png" align="right" style="max-height: 12rem;" />
 > ***Attribute*** colours are entirely vibe-based, though a rough guide is provided in the *Colour Words* graphic. Each ***Attribute*** must be a different colour. Attempting to balance or concentrate a character around the wheel may help guide their formation, but take care to avoid using one of the guiding colour words as an ***Attribute***. While allowed, you won't have much fun playing a boring character!
 
 ## Guiding Questions

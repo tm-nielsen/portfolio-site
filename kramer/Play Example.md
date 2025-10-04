@@ -1,3 +1,7 @@
+---
+permalink: :path/play-example
+---
+
 # Example of Play
 > Moving Day!  
 > You found this place dirt cheap online and signed a lease without looking to hard.
