@@ -7,8 +7,7 @@ body {
   --main-colour-faded: #ccc;
   --accent-colour-faded: #c9b;
 
-  display: flex;
-  padding: 2vw 2.5vw;
+  padding: 2vw 4vw;
 
   background-color: var(--bg-colour);
   color: var(--main-colour);
@@ -33,6 +32,16 @@ h1 {
 
 ul, ol {
   padding-left: 2em;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+
+  padding: 0;
+  gap: 2em;
+
+  li { list-style: none; }
 }
 
 label {
