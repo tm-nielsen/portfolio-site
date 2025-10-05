@@ -1,3 +1,6 @@
+exclude:
+  - serve.sh
+
 defaults:
   - 
     scope:
