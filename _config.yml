@@ -1,5 +1,6 @@
 exclude:
   - serve.sh
+  - Gemfile*
 
 defaults:
   - 
