@@ -4,7 +4,8 @@ const textInputs = document.querySelectorAll('input[type="text"]')
 checkboxes.forEach(checkbox => checkbox.removeAttribute('disabled'))
 
 function bindCookieMethods(inputElement, setMethod, getMethod) {
-    const cookieLabel = inputElement.parentElement.textContent.trim()
+    const labelText = inputElement.parentElement.textContent
+    const cookieLabel = labelText.split('\n')[0].trim()
     cookieStore.get(cookieLabel).then(
         cookie => {
             if(cookie) setMethod(cookie.value) 
