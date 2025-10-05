@@ -17,7 +17,7 @@ Pick a category *(or roll 1d8)*, then roll 1d8 to select a discipline.
 <ol>
 {% for category in site.data.kramer.backgrounds %}
     <li>
-        {% include detail-list.html title=category.title items=category.items %}
+        {% include list-details.html summary=category.title items=category.items %}
     </li>
 {% endfor %}
 </ol>
