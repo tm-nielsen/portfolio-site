@@ -33,7 +33,8 @@ To create your character, you must invent and name these three ***Attributes***.
 > These names are critically important, as all three represent your character entirely!
 > Whatever you choose, have a clear idea of what these ***Attributes*** represent, and how to communicate that with your facilitator as needed.
 
-### [Attribute Colours](system#colours) <img src="colour words.png" align="right" style="max-height: 12rem;" />
+
+### [Attribute Colours](system#colours) {% include image.html src="colour words.png" width="12rem" max-width="40vw" align="right" %}
 > ***Attribute*** colours are entirely vibe-based, though a rough guide is provided in the *Colour Words* graphic. Each ***Attribute*** must be a different colour. Attempting to balance or concentrate a character around the wheel may help guide their formation, but take care to avoid using one of the guiding colour words as an ***Attribute***. While allowed, you won't have much fun playing a boring character!
 
 ## Guiding Questions
