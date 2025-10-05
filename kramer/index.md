@@ -22,7 +22,7 @@ A high lethality sitcom role-playing game orbiting *Kramer County Community Coll
 - [Character Creation](character-creation) *(~3 min + time to stew)*
 - [System Rules](system) *(~6 min)*
     - [Quick Reference](system-reference) *(~1 min)*
-    - [Example of Play](play-example) *(~4 min)*
+    - [Example of Play](example) *(~4 min)*
 - [Character Sheet](character sheet.png) *(2 s)*
 
 ## Scheduling

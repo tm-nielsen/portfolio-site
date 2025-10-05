@@ -1,5 +1,5 @@
 ---
-permalink: :path/play-example
+permalink: :path/example
 ---
 
 # Example of Play
@@ -33,7 +33,7 @@ Pulling out a small mirror and dirty jar from his duffel bag, Darius just gets s
 
 > Give me a [Roll to Do][Do]
 
-*[Rolls to Do][Do]*  
+**[Rolls to Do][Do]*  
 Well I'm gonna have to use my red for this, and that's a 3.
 
 > Okay, so that's decent.  
@@ -46,7 +46,7 @@ Well I'm gonna have to use my red for this, and that's a 3.
 > How are you feeling?
 
 ## Elina
-### *[Rolls to Discern][Discern]
+**[Rolls to Discern][Discern]*  
 My green was highest. I'm looking forward to this new chapter of my life, ready to take on the challenges presented to me.
 
 > It was clear during the walkthrough that this place is pretty bare, what all did you bring to move in?  
