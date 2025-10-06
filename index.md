@@ -12,7 +12,7 @@
 ## [Games](/games)
 ## Featured Projects
 <ul>
-{% for project in site.data.featured_projects %}
-    {% include featured-project.html project=project %}
+{% for item in site.data.featured %}
+    {% include link-item.html %}
 {% endfor %}
 </ul>
