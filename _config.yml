@@ -3,17 +3,20 @@ exclude:
   - Gemfile*
 
 defaults:
-  - 
-    scope:
+  - scope:
       path: ""
     values:
-      layout: base
+      layout: page
       title: Twig Site
       description: I make video games.
-  -
-    scope:
+
+  - scope:
+      path: projects
+    values:
+      project: true
+
+  - scope:
       path: kramer
     values:
-      layout: kramer-page
       title: Kramer County
       description: Resources for a high lethality sitcom role-playing game.

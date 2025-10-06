@@ -34,14 +34,22 @@ ul, ol {
   padding-left: 2em;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
+nav {
+  ul, ol {
+    display: flex;
+    gap: 2em;
+  }
 
-  padding: 0;
-  gap: 2em;
+  ul {
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+  }
 
-  li { list-style: none; }
+  ol {
+    display: flex;
+    list-style: disclosure-closed;
+  }
 }
 
 label {

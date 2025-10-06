@@ -1,4 +1,5 @@
 ---
+layout: base
 ---
 
 # Twig <sub>(she/her)</sub>
