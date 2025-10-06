@@ -109,8 +109,8 @@ Oh she's already completely disregarded this man as a facet of the room.
 Almost a force of nature, he's just going to be there and she's already living with it.
 
 
-[Do]: Twee%20Rules#roll-to-do
-[Die]: Twee%20Rules#roll-to-die
-[Clash]: Twee%20Rules#clashes
-[Discern]: Twee%20Rules#roll-to-discern
-[Wound]: Twee%20Rules#health-damage-and-wounds
+[Do]: system#roll-to-do
+[Die]: system#roll-to-die
+[Clash]: system#clashes
+[Discern]: system#roll-to-discern
+[Wound]: system#health-damage-and-wounds
