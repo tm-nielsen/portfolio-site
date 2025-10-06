@@ -1,4 +1,9 @@
-# Curl!
+---
+permalink: :path/curl
+title: Curl!
+description: A space themed curling video game you can play with your thoughts.
+---
+
 [Curl is a video game that can be played with a brain computer interface][0]. This enables people with limited reliable control of their muscles and bodies to play. The project implements an integrated training scenario along with menus and gameplay built around switch access.
 
 ## Game Jam

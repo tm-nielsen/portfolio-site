@@ -1,4 +1,9 @@
-# BCI Game Jam 2022
+---
+permalink: :path/bci-game-jam-2022
+title: BCI Game Jam 2022
+description: My work on the 2022 BCI Game Jam and subsequent contract.
+---
+
 ## What I Made
 There was another BCI game jam in 2022, the same event where Curl started. I was there partly involved with the organizers but also hoping to participate. I gave a short talk on how I'd integrated BCI with Curl, showed some people the game, and helped facilitate an online match between a player in Calgary and Edmonton at different jam sites.
 

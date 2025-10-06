@@ -1,4 +1,9 @@
-# Web Projects
+---
+permalink: :path/web-projects
+title: Web Projects
+description: Some of the websites and services I've built.
+---
+
 Along with my games, I've made a few websites. Purposes vary, but I built all of them in React because I learned that for my University capstone project and it worked to I kept using it. Back ends are similar but for Express.
 
 ## Curl! Website
