@@ -22,7 +22,7 @@ body {
 }
 
 main {
-  width: min(1080px, 95vw);
+  width: min(min(1080px, 95vw), 100%);
   margin: auto;
 }
 
