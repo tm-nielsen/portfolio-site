@@ -1,5 +1,5 @@
 ---
-layout: base
+project: true
 ---
 
 # Kramer County
