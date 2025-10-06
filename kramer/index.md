@@ -1,8 +1,8 @@
 ---
 project: true
+title: Kramer County
 ---
 
-# Kramer County
 A high lethality sitcom role-playing game orbiting *Kramer County Community College*, players navigate silly situations and awkward social dynamics while prodded by a facilitator. Character and narrative are centred over mechanics in this laughs-first open table campaign.  
 
 ## Getting Started
@@ -21,8 +21,8 @@ A high lethality sitcom role-playing game orbiting *Kramer County Community Coll
 ## Resources
 - [Character Creation](character-creation) *(~3 min + time to stew)*
 - [System Rules](system) *(~6 min)*
-    - [Quick Reference](system-reference) *(~1 min)*
-    - [Example of Play](example) *(~4 min)*
+    - [Quick Reference](system/reference) *(~1 min)*
+    - [Example of Play](system/example) *(~4 min)*
 - [Character Sheet](character sheet.png) *(2 s)*
 
 ## Scheduling

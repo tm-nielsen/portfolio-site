@@ -1,8 +1,8 @@
 ---
-permalink: :path/system-reference
+permalink: :path/reference
+title: Twee Quick Reference
 ---
 
-# Twee Quick Reference
 ## Roll to Do:
 - Roll all ***Attribute*** dice
 - Select one to act with

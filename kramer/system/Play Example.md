@@ -1,8 +1,8 @@
 ---
 permalink: :path/example
+title: Example of Play
 ---
 
-# Example of Play
 > Moving Day!  
 > You found this place dirt cheap online and signed a lease without looking to hard.
 
@@ -109,8 +109,8 @@ Oh she's already completely disregarded this man as a facet of the room.
 Almost a force of nature, he's just going to be there and she's already living with it.
 
 
-[Do]: system#roll-to-do
-[Die]: system#roll-to-die
-[Clash]: system#clashes
-[Discern]: system#roll-to-discern
-[Wound]: system#health-damage-and-wounds
+[Do]: .#roll-to-do
+[Die]: .#roll-to-die
+[Clash]: .#clashes
+[Discern]: .#roll-to-discern
+[Wound]: .#health-damage-and-wounds

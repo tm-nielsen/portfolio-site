@@ -2,7 +2,8 @@
 layout: base
 ---
 
-{% if page.dir != page.url %}
+{%- assign path_length = page.dir | split: "/" | size -%}
+{% if page.dir != page.url or path_length > 2 %}
 <hr/>
 <nav>
     <ol>

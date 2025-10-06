@@ -1,9 +1,12 @@
 ---
-permalink: :path/system
+permalink: :path/
+title: Twee
 ---
 
-# Twee
 is a character-rich story-focused de-make of the [***Sentiment***](https://www.patreon.com/sentimentttrpg) ttrpg system.
+
+- [Quick Reference](reference)
+- [Example of Play](example)
 
 ## Attributes
 Every character consists of three unique stats, each with a name and colour.  
@@ -16,7 +19,7 @@ These names are critically important, as all three represent your character enti
 Whatever you choose, have a clear idea of what these ***Attributes*** represent, and how to communicate that with your facilitator as needed.  
 *The name of an attribute is permanent and cannot be changed without undergoing significant narrative and mechanical character growth.*
 
-### Colours {% include image.html src="colour words.png" width="12rem" max-width="40vw" align="right" %}
+### Colours {% include image.html src="/kramer/colour words.png" width="12rem" max-width="40vw" align="right" %}
 ***Attribute*** colours are entirely vibe-based, though a rough guide is provided in the *Colour Words* graphic. Each ***Attribute*** must be a different colour. Attempting to balance or concentrate a character around the wheel may help guide their formation, but take care to avoid using one of the guiding colour words as an ***Attribute***. While allowed, you won't have much fun playing a boring character!
 
 ### Levels

@@ -1,8 +1,8 @@
 ---
 permalink: :path/character-creation
+title: Character Creation
 ---
 
-# Character Creation
 - [ ] Connection to the College
 - <label>Attribute 1: <input type="text"/></label>
 - <label>Attribute 2: <input type="text"/></label>
