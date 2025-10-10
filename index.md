@@ -13,7 +13,7 @@ layout: base
 ## [Games](/games)
 ## Featured Projects
 <ul>
-{% for item in site.data.featured %}
+{% for item in site.data.featured -%}
     {% include link-item.html %}
-{% endfor %}
+{% endfor -%}
 </ul>
