@@ -1,7 +1,18 @@
 .game-capsule {
     height: 12em;
     max-height: 30vw;
-    margin: 0 5vw 2vw;
+
+    margin: 0 5vw 1em;
+
+    @media (width <= 480px) {
+        width: 80%;
+        height: auto;
+        max-height: none;
+
+        float: none;
+        display: block;
+        margin: auto;
+    }
 }
 
 .play-link {
