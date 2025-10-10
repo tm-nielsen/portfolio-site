@@ -22,18 +22,19 @@ The game is genuinely evil.
 
 There are 19 different types of enemy tank including predictive shots, mortars, moles that cannot be hurt when burrowing beneath the ground, and the final type that will clear the entire screen with a massive laser if you spend more than three seconds in their line of sight. To (slightly) compensate for this there are 7 different player tanks, some of which are arguably a disadvantage, to which each level is assigned only one option.
 
-120 levels are split into 5 worlds, each with a boss.
-There is also a full sandbox level editor that unlocks tank types as you encounter them, which was actually made to aid level creation.
-There is a hardcore mode, where you have to get through every world without dying or your progress resets, and an arcade mode where you have to beat the whole game without dying.
-There is a independent timer for each level and collective timer.
-There is a death count.
-Beating a level without shooting gives you a special red star on that level.
-There is a specific setting to stop drawing the background, smearing the whole screen. Beating a level with this setting enabled gives you a special blue star.
-There is a setting that removes the rounded corners from some wall blocks which increases performance by 4x.
-Each tile in the level select screen has a little box in the corner that will pull up a preview of that level if you hover over it.
-There are 5 hidden minigames that can only be accessed by clicking on tiny obscure places in different menu screens.
+- 120 levels are split into 5 worlds, each with a boss.
+- Full sandbox level editor that unlocks tank types as you encounter them, which was actually made to aid level creation.
+- Hardcore mode, where you have to get through every world without dying or your progress resets, and an arcade mode where you have to beat the whole game without dying.
+- Independent timer for each level and collective timer.
+- Death count.
+- Beating a level without shooting gives you a special red star on that level.
+- Setting to stop drawing the background, smearing the whole screen. Beating a level with this setting enabled gives you a special blue star.
+- Setting that removes the rounded corners from some wall blocks which increases performance by 4x.
+- Each tile in the level select screen has a little box in the corner that will pull up a preview of that level if you hover over it.
+- 5 hidden minigames that can only be accessed by clicking on tiny obscure places in different menu screens.
 
 It is the foundation of my development philosophy and a treasured gem of my artistic output.
+
 It will be remade.
 
 ## What I Learned
