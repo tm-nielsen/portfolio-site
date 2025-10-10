@@ -11,7 +11,7 @@ roles:
  - coordination
 ---
 
-# About
+## About
 This was the first proper game I ever made.
 In my first year of university, as I exposed to the wonders of programming, I started to make random little games in a little program called Processing, an IDE and graphics library for Java. You could find worse ways to make a game. The thought of remaking Wii Tanks snowballed with more and more zany and sadistic ideas into a year long project and eventual steam release.
 
@@ -35,7 +35,7 @@ There are 5 hidden minigames that can only be accessed by clicking on tiny obscu
 It is the foundation of my development philosophy and a treasured gem of my artistic output.
 It will be remade.
 
-# What I Learned
+## What I Learned
 This project is largely how I learned to program, being naturally introduced to many of the fundamental and advanced concepts and patterns of software engineering. I genuinely feel like I skipped two years of my degree with this project, learning in class the name for ideas I was already familiar with. As such, the code is filled with beautiful and horrifying growing pains.
 
 All the UI is custom written and hardcoded.

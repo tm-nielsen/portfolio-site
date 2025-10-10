@@ -14,13 +14,13 @@ roles:
  - technical art
 ---
 
-# About
+## About
 Made for the 2025 Calgary Game Developers Association Arcade Game Jam.
 
 YOU CAN PLAY THIS NOW!
 I fixed it and it works now.
 
-# The Story
+## The Story
 This silly little game with garbage SEO is a perfect culmination of the artful and delicious idea stew resulting from the in person vomit funnel. This is a terrible name for a simple and effective collaborative conceptualization process I have been using for years now, most notably during game jams.
 
 Planning starts, from the theme, with pure slop. Random thoughts, word association, stupid jokes. Anything is allowed and encouraged except for well formed ideas. Garbage only. Once the stream of garbage starts to slow down, chunks start to form. Not fleshed out ideas, but pieces. Mechanics, themes, contexts. This progression happens naturally, but I find it very important to hold it off for a few minutes very intentionally to let things boil over. Just a bit. Then run around passing these rough ideas back and forth with all the silly little pre-formed groups to give that final stew a rich and bodied flavour.

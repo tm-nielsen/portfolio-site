@@ -17,10 +17,10 @@ roles:
  - coordination
 ---
 
-# About
+## About
 Clack is a juicy little video game video game made for the 2024 Calgary Game Developers Association Arcade Game Jam. It is also the third entry in the retrospective "Twig Goes Hard" trilogy of jam games, also including ET-Skate and Jugghoul.
 
-# The Journey
+## The Journey
 The point of the jam was to make little games that could and would actually be showcased on physical arcade machine throughout the city and at different events. We were given the theme: "coin-operated". Fairly strange as far as themes go, but I'm very happy with where I took it. Bouncing off other clumps in brainstorming, one main idea was reached: coins as health. Coins would also be necessary to attack. A sort of background currency. With [my favourite audio guy][0] on board remotely, we were too large of a group, so I split off from the wonderful people I drew these plans with to do my own thing.
 
 Working on my own project now, I came to two pillars. First, the image of throwing a coin and it bouncing around off enemies like pinball. Second, and only by the end of the first night, that I could simply make the character a stack of coins. Collecting a coin would make the stack bigger and throwing/spending a coin would diminish it. I was making Knack. This excited me.
@@ -37,13 +37,13 @@ Audio came in after the deadline but before the actual deadline of the live show
 
 Being my 20-something-ith game jam, knowing what I was doing, barely having to coordinate with a team, and sleeping only a few hours each night on site and going hard at it every waking hour, I had an abundance of time to playtest. This was an enormous boon. Playtesting is always important, but being able to do so much of it with so many different people shaped and improved the game significantly. I am very thankful to all the other on site jammers who contributed in this way.
 
-# What I Learned
+## What I Learned
 I kinda went off with this one. I used tools I already knew, implementing the same solutions to problems I've solved so many times already. Made art in ways I already know. Though no revelation, the project was another step forward in my design ability. The foremost consideration of an arcade game: unconventional controls, high-scores, grabbing attention, that special kind of looks easy but really grinds you down once you get going, calibrating a difficulty curve to accommodate a first playthrough and a twentieth. A very good fit for my direct, percussive inclinations.
 
-# The Future
+## The Future
 I am thankful to have received such a heartening wash of positive feedback for the project both at the jam and after. Such rave reviews 've got me thinking that maybe I should take this thing a little further. The game is fun, we had aught to make more of it.
 
-# Arcade Port
+## Arcade Port
 Following the jam, I implemented a number of refinements in preparation for the game's long term deployment on unmoderated cabinets. After drafting a proper plan for an extended production project, I dedicated a short sprint to this work. This largely consisted of visual or mechanical polish, with special attention paid to the proper function of the project on the cabinets. No playable content was added.
 
 On top of experience planning a project, this latest sprint was good practice in establishing modular and scalable solutions for a long term project.

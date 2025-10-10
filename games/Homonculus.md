@@ -14,12 +14,12 @@ roles:
  - modelling
 ---
 
-# About
+## About
 Something vague and obtuse made for the 2025 Queer Horror Jam; a properly conceptual piece.
 
 Though it retains my signature mechanical flair and a significant degree of polish, we ultimately set out to capture an imposed feeling of obligation, confusion, and ultimately frustration. I am quite happy with how it turned out.
 
-# The Story
+## The Story
 Back in march, [my sonic saviour][0] had found himself in a gap between projects, and reached out to myself and another experienced developer about seeing what we could do for a longer term jam. We settled on the initially suggested 2 month Queer Horror Jam, which was relevant to all involved.
 
 Without a theme, we riffed on an initial concept of an asexual dating simulator. A robot trying to figure out what all these weird, needy, and sensitive people want and how to navigate an encounter without hurting them or giving them the wrong idea.
@@ -35,7 +35,7 @@ Also a significant challenge to implement mechanically, but I got it sorted.
 
 Though [our man][0] on audio and writing had ample time, I was doing this in addition to full time work and normal life, which meant putting off a lot of things that I can finally get around to again now that the game is done. Ended up scrambling just a little bit, doing some of my best work at the last minute, as is typical, getting poses and animations in for all of the individual conversations and adding an actual ending to the game and everything.
 
-# My Creative Approach
+## My Creative Approach
 Appropriately, after publishing the game and submitting it the jam, our first comment was from someone who just didn't connect with the thing mechanically. I am very pleased to be in a place artistically that, though I can approach it with love, feedback like that seems irrelevant and a little silly.
 
 I don't make games for people to play.

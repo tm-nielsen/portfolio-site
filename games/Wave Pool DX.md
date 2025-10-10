@@ -10,18 +10,18 @@ roles:
  - design
 ---
 
-# About
+## About
 This project is a remake of a remake of a little toy I made years ago to see if I could.
 
-## Original project
+### Original project
 I had to take a wave physics course in my second year of University. This seeded a vision, which I manifested in that wonderful, terrible artistic birthplace of mine called Processing. A grid of dots distorted by waves.
 
 Poorly written and poorlier optimized, but properly expressed. You could right click to cycle between 3 modes. In the first mode, you could click to make a ripple. In the second, you could hold down to continuously make smaller ripples. These small ripples pleasantly mirrored the way that the surface of water parts and distorts around an object moving through it. The final mode would rapidly spawn ripples in random places throughout the grid, mimicking rainfall on a pond. It was a fun little project. However, it stuck with me. I kept it on my desktop for years and would just play with it sometimes.
 
-## The First Remake
+### The First Remake
 Years later, I remade the project in Monogame for a jam. This first remake is also up on my itch and thus on this page, too. I had lost the original and had been looking for an excuse to remake it for some time. A local student jam with the theme "recovery" was the perfect excuse. The project even gained new, musical life. Couldn't export to web though.
 
-## The Third Remake
+### The Third Remake
 I really wanted to get this project on web. It was prefect for that. Even on desktop, I had problems with window scaling that I never really addressed causing cropping issues that still bother me. It shouldn't be that hard to port it, right? I looked into other tools, but ultimately settled on raylib. If only I could manage to configure a proper C/C++ development setup on Windows. Hah!
 
 It wasn't that bad. Actually, with the help of a cool little thing called win64 devkit, it was actually very straightforward. A portable payload of all the compiler binaries I could need, precompiled libraries for web, and overall far better documentation to what I remember bouncing off of the last time I tried setting up raylib made the whole thing not only possible but relatively painless.
@@ -36,5 +36,5 @@ Building for web wasn't especially laborious so much as it is that one little th
 
 I am very satisfied with this project. Taking about two weeks overall, I think I managed to nurture the inkling of an idea into the zen little desktop buddy that it always deserved to be.
 
-# What I Learned
+## What I Learned
 This was a good refresher on C++, good software design, and setting up a development environment. Practice, also, in my artistic practice; following my thoughts around as a project informs itself.

@@ -11,8 +11,8 @@ roles:
  - animation
 ---
 
-# About
+## About
 A game about keeping cats in a circle on the ground. Made for the University of Alberta Games Den's Let's Jam Together.
 
-# What I Learned
+## What I Learned
 Just did art for this one, but I learned how hard and unnecessary it is to make animated eight directional sprites.
