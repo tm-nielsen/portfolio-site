@@ -1,0 +1,23 @@
+{%- assign path_length = page.dir | split: "/" | size -%}
+{% if page.dir != page.url or path_length > 2 %}
+<hr/>
+<nav>
+    <ol>
+    {%- assign path_parts = page.dir | split: "/" -%}
+    {%- assign total_path = "" -%}
+    {%- for part in path_parts -%}
+        {%- assign total_path = total_path | append: part | append: "/" -%}
+        {%- assign target_page = site.pages | where: "url", total_path | first %}
+        {%- unless total_path == "/" %}
+        <li>
+            {%- if target_page -%}
+            <a href="{{total_path}}">{{target_page.title}}</a>
+            {%- else -%}
+            {{part | capitalize}}
+            {%- endif -%}
+        </li>
+        {%- endunless -%}
+    {%- endfor %}
+    </ol>
+</nav>
+{% endif %}
