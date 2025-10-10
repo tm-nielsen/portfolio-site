@@ -22,7 +22,7 @@ Poorly written and poorlier optimized, but properly expressed. You could right c
 ### The First Remake
 Years later, I remade the project in Monogame for a jam. This first remake is also up on my itch and thus on this page, too. I had lost the original and had been looking for an excuse to remake it for some time. A local student jam with the theme "recovery" was the perfect excuse. The project even gained new, musical life. Couldn't export to web though.
 
-### The Third Remake
+### The Second Remake
 I really wanted to get this project on web. It was prefect for that. Even on desktop, I had problems with window scaling that I never really addressed causing cropping issues that still bother me. It shouldn't be that hard to port it, right? I looked into other tools, but ultimately settled on raylib. If only I could manage to configure a proper C/C++ development setup on Windows. Hah!
 
 It wasn't that bad. Actually, with the help of a cool little thing called win64 devkit, it was actually very straightforward. A portable payload of all the compiler binaries I could need, precompiled libraries for web, and overall far better documentation to what I remember bouncing off of the last time I tried setting up raylib made the whole thing not only possible but relatively painless.
