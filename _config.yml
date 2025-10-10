@@ -11,6 +11,11 @@ defaults:
       description: I make video games.
 
   - scope:
+      path: games
+    values:
+      layout: game
+
+  - scope:
       path: projects
     values:
       project: true

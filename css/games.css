@@ -1,0 +1,11 @@
+.game-capsule {
+    height: 12em;
+    max-height: 30vw;
+    margin: 0 5vw 2vw;
+}
+
+.play-link {
+    display: block;
+    font-size: 2em;
+    text-align: center;
+}
