@@ -1,1 +1,17 @@
-<img src="{{include.src}}" {% if include.align %} align="{{include.align}}" {% endif %} style="{% if include.width %} width: {{include.width}};{% endif %} {% if include.height %} height: {{include.height}};{% endif %} {% if include.max-width %} max-width: {{include.max-width}};{% endif %} {% if include.max-height %} max-height: {{include.max-height}};{% endif %}" />
+{% assign style = "" -%}
+{% if include.width -%}
+    {% assign style = style | append: "width: " | append: include.width | append: ";" -%}
+{% endif -%}
+{% if include.height -%}
+    {% assign style = style | append: "height: " | append: include.height | append: ";" -%}
+{% endif -%}
+{% if include.max-width -%}
+    {% assign style = style | append: "max-width: " | append: include.max-width | append: ";" -%}
+{% endif -%}
+{% if include.max-height -%}
+    {% assign style = style | append: "max-height: " | append: include.max-height | append: ";" -%}
+{%- endif -%}
+
+<img src="{{include.src}}"
+{%- if include.align %} align="{{include.align}}" {%- endif %}
+{%- unless style == "" %} style="{{style}}" {%- endunless %} />
