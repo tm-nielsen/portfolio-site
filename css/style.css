@@ -56,7 +56,7 @@ label {
   display: grid;
 }
 
-blockqoute, sub {
+blockquote, sub {
   color: var(--main-colour-faded);
 }
 blockquote {
