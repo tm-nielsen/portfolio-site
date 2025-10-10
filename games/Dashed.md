@@ -1,4 +1,5 @@
 ---
+permalink: :path/dashed
 title: Dashed
 static_cover_url: https://img.itch.zone/aW1nLzczOTE4NTAuZ2lm/315x250%23cm/MmN7B0.gif
 tags:

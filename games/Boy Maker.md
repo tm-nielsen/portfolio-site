@@ -1,4 +1,5 @@
 ---
+permalink: :path/boy-maker
 title: Boy Maker
 tools:
  - Godot

@@ -1,4 +1,5 @@
 ---
+permalink: :path/wave-pool-dx
 title: Wave Pool DX
 static_cover_url: https://img.itch.zone/aW1nLzE2NjM3NzI0LmdpZg==/315x250%23cm/In6zVL.gif
 tags:

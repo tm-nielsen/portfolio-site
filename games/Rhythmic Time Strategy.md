@@ -1,4 +1,5 @@
 ---
+permalink: :path/rhythmic-time-strategy
 title: Rhythmic Time Strategy
 tags:
  - jam

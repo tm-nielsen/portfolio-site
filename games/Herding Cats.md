@@ -1,4 +1,5 @@
 ---
+permalink: :path/herding-cats
 title: Herding Cats
 static_cover_url: https://img.itch.zone/aW1nLzQ1OTA4MzYuZ2lm/315x250%23cm/W3ZC9q.gif
 tags:

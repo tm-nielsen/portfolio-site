@@ -1,4 +1,5 @@
 ---
+permalink: :path/yut-yut
 title: YUT YUT
 tags:
  - fun

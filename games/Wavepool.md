@@ -1,4 +1,5 @@
 ---
+permalink: :path/wavepool
 title: Wavepool
 tags:
  - fun

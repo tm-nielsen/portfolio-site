@@ -1,4 +1,5 @@
 ---
+permalink: :path/badgergogo
 title: BadgerGoGo
 tags:
  - jam

@@ -1,4 +1,5 @@
 ---
+permalink: :path/howard
 title: Howard
 static_cover_url: https://img.itch.zone/aW1nLzcxMzM4NzkuZ2lm/315x250%23cm/%2F%2FPTaY.gif
 tags:

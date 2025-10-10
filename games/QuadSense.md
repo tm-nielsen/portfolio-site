@@ -1,4 +1,5 @@
 ---
+permalink: :path/quadsense
 title: QuadSense
 tags:
  - jam

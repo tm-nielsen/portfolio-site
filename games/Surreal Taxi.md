@@ -1,4 +1,5 @@
 ---
+permalink: :path/surreal-taxi
 title: Surreal Taxi
 tags:
  - jam

@@ -1,6 +1,7 @@
 ---
+permalink: :path/bulbys-domino-adventure
 title: Bulby's Domino Adventure
-cover_override: images/games/bulby_cover_override.png
+cover_override: /images/games/bulby_cover_override.png
 tags:
  - jam
 tools:

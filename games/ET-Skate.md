@@ -1,4 +1,5 @@
 ---
+permalink: :path/et-stake
 title: ET-Skate
 tags:
  - jam

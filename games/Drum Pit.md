@@ -1,4 +1,5 @@
 ---
+permalink: :path/drum-pit
 title: Drum Pit
 static_cover_url: https://img.itch.zone/aW1nLzc4ODkxNDguZ2lm/315x250%23cm/%2FSuKf2.gif
 tags:

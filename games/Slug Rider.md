@@ -1,4 +1,5 @@
 ---
+permalink: :path/slug-rider
 title: Slug Rider
 static_cover_url: https://img.itch.zone/aW1nLzY5Njk3NDQuZ2lm/315x250%23cm/jFUzfJ.gif
 tags:

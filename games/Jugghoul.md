@@ -1,4 +1,5 @@
 ---
+permalink: :path/jugghoul
 title: Jugghoul
 static_cover_url: https://img.itch.zone/aW1nLzE0ODc1NzEwLmdpZg==/315x250%23cm/pyz10L.gif
 tags:

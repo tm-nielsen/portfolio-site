@@ -1,4 +1,5 @@
 ---
+permalink: :path/skatboard-rat
 title: Skatboard Rat
 tags:
 tools:

@@ -1,5 +1,6 @@
 ---
-title: Trolley Problem
+permalink: :path/scat-pit
+title: Scat Pit
 tags:
  - jam
  - fun

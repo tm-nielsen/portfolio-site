@@ -1,4 +1,5 @@
 ---
+permalink: :path/trolley-problem
 title: Trolley Problem
 tags:
  - jam

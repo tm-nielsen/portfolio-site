@@ -1,4 +1,5 @@
 ---
+permalink: :path/kusa
 title: Kusa
 tags:
  - jam

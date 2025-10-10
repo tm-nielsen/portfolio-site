@@ -1,4 +1,5 @@
 ---
+permalink: :path/snail-bail
 title: Snail Bail
 tags:
  - jam

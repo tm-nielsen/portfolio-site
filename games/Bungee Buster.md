@@ -1,4 +1,5 @@
 ---
+permalink: :path/bungee-buster
 title: Bungee Buster
 tags:
  - jam

@@ -1,4 +1,5 @@
 ---
+permalink: :path/drawscii
 title: Drawscii
 tags:
  - jam

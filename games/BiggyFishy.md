@@ -1,4 +1,5 @@
 ---
+permalink: :path/biggy-fishy
 title: BiggyFishy
 tags:
  - jam

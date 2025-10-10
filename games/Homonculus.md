@@ -1,5 +1,6 @@
 ---
-title: Trolley Problem
+permalink: :path/homonculus
+title: Homonculus
 tags:
  - jam
 tools:

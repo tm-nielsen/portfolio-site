@@ -1,4 +1,5 @@
 ---
+permalink: :path/bow-practice
 title: Bow Practice
 static_cover_url: https://img.itch.zone/aW1nLzM3MjAzODYuZ2lm/315x250%23cm/7ItfBG.gif
 tags:
