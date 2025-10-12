@@ -1,0 +1,54 @@
+---
+permalink: /games/
+layout: base
+game: false
+---
+
+{%- assign game_pages = site.pages | where: "game", true -%}
+{%- assign tags = game_pages
+    | where_exp: "page", "page.tags"
+    | map: "tags" | uniq
+-%}
+
+<h1>Games</h1>
+<form>
+<fieldset>
+    <legend>Search and Filter</legend>
+    <label>
+        <input
+            id="search"
+            type="search" name="q"
+            placeholder="Search..."
+            maxlength="20"
+        />
+    </label>
+    <label>
+        Sort
+        <select name="sort" id="sort">
+            <option value="title" selected>title</option>
+            <option value="published_at">date</option>
+            <option value="views_count">views</option>
+            <option value="downloads_count">downloads</option>
+        </select>
+    </label>
+    <label>
+        Platform
+        <select name="platform" id="platform">
+            <option value="" selected>Any</option>
+            <option value="web">Browser</option>
+            <option value="windows">Windows</option>
+            <option value="osx">MacOS</option>
+            <option value="linux">Linux</option>
+        </select>
+    </label>
+    <label>
+        Tags
+        <select name="tags" id="tags" multiple>
+            <option value="">any</option>
+        {%- for tag in tags %}
+            <option value="{{tag}}">{{tag}}</option>
+        {%- endfor %}
+        </select>
+    </label>
+</fieldset>
+</form>
