@@ -4,6 +4,8 @@ layout: base
 game: false
 ---
 
+<link rel="stylesheet" href="/css/games.css" />
+
 {%- assign game_pages = site.pages | where: "game", true -%}
 {%- assign tags = game_pages
     | where_exp: "page", "page.tags"
@@ -27,7 +29,7 @@ game: false
             id="search"
             type="search" name="q"
             placeholder="Search..."
-            maxlength="20"
+            maxlength=8
         />
     </label>
 {% include select.md label="Sort" name="sort" items=site.data.sort_methods exclude_any=true %}
