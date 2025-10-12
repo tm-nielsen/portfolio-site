@@ -1,0 +1,11 @@
+- label: Browser
+  value: web
+
+- label: Windows
+  value: windows
+
+- label: MacOs
+  value: osx
+
+- label: Linux
+  value: linux

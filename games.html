@@ -9,6 +9,14 @@ game: false
     | where_exp: "page", "page.tags"
     | map: "tags" | uniq
 -%}
+{%- assign tools = game_pages
+    | where_exp: "page", "page.tools"
+    | map: "tools" | uniq
+-%}
+{%- assign roles = game_pages
+    | where_exp: "page", "page.roles"
+    | map: "roles" | uniq
+-%}
 
 <h1>Games</h1>
 <form>
@@ -22,34 +30,11 @@ game: false
             maxlength="20"
         />
     </label>
-    <label>
-        Sort
-        <select name="sort" id="sort">
-            <option value="title" selected>title</option>
-            <option value="published_at">date</option>
-            <option value="views_count">views</option>
-            <option value="downloads_count">downloads</option>
-        </select>
-    </label>
-    <label>
-        Platform
-        <select name="platform" id="platform">
-            <option value="" selected>Any</option>
-            <option value="web">Browser</option>
-            <option value="windows">Windows</option>
-            <option value="osx">MacOS</option>
-            <option value="linux">Linux</option>
-        </select>
-    </label>
-    <label>
-        Tags
-        <select name="tags" id="tags" multiple>
-            <option value="">any</option>
-        {%- for tag in tags %}
-            <option value="{{tag}}">{{tag}}</option>
-        {%- endfor %}
-        </select>
-    </label>
+{% include select.md label="Sort" name="sort" items=site.data.sort_methods exclude_any=true %}
+{% include select.md label="Platform" name="platform" items=site.data.platforms %}
+{% include select.md label="Tags" name="tags" multiple=true items=tags %}
+{% include select.md label="Tools" name="tools" multiple=true items=tools %}
+{% include select.md label="Roles" name="roles" multiple=true items=roles %}
 </fieldset>
 <script src="/scripts/search_params.js"></script>
 </form>
