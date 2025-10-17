@@ -20,9 +20,9 @@ game: false
     | map: "roles" | uniq
 -%}
 
-<h1>Games</h1>
+<h1 class="drop-shadow">Games</h1>
 <form>
-<fieldset>
+<fieldset class="drop-shadow">
     <legend>Search and Filter</legend>
     <label>
         <input
@@ -51,7 +51,7 @@ game: false
     {%- if game_page.cover_override -%}
         {%- assign cover_src = game_page.cover_override -%}
     {%- endif -%}
-    <li>
+    <li class="drop-shadow">
         <a href="{{game_page.url}}" class="game-tile">
             <img src="{{cover_src}}" alt="capsule image" />
             <h2>{{game_page.title}}</h2>

@@ -10,11 +10,11 @@ layout: base
     {%- assign cover_src = page.cover_override -%}
 {%- endif -%}
 
-<img src="{{cover_src}}" alt="capsule image" align="right" class="game-capsule" />
+<img src="{{cover_src}}" alt="capsule image" align="right" class="game-capsule drop-shadow" />
 
-<h1>{{game_info.title}}</h1>
+<h1 class="drop-shadow">{{game_info.title}}</h1>
 <blockquote>{{game_info.short_text}}</blockquote>
-<a href="{{game_info.url}}" class="play-link">Play Now</a>
+<a href="{{game_info.url}}" class="play-link drop-shadow">Play Now</a>
 <hr>
 {{content}}
 

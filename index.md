@@ -2,7 +2,7 @@
 layout: base
 ---
 
-# Twig <sub>(she/her)</sub>
+<h1 class="drop-shadow"> Twig <sub>(she/her)</sub></h1>
 *Developer (Software, BCI, Gaming) at the University of Calgary*
 
 [tmnielsen33@gmail.com](mailto:tmnielsen33@gmail.com)  

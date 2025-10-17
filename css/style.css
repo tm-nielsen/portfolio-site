@@ -26,10 +26,6 @@ main {
   margin: auto;
 }
 
-h1 {
-  text-shadow: 0.1em 0.15em 2px black;
-}
-
 ul, ol {
   padding-left: 2em;
 }
@@ -93,4 +89,8 @@ table {
     text-align: left;
     border-bottom: 2px solid var(--main-colour-faded);
   }
+}
+
+.drop-shadow {
+  filter: drop-shadow(4px 5px 1px var(--bg-accent-colour));
 }
