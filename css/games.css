@@ -62,7 +62,7 @@ fieldset {
 }
 
 .play-link {
-    display: block;
+    display: grid;
     font-size: 2em;
     text-align: center;
 }
