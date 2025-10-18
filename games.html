@@ -41,8 +41,23 @@ game: false
 <script src="/scripts/search_params.js"></script>
 </form>
 
+{%-
+    assign ordered_titles = site.data.game_data
+    | sort: "published_at" | map: "title" | reverse
+-%}
+{%- assign game_titles = game_pages | map: "title" -%}
+{%-
+    assign ordered_titles = ordered_titles
+    | where_exp: "title", "game_titles contains title"
+    | concat: game_titles | uniq
+%}
+
 <ul class="game-list">
-{%- for game_page in game_pages %}
+{%- for game_title in ordered_titles %}
+    {%-
+        assign game_page = game_pages
+        | where: "title", game_title | first
+    -%}
     {%- 
         assign game_info = site.data.game_data
         | where: "title", game_page.title | first
@@ -54,7 +69,7 @@ game: false
     <li class="drop-shadow">
         <a href="{{game_page.url}}" class="game-tile">
             <img src="{{cover_src}}" alt="capsule image" />
-            <h2>{{game_page.title}}</h2>
+            <h2>{{game_title}}</h2>
         </a>
     </li>
 {%- endfor %}
