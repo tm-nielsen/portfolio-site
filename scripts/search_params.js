@@ -19,11 +19,11 @@ function SetQueryString(newQueryString)
 
 function SetSearchParam(name, value)
 {
-    console.log(value)
     const currentParams = new URLSearchParams(window.location.search)
     if (value) currentParams.set(name, value)
     else currentParams.delete(name)
     SetQueryString(currentParams.toString())
+        window.dispatchEvent(new Event('popstate'))
 }
 
 function SetSearchParamFromValueEvent(event)
