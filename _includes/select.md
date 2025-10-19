@@ -1,6 +1,12 @@
+{%- if include.id -%}
+    {%- assign id = include.id -%}
+{%- else -%}
+    {%- assign id = include.name -%}
+{%- endif -%}
+
 <label>
     {{include.label}}
-    <select name="{{include.name}}" id="{{include.id}}"
+    <select name="{{include.name}}" id="{{id}}"
         {%- if include.multiple %} multiple{%- endif -%}
     >
     {%- unless include.exclude_any %}
