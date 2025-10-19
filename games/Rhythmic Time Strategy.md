@@ -9,6 +9,7 @@ tools:
 roles:
  - pixel art
  - coordination
+ancestor: Herding Cats
 ---
 
 ## About

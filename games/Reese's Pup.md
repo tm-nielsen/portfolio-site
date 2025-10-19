@@ -12,6 +12,7 @@ roles:
  - pixel art
  - animation
  - coordination
+ancestor: Drum Pit
 ---
 
 ## About

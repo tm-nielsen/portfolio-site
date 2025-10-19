@@ -20,3 +20,12 @@ layout: base
 
 <p><sub>Roles: {{page.roles | join: ", "}}</sub></p>
 <p><sub>Tools: {{page.tools | join: ", "}}</sub></p>
+
+{%- assign ancestor_title = page.ancestor -%}
+{%- if ancestor_title %}
+<hr/>
+<h2>Ancestry:</h2>
+<ol>
+{%- include ancestor-crumb.md %}
+</ol>
+{%- endif -%}

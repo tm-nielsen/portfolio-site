@@ -10,6 +10,7 @@ tools:
 roles:
  - pixel art
  - animation
+ancestor: BiggyFishy
 ---
 
 ## About

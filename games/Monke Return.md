@@ -8,6 +8,7 @@ tools:
 roles:
  - pixel art
  - animation
+ancestor: Rhythmic Time Strategy
 ---
 
 ## About

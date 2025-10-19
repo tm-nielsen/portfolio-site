@@ -9,6 +9,7 @@ tools:
  - Piskel
 roles:
  - pixel art
+ancestor: Gum Ship
 ---
 
 ## About

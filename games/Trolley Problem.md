@@ -13,6 +13,7 @@ roles:
  - design
  - coordination
  - technical art
+ancestor: Jugghoul
 ---
 
 ## About

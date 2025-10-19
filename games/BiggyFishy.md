@@ -8,6 +8,7 @@ tools:
  - Piskel
 roles:
  - pixel art
+ancestor: Kusa
 ---
 
 ## About

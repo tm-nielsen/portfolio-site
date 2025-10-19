@@ -15,6 +15,7 @@ roles:
  - design
  - audio
  - technical art
+ancestor: Bungee Buster
 ---
 
 ## About
