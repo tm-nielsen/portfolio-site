@@ -15,7 +15,7 @@ const tiles = gameTileElements.map(
 
 function bindSortMethod(sortKey)
 {
-    if (!sortKey) return (a, b) => 1
+    if (!sortKey) return (a, b) => -1
     return (a, b) => {
         let valueA = a.data[sortKey]
         let valueB = b.data[sortKey]
@@ -47,7 +47,8 @@ function bindPropertyFilterMethod(key, values)
 }
 
 
-window.addEventListener('popstate', (event) => {
+function sieveGameTiles()
+{
     const params = new URLSearchParams(window.location.search)
     const searchValue = params.get('q')
     const selectedPlatform = params.get('platform')
@@ -64,19 +65,23 @@ window.addEventListener('popstate', (event) => {
         )
     )
 
-    let displayedTiles = tiles.filter(
-        bindTitleFilterMethod(searchValue)
-    ).filter(
-        bindPlatformFilterMethod(selectedPlatform)
-    ).filter(
-        bindSearchParampropertyFilterMethod('tags')
-    ).filter(
-        bindSearchParampropertyFilterMethod('tools')
-    ).filter(
-        bindSearchParampropertyFilterMethod('roles')
-    ).sort(
-        bindSortMethod(selectedSortMethod)
+    gameList.replaceChildren(
+        ...tiles.filter(
+            bindTitleFilterMethod(searchValue)
+        ).filter(
+            bindPlatformFilterMethod(selectedPlatform)
+        ).filter(
+            bindSearchParampropertyFilterMethod('tags')
+        ).filter(
+            bindSearchParampropertyFilterMethod('tools')
+        ).filter(
+            bindSearchParampropertyFilterMethod('roles')
+        ).sort(
+            bindSortMethod(selectedSortMethod)
+        )
+        .map(({element}) => element)
     )
+}
 
-    gameList.replaceChildren(...displayedTiles.map(({element}) => element))
-})
+window.addEventListener('popstate', sieveGameTiles)
+sieveGameTiles()
