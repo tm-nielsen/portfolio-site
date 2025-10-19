@@ -2,6 +2,7 @@
 project: true
 title: Kramer County
 ---
+<script src="/scripts/input_cookies.js" defer></script>
 
 A high lethality sitcom role-playing game orbiting *Kramer County Community College*, players navigate silly situations and awkward social dynamics while prodded by a facilitator. Character and narrative are centred over mechanics in this laughs-first open table campaign.  
 

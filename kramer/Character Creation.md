@@ -2,6 +2,7 @@
 permalink: :path/character-creation
 title: Character Creation
 ---
+<script src="/scripts/input_cookies.js" defer></script>
 
 - [ ] Connection to the College
 - <label>Attribute 1: <input type="text"/></label>
