@@ -67,7 +67,11 @@ game: false
     {%- if game_page.cover_override -%}
         {%- assign cover_src = game_page.cover_override -%}
     {%- endif -%}
-    <li class="drop-shadow">
+    <li class="drop-shadow"
+        data-tags="{{game_page.tags | join: ','}}"
+        data-tools="{{game_page.tools | join: ','}}"
+        data-roles="{{game_page.roles | join: ','}}"
+    >
         <a href="{{game_page.url}}" class="game-tile">
             <img src="{{cover_src}}" alt="capsule image" loading="lazy" />
             <h2>{{game_title}}</h2>

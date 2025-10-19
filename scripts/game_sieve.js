@@ -12,17 +12,71 @@ const tiles = gameTileElements.map(
     }
 )
 
+
+function bindSortMethod(sortKey)
+{
+    if (!sortKey) return (a, b) => 1
+    return (a, b) => {
+        let valueA = a.data[sortKey]
+        let valueB = b.data[sortKey]
+        if (Number.isInteger(valueA)) return valueB - valueA
+        if (Date.parse(valueA)) return valueB.localeCompare(valueB)
+        else return valueA.localeCompare(valueB)
+    }
+}
+
+function bindTitleFilterMethod(searchValue)
+{
+    if (!searchValue) return (tile) => true
+    searchValue = searchValue.toLowerCase()
+    return ({title}) => title.toLowerCase().startsWith(searchValue)
+}
+
+function bindPlatformFilterMethod(value)
+{
+    if (!value) return (tile) => true
+    return ({data}) => data[`p_${value}`]
+}
+
+function bindPropertyFilterMethod(key, values)
+{
+    return ({element}) => {
+        const tileValues = element.getAttribute(`data-${key}`)
+        return values.every(value => tileValues.includes(value))
+    }
+}
+
+
 window.addEventListener('popstate', (event) => {
     const params = new URLSearchParams(window.location.search)
-    const searchValue = params.get('q')?.toLowerCase()
+    const searchValue = params.get('q')
+    const selectedPlatform = params.get('platform')
+    const selectedSortMethod = params.get('sort')
 
-    let displayTiles = tiles
-
-    if (searchValue)
-    {
-        displayTiles = displayTiles.filter(
-            ({title}) => title.toLowerCase().startsWith(searchValue)
+    const bindSearchParampropertyFilterMethod
+    = (key) => bindPropertyFilterMethod(
+        key, params.getAll(key).reduce(
+            (result, value) => {
+                result.push(...value.split(','))
+                return result
+            }
+            , []
         )
-    }
-    gameList.replaceChildren(...displayTiles.map(({element}) => element))
+    )
+
+    let displayedTiles = tiles.filter(
+        bindTitleFilterMethod(searchValue)
+    ).filter(
+        bindPlatformFilterMethod(selectedPlatform)
+    ).filter(
+        bindSearchParampropertyFilterMethod('tags')
+    ).filter(
+        bindSearchParampropertyFilterMethod('tools')
+    ).filter(
+        bindSearchParampropertyFilterMethod('roles')
+    ).sort(
+        bindSortMethod(selectedSortMethod)
+    )
+
+    gameList.replaceChildren(...displayedTiles.map(({element}) => element))
 })
