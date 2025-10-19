@@ -85,3 +85,15 @@ function sieveGameTiles()
 
 window.addEventListener('popstate', sieveGameTiles)
 sieveGameTiles()
+
+
+const result = await fetch('https://games.twig.skin')
+const responseData = await result.json()
+tiles.forEach(
+    tile => {
+        const updatedData = responseData.find(
+            ({title}) => title === tile.title
+        )
+        if (updatedData) tile.data = updatedData
+    }
+)
