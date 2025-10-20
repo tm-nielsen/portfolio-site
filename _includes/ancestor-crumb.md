@@ -9,7 +9,9 @@
 
     <li>
         {{prefix}}
-    {%- if ancestor_page -%}
+    {%- if ancestor_title == page.title -%}
+        <i>{{page.title}}</i>
+    {%- else if ancestor_page -%}
         <a href="{{ancestor_page.url}}">{{ancestor_title}}</a>
     {%- else -%}
         {{ancestor_title}}
