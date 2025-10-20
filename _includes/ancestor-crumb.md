@@ -1,14 +1,11 @@
-{%- if ancestor_title %}
+{%- if ancestor_title -%}
     {%- assign ancestor_page = site.pages | where: "title", ancestor_title | first -%}
     {%- if ancestor_page.ancestor -%}
         {%- assign prefix = "⮣ " -%}
     {%- else -%}
         {%- assign prefix = "▪ " -%}
-    {%- endif -%}
-    {%- assign label = ancestor_title | prepend: prefix -%}
-
-    <li>
-        {{prefix}}
+    {%- endif %}
+    <li>{{prefix}}
     {%- if ancestor_title == page.title -%}
         <i>{{page.title}}</i>
     {%- else if ancestor_page -%}
