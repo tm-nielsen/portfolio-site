@@ -1,11 +1,13 @@
 body {
-  --bg-colour: #2a2d34;
-  --main-colour: #fff;
-  --accent-colour: #fae;
-  --bg-accent-colour: #1a1d24;
+  color-scheme: light dark;
 
-  --main-colour-faded: #ccc;
-  --accent-colour-faded: #c9b;
+  --bg-colour: light-dark(#fff, #2a2d34);
+  --main-colour: light-dark(#000, #fff);
+  --accent-colour: light-dark(#64d, #fae);
+  --bg-accent-colour: light-dark(#eeeeee, #1a1d24);
+
+  --main-colour-faded: light-dark(#666, #ccc);
+  --accent-colour-faded: light-dark(#96f, #c9d);
 
   padding: 2vw 4vw;
 
