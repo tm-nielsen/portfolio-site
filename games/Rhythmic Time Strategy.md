@@ -1,7 +1,7 @@
 ---
 permalink: :path/rhythmic-time-strategy
 title: Rhythmic Time Strategy
-cover_override: /images/games/rythmic-time-strategy.png
+cover_override: covers/rythmic-time-strategy.png
 tags:
  - jam
  - fun

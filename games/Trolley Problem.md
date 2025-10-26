@@ -1,7 +1,7 @@
 ---
 permalink: :path/trolley-problem
 title: Trolley Problem
-cover_override: /images/games/trolley-problem.png
+cover_override: covers/trolley-problem.png
 tags:
  - jam
  - fun

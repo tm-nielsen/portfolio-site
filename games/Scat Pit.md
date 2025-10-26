@@ -1,7 +1,7 @@
 ---
 permalink: :path/scat-pit
 title: Scat Pit
-cover_override: /images/games/scat-pit.png
+cover_override: covers/scat-pit.png
 tags:
  - jam
  - fun

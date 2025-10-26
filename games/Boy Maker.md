@@ -1,7 +1,7 @@
 ---
 permalink: :path/boy-maker
 title: Boy Maker
-cover_override: /images/games/boy-maker.png
+cover_override: covers/boy-maker.png
 tools:
  - Godot
 roles:
