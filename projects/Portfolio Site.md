@@ -9,9 +9,57 @@ Hello and welcome!
 
 I started the first iteration of this site in the final year of my degree, wanting a place to show off my games. After some initial work, I shelved the project indefinitely to focus on whatever was in front of me at the time. Looking for work again in spring 2024 was a perfect excuse to revive the project. Having even more projects to write about and show off didn't hurt and was ultimately what got things moving.
 
-The site exists for the Games page and, secondarily, the projects. The main page is obligatory. This order of priority is naturally reflected in the complexity of and effort put into each page. Like anything I make, I also wanted to learn something and have a little fun with it. To this end, I also used the project as an excuse to learn typescript, which ended up being really straightforward and also pretty cool.
+The site exists for the Games page and, secondarily, the projects. The main page is obligatory but has been updated to be somewhat presentable. This order of priority is naturally reflected in the complexity of and effort put into each page. Like anything I make, I also wanted to learn something and have a little fun with it. To this end, I've used different iterations of the project to learn different technologies.
 
-## Custom Markdown Tokenizer
+## The Latest Version: Jekyll
+> [Custom markdown tokenization] was entirely unnecessary and probably made the site worse...
+
+The more web development I do, the more of a luddite I become. There is simply a correct way for a website like this to be constructed. The React version of this website was essentially served in a single javascript file wrapped in an html index shell. This is very silly. With the exception of a few *(optional)* features, I've successfully migrated the entire content of the site to a normal, standard, useable, efficient and accessible format: just a bunch of html documents.
+
+I learned about Jekyll on a work project. Though that specific site was somewhat bloated and blighted by modern web design by use of a theme, I could still see the enourmous potential to generate a clean, simple, easilly editable, and correctly formatted website. I already had all my content in markdown anyway.
+
+Eventual complete migration started with a subproject for [Kramer County](/kramer), which I embedded as a jekyll site inside of the `public` folder of my React base. This was wonderful! Besides the horror of having them next to each other: a splinter I put in my own foot ensuring I would have to complete a full port at some point.
+
+Thankfully, the port was rather painless and gave me a fantastic oppourunity to learn a whole lot more about jekyll and how I could use it to make a site with minimal frills.
+
+### Comparisons
+There were also a number of accessibility concerns *(issues of semantic correctness)* I wanted to address in this new version. Using specific tags instead of wrapping divs in style. A number of examples follow.
+
+#### Games Page
+One of my more siginificant gripes was the sort and filter dropdowns I originally made in react. They look pretty, but are made out of divs and buttons. It's silly. Addditionally, the entire page is dynamically constructed from a request to the itch.io api, which limits the projects I can include and makes the whole thing quite slow. I could simply update this site with a new downloaded version of that response whenever I make a new game, use that to 'bake' the site, then update it live with the request result.
+
+{% include side-by-side.liquid
+    left="attachments/portfolio/react-games-page.png"
+    right="attachments/portfolio/jekyll-games-page.png"
+    caption="Comparison between versions of the games page"
+%}
+
+Additionally, clicking on one of those game tiles use to expand it inside of the page. Another thing that looked cool, but wan't very useable. See all that text? You know what that should be? A seperate webpage.
+
+{% include side-by-side.liquid
+    left="attachments/portfolio/react-game.png"
+    right="attachments/portfolio/jekyll-game.png"
+    caption="Comparison of game description displays"
+%}
+
+Similarly, projects used to be loaded in from markdown on request using javascript, injected into the docuemnt when a *"link"* was clicked. Now I have an index page with **links** to other documents.
+
+{% include side-by-side.liquid
+    left="attachments/portfolio/react-projects-page.png"
+    right="attachments/portfolio/jekyll-project.png"
+    caption="Comparison of project pages"
+%}
+
+<img src="attachments/portfolio/jekyll-projects-page.png" alt="Screenshot of projects index page">
+
+I also didn't love having my professional summary out there in front. I don't want someone's first impression of me to be resumt speak. This has since bween wrapped in a `details` dropdown, this is what the homepage used to look like:
+
+<img src="attachments/portfolio/react-homepage.png" alt="Screenshot of old homepage layout">
+
+## Previously: React
+When originally putting together this site together, I used it an an excuse to learn typescript with React *(which I already knew)*. This ended up being really straightforward and also pretty cool.
+
+### Custom Markdown Tokenizer
 This page used to be formatted a bit strangely, but is now more useable.
 
 I started writing it out in jsx, but realized quickly that the amount of text I wanted to include would make that format unreasonable. I pivoted towards markdown, as it is so wonderfully easy to write in. There are a wealth of tools available to convert the raw text directly into jsx. However, like most of my art (if you will grant me that this remotely counts), I was presented with a vision of what this page could be, then had to find a way to make it like that.
@@ -22,7 +70,7 @@ I Looked through available packages. Naturally, There wasn't anything directly a
 
 Ultimately, I could've applied the same nesting algorithm to an existing markdown package. The entire problem was entirely unnecessary and probably made the site worse, but that doesn't conflict with my goals for the project.
 
-## Games Page
+### Games Page
 The games page is why this website exists. I poked around a bit when I was younger, but started properly making games in 2018, my first year of University. Since then I've made many, many games, most of which are available on [itch.io][0], a wonderful platform for sharing and selling games. It also has an API. The original conceit of this project was to make a nice display for that API response. I believe I've accomplished that.
 
 In addition to the base information provided: title, release date, cover image, summary description, platforms, and a bit more, I wanted to include a bit of writing on each title with a longer description and what I learned from making it. This serves a dual purpose, effectively displaying the notable extent of technical and professional development I've gained from such projects, and a little personal scrapbook.

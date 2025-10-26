@@ -1,0 +1,7 @@
+<figure class="side-by-side">
+    {% include image.html src=include.left %}
+    {% include image.html src=include.right %}
+    {% if include.caption -%}
+    <figcaption>{{include.caption}}</figcaption>
+    {%- endif %}
+</figure>
