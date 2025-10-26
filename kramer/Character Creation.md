@@ -28,6 +28,8 @@ Pick a category *(or roll 1d8)*, then roll 1d8 to select a discipline.
 
 To create your character, you must invent and name these three ***Attributes***.
 
+Don't forget to share them with everyone you'll be playing with before the session!
+
 ### [Attribute Names](system#names)
 > You may name ***Attributes*** in any way, from 'Crystal Girlie' to 'Beatboxing' to 'My old Co-Worker Brendan'. Poetry, Unicode characters, drawings, or anything else you can think of to meaningfully represent an aspect of your character are also valid.
 
@@ -82,5 +84,3 @@ Use the spite as creative fuel.*
 
 ## Notes
 While the name and colour of an ***Attribute*** are typically permanent, your first session with a character is a chance to feel out who they are through play. You may adjust names and colours as appropriate before they are locked in for any future sessions.
-
-***Attributes*** are not shared with other players by default. They are as secret as you'd like them to be. Sharing them is fun, but more impactful if saved for a fitting character moment.

@@ -9,10 +9,10 @@ A high lethality sitcom role-playing game orbiting *Kramer County Community Coll
 ## Getting Started
 - [ ] [Create a Character](character-creation)
 - [ ] Read over the [System Rules](system)
-- [ ] Schedule a session
+- [ ] Schedule a Session
     - [ ] find 1-3 other players
     - [ ] confirm with facilitator
-- [ ] Tell facilitator who you'll be playing
+- [ ] Share your Character
     - Name + Pronouns
     - Attributes
     - Connection to the College
