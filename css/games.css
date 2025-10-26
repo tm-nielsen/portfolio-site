@@ -2,6 +2,8 @@ fieldset {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(clamp(25%, 8ch, 100%), 1fr));
     gap: 0.5em 1em;
+
+    border: var(--main-colour) solid;
     
     label input { width: 100%; }
 }
