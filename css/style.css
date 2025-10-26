@@ -97,19 +97,3 @@ table {
 .drop-shadow {
   filter: drop-shadow(4px 5px 1px var(--bg-accent-colour));
 }
-
-figure.side-by-side {
-  display: grid;
-  margin: 0;
-  padding: 0.5em;
-
-  grid-template-columns: auto auto;
-  gap: 0.5em 1em;
-
-  border: var(--main-colour-faded) 2px solid;
-
-  figcaption {
-    grid-column: -1 / 1;
-    text-align: center;
-  }
-}

@@ -1,3 +1,8 @@
+{% unless side_by_side_style_included %}
+    {%- assign side_by_side_style_included = true -%}
+    <link rel="stylesheet" href="/css/side-by-side.css">
+{% endunless -%}
+
 <figure class="side-by-side">
     {% include image.liquid src=include.left alt=include.left_alt %}
     {% include image.liquid src=include.right alt=include.right_alt %}
