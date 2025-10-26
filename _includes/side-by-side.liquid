@@ -1,6 +1,6 @@
 <figure class="side-by-side">
-    {% include image.html src=include.left %}
-    {% include image.html src=include.right %}
+    {% include image.liquid src=include.left alt=include.left_alt %}
+    {% include image.liquid src=include.right alt=include.right_alt %}
     {% if include.caption -%}
     <figcaption>{{include.caption}}</figcaption>
     {%- endif %}

@@ -30,7 +30,9 @@ One of my more siginificant gripes was the sort and filter dropdowns I originall
 
 {% include side-by-side.liquid
     left="attachments/portfolio/react-games-page.png"
+    left_alt="Screenshot of old games page layout with roles filter expanded"
     right="attachments/portfolio/jekyll-games-page.png"
+    right_alt="Screenshot up updated games page layout with search and filters using native web components contained in a fieldset"
     caption="Comparison between versions of the games page"
 %}
 
@@ -38,7 +40,9 @@ Additionally, clicking on one of those game tiles use to expand it inside of the
 
 {% include side-by-side.liquid
     left="attachments/portfolio/react-game.png"
+    left_alt="Screenshot of old game description display embedded into list page as enlarged tile"
     right="attachments/portfolio/jekyll-game.png"
+    right_alt="Screenshot of updated game description display as distinct webpage"
     caption="Comparison of game description displays"
 %}
 
@@ -46,7 +50,9 @@ Similarly, projects used to be loaded in from markdown on request using javascri
 
 {% include side-by-side.liquid
     left="attachments/portfolio/react-projects-page.png"
+    left_alt="Screenshot of old projects page layout with text content embedded beneath a list of links"
     right="attachments/portfolio/jekyll-project.png"
+    right_alt="Scrrenshot of an updated, distinct project webpage"
     caption="Comparison of project pages"
 %}
 
