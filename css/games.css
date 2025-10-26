@@ -4,7 +4,8 @@ fieldset {
     gap: 0.5em 1em;
 
     border: var(--main-colour) solid;
-    
+
+    legend { white-space: nowrap; }
     label input { width: 100%; }
 }
 
@@ -34,6 +35,7 @@ fieldset {
         border: thick solid var(--main-colour);
 
         img {
+            width: 100%;
             border-radius: 0.5em 0.5em 0 0;
         }
         h2 {
@@ -41,7 +43,7 @@ fieldset {
 
             text-align: center;
             text-overflow: ellipsis;
-            text-wrap: nowrap;
+            white-space: nowrap;
             overflow: hidden;
         }
     }:hover {
@@ -50,7 +52,6 @@ fieldset {
 }
 
 .game-capsule {
-    width: auto;
     height: 12em;
     max-height: 30vw;
 
