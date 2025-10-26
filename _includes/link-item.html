@@ -1,0 +1,9 @@
+{%- if item.link %}
+    {% assign item_link = item.link %}
+{% else %}
+    {% assign item_link = item.url %}
+{% endif -%}
+<li>
+    <a href="{{item_link}}">{{item.title}}</a>
+     - {{item.description}}
+</li>

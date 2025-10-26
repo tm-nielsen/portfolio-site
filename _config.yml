@@ -1,0 +1,28 @@
+exclude:
+  - serve.sh
+  - Gemfile*
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      title: Twig Site
+      description: I make video games.
+
+  - scope:
+      path: games
+    values:
+      layout: game
+      game: true
+
+  - scope:
+      path: projects
+    values:
+      project: true
+
+  - scope:
+      path: kramer
+    values:
+      title: Kramer County
+      description: Resources for a high lethality sitcom role-playing game.

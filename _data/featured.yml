@@ -1,0 +1,15 @@
+- title: "Scat Pit"
+  link: "/games/scat-pit"
+  description: "Scream into your microphone."
+
+- title: "Clack"
+  link: "/games/clack"
+  description: "It's just really fun."
+
+- title: "Curl!"
+  link: "/projects/curl"
+  description: "BCI video game!"
+
+- title: "BCI Essentials"
+  link: "https://github.com/kirtonBCIlab/bci-essentials-unity"
+  description: "What I do for work."

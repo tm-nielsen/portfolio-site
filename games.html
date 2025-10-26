@@ -1,0 +1,83 @@
+---
+permalink: /games/
+layout: base
+game: false
+---
+
+<link rel="stylesheet" href="/css/games.css" />
+
+{%- assign game_pages = site.pages | where: "game", true -%}
+{%- assign tags = game_pages
+    | where_exp: "page", "page.tags"
+    | map: "tags" | uniq
+-%}
+{%- assign tools = game_pages
+    | where_exp: "page", "page.tools"
+    | map: "tools" | uniq
+-%}
+{%- assign roles = game_pages
+    | where_exp: "page", "page.roles"
+    | map: "roles" | uniq
+-%}
+
+<h1 class="drop-shadow">Games</h1>
+<form class="script-only">
+<fieldset class="drop-shadow">
+    <legend>Search and Filter</legend>
+    <label>
+        <input
+            id="search"
+            type="search" name="q"
+            placeholder="Search..."
+            maxlength=8
+        />
+    </label>
+{% include select.liquid label="Sort" name="sort" items=site.data.sort_methods exclude_any=true %}
+{% include select.liquid label="Platform" name="platform" items=site.data.platforms %}
+{% include select.liquid label="Tags" name="tags" multiple=true items=tags %}
+{% include select.liquid label="Tools" name="tools" multiple=true items=tools %}
+{% include select.liquid label="Roles" name="roles" multiple=true items=roles %}
+</fieldset>
+<script src="/scripts/search_params.js" defer></script>
+<script type="module" src="/scripts/game_sieve.js" defer></script>
+</form>
+
+<noscript><i>Search and filter area hidden with javascript disabled.</i></noscript>
+
+{%-
+    assign ordered_titles = site.data.game_data
+    | sort: "published_at" | map: "title" | reverse
+-%}
+{%- assign game_titles = game_pages | map: "title" -%}
+{%-
+    assign ordered_titles = ordered_titles
+    | where_exp: "title", "game_titles contains title"
+    | concat: game_titles | uniq
+%}
+
+<ul class="game-list">
+{%- for game_title in ordered_titles %}
+    {%-
+        assign game_page = game_pages
+        | where: "title", game_title | first
+    -%}
+    {%- 
+        assign game_info = site.data.game_data
+        | where: "title", game_page.title | first
+    -%}
+    {%- assign cover_src = game_info.cover_url -%}
+    {%- if game_page.cover_override -%}
+        {%- assign cover_src = game_page.cover_override -%}
+    {%- endif -%}
+    <li class="drop-shadow"
+        data-tags="{{game_page.tags | join: ','}}"
+        data-tools="{{game_page.tools | join: ','}}"
+        data-roles="{{game_page.roles | join: ','}}"
+    >
+        <a href="{{game_page.url}}" class="game-tile">
+            <img src="{{cover_src}}" alt="capsule image" loading="lazy" />
+            <h2>{{game_title}}</h2>
+        </a>
+    </li>
+{%- endfor %}
+</ul>

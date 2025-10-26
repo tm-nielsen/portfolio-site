@@ -1,0 +1,11 @@
+- label: date
+  value: published_at
+
+- label: title
+  value: title
+
+- label: views
+  value: views_count
+
+- label: downloads
+  value: downloads_count

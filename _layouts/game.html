@@ -1,0 +1,31 @@
+---
+layout: base
+---
+
+<link rel="stylesheet" href="/css/games.css" />
+
+{% assign game_info = site.data.game_data | where: "title", page.title | first -%}
+{%- assign cover_src = game_info.cover_url -%}
+{%- if page.cover_override -%}
+    {%- assign cover_src = page.cover_override -%}
+{%- endif -%}
+
+<img src="{{cover_src}}" alt="capsule image" align="right" class="game-capsule drop-shadow" />
+
+<h1 class="drop-shadow">{{game_info.title}}</h1>
+<blockquote>{{game_info.short_text}}</blockquote>
+<a href="{{game_info.url}}" class="play-link drop-shadow">Play Now</a>
+<hr>
+{{content}}
+
+<p><sub>Roles: {{page.roles | join: ", "}}</sub></p>
+<p><sub>Tools: {{page.tools | join: ", "}}</sub></p>
+
+{%- if page.ancestor %}
+<hr/>
+<h2>Ancestry:</h2>
+<ol class="ancestor-list">
+{%- assign ancestor_title = page.title -%}
+{%- include ancestor-crumb.liquid %}
+</ol>
+{%- endif -%}
