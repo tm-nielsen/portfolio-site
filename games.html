@@ -32,11 +32,11 @@ game: false
             maxlength=8
         />
     </label>
-{% include select.md label="Sort" name="sort" items=site.data.sort_methods exclude_any=true %}
-{% include select.md label="Platform" name="platform" items=site.data.platforms %}
-{% include select.md label="Tags" name="tags" multiple=true items=tags %}
-{% include select.md label="Tools" name="tools" multiple=true items=tools %}
-{% include select.md label="Roles" name="roles" multiple=true items=roles %}
+{% include select.liquid label="Sort" name="sort" items=site.data.sort_methods exclude_any=true %}
+{% include select.liquid label="Platform" name="platform" items=site.data.platforms %}
+{% include select.liquid label="Tags" name="tags" multiple=true items=tags %}
+{% include select.liquid label="Tools" name="tools" multiple=true items=tools %}
+{% include select.liquid label="Roles" name="roles" multiple=true items=roles %}
 </fieldset>
 <script src="/scripts/search_params.js" defer></script>
 <script type="module" src="/scripts/game_sieve.js" defer></script>
