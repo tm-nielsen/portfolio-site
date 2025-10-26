@@ -6,6 +6,10 @@ fieldset {
     label input { width: 100%; }
 }
 
+@media (scripting: none) {
+    .script-only { display: none }
+}
+
 .game-list {
     display: grid;
     list-style: none;

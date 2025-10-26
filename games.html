@@ -21,7 +21,7 @@ game: false
 -%}
 
 <h1 class="drop-shadow">Games</h1>
-<form>
+<form class="script-only">
 <fieldset class="drop-shadow">
     <legend>Search and Filter</legend>
     <label>
@@ -41,6 +41,8 @@ game: false
 <script src="/scripts/search_params.js" defer></script>
 <script type="module" src="/scripts/game_sieve.js" defer></script>
 </form>
+
+<noscript><i>Search and filter area hidden with javascript disabled.</i></noscript>
 
 {%-
     assign ordered_titles = site.data.game_data
