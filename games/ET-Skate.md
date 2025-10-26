@@ -1,6 +1,7 @@
 ---
 permalink: :path/et-stake
 title: ET-Skate
+cover_override: /images/games/et-skate.png
 tags:
  - jam
  - fun
