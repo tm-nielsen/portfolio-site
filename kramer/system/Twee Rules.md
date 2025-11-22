@@ -74,7 +74,8 @@ When all health is lost, your character is ***Wounded***
 	- *completely unusable until healed*
 - Restore health to full
 - Select a new ***Swing***
-- **Mark a point of *Experience***  
+- **Mark a point of *Experience***
+	- *(2 points for every subsequent wound)*  
 *experience is also gained for dealing a wound.*
 
 *You are encouraged to roleplay what your character would be like in the complete absence of this core characteristic.*
@@ -82,7 +83,7 @@ When all health is lost, your character is ***Wounded***
 When a character ***Wounds*** their second last ***Attribute***, they may choose to yield. Such a character may remain present or exit the scene but loses the ability to deal damage, take damage, or gain experience until they are healed.
 #### Death's Door
 A character who continues with only a single remaining ***Attribute*** is said to be on ***Death's Door***. Upon loosing all health in this state, your character will be narratively obliterated and removed from play.  
-Entering this state grants a point of experience in addition to that from the wound. Surviving a hit on ***Death's Door*** grants 2 points of experience.  
+Surviving a hit on ***Death's Door*** grants 2 points of experience.  
 A character on ***Death's Door*** may not leave a scene in conflict.
 
 ## Progression
@@ -95,7 +96,49 @@ During play, ***Experience*** points are awarded for character moments like achi
 | Level  | 2, 4, 6... *(2 x level)* | Increase an ***Attribute***'s level by 1 |
 
 *Attributes may also be healed, levelled, and altered in combination at a discount representative of character growth if it can be narratively justified to the facilitator.*
+
+---
+*skip on first reading*
+
+## Advanced
+Additional system mechanics exist optionally. Though available to any player that cares to read and bring them up in session, they will not be introduced until a player becomes more familiar and comfortable with the basic system, beginning to crave complexity.
+
+### Exhaustion
+Certain extraordinary actions may fall at the limit of a character's ability. To push past this, you may be given the option to ***Exhaust*** a die. Place your current swing beside your character sheet, leaving the slot empty. This leaves a character defenceless until they next act or ***Roll to Die***, when they may select a new *Swing* before restoring the exhausted die.
+
+### Attribute Compulsion
+Knowing the name of an attribute represents a significant degree of vulnerability between characters; both a weakness and a strength. While the attributes of player characters are shared, those of NPCs must be discovered through play.
+#### Bond Tokens
+Sharing a character moment, developing a friendship, stoking a rivalry, or even just a solid role-play scene will grant you a ***Bond Token*** for the relevant character. This includes PCs and NPCs.
+
+***Bond Tokens*** can then be spent in play to bolster or incapacitate the target.
+
+#### Invoking an Attribute
+To support a struggling ally, you may spend a ***Bond Token*** to call upon one of their attributes by name, temporarily granting them use of that die as their swing, even if it is wounded. The effect persists until that character takes a wound *(in which case the invokes attribute is wounded)* or locks in another attribute *(in which case the effect is lost)*. Mechanically, this grants an extra wound but forces the character to use only the invoked attribute *(if they choose to keep the effect)*.
+
+You must be able to narratively justify how to call out the target attribute in this moment.  
+##### Example
+> To invoke an ally's *Heroism* attribute, you might give them a rousing speech about a time they saved you.  
+> -Sentiment 0.8.1 Rules
+
+It may also be useful in certain scenarios to invoke an enemy attribute to compel certain behaviour or trains of thought.
+
+#### Banning an Attribute
+To partially incapacitate a target, you may spend a ***Bond Token*** and ***Roll to Do*** to ***Ban*** a known attribute. On a success, it is functionally *Exhausted* and can only be restored by the following:
+- The scene ends
+- Your character allows the attribute to return
+- The target successfully *Bans* one of your character's attributes
+- The banned attribute is *Invoked*
+
+##### Example
+> Your target is a proud knight, whose dirty secrets you are aware of. In discovering their misdeeds, you gain knowledge that their Red Attribute is named The One Good Nobleman. You Ban this Attribute by announcing their misdeeds to a crowded town square, nullifying their ability to call upon it.  
+> -Sentiment 0.8.1 Rules
+
+> [By] getting to know a dragon and learning that their Blue Attribute is Unending Hunger, you may Roll to Do to prepare a feast of poisoned meat for them, Banning their Attribute.  
+> -Sentiment 0.8.1 Rules
+
 ### Gifts
+Special equipment and character abilities are codified as ***Gifts***. These special mechanics will normally impose a 
 As part of character progression, the facilitator may offer you the option to spend ***Experience*** on a special ability called a ***Gift***. The availability of this option is based on the presence of a compelling idea and it's relevance to your character. You may bring suggestions to your facilitator. ***Experience*** may also be spent on certain ***Gifts*** to increase their potency.
 #### Examples
 ##### I Know A Guy
@@ -103,8 +146,9 @@ Once per Session - Name and conjure an individual fit to tackle the issue at han
 
 Roll a number of d6s determined by the facilitator based on their potential helpfulness.  
 The lowest die value decides your relationship with this individual.
-##### Confrontational
-Action - In addition to a match, you may also clash with colours adjacent to your swing on the colour wheel.
+##### A Gun
+On a Hit - Deal 2 wounds.
 
-Deals +2 damage rather than double. Ties function normally.  
-*Could be levelled up to deal normal clash damage.*
+You can't bring a gun to school.  
+If someone sees you with a gun, they will call the police.  
+The police also have guns.
