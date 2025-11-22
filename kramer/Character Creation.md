@@ -84,3 +84,5 @@ Use the spite as creative fuel.*
 
 ## Notes
 While the name and colour of an ***Attribute*** are typically permanent, your first session with a character is a chance to feel out who they are through play. You may adjust names and colours as appropriate before they are locked in for any future sessions.
+
+Experience and the benefits you can spend it on are primarily gained from dealing and taking wounds. Characters and play oriented towards conflict will grow in power much more quickly.

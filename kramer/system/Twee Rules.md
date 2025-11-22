@@ -44,7 +44,8 @@ While you will normally want to use the highest value, you will have to justify 
 #### Success
 When rolling against another character, you will be contesting a roll to die.  
 The ***Roll to Do* must exceed the *Roll to Die*** in order to succeed, dealing damage equal to your Swing (die value + attribute level).  
-In other situations, you may simply roll against a static threshold determined by the facilitator.
+In other situations, you may simply roll against a static threshold determined by the facilitator.  
+A normal success will be partial, somehow complicated by a contextual setback, unless the threshold is cleared by a wide enough margin *(~2)*.
 #### Clashes
 If you ***Roll to Do*** using a die the same colour as your target's current ***Swing***, it becomes a clash.
 - A successful attack deals double damage.
