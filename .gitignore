@@ -1,11 +1,13 @@
-# Editor directories and files
-.vscode
+# Generated files by hugo
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
 
-# Jekyll
-_site
-.sass-cache/
-.jekyll-cache
-.jekyll-metadata
-.bundle/
-vendor/
-Gemfile.lock
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# Temporary lock file while building
+/.hugo_build.lock

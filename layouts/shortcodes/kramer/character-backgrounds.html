@@ -1,0 +1,16 @@
+{{- with .Site.Data.kramer.backgrounds -}}
+<ol>
+{{- range . -}}
+    <li>
+        <details>
+            <summary>{{ .title }}</summary>
+            <ol>
+            {{- range .items }}
+                <li>{{ . }}</li>
+            {{- end }}
+            </ol>
+        </details>
+    </li>
+{{- end -}}
+</ol>
+{{- end -}}

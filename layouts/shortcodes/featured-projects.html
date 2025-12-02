@@ -1,0 +1,10 @@
+{{- with .Site.Data.featured -}}
+    <ul>
+    {{- range . }}
+        <li>
+            <a href="{{.link}}">{{.title}}</a>
+            - {{.description}}
+        </li>
+    {{- end -}}
+    </ul>
+{{- end -}}

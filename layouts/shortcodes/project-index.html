@@ -1,0 +1,9 @@
+{{- $projects := where site.Pages ".Params.project" true -}}
+<ul>
+{{- range $projects }}
+    <li>
+        <a href="{{.RelPermalink}}">{{.Title}}</a>
+        - {{.Params.description}}
+    </li>
+{{- end -}}
+</ul>

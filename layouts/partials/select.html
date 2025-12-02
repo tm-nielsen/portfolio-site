@@ -1,0 +1,11 @@
+<label>
+    {{.label}}
+    <select name="{{.name}}" id="{{.name}}">
+    {{- if not .exclude_any }}
+        <option value="">any</option>
+    {{- end -}}
+    {{- range .items }}
+        <option value="{{.value}}">{{.label}}</option>
+    {{- end }}
+    </select>
+</label>

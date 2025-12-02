@@ -1,0 +1,71 @@
+{{- define "main" -}}
+
+<link rel="stylesheet" href="/css/games.css" />
+
+{{- $game_pages := where .Site.Pages ".Type" "game" -}}
+{{- $tags := slice -}}
+{{- $roles := slice -}}
+{{- $tools := slice -}}
+{{- range $game_pages -}}
+    {{- $tags = union .Params.tags $tags -}}
+    {{- $tools = union .Params.tools $tools -}}
+    {{- $roles = union .Params.roles $roles -}}
+{{- end -}}
+
+
+<h1 class="drop-shadow">Games</h1>
+<form class="script-only">
+<fieldset class="drop-shadow">
+    <legend>Search and Filter</legend>
+    <label>
+        <input
+            id="search"
+            type="search" name="q"
+            placeholder="Search..."
+            maxlength=8
+        />
+    </label>
+{{- partial "select" (dict "label" "Sort" "name" "sort" "items" .Site.Data.sort_methods "exclude_any" true) -}}
+{{- partial "select" (dict "label" "Platform" "name" "platform" "items" .Site.Data.platforms) -}}
+{{- partial "multiple-select" (dict "label" "Tags" "name" "tags" "items" $tags) -}}
+{{- partial "multiple-select" (dict "label" "Tools" "name" "tools" "items" $tools) -}}
+{{- partial "multiple-select" (dict "label" "Roles" "name" "roles" "items" $roles) -}}
+</fieldset>
+<script src="/scripts/search_params.js" defer></script>
+<script type="module" src="/scripts/game_sieve.js" defer></script>
+</form>
+
+<noscript><i>Search and filter area hidden with javascript disabled.</i></noscript>
+
+
+{{- $game_data := .Site.Data.game_data -}}
+{{- $ordered_games := (sort $game_data "published_at") | collections.Reverse -}}
+{{- $ordered_titles := partial "remap" (dict "map" $ordered_games "key" "title") -}}
+
+<ul class="game-list">
+    {{- range $ordered_titles }}
+        {{- $game_page := index (where $game_pages ".Title" .) 0 -}}
+        {{- $game_info := index (where $game_data "title" .) 0 -}}
+
+        {{- $params := $game_page.Params  -}}
+        {{- $cover_src := default $game_info.cover_url $params.cover_override -}}
+
+        {{ $empty := slice }}
+        {{- $game_tags := default $empty $params.tags -}}
+        {{- $game_tools := default $empty $params.tools -}}
+        {{- $game_roles := default $empty $params.roles -}}
+
+        <li class="drop-shadow"
+            data-tags='{{delimit $game_tags ","}}'
+            data-tools='{{delimit $game_tools ","}}'
+            data-roles='{{delimit $game_roles ","}}'
+        >
+            <a href="{{$game_page.RelPermalink}}" class="game-tile">
+                <img src="{{$cover_src}}" alt="capsule image" loading="lazy" />
+                <h2>{{.}}</h2>
+            </a>
+        </li>
+    {{- end -}}
+</ul>
+    
+{{- end -}}

@@ -1,0 +1,6 @@
+{{- $res := slice -}}
+{{- $key := .key -}}
+{{- range .map -}}
+    {{- $res = append (index . $key) $res -}}
+{{- end -}}
+{{- return $res -}}

@@ -1,0 +1,29 @@
+{{- define "main" -}}
+
+{{ .Content }}
+
+{{- $game_pages := where .Site.Pages ".Type" "game" -}}
+{{- $project_pages := where .Site.Pages ".Params.project" true -}}
+{{- $redirectable_pages := append $game_pages $project_pages -}}
+
+<script>
+    const sources = [
+        {{ range $redirectable_pages -}}
+            {slugPath: {{.Path}}, link: {{.RelPermalink}}},
+        {{ end }}
+    ]
+
+    const redirects = sources.map(
+        ({slugPath, link}) =>
+        ({slug: slugPath.split('/').pop(), path: link})
+    )
+
+    const requestedPath = window.location.pathname.substring(1)
+    const matchingRedirect = redirects.find(
+        candidate => candidate.slug === requestedPath
+    )
+    
+    if (matchingRedirect) window.location.replace(matchingRedirect.path)
+</script>
+
+{{- end -}}

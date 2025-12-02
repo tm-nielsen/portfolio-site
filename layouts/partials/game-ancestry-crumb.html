@@ -1,0 +1,24 @@
+{{- $ancestor_title := .Scratch.Get "ancestor_title" -}}
+{{- if $ancestor_title -}}
+    {{- $ancestor_page := index (where .Site.Pages "Title" $ancestor_title) 0 -}}
+    {{- $grandcestor_title := $ancestor_page.Params.ancestor -}}
+
+    {{- if $grandcestor_title -}}
+        {{- .Scratch.Set "prefix" "⮣ " -}}
+    {{- else -}}
+        {{- .Scratch.Set "prefix" "▪ " -}}
+    {{- end }}
+    <li>
+        {{- .Scratch.Get "prefix" -}}
+    {{- if eq $ancestor_title .Page.Title }}
+        <i>{{ $ancestor_title }}</i>
+    {{- else if $ancestor_page }}
+        <a href="{{$ancestor_page.RelPermalink}}">{{ $ancestor_title }}</a>
+    {{- else -}}
+        {{- $ancestor_title -}}
+    {{- end }}
+    </li>
+
+    {{- .Scratch.Set "ancestor_title" $grandcestor_title -}}
+    {{- partial "game-ancestry-crumb" . -}}
+{{- end -}}

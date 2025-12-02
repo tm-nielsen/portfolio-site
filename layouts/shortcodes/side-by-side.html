@@ -1,0 +1,7 @@
+<figure class="side-by-side">
+    <img src='{{ .Get "left" }}' alt='{{ .Get "left-alt" }}'>
+    <img src='{{ .Get "right" }}' alt='{{ .Get "right-alt" }}'>
+    {{ with .Get "caption" }}
+        <figcaption>{{ . }}</figcaption>
+    {{ end }}
+</figure>

@@ -1,0 +1,9 @@
+<label>
+    {{.label}}
+    <select name="{{.name}}" id="{{.name}}" multiple>
+        <option value="">any</option>
+    {{- range .items }}
+        <option value="{{.}}">{{.}}</option>
+    {{- end }}
+    </select>
+</label>

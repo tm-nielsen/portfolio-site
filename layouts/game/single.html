@@ -1,0 +1,28 @@
+{{- define "main" -}}
+
+<link rel="stylesheet" href="/css/games.css" />
+
+{{- $game_info := index (where .Site.Data.game_data "title" .Title) 0 -}}
+{{- $cover_src := default $game_info.cover_url .Params.cover_override -}}
+
+<img src="{{$cover_src}}" alt="capsule image" align="right" class="game-capsule drop-shadow" />
+
+<h1 class="drop-shadow">{{ $game_info.title }}</h1>
+<blockquote>{{ $game_info.short_text }}</blockquote>
+<a href="{{$game_info.url}}" class="play-link drop-shadow">Play Now</a>
+<hr>
+{{ .Content }}
+
+<p><sub>Roles: {{ delimit .Params.roles ", " }}</sub></p>
+<p><sub>Tools: {{ delimit .Params.tools ", " }}</sub></p>
+
+{{- if .Params.ancestor -}}
+<hr/>
+<h2>Ancestry:</h2>
+<ol class="ancestor-list">
+    {{- .Scratch.Set "ancestor_title" .Title -}}
+    {{- partial "game-ancestry-crumb" . -}}
+</ol>
+{{- end -}}
+
+{{- end -}}

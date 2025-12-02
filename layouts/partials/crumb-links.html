@@ -1,0 +1,15 @@
+{{- with .Ancestors.Reverse -}}
+<hr/>
+<nav>
+    <ol>
+    {{- range $k, $_ := . -}}
+        {{- if not $k -}}
+            {{- continue -}}
+        {{- end }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </li>
+    {{- end }}
+    </ol>
+</nav>
+{{- end -}}
