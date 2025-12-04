@@ -1,5 +1,4 @@
 ---
-permalink: :path/bulbys-domino-adventure
 title: Bulby's Domino Adventure
 cover_override: covers/bulby_cover_override.png
 tags:

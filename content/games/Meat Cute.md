@@ -1,5 +1,4 @@
 ---
-permalink: :path/meat-cute
 title: Meat Cute
 tags:
  - jam

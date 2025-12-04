@@ -1,5 +1,4 @@
 ---
-permalink: :path/curl
 title: Curl!
 description: A space themed curling video game you can play with your thoughts.
 ---

@@ -1,5 +1,4 @@
 ---
-permalink: :path/big-boy-beach-ball
 title: Big Boy Beach Ball
 tools:
  - Processing

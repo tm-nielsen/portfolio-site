@@ -1,5 +1,4 @@
 ---
-permalink: :path/counter-castle
 title: Counter Castle [Demo]
 static_cover_url: https://img.itch.zone/aW1nLzM1ODI1OTQuZ2lm/315x250%23cm/tc8bd0.gif
 tags:

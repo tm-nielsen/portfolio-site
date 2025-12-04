@@ -1,5 +1,4 @@
 ---
-url: :section/system/
 title: Twee
 layout: single
 ---

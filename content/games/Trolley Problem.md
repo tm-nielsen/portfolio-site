@@ -1,5 +1,4 @@
 ---
-permalink: :path/trolley-problem
 title: Trolley Problem
 cover_override: covers/trolley-problem.png
 tags:

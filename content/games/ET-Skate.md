@@ -1,5 +1,4 @@
 ---
-permalink: :path/et-stake
 title: ET-Skate
 cover_override: covers/et-skate.png
 tags:

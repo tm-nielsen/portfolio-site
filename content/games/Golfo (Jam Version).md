@@ -1,5 +1,4 @@
 ---
-permalink: :path/golfo-jam
 title: Golfo (Jam Version)
 tags:
  - jam

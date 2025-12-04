@@ -1,5 +1,4 @@
 ---
-permalink: :path/scat-pit
 title: Scat Pit
 cover_override: covers/scat-pit.png
 tags:

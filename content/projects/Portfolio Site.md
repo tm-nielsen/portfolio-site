@@ -1,5 +1,4 @@
 ---
-permalink: :path/twigsite
 title: '"Portfolio" Site'
 description: Ongoing retrospective on my personal website.
 ---

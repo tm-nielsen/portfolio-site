@@ -1,5 +1,4 @@
 ---
-permalink: :path/web-projects
 title: Web Projects
 description: Some of the websites and services I've built.
 ---

@@ -1,5 +1,4 @@
 ---
-permalink: :path/bci-game-jam-2022
 title: BCI Game Jam 2022
 description: My work on the 2022 BCI Game Jam and subsequent contract.
 ---

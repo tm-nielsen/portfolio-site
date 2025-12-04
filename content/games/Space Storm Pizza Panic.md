@@ -1,5 +1,4 @@
 ---
-permalink: :path/space-storm-pizza-panic
 title: Space Storm Pizza Panic
 tags:
  - jam

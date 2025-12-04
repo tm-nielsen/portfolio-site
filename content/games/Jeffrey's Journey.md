@@ -1,5 +1,4 @@
 ---
-permalink: :path/jeffreys-journey
 title: Jeffrey's Journey
 tags:
  - jam

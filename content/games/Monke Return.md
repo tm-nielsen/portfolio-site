@@ -1,5 +1,4 @@
 ---
-permalink: :path/monke-return
 title: Monke Return
 tags:
  - jam

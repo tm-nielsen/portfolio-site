@@ -1,5 +1,4 @@
 ---
-permalink: :path/boy-maker
 title: Boy Maker
 cover_override: covers/boy-maker.png
 tools:

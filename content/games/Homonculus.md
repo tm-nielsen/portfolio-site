@@ -1,5 +1,4 @@
 ---
-permalink: :path/homonculus
 title: Homonculus
 tags:
  - jam

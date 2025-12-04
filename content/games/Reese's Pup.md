@@ -1,5 +1,4 @@
 ---
-permalink: :path/reeses-pup
 title: Reese's Pup
 tags:
  - jam

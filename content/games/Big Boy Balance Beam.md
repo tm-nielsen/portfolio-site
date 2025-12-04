@@ -1,5 +1,4 @@
 ---
-permalink: :path/big-boy-balance-beam
 title: Big Boy Balance Beam
 static_cover_url: https://img.itch.zone/aW1nLzE3OTAyMDI3LmdpZg==/315x250%23cm/bAdrV2.gif
 tags:

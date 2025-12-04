@@ -1,5 +1,4 @@
 ---
-permalink: :path/rhythmic-time-strategy
 title: Rhythmic Time Strategy
 cover_override: covers/rythmic-time-strategy.png
 tags:

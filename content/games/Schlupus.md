@@ -1,5 +1,4 @@
 ---
-permalink: :path/schlupus
 title: Schlupus
 static_cover_url: https://img.itch.zone/aW1nLzc4MDExMzkuZ2lm/315x250%23cm/57b1BS.gif
 tags:
