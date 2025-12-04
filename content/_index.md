@@ -14,7 +14,7 @@ cascade:
 <details>
     <summary>Professional Summary</summary>
     <p>
-    A capable developer passionate about creating engaging and accessible experiences. I've completed 30+ game jams, several long term game projects, and web schemes using tools like React; Express; and Jekyll.
+    A capable developer passionate about creating engaging and accessible experiences. I've completed 30+ game jams, several long term game projects, and web schemes using tools like React; Express; and Hugo.
     </p>
 </details>
 
