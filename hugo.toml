@@ -6,6 +6,9 @@ disableKinds = ['taxonomy', 'term', 'sitemap', 'rss']
 uglyURLs = true
 cleanDestinationDir = true
 
+[cache.images]
+    dir = ':cacheDir/images'
+
 [markup.goldmark.renderer]
     unsafe = true
 [markup.goldmark.renderHooks.link]
