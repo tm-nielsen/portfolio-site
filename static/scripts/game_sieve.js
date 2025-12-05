@@ -15,7 +15,7 @@ const tiles = gameTileElements.map(
 
 function bindSortMethod(sortKey)
 {
-    if (!sortKey) return (a, b) => -1
+    if (!sortKey) return (_a, _b) => -1
     return (a, b) => {
         let valueA = a.data[sortKey]
         let valueB = b.data[sortKey]
@@ -27,14 +27,18 @@ function bindSortMethod(sortKey)
 
 function bindTitleFilterMethod(searchValue)
 {
-    if (!searchValue) return (tile) => true
+    if (!searchValue) return (_) => true
     searchValue = searchValue.toLowerCase()
-    return ({title}) => title.toLowerCase().startsWith(searchValue)
+    return ({title}) => {
+        const lowTitle = title.toLowerCase();
+        return lowTitle.startsWith(searchValue)
+        || lowTitle.includes(searchValue)
+    }
 }
 
 function bindPlatformFilterMethod(value)
 {
-    if (!value) return (tile) => true
+    if (!value) return (_) => true
     return ({data}) => data[`p_${value}`]
 }
 
