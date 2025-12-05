@@ -1,13 +1,24 @@
 body {
   color-scheme: light dark;
 
-  --bg-colour: light-dark(#fff, #2a2d34);
-  --main-colour: light-dark(#000, #fff);
-  --accent-colour: light-dark(#64d, #fae);
-  --bg-accent-colour: light-dark(#eeeeee, #1a1d24);
+  @media (prefers-color-scheme: light) {
+    --bg-colour: #fff;
+    --main-colour: #000;
+    --accent-colour: #64d;
+    --bg-accent-colour: #eeeeee;
 
-  --main-colour-faded: light-dark(#666, #ccc);
-  --accent-colour-faded: light-dark(#96f, #c9d);
+    --main-colour-faded: #666;
+    --accent-colour-faded: #96f;
+  }
+  @media (prefers-color-scheme: dark) {
+    --bg-colour: #2a2d34;
+    --main-colour: #fff;
+    --accent-colour: #fae;
+    --bg-accent-colour: #1a1d24;
+
+    --main-colour-faded: #ccc;
+    --accent-colour-faded: #c9d;
+  }
 
   padding: 2vw 4vw;
 
