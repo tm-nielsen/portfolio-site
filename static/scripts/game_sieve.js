@@ -54,7 +54,7 @@ function sieveGameTiles()
     const selectedPlatform = params.get('platform')
     const selectedSortMethod = params.get('sort')
 
-    const bindSearchParampropertyFilterMethod
+    const bindSearchParamPropertyFilterMethod
     = (key) => bindPropertyFilterMethod(
         key, params.getAll(key).reduce(
             (result, value) => {
@@ -65,22 +65,28 @@ function sieveGameTiles()
         )
     )
 
-    gameList.replaceChildren(
-        ...tiles.filter(
-            bindTitleFilterMethod(searchValue)
-        ).filter(
-            bindPlatformFilterMethod(selectedPlatform)
-        ).filter(
-            bindSearchParampropertyFilterMethod('tags')
-        ).filter(
-            bindSearchParampropertyFilterMethod('tools')
-        ).filter(
-            bindSearchParampropertyFilterMethod('roles')
-        ).sort(
-            bindSortMethod(selectedSortMethod)
-        )
-        .map(({element}) => element)
+    const filteredGames = tiles.filter(
+        bindTitleFilterMethod(searchValue)
+    ).filter(
+        bindPlatformFilterMethod(selectedPlatform)
+    ).filter(
+        bindSearchParamPropertyFilterMethod('tags')
+    ).filter(
+        bindSearchParamPropertyFilterMethod('tools')
+    ).filter(
+        bindSearchParamPropertyFilterMethod('roles')
+    ).sort(
+        bindSortMethod(selectedSortMethod)
     )
+    .map(({element}) => element)
+
+    if (typeof(gameList.replaceChildren)!="undefined") {
+        gameList.replaceChildren(...filteredGames)
+    }
+    else {
+        gameList.innerHTML = ""
+        filteredGames.forEach(gameList.appendChild)
+    }
 }
 
 window.addEventListener('popstate', sieveGameTiles)
