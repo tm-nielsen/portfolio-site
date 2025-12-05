@@ -3,7 +3,7 @@ title: Twee
 layout: single
 ---
 
-is a character-rich story-focused de-make of the [***Sentiment***](https://www.patreon.com/sentimentttrpg) ttrpg system.
+is a character-rich story-focused de-make of the [***Sentiment***](https://www.patreon.com/sentimentttrpg) ttrpg system. Largely built from the 0.6-0.8 revisions of the beta ruleset, Twee is an attempt to simplify the system even further, optimizing for an open table environment.
 
 - [Quick Reference](reference)
 - [Example of Play](example)
