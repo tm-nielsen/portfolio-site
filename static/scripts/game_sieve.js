@@ -1,14 +1,11 @@
-import gameData from '/assets/game_data.json' with { type: "json" }
-
 const gameTileElements = [...document.getElementsByClassName('game-tile')]
 const gameList = document.getElementsByClassName('game-list')[0]
 
 const tiles = gameTileElements.map(
     tile => {
         const title = tile.getElementsByTagName('h2')[0].textContent
-        const data = gameData.find(entry => entry.title === title)
         const element = tile.parentElement
-        return {title, data, element}
+        return {title, element, data: null}
     }
 )
 
@@ -17,6 +14,7 @@ function bindSortMethod(sortKey)
 {
     if (!sortKey) return (_a, _b) => -1
     return (a, b) => {
+        if (!a.data || !b.data) return -1
         let valueA = a.data[sortKey]
         let valueB = b.data[sortKey]
         if (Number.isInteger(valueA)) return valueB - valueA
@@ -56,7 +54,7 @@ function sieveGameTiles()
     const params = new URLSearchParams(window.location.search)
     const searchValue = params.get('q')
     const selectedPlatform = params.get('platform')
-    const selectedSortMethod = params.get('sort')
+    const selectedSortMethod = params.get('sort') ?? 'published_at'
 
     const bindSearchParamPropertyFilterMethod
     = (key) => bindPropertyFilterMethod(
@@ -69,7 +67,7 @@ function sieveGameTiles()
         )
     )
 
-    const filteredGames = tiles.filter(
+    const filteredTiles = tiles.filter(
         bindTitleFilterMethod(searchValue)
     ).filter(
         bindPlatformFilterMethod(selectedPlatform)
@@ -85,11 +83,11 @@ function sieveGameTiles()
     .map(({element}) => element)
 
     if (typeof(gameList.replaceChildren)!="undefined") {
-        gameList.replaceChildren(...filteredGames)
+        gameList.replaceChildren(...filteredTiles)
     }
     else {
         gameList.innerHTML = ""
-        filteredGames.forEach(gameList.appendChild)
+        filteredTiles.forEach(gameList.appendChild)
     }
 }
 
@@ -101,9 +99,10 @@ const result = await fetch('https://games.twig.skin')
 const responseData = await result.json()
 tiles.forEach(
     tile => {
-        const updatedData = responseData.find(
+        const matchingData = responseData.find(
             ({title}) => title === tile.title
         )
-        if (updatedData) tile.data = updatedData
+        if (matchingData) tile.data = matchingData
     }
 )
+sieveGameTiles()
