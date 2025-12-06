@@ -3,40 +3,25 @@ const textInputs = document.querySelectorAll('input[type="text"]')
 
 checkboxes.forEach(checkbox => checkbox.removeAttribute('disabled'))
 
-
-const cookieStoreSupported = typeof(cookieStore)!="undefined"
-
 async function getCookie(label) {
-    if (cookieStoreSupported) {
-        return cookieStore.get(label)
-    }
-    else {
-        const cookieRegex = RegExp(`${label}=([^;])+`)
-        const regexResult = document.cookie.match(cookieRegex)
-        return regexResult[1]
-    }
+    const escapedLabel = label.replace(/[#-.]|[[-^]|[?|{}]/g, '\\$&')
+    const cookieRegex = RegExp(`${escapedLabel}=([^;]+)`)
+    const regexResult = document.cookie.match(cookieRegex)
+    return regexResult && regexResult[1]
 }
 
-function SetCookie(label, value) {
-    if (cookieStoreSupported) {
-        cookieStore.set(label, value)
-    }
-    else {
-        document.cookie = `${label}=${value}`
-    }
+function setCookie(label, value) {
+    document.cookie = `${label}=${value}`
 }
 
 
 function bindCookieMethods(inputElement, setMethod, getMethod) {
     const labelText = inputElement.parentElement.textContent
     const cookieLabel = labelText.split('\n')[0].trim()
-    cookieStore.get(cookieLabel).then(
-        cookie => {
-            if(cookie) setMethod(cookie.value) 
-        }
-    )
+
+    getCookie(cookieLabel).then(setMethod)
     inputElement.onchange = event => {
-        cookieStore.set(cookieLabel, getMethod(event.target))
+        setCookie(cookieLabel, getMethod(event.target))
     }
 }
 
