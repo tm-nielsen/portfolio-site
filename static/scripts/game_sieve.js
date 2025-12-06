@@ -5,7 +5,8 @@ const tiles = gameTileElements.map(
     tile => {
         const title = tile.getElementsByTagName('h2')[0].textContent
         const element = tile.parentElement
-        return {title, element, data: null}
+        const data = { published_at: element.getAttribute('data-date') }
+        return {title, element, data}
     }
 )
 
@@ -14,9 +15,9 @@ function bindSortMethod(sortKey)
 {
     if (!sortKey) return (_a, _b) => -1
     return (a, b) => {
-        if (!a.data || !b.data) return -1
         let valueA = a.data[sortKey]
         let valueB = b.data[sortKey]
+        if (!valueA || !valueB) return -1
         if (Number.isInteger(valueA)) return valueB - valueA
         if (Date.parse(valueA)) return valueB.localeCompare(valueB)
         else return valueA.localeCompare(valueB)

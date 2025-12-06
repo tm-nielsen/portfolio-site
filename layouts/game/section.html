@@ -54,11 +54,13 @@
         {{- $game_tags := default $empty $params.tags -}}
         {{- $game_tools := default $empty $params.tools -}}
         {{- $game_roles := default $empty $params.roles -}}
+        {{- $game_date := default $empty $game_info.published_at -}}
 
         <li class="drop-shadow"
             data-tags='{{delimit $game_tags ","}}'
             data-tools='{{delimit $game_tools ","}}'
             data-roles='{{delimit $game_roles ","}}'
+            data-date='{{ $game_date }}'
         >
             <a href="{{$game_page.RelPermalink}}" class="game-tile">
                 <img src="{{$cover_src}}" alt="capsule image" loading="lazy" />
