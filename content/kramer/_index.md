@@ -33,6 +33,8 @@ Kramer County is run as an ***Open Table***.
 This means there is no fixed schedule, group of players, or commitment beyond a single session. When you want to play, reach out to other players and find a time that works for all of you, then check with the facilitator. The facilitator may also propose session times filled on a first come first serve basis.
 
 ## Additional Reading
+[Musings](musings) - ongoing reflections on the game as it develops
+
 This game has been significantly *(though unintentionally)* influenced by the Old School Renaissance philosophy of rpg design. [This primer][0] may help introduce players to the underlying approach to play.
 - [OSR Primer][0]
 - [The Open Table Manifesto][1]
