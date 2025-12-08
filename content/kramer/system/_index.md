@@ -23,7 +23,7 @@ Whatever you choose, have a clear idea of what these ***Attributes*** represent,
 ***Attribute*** colours are entirely vibe-based, though a rough guide is provided in the *Colour Words* graphic. Each ***Attribute*** must be a different colour. Attempting to balance or concentrate a character around the wheel may help guide their formation, but take care to avoid using one of the guiding colour words as an ***Attribute***. While allowed, you won't have much fun playing a boring character!
 
 ### Levels
-Each ***Attribute*** has an associated level, which adds a bonus value to a roll when you lock it in as your ***Swing***. As a character progresses through multiple sessions, you may spend ***Experience*** points to increase these bonuses individually. ***Attribute*** levels can be tracked on your character sheet next to the relevant dice slots. The bonus is equal to the level, starting at 0.
+Each ***Attribute*** has an associated level, which adds a bonus value to a roll when you lock it in as your ***Swing***. As a character progresses through multiple sessions, you may spend ***Potential*** to increase these bonuses individually. ***Attribute*** levels can be tracked on your character sheet next to the relevant dice slots. The bonus is equal to the level, starting at 0.
  
 ## Dice
 Each ***Attribute*** is represented by a coloured d6 which are used to act on or react to the world around you. Normally living in their home slots on your character sheet, performing a roll using an ***Attribute*** dice will bring it to the forefront. This die is physically placed in the ***Swing*** slot of your character sheet.  
@@ -43,7 +43,8 @@ While you will normally want to use the highest value, you will have to justify 
 *Bonuses may be granted by the facilitator based on clever incorporation of context like a prop.*
 #### Success
 When rolling against another character, you will be contesting a roll to die.  
-The ***Roll to Do* must exceed the *Roll to Die*** in order to succeed, dealing damage equal to your Swing (die value + attribute level).  
+The ***Roll to Do* must exceed the *Roll to Die*** in order to succeed, dealing damage equal to your Swing (die value + attribute level). Mark a point of ***Potential*** if you deal enough damage to ***Wound*** your target.
+
 In other situations, you may simply roll against a static threshold determined by the facilitator.  
 A normal success will be partial, somehow complicated by a contextual setback, unless the threshold is cleared by a wide enough margin *(~2)*.
 #### Clashes
@@ -74,20 +75,20 @@ When all health is lost, your character is ***Wounded***
 	- *completely unusable until healed*
 - Restore health to full
 - Select a new ***Swing***
-- **Mark a point of *Experience***
+- **Mark a point of *Potential***
 	- *(2 points for every subsequent wound)*  
-*experience is also gained for dealing a wound.*
+	- *Potential is also gained for dealing a wound.*
 
-*You are encouraged to roleplay what your character would be like in the complete absence of this core characteristic.*
+*A wound represents critical damage to a core aspect of your character. Consider how this could blight or invert their behaviour in certain ways.*
 
-When a character ***Wounds*** their second last ***Attribute***, they may choose to yield. Such a character may remain present or exit the scene but loses the ability to deal damage, take damage, or gain experience until they are healed.
+When a character ***Wounds*** their second last ***Attribute***, they may choose to yield. Such a character may remain present or exit the scene but loses the ability to deal damage, take damage, or gain Potential until they are healed.
 #### Death's Door
 A character who continues with only a single remaining ***Attribute*** is said to be on ***Death's Door***. Upon loosing all health in this state, your character will be narratively obliterated and removed from play.  
-Surviving a hit on ***Death's Door*** grants 2 points of experience.  
+Surviving a hit on ***Death's Door*** grants 2 points of Potential.  
 A character on ***Death's Door*** may not leave a scene in conflict.
 
 ## Progression
-During play, ***Experience*** points are awarded for character moments like achievements or personal growth. The most consistent way to gain ***Experience*** is by taking or dealing ***Wounds***. These can be spent at the end of session on the following:
+During play, points of ***Potential*** are awarded for character moments like achievements or personal growth. The most consistent way to gain ***Potential*** is by taking or dealing ***Wounds***. These can be spent at the end of session on the following:
 
 | Action | Cost                     | Description                              |
 | ------ | ------------------------ | ---------------------------------------- |
@@ -104,7 +105,10 @@ During play, ***Experience*** points are awarded for character moments like achi
 Additional system mechanics exist optionally. Though available to any player that cares to read and bring them up in session, they will not be introduced until a player becomes more familiar and comfortable with the basic system, beginning to crave complexity.
 
 ### Exhaustion
-Certain extraordinary actions may fall at the limit of a character's ability. To push past this, you may be given the option to ***Exhaust*** a die. Place your current swing beside your character sheet, leaving the slot empty. This leaves a character defenceless until they next act or ***Roll to Die***, when they may select a new *Swing* before restoring the exhausted die.
+Certain extraordinary actions may fall at the limit of a character's ability. To push past this, you may be given the option to ***Exhaust*** a die. Place your current swing beside your character sheet, leaving the slot empty. This leaves a character defenceless until they next act, when they may select a new *Swing*.
+
+#### Take a Breath
+When one or more attribute die is exhausted a character may spend an action to take a breath. Describe how your character stops to reset, regaining their composure and restoring all exhausted attributes. A new swing may also be selected.
 
 ### Attribute Compulsion
 Knowing the name of an attribute represents a significant degree of vulnerability between characters; both a weakness and a strength. While the attributes of player characters are shared, those of NPCs must be discovered through play.
@@ -138,8 +142,12 @@ To partially incapacitate a target, you may spend a ***Bond Token*** and ***Roll
 > -Sentiment 0.8.1 Rules
 
 ### Gifts
-Special equipment and character abilities are codified as ***Gifts***. These special mechanics will normally impose a 
-As part of character progression, the facilitator may offer you the option to spend ***Experience*** on a special ability called a ***Gift***. The availability of this option is based on the presence of a compelling idea and it's relevance to your character. You may bring suggestions to your facilitator. ***Experience*** may also be spent on certain ***Gifts*** to increase their potency.
+Special equipment and character abilities are codified as ***Gifts***.
+
+Especially potent character moments can be crystallized by the facilitator, codifying a mechanical representation of ingenuity, courage, or vulnerability into this form of lasting reusable empowerment. The availability of this option is based on the presence of a compelling idea and it's relevance to your character.
+
+You may spend ***Potential*** to form ***Gifts*** of your own from moments you found important, with costs decided by the facilitator. ***Potential*** may also be spend on certain ***Gifts*** to increase the strength of an effect or mitigate an imposed cost.
+
 #### Examples
 ##### I Know A Guy
 Once per Session - Name and conjure an individual fit to tackle the issue at hand.

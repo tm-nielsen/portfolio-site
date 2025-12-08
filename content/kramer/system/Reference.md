@@ -29,4 +29,3 @@ title: Twee Quick Reference
 - **+1 experience**
 - **+2 experience / hit survived**
 - Character deleted if health reaches 0
-- Can't run
