@@ -7,6 +7,7 @@ cascade:
 <script src="/scripts/input_cookies.js" defer></script>
 
 A high lethality sitcom role-playing game orbiting *Kramer County Community College*, players navigate silly situations and awkward social dynamics while prodded by a facilitator. Character and narrative are centred over mechanics in this laughs-first open table campaign.  
+<sub>spooks may also be afoot</sub>
 
 ## Getting Started
 - [ ] [Create a Character](character-creation)
@@ -35,7 +36,7 @@ This means there is no fixed schedule, group of players, or commitment beyond a 
 ## Additional Reading
 [Musings](musings) - ongoing reflections on the game as it develops
 
-This game has been significantly *(though unintentionally)* influenced by the Old School Renaissance philosophy of rpg design. [This primer][0] may help introduce players to the underlying approach to play.
+However much it persists through development, this game was initially influenced by the Old School Renaissance philosophy of rpg design. [This primer][0] may help introduce players to the underlying approach to play.
 - [OSR Primer][0]
 - [The Open Table Manifesto][1]
 - [West Marches][2]
