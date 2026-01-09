@@ -1,10 +1,12 @@
 - title: "Scat Pit"
   link: "/games/scat-pit"
   description: "Scream into your microphone."
+  image: "/games/covers/scat-pit.png"
 
 - title: "Clack"
   link: "/games/clack"
   description: "It's just really fun."
+  image: "/games/covers/clack.gif"
 
 - title: "Curl!"
   link: "/projects/curl"
