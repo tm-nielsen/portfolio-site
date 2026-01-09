@@ -42,7 +42,7 @@
 {{- $ordered_games := (sort $game_data "published_at") | collections.Reverse -}}
 {{- $ordered_titles := partial "remap" (dict "map" $ordered_games "key" "title") -}}
 
-<ul class="game-list">
+<ul class="tiles">
     {{- range $ordered_titles }}
         {{- $game_page := index (where $game_pages ".Title" .) 0 -}}
         {{- $game_info := index (where $game_data "title" .) 0 -}}
