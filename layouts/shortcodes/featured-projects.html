@@ -1,9 +1,14 @@
 {{- with .Site.Data.featured -}}
-    <ul>
+    <ul class="tiles">
     {{- range . }}
-        <li>
-            <a href="{{.link}}">{{.title}}</a>
-            - {{.description}}
+        <li class="drop-shadow">
+            <a href="{{ .link }}">
+                {{ with .image }}
+                    <img src="{{ . }}">
+                {{ end }}
+                <h3>{{ .title }}</h3>
+                <sub>{{ .description }}</sub>
+            </a>
         </li>
     {{- end -}}
     </ul>
