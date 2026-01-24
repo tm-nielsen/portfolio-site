@@ -1,12 +1,11 @@
-const gameTileElements = [...document.getElementsByClassName('game-tile')]
-const gameList = document.getElementsByClassName('game-list')[0]
+const gameList = document.getElementById('game-list')
+const gameTileElements = [...gameList.children]
 
 const tiles = gameTileElements.map(
     tile => {
         const title = tile.getElementsByTagName('h2')[0].textContent
-        const element = tile.parentElement
-        const data = { published_at: element.getAttribute('data-date') }
-        return {title, element, data}
+        const data = { published_at: tile.getAttribute('data-date') }
+        return {title, data, element: tile}
     }
 )
 
