@@ -8,7 +8,7 @@ cascade:
 
 *Developer (Software, BCI, Gaming) at the University of Calgary*
 
-[tmnielsen33@gmail.com](mailto:tmnielsen33@gmail.com)  
+[Email: hello@twig.gay](mailto:hello@twig.gay)  
 [Github: tm-nielsen](https://github.com/tm-nielsen)
 
 <details>
