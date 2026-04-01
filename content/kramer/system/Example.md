@@ -64,7 +64,8 @@ I guess she'll get her stuff down and start getting settled.
 > Darius, what does you do as you hear small footsteps approaching?
 
 ## Darius
-He quickly turns away and screams "Don't look at me when I'm naked"
+He quickly turns away and screams "Don't look at me when I'm naked"  
+*(He is fully clothed but doesn't have his makeup on)*
 
 > [Roll to Do][Do]  
 > Elina [Roll to Die][Die]
