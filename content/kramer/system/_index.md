@@ -104,10 +104,12 @@ If you no longer wish to continue playing a character, you can choose to **Retir
 *Can only be done after or outside of session.*
 
 ---
-*skip on first reading*
 
 ## Advanced
-Additional system mechanics exist optionally. Though available to any player that cares to read and bring them up in session, they will not be introduced until a player becomes more familiar and comfortable with the basic system, beginning to crave complexity.
+<details>
+	<summary>Optional System Mechanics</summary>
+
+Additional system mechanics exist. Though available to any player that cares to read and bring them up in session, they will not be introduced until a player becomes more familiar and comfortable with the basic system, beginning to crave complexity.
 
 ### Exhaustion
 Certain extraordinary actions may fall at the limit of a character's ability. To push past this, you may be given the option to ***Exhaust*** a die. Place your current swing beside your character sheet, leaving the slot empty. This leaves a character defenceless until they next act, when they may select a new *Swing*.
@@ -165,3 +167,4 @@ On a Hit - Deal 2 wounds.
 You can't bring a gun to school.  
 If someone sees you with a gun, they will call the police.  
 The police also have guns.
+</details>
