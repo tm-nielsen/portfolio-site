@@ -43,7 +43,7 @@ While you will normally want to use the highest value, you will have to justify 
 *Bonuses may be granted by the facilitator based on clever incorporation of context like a prop.*
 #### Success
 When rolling against another character, you will be contesting a roll to die.  
-The ***Roll to Do* must exceed the *Roll to Die*** in order to succeed, dealing damage equal to your Swing (die value + attribute level). Mark a point of ***Potential*** if you deal enough damage to ***Wound*** your target.
+The ***Roll to Do* must meet or exceed the *Roll to Die*** in order to succeed, dealing damage equal to your Swing (die value + attribute level). Mark a point of ***Potential*** if you deal enough damage to ***Wound*** your target.
 
 In other situations, you may simply roll against a static threshold determined by the facilitator.  
 A normal success will be partial, somehow complicated by a contextual setback, unless the threshold is cleared by a wide enough margin *(~2)*.
@@ -98,6 +98,11 @@ During play, points of ***Potential*** are awarded for character moments like ac
 
 *Attributes may also be healed, levelled, and altered in combination at a discount representative of character growth if it can be narratively justified to the facilitator.*
 
+### Retiring a Character
+If you no longer wish to continue playing a character, you can choose to **Retire** them. Redeem half their total lifetime potential to spend on a new character. Total lifetime potential includes any unspent points plus any spent to increase their max health or attribute levels.
+
+*Can only be done after or outside of session.*
+
 ---
 *skip on first reading*
 
@@ -118,7 +123,7 @@ Sharing a character moment, developing a friendship, stoking a rivalry, or even 
 ***Bond Tokens*** can then be spent in play to bolster or incapacitate the target.
 
 #### Invoking an Attribute
-To support a struggling ally, you may spend a ***Bond Token*** to call upon one of their attributes by name, temporarily granting them use of that die as their swing, even if it is wounded. The effect persists until that character takes a wound *(in which case the invokes attribute is wounded)* or locks in another attribute *(in which case the effect is lost)*. Mechanically, this grants an extra wound but forces the character to use only the invoked attribute *(if they choose to keep the effect)*.
+To support a struggling ally, you may spend a ***Bond Token*** to call upon one of their attributes by name, temporarily granting them use of that die as their swing, even if it is wounded. The effect persists until that character takes a wound *(in which case the invoked attribute is wounded)* or locks in another attribute *(in which case the effect is lost)*. Mechanically, this grants an extra wound but forces the character to use only the invoked attribute *(if they choose to keep the effect)*.
 
 You must be able to narratively justify how to call out the target attribute in this moment.  
 ##### Example
