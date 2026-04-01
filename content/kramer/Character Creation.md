@@ -8,6 +8,7 @@ title: Character Creation
 - <label>Attribute 2: <input type="text"/></label>
 - <label>Attribute 3: <input type="text"/></label>
 - [ ] Name + Pronouns
+- [ ] Link to the paranormal
 
 ## Backgrounds
 One way or another, your character needs to be at Kramer County Community College. While any halfway plausible explanation you might think of is valid, you can also roll for a general character background. *(or just something to use as a starting point)*
@@ -15,6 +16,9 @@ One way or another, your character needs to be at Kramer County Community Colleg
 Pick a category *(or roll 1d8)*, then roll 1d8 to select a discipline.
 
 {{< kramer/character-backgrounds >}}
+
+### Investment in the Unusual
+Kramer County is *pretty much* normal. Incidents suggesting otherwise are easily dismissed by locals who've spent their entire lives in town. Out-of-towners are either too busy or just don't care. Only the curious, young, and bored occupants of *The College* have the interest and the free time to seek the truth.
 
 
 ## [Attributes](system#attributes)
@@ -47,6 +51,13 @@ They are meant to get the process started.*
 	- What do they do on campus if not study or work?
 - How old are they?
 	- *roll 1d100 + 10*
+- What vested interest do they have in the paranormal?
+	- Are they a conspiracy theorist?
+		- a new-age spiritualist?
+		- a concerned community member?
+		- an entrepreneur?
+		- lonely?
+	- Are they seeking closure for past encounters?
 - Do they own an air fryer?
 	- Do they use it?
 	- Would they like to?

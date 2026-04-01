@@ -6,8 +6,8 @@ cascade:
 ---
 <script src="/scripts/input_cookies.js" defer></script>
 
-A high lethality sitcom role-playing game orbiting *Kramer County Community College*, players navigate silly situations and awkward social dynamics while prodded by a facilitator. Character and narrative are centred over mechanics in this laughs-first open table campaign.  
-<sub>spooks may also be afoot</sub>
+A high lethality sitcom role-playing game orbiting *Kramer County Community College*, players navigate the comically perilous social dynamics of school life while pursuing the truth behind strange occurrences in their small town. Character and narrative are centred over mechanics in this laughs-first open table campaign.  
+<sub>spooks are afoot</sub>
 
 ## Getting Started
 - [ ] [Create a Character](character-creation)
