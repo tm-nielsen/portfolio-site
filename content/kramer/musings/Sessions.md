@@ -3,6 +3,30 @@ title: Session Log
 ---
 Listed in reverse order *(most recent on top)*, a brief summary and lessons learned from each session I've run so far.
 
+## #5 - Spectrochemicals
+After months on the back burner, this session was a way to get back into things, building up momentum and confidence again. This was very successful. I love gaming. Supernatural opposition arose naturally from improvisation with minor character details.
+
+Players still struggle to understand what's going on with the dice, even after playing multiple sessions. The key problem of character motivation is also apparent. Though intuitively falling back on a core narrative backbone of follow-the-freak-to-the-dungeon worked out well enough this time, it would be ideal to bake that into player characters directly. Would also be good to find narrative moments other than killing the NPC introduced that session to guide players to the conflict.
+
+At one point, jellybeans were used along with a placemat to establish a shared sense of space, reminding me of the value of physical game elements, however rudimentary.
+
+### Lessons
+- Simplify attribute colours to Red, Blue, and Yellow
+  - Less confusion, more clashes
+  - Looped back around to Sentiment rules as written lol
+- Always paint opposition with a colour
+  - Provides a small baseline interaction handle
+  - Extra flavour
+  - Even for simple skill checks *(let players clash with a stepladder)*
+- Use simple physical game elements
+- Include a drive to paranormal as a requirement for character creation
+
+*Clashing rules were also adjusted following this session to be non-optional and require additional narrative justification.*
+
+### Hook
+One player was a groundskeeper raking leaves. A weird old lady showed up talking about how leaving leaves on the ground creates a conductive surface allowing the congealed souls of billions of ancient trees to seep up through the surface as spectral crude oil. Went to greenhouse where this was concentrated. Though I really liked the paranormal opposition that arose from it, the initial narrative structure was extremely weak. Only worked because of my wonderful players.
+
+---
 ## #4 - Dungeon
 A few points of feedback from the previous session focused on the lack of narrative foundation, missing both a concrete plot hook and established sense of place. Overcorrecting, I wanted to try a dungeon. Did not prep a dungeon, just some general ideas. This was extremely stressful but paid off extremely well in that certain parts worked very well and other parts really didn't.
 
