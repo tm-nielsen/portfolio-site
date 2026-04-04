@@ -6,7 +6,7 @@ layout: single
 is a character-rich story-focused de-make of the [***Sentiment***](https://www.patreon.com/sentimentttrpg) ttrpg system. Largely built from the 0.6-0.8 revisions of the beta ruleset, Twee is an attempt to simplify the system even further, optimizing for an open table environment.
 
 - [Quick Reference](reference)
-- [Example of Play](example)
+- [Example of Play *(draft)*](example)
 
 ## Attributes
 Every character consists of three unique stats, each with a name and colour.  
@@ -19,8 +19,8 @@ These names are critically important, as all three represent your character enti
 Whatever you choose, have a clear idea of what these ***Attributes*** represent, and how to communicate that with your facilitator as needed.  
 *The name of an attribute is permanent and cannot be changed without undergoing significant narrative and mechanical character growth.*
 
-### Colours {{< kramer/colour-wheel >}}
-***Attribute*** colours are entirely vibe-based, though a rough guide is provided in the *Colour Words* graphic. Each ***Attribute*** must be a different colour. Attempting to balance or concentrate a character around the wheel may help guide their formation, but take care to avoid using one of the guiding colour words as an ***Attribute***. While allowed, you won't have much fun playing a boring character!
+### Colours
+Each character must have one ***Attribute*** for each of the three primary pigment colours: **Red**, **Blue**, and **Yellow**, the assignment of which is entirely vibes-based. You are strongly encouraged to form questionably grounded and unreasonably convicted justifications for this choice.
 
 ### Levels
 Each ***Attribute*** has an associated level, which adds a bonus value to a roll when you lock it in as your ***Swing***. As a character progresses through multiple sessions, you may spend ***Potential*** to increase these bonuses individually. ***Attribute*** levels can be tracked on your character sheet next to the relevant dice slots. The bonus is equal to the level, starting at 0.
@@ -41,18 +41,20 @@ This could be anything from lifting a box to hitting someone or hitting on them.
 
 While you will normally want to use the highest value, you will have to justify to the facilitator how and why your character is using that ***Attribute*** to perform the action *(if not self-evident)*.
 *Bonuses may be granted by the facilitator based on clever incorporation of context like a prop.*
+
+#### Clashes
+To choose a dice which matches the colour of your target, identify a thematic link between the two attributes and describe how they are directly conflicting in this moment. This becomes a ***Clash***.
+- If the instigator rolls higher, they deal double damage
+- If the target rolls higher, they deal normal damage
+- A tie banks the damage and prompts a reroll. This banked damage will be dealt to the losing party along with the value of the winning roll.
+	- *Damage banked by successive tied clashes can stack indefinitely.*
+
 #### Success
 When rolling against another character, you will be contesting a roll to die.  
 The ***Roll to Do* must meet or exceed the *Roll to Die*** in order to succeed, dealing damage equal to your Swing (die value + attribute level). Mark a point of ***Potential*** if you deal enough damage to ***Wound*** your target.
 
 In other situations, you may simply roll against a static threshold determined by the facilitator.  
 A normal success will be partial, somehow complicated by a contextual setback, unless the threshold is cleared by a wide enough margin *(~2)*.
-#### Clashes
-If you ***Roll to Do*** using a die the same colour as your target's current ***Swing***, it becomes a clash.
-- A successful attack deals double damage.
-- A successful defence deals normal damage.
-- A tie banks the damage and prompts a reroll. This banked damage will be dealt to the losing party along with the value of the winning roll.
-	- *Damage banked by successive tied clashes can stack indefinitely.*
 
 ### Roll to ***Die***
 When acted against, you ***Roll to Die***.  
@@ -88,7 +90,7 @@ Surviving a hit on ***Death's Door*** grants 2 points of Potential.
 A character on ***Death's Door*** may not leave a scene in conflict.
 
 ## Progression
-During play, points of ***Potential*** are awarded for character moments like achievements or personal growth. The most consistent way to gain ***Potential*** is by taking or dealing ***Wounds***. These can be spent at the end of session on the following:
+During play, points of ***Potential*** are earned by taking or dealing ***Wounds***. They may also be awarded for progress in or fulfilment of a character arc. These can be spent at the end of session on the following:
 
 | Action | Cost                     | Description                              |
 | ------ | ------------------------ | ---------------------------------------- |
@@ -99,7 +101,7 @@ During play, points of ***Potential*** are awarded for character moments like ac
 *Attributes may also be healed, levelled, and altered in combination at a discount representative of character growth if it can be narratively justified to the facilitator.*
 
 ### Retiring a Character
-If you no longer wish to continue playing a character, you can choose to **Retire** them. Redeem half their total lifetime potential to spend on a new character. Total lifetime potential includes any unspent points plus any spent to increase their max health or attribute levels.
+If you no longer wish to continue playing a character, you can choose to **Retire** them. Redeem half their total lifetime potential *(rounded up)* to spend on a new character. Total lifetime potential includes any unspent points plus any spent to increase their max health or attribute levels.
 
 *Can only be done after or outside of session.*
 

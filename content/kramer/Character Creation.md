@@ -4,11 +4,11 @@ title: Character Creation
 <script src="/scripts/input_cookies.js" defer></script>
 
 - [ ] Connection to the College
-- <label>Attribute 1: <input type="text"/></label>
-- <label>Attribute 2: <input type="text"/></label>
-- <label>Attribute 3: <input type="text"/></label>
+- <label>Red Attribute:<input type="text"/></label>
+- <label>Blue Attribute:<input type="text"/></label>
+- <label>Yellow Attribute:<input type="text"/></label>
 - [ ] Name + Pronouns
-- [ ] Link to the paranormal
+- [ ] Paranormal Angst
 
 ## Backgrounds
 One way or another, your character needs to be at Kramer County Community College. While any halfway plausible explanation you might think of is valid, you can also roll for a general character background. *(or just something to use as a starting point)*
@@ -18,7 +18,11 @@ Pick a category *(or roll 1d8)*, then roll 1d8 to select a discipline.
 {{< kramer/character-backgrounds >}}
 
 ### Investment in the Unusual
-Kramer County is *pretty much* normal. Incidents suggesting otherwise are easily dismissed by locals who've spent their entire lives in town. Out-of-towners are either too busy or just don't care. Only the curious, young, and bored occupants of *The College* have the interest and the free time to seek the truth.
+Kramer County is *pretty much* normal. Incidents suggesting otherwise are easily dismissed by locals who've spent their entire lives in town. Out-of-towners are either too busy or just don't care. Only the curious, young, and bored occupants of *The College* have the interest and the free time to seek the truth. Your character is among these seekers.
+
+What insecurity, desire, or character flaw drives them to search for answers beyond the veil?
+
+*This will be codified by the facilitator as a secret personal bounty, rewarding **Potential** when it has been satisfied by a narrative arc.*
 
 
 ## [Attributes](system#attributes)
@@ -35,8 +39,8 @@ Don't forget to share them with everyone you'll be playing with before the sessi
 > Whatever you choose, have a clear idea of what these ***Attributes*** represent, and how to communicate that with your facilitator as needed.
 
 
-### [Attribute Colours](system#colours) {{< kramer/colour-wheel >}}
-> ***Attribute*** colours are entirely vibe-based, though a rough guide is provided in the *Colour Words* graphic. Each ***Attribute*** must be a different colour. Attempting to balance or concentrate a character around the wheel may help guide their formation, but take care to avoid using one of the guiding colour words as an ***Attribute***. While allowed, you won't have much fun playing a boring character!
+### [Attribute Colours](system#colours)
+> Each character must have one ***Attribute*** for each of the three primary pigment colours: **Red**, **Blue**, and **Yellow**, the assignment of which is entirely vibes-based. You are strongly encouraged to form questionably grounded and unreasonably convicted justifications for this choice.
 
 ## Guiding Questions
 *I don't need your answers to these questions, and neither do you.  
@@ -51,13 +55,6 @@ They are meant to get the process started.*
 	- What do they do on campus if not study or work?
 - How old are they?
 	- *roll 1d100 + 10*
-- What vested interest do they have in the paranormal?
-	- Are they a conspiracy theorist?
-		- a new-age spiritualist?
-		- a concerned community member?
-		- an entrepreneur?
-		- lonely?
-	- Are they seeking closure for past encounters?
 - Do they own an air fryer?
 	- Do they use it?
 	- Would they like to?
@@ -73,18 +70,18 @@ Use the spite as creative fuel.*
 - 🟥 "Did you hear about Pluto?"
 
 ### Lucy Ricardo
-- 🟩 Housewife
+- 🟦 Housewife
 - 🟨 Desperate for the Stage
-- 🟪 Schemes 💅
+- 🟥 Schemes 💅
 
 ### Jeff Community
 - 🟥 Speech
-- 🟪 Fake Lawyer
-- 🟧 Crossing his Arms While Looking at Someone Sarcastically
+- 🟦 Fake Lawyer
+- 🟨 Crossing his Arms While Looking at Someone Sarcastically
 
 ### Jake Peralta
-- 🟧 Man Child
-- 🟩 Daddy Issues
+- 🟨 Man Child
+- 🟥 Daddy Issues
 - 🟦 Cop
 
 ## Notes

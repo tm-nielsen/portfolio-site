@@ -46,7 +46,7 @@ Well I'm gonna have to use my red for this, and that's a 3.
 
 ## Elina
 **[Rolls to Discern][Discern]*  
-My green was highest. I'm looking forward to this new chapter of my life, ready to take on the challenges presented to me.
+My yellow was highest. I'm looking forward to this new chapter of my life, ready to take on the challenges presented to me.
 
 > It was clear during the walkthrough that this place is pretty bare, what all did you bring to move in?  
 > Do you have anyone with you to help with furniture?
@@ -73,7 +73,7 @@ He quickly turns away and screams "Don't look at me when I'm naked"
 That's a red 5
 
 ## Elina
-I got a green 4
+I got a yellow 4
 > Describe to me how you take 5 damage from seeing this horrible gremlin in your new home.
 
 She's rattled.  
@@ -82,6 +82,7 @@ But she's not going to let that stop her.
 She turns to this guy and asks him "how old are you"
 
 > [Roll to Do][Do]
+
 Red 6
 
 ## Darius
