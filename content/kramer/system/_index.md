@@ -6,7 +6,7 @@ layout: single
 is a character-rich story-focused de-make of the [***Sentiment***](https://www.patreon.com/sentimentttrpg) ttrpg system. Largely built from the 0.6-0.8 revisions of the beta ruleset, Twee is an attempt to simplify the system even further, optimizing for an open table environment.
 
 - [Quick Reference](reference)
-- [Example of Play *(draft)*](example)
+- [Example of Play *(outdated)*](example)
 
 ## Attributes
 Every character consists of three unique stats, each with a name and colour.  
@@ -15,35 +15,37 @@ These ***Attributes*** are your character's core personality traits, convictions
 ### Names
 You may name ***Attributes*** in any way, from 'Crystal Girlie' to 'Beatboxing' to 'My old Co-Worker Brendan'. Poetry, Unicode characters, drawings, or anything else you can think of to meaningfully represent an aspect of your character are also valid.
 
-These names are critically important, as all three represent your character entirely!  
-Whatever you choose, have a clear idea of what these ***Attributes*** represent, and how to communicate that with your facilitator as needed.  
-*The name of an attribute is permanent and cannot be changed without undergoing significant narrative and mechanical character growth.*
+These names are critically important, as all three represent your character entirely! Whatever you choose, have a clear idea of what these ***Attributes*** represent, and how to communicate that with your facilitator as needed. The concept can and will morph through play but the name may not.
 
 ### Colours
-Each character must have one ***Attribute*** for each of the three primary pigment colours: **Red**, **Blue**, and **Yellow**, the assignment of which is entirely vibes-based. You are strongly encouraged to form questionably grounded and unreasonably convicted justifications for this choice.
+Each character must have one ***Attribute*** for each of the three primary pigment colours: **Red**, **Blue**, and **Yellow**. The assignment of these colours is entirely vibes-based. You are strongly encouraged to form questionably grounded and unreasonably convicted justifications for this choice.
 
-### Levels
-Each ***Attribute*** has an associated level, which adds a bonus value to a roll when you lock it in as your ***Swing***. As a character progresses through multiple sessions, you may spend ***Potential*** to increase these bonuses individually. ***Attribute*** levels can be tracked on your character sheet next to the relevant dice slots. The bonus is equal to the level, starting at 0.
+### Bonuses
+Each ***Attribute*** has an associated ***Bonus***, which is added to any roll for which it is used. These bonuses can be increased by taking ***Wounds*** or spending ***Potential*** between sessions.
+
+Initial ***Bonuses*** are determined by a roll of your three attribute dice. Any ***Attribute*** corresponding to the highest value rolled receives a +1 ***Bonus***.
  
 ## Dice
-Each ***Attribute*** is represented by a coloured d6 which are used to act on or react to the world around you. Normally living in their home slots on your character sheet, performing a roll using an ***Attribute*** dice will bring it to the forefront. This die is physically placed in the ***Swing*** slot of your character sheet.  
-*You are encouraged to roleplay your character as embodying their active attribute.*
+Each ***Attribute*** is represented by a coloured d6 which are used to act on or react to the world around you. One of these dice must be prominently displayed as your character's ***Vibe*** at all times, as selected by a ***Roll to Do*** or ***Roll to Discern***.  
+*You are encouraged to roleplay your character as embodying this active attribute.*
 
 Rolls are largely self-determined by player intention, but the facilitator will regularly call strays as they are caught in freeform dialogue.
 
 ### Roll to ***Do***
 Whenever you perform an action or influence something in the world, you ***Roll to Do***.  
-This could be anything from lifting a box to hitting someone or hitting on them.
+This could be anything from lifting a box to hitting someone or hitting on them.  
+A successful roll deals an equal amount of damage *(dice value + **Bonus**)*.
 - Roll all ***Attribute*** dice
-- Select one to act with
-	- *add attribute level*
-- Lock it in as your new ***Swing***
+- Select one to use
+	- *explain yourself*
+	- *add attribute bonus*
+- Indicate your new ***Vibe***
 
-While you will normally want to use the highest value, you will have to justify to the facilitator how and why your character is using that ***Attribute*** to perform the action *(if not self-evident)*.
+While you will normally want to use the highest value, you will have to justify to the facilitator how and why your character is using an ***Attribute*** to perform the action *(if not self-evident)*. An emotional and narratively driven justification will always be the most compelling.  
 *Bonuses may be granted by the facilitator based on clever incorporation of context like a prop.*
 
 #### Clashes
-To choose a dice which matches the colour of your target, identify a thematic link between the two attributes and describe how they are directly conflicting in this moment. This becomes a ***Clash***.
+To choose a dice which matches the colour of your target's ***Vibe***, identify a thematic link between the two attributes and describe how they are directly conflicting in this moment. This becomes a ***Clash***.
 - If the instigator rolls higher, they deal double damage
 - If the target rolls higher, they deal normal damage
 - A tie banks the damage and prompts a reroll. This banked damage will be dealt to the losing party along with the value of the winning roll.
@@ -51,57 +53,62 @@ To choose a dice which matches the colour of your target, identify a thematic li
 
 #### Success
 When rolling against another character, you will be contesting a roll to die.  
-The ***Roll to Do* must meet or exceed the *Roll to Die*** in order to succeed, dealing damage equal to your Swing (die value + attribute level). Mark a point of ***Potential*** if you deal enough damage to ***Wound*** your target.
+The ***Roll to Do* must meet or exceed the *Roll to Die*** in order to succeed.  
+Mark a point of ***Potential*** if you deal enough damage to ***Wound*** your target.
 
 In other situations, you may simply roll against a static threshold determined by the facilitator.  
-A normal success will be partial, somehow complicated by a contextual setback, unless the threshold is cleared by a wide enough margin *(~2)*.
+Such thresholds have a colour and can be clashed with.
 
 ### Roll to ***Die***
 When acted against, you ***Roll to Die***.  
 This is your roll to weather external action, influence, or attack.
-- Reroll your ***Swing***
-	- *add attribute level*
+- Reroll your ***Vibe***
+	- *add attribute bonus*
 
 ### Roll to ***Discern***
 At any point outside of a fixed turn order, roll your ***Attributes*** to examine your character's inner thoughts or feelings. The values presented by the dice can help guide character or roleplay decisions. A higher value in one stat might mean a certain tendency or viewpoint is acting up while a lower value could indicate a lack of confidence.
 - Roll all ***Attribute*** dice
-- Assess the vibe
-- Lock one in as a ***Swing***
+- Assess
+- Indicate your new ***Vibe***
 
-### Health, Damage, and Wounds
-A successful ***Roll to Do*** deals damage equal to your ***Swing*** *(die value + attribute level)*.  
-Each character starts with 10 health points.  
-When all health is lost, your character is ***Wounded***
-- Select the most relevant ***Attribute***  *(defaults to **Swing**)*
-	- discard ***Attribute*** die
-	- *completely unusable until healed*
-- Restore health to full
-- Select a new ***Swing***
+## Exchanging Damage
+A successful ***Roll to Do*** deals damage equal to the dice value plus the corresponding ***Bonus***.
+
+This damage is accumulated as an increasing number of tokens on a character as it is dealt to them. When this amount meets or exceeds their ***Threshold***, a character is ***Wounded***.
+
+Damage tokens are transferred from those accumulated by the dealing party, with any remaining introduced from a central supply. **Dealing damage removes it from your own character.**
+
+Each character starts with a ***Threshold*** of 10.
+
+### Wounds
+When enough damage is accumulated to meet or exceed their ***Threshold***, a character is ***Wounded***.  
+The ***Attribute*** die currently indicating their ***Vibe*** is discarded for the remainder of the session, representing critical damage to one of their core aspects. Consider how this would blight or invert their behaviour.
+
+- Discard die of current ***Vibe***
+- Discard accumulated damage
+- Select an unwounded ***Attribute***
+	- Permanently increase its ***Bonus*** by +1
+	- Indicate it as your new ***Vibe***
 - **Mark a point of *Potential***
-	- *(2 points for every subsequent wound)*  
 	- *Potential is also gained for dealing a wound.*
 
-*A wound represents critical damage to a core aspect of your character. Consider how this could blight or invert their behaviour in certain ways.*
-
-When a character ***Wounds*** their second last ***Attribute***, they may choose to yield. Such a character may remain present or exit the scene but loses the ability to deal damage, take damage, or gain Potential until they are healed.
+#### Yielding
+When a character ***Wounds*** their second last ***Attribute***, they may choose to yield. Such a character may remain present or exit the scene but loses the ability to exchange damage or gain Potential until they are healed.
 #### Death's Door
-A character who continues with only a single remaining ***Attribute*** is said to be on ***Death's Door***. Upon loosing all health in this state, your character will be narratively obliterated and removed from play.  
+A character who continues with only a single remaining ***Attribute*** is said to be on ***Death's Door***. Upon reaching their ***Threshold*** in this state, your character will be narratively obliterated and removed from play.  
 Surviving a hit on ***Death's Door*** grants 2 points of Potential.  
 A character on ***Death's Door*** may not leave a scene in conflict.
 
 ## Progression
 During play, points of ***Potential*** are earned by taking or dealing ***Wounds***. They may also be awarded for progress in or fulfilment of a character arc. These can be spent at the end of session on the following:
 
-| Action | Cost                     | Description                              |
-| ------ | ------------------------ | ---------------------------------------- |
-| Heal   | 1                        | Restore all ***Wounded Attributes***     |
-| Bulk   | 4, 6, 8...               | Increase max health by 5                 |
-| Level  | 2, 4, 6... *(2 x level)* | Increase an ***Attribute***'s level by 1 |
-
-*Attributes may also be healed, levelled, and altered in combination at a discount representative of character growth if it can be narratively justified to the facilitator.*
+| Action | Cost                     | Description                                  |
+| ------ | ------------------------ | -------------------------------------------- |
+| Bulk   | 4, 6, 8...               | Increase ***Threshold*** by 5                |
+| Level  | 2, 4, 6... *(2 x bonus)* | Increase a single ***Attribute Bonus*** by 1 |
 
 ### Retiring a Character
-If you no longer wish to continue playing a character, you can choose to **Retire** them. Redeem half their total lifetime potential *(rounded up)* to spend on a new character. Total lifetime potential includes any unspent points plus any spent to increase their max health or attribute levels.
+If you no longer wish to continue playing a character, you can choose to **Retire** them. Redeem half their total lifetime potential *(rounded up)* to spend on a new character. This includes any unspent points plus the amount which would be need to be spent to achieve their ***Threshold*** and ***Bonuses***.
 
 *Can only be done after or outside of session.*
 
@@ -114,10 +121,10 @@ If you no longer wish to continue playing a character, you can choose to **Retir
 Additional system mechanics exist. Though available to any player that cares to read and bring them up in session, they will not be introduced until a player becomes more familiar and comfortable with the basic system, beginning to crave complexity.
 
 ### Exhaustion
-Certain extraordinary actions may fall at the limit of a character's ability. To push past this, you may be given the option to ***Exhaust*** a die. Place your current swing beside your character sheet, leaving the slot empty. This leaves a character defenceless until they next act, when they may select a new *Swing*.
+Certain extraordinary actions may fall at the limit of a character's ability. To push past this, you may be given the option to ***Exhaust*** a die. Place the die representing your current ***Vibe*** to the side. This leaves a character defenceless until they next act, when they may select a new *Swing*.
 
 #### Take a Breath
-When one or more attribute die is exhausted a character may spend an action to take a breath. Describe how your character stops to reset, regaining their composure and restoring all exhausted attributes. A new swing may also be selected.
+When one or more dice is exhausted a character may spend an action to ***Breathe*** Describe how your character stops to reset, regaining their composure and restoring all exhausted attributes. A new ***Vibe*** may also be selected.
 
 ### Attribute Compulsion
 Knowing the name of an attribute represents a significant degree of vulnerability between characters; both a weakness and a strength. While the attributes of player characters are shared, those of NPCs must be discovered through play.
@@ -127,7 +134,7 @@ Sharing a character moment, developing a friendship, stoking a rivalry, or even 
 ***Bond Tokens*** can then be spent in play to bolster or incapacitate the target.
 
 #### Invoking an Attribute
-To support a struggling ally, you may spend a ***Bond Token*** to call upon one of their attributes by name, temporarily granting them use of that die as their swing, even if it is wounded. The effect persists until that character takes a wound *(in which case the invoked attribute is wounded)* or locks in another attribute *(in which case the effect is lost)*. Mechanically, this grants an extra wound but forces the character to use only the invoked attribute *(if they choose to keep the effect)*.
+To support a struggling ally, you may spend a ***Bond Token*** to call upon one of their attributes by name, temporarily granting them use of that die as their ***Vibe***, even if it is wounded. The effect persists until that character takes a wound *(in which case the invoked attribute is wounded)* or locks in another attribute *(in which case the effect is lost)*. Mechanically, this grants an extra wound but forces the character to use only the invoked attribute *(if they choose to keep the effect)*.
 
 You must be able to narratively justify how to call out the target attribute in this moment.  
 ##### Example

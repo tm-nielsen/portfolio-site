@@ -5,27 +5,29 @@ title: Twee Quick Reference
 ## Roll to Do:
 - Roll all ***Attribute*** dice
 - Select one to act with
+	- *explain yourself*
 	- *add attribute level*
-- Lock it in as your new ***Swing***
+- Indicate your new ***Vibe***
 
 ### Clash *(same colour dice)*
+- *describe link between **Attributes***
 - Success -> double damage
 - Failure -> take damage
 - Tie -> bank damage and reroll
 
 ## Roll to Die
-- Reroll your ***Swing***
+- Reroll your ***Vibe***
 	- *add attribute level*
 
 ## Wound
-- Select the most relevant ***Attribute*** *(defaults to **Swing**)*
-	- discard ***Attribute*** die
-	- *completely unusable until healed*
-- Restore health to full
-- Select new ***Swing***
-- **+1 experience**
+- Discard die of current ***Vibe***
+- Discard accumulated damage
+- Select unwounded ***Attribute***
+	- Increase its ***Bonus*** by 1
+	- Indicate it as your new ***Vibe***
+- **+1 *Potential***
 
 ### Death's Door *(last attribute)*
-- **+1 experience**
-- **+2 experience / hit survived**
-- Character deleted if health reaches 0
+- **+1 *Potential***
+- **+2 *Potential* / hit survived**
+- Character deleted if ***Threshold*** is reached

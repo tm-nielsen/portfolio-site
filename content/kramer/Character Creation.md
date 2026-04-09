@@ -7,6 +7,7 @@ title: Character Creation
 - <label>Red Attribute:<input type="text"/></label>
 - <label>Blue Attribute:<input type="text"/></label>
 - <label>Yellow Attribute:<input type="text"/></label>
+- [ ] Roll for Initial Bonuses
 - [ ] Name + Pronouns
 - [ ] Paranormal Angst
 
@@ -40,7 +41,11 @@ Don't forget to share them with everyone you'll be playing with before the sessi
 
 
 ### [Attribute Colours](system#colours)
-> Each character must have one ***Attribute*** for each of the three primary pigment colours: **Red**, **Blue**, and **Yellow**, the assignment of which is entirely vibes-based. You are strongly encouraged to form questionably grounded and unreasonably convicted justifications for this choice.
+> Each character must have one ***Attribute*** for each of the three primary pigment colours: **Red**, **Blue**, and **Yellow**. The assignment of these colours is entirely vibes-based. You are strongly encouraged to form questionably grounded and unreasonably convicted justifications for this choice.
+
+### [Attribute Bonuses](system#bonuses)
+*After determining your attribute names and colours, roll a d6 for each to determine their starting ***Bonuses***.
+> Any ***Attribute*** corresponding to the highest value rolled receives a +1 ***Bonus***.
 
 ## Guiding Questions
 *I don't need your answers to these questions, and neither do you.  
@@ -85,6 +90,4 @@ Use the spite as creative fuel.*
 - 🟦 Cop
 
 ## Notes
-While the name and colour of an ***Attribute*** are typically permanent, your first session with a character is a chance to feel out who they are through play. You may adjust names and colours as appropriate before they are locked in for any future sessions.
-
 Experience and the benefits you can spend it on are primarily gained from dealing and taking wounds. Characters and play oriented towards conflict will grow in power much more quickly.
