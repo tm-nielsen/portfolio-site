@@ -56,6 +56,8 @@ If someone else rolls *at* you, re-roll your ***Vibe***.
 ### Feeling Things Out
 If uncertain of character reaction, motivation, or just trying to make a decision: ***[Roll to Discern][Discern]***
 
+## Read Next
+[System Rules](.)
 
 [Do]: .#roll-to-do
 [Die]: .#roll-to-die

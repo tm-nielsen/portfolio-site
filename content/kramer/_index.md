@@ -11,7 +11,7 @@ A high lethality sitcom role-playing game orbiting *Kramer County Community Coll
 
 ## Getting Started
 - [ ] [Create a Character](character-creation)
-- [ ] Read over the [System Rules](system)
+- [ ] Read over the [System Introduction](system/introduction)
 - [ ] Schedule a Session
     - [ ] find 1-3 other players
     - [ ] confirm with facilitator
@@ -25,8 +25,8 @@ A high lethality sitcom role-playing game orbiting *Kramer County Community Coll
 ## Resources
 - [Character Creation](character-creation) *(~3 min + time to stew)*
 - [System Rules](system) *(~6 min)*
+    - [Introduction to Play](system/introduction) *(~3 min)*
     - [Quick Reference](system/reference) *(~1 min)*
-    - [Example of Play](system/example) *(~4 min)*
 - [Character Sheet](character-sheet.png) *(2 s)*
 
 ## Scheduling
