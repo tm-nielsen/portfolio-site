@@ -5,8 +5,8 @@ layout: single
 
 is a character-rich story-focused de-make of the [***Sentiment***](https://www.patreon.com/sentimentttrpg) ttrpg system. Largely built from the 0.6-0.8 revisions of the beta ruleset, Twee is an attempt to simplify the system even further, optimizing for an open table environment.
 
+- [Introduction to Play](introduction)
 - [Quick Reference](reference)
-- [Example of Play *(outdated)*](example)
 
 ## Attributes
 Every character consists of three unique stats, each with a name and colour.  
@@ -41,7 +41,7 @@ A successful roll deals an equal amount of damage *(dice value + **Bonus**)*.
 	- *add attribute bonus*
 - Indicate your new ***Vibe***
 
-While you will normally want to use the highest value, you will have to justify to the facilitator how and why your character is using an ***Attribute*** to perform the action *(if not self-evident)*. An emotional and narratively driven justification will always be the most compelling.  
+While you will normally want to use the highest value, you will have to justify to the facilitator how and why an ***Attribute*** brought forth the action. An emotional and narratively driven justification will always be the most compelling.  
 *Bonuses may be granted by the facilitator based on clever incorporation of context like a prop.*
 
 #### Clashes
