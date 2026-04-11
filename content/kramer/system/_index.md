@@ -121,7 +121,7 @@ If you no longer wish to continue playing a character, you can choose to **Retir
 Additional system mechanics exist. Though available to any player that cares to read and bring them up in session, they will not be introduced until a player becomes more familiar and comfortable with the basic system, beginning to crave complexity.
 
 ### Exhaustion
-Certain extraordinary actions may fall at the limit of a character's ability. To push past this, you may be given the option to ***Exhaust*** a die. Place the die representing your current ***Vibe*** to the side. This leaves a character defenceless until they next act, when they may select a new *Swing*.
+Certain extraordinary actions may fall at the limit of a character's ability. To push past this, you may be given the option to ***Exhaust*** a die. Place the die representing your current ***Vibe*** to the side. This leaves a character defenceless until they next act, when they may select a new ***Vibe***.
 
 #### Take a Breath
 When one or more dice is exhausted a character may spend an action to ***Breathe*** Describe how your character stops to reset, regaining their composure and restoring all exhausted attributes. A new ***Vibe*** may also be selected.
