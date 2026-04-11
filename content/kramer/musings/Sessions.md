@@ -1,8 +1,37 @@
 ---
 title: Session Log
 ---
-Listed in reverse order *(most recent on top)*, a brief summary and lessons learned from each session I've run so far.
+Listed in reverse order *(most recent on top)*, a brief summary and lessons learned from each session so far.
 
+## 5.5 - Tweezer gets Slimed
+*(I didn't run this one, it has lead to significant system changes)*
+
+Less than a week after the "reboot" session (#5), one of the players *(an experienced GM)* ran her own experimental session in a related system she called "Tweezer". Leaning towards the *Fate* system, tokens were introduced which could be spent to compel another character's attribute, invoke one of your own, or introduce a new element to the scene *(among other system differences)*.
+
+Of these, I was primarily interested in the option to compel. By offering a token to a player, you suggest a complication which they must use a designated attribute to handle *(if the offer is accepted)*. A somewhat similar *(unused)* ruling exists in *Twee*'s advanced section as interpreted from *Sentiment*. In addition to being gated by complexity, I tied this ruling to character bonds, which makes it mechanically inaccessible. A readily available tool to pay players to accept roleplay suggestions is *compelling*.
+
+### Facilitator in Focus
+Taking the role of a player reminded me of why I started this project in the first place, something I had lost sight of in the months between sessions 4 and 5: an obsessive focus on internal character dynamics. That is what I love about *Sentiment* and have attempted to focus on with *Twee*.
+
+The "facilitator" title comes from what I view as an important distinction in the role. A Game Master is a special type of player that manages context, opposition, the supporting cast, and referees mechanical interactions. Ideally, a Facilitator is closer to the audience and an active consultant in roleplay. The core GM question is "what do you do?", the core facilitator question is "why would you do that?".
+
+This distinction largely comes down to somewhat nebulous styles of running a game, which makes it difficult to define. An incredibly helpful discussion with the other very smart and cool player from session 5 introduced me to the term **Dramaturg**: a theatrical consultant for the writing of new plays or the interpretation implicit in producing an established work. Though not reflective of the actual role, the idea of hovering beside a playwright helpfully demanding thorough justifications for their creative decisions while providing historical and cultural context is exactly what I want a facilitator to be.
+
+I attempted to capture some of this in the new "Introduction to Play" document.
+
+### Lessons
+- The *Compel* mechanic is very cool
+- Reminder of the facilitator role: **dramaturg**
+- Keep the party together
+
+I don't plan to change the invoke/compel section of the *Twee* rules at present, but have noted this style of prompt as a facilitator tool when a heavy-handed approach might help a struggling player.
+
+In addition to a general clarification of names and descriptions for system components, a few more experimental changes were made to the rules:
+- One or more attributes start with a small bonus
+- Taking a wound permanently increases the bonus of a remaining attribute
+- Damage is exchanged as a hot potato of accumulating tokens
+
+---
 ## #5 - Spectrochemicals
 After months on the back burner, this session was a way to get back into things, building up momentum and confidence again. This was very successful. I love gaming. Supernatural opposition arose naturally from improvisation with minor character details.
 
