@@ -2,6 +2,8 @@
 title: Twee Quick Reference
 ---
 
+*Always have one dice displayed prominently as your current **Vibe**.*
+
 ## Roll to Do:
 - Roll all ***Attribute*** dice
 - Select one to act with

@@ -27,7 +27,10 @@ The most fun way to play is **Head First**.
 
 Your character is disposable, your experience at the table less so. A conflict oriented character will get farther and become more powerful faster than others.
 
-Having a goal in mind is the most direct way to ensure your character always has something to do or say. Ideally, this goal is internally focused and could be achieved in a variety of external circumstances. The easiest possible version of this is to view your character's ***Attributes*** as quest objectives, completed once they have been wounded or used to deal a wound.
+View your character's ***Attributes*** as quest objectives, completed once they have been ***Wounded***. Your secondary objective is to ***Wound*** the other player characters.
+
+You want to **end the session with a single dice** *(having taken 2 wounds)*.  
+**A team player damages their friends.**
 
 ## Dice
 You are playing a three dimensional character in that they have exactly three dimensions: their ***Attributes***. When taking action, you describe the way in which a specific aspect has induced it in order to select the relevant dice.
