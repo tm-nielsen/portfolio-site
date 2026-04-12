@@ -3,6 +3,34 @@ title: Session Log
 ---
 Listed in reverse order *(most recent on top)*, a brief summary and lessons learned from each session so far.
 
+## #6 - Hairy Omen
+A quick turnaround from both session 5 and 5.5, this was the first time the system felt close. I still have so much to learn and practice as a facilitator but the tools I'm using feel solid. One such thing was forgetting to pay the late gay tax, as we started almost an hour after the scheduled time. It worked out alright.
+
+I was extremely happy to be *facilitating* again, with inner monologues constituting the majority of play. I continue to *(slowly)* endeavour towards a heavier *(more helpful)* hand.
+
+Started in the situation, though not in the action. I think this approach works well enough to give fresh players time to stretch. A direct instigating event could provide a more effective start, prompting players for character reactions.
+
+Increasing attribute bonuses directly and immediately for taking wounds, along with the specification of this in the introductory materials, was a resounding success! Three of four players ended with only a single unwounded attribute. Two of those players felt this very effectively guided or even forced a character arc. Exactly what I was looking for. Another player got a bit stuck on her last attribute, unsure of how it would lead to any action.
+
+To address this, along with the consideration that certain attributes may become irrelevant or unreflective or a character develops, I've introduced a mechanic to rename attributes when certain conditions are met. This aims to provide a potent mechanical reflection of character growth as well as a way out of what might become a common roleplay pitfall.
+
+The remaining player failed to take any wounds, in large part because she wasn't targetted by the other players. Attempted to address this in the introductory materials specifying wounding the other players as a helpful team objective.
+
+Some confusion was had in exchanging damage tokens, but I also saw a player act quickly to pass damage off on another more than once. That's exactly what I was hoping for.
+
+### Unwanted Attention
+One concern I had with granting bonuses for wounds was characters becoming too powerful too quickly. My bandaid solution to this problem was a red index card placed face down in the centre of the table. When a PC attribute reached a +3 bonus, it was revealed. They rolled against 1d6+6 and took damage one less than their threshold *(brought to the brink of death)*. It was also announced this character is now *targeted*. Not by present entities, but some unknown and powerful force. The intent is to introduce another tier of active threat only relevant to characters above a certain power level.
+
+Was a fun *(if unclear)* moment in session, but any lasting success will have to be measured on execution in following sessions. I've gotta make a concrete mechanic for this.
+
+### Lessons
+- Wounding to grow worked *really well*
+  - focus can be even tighter on this point
+- Players can get stuck with only one attribute
+- Need direct examples of play on the introduction page
+- Lead with a quick system refresher/tutorial
+
+---
 ## 5.5 - Tweezer gets Slimed
 *(I didn't run this one, it has lead to significant system changes)*
 
