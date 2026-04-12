@@ -23,8 +23,6 @@ Kramer County is *pretty much* normal. Incidents suggesting otherwise are easily
 
 What insecurity, desire, or character flaw drives them to search for answers beyond the veil?
 
-*This will be codified by the facilitator as a secret personal bounty, rewarding **Potential** when it has been satisfied by a narrative arc.*
-
 
 ## [Attributes](system#attributes)
 > Every character consists of three unique stats, each with a name and a colour. These ***Attributes*** are your character's core personality traits, convictions, features, and interests.

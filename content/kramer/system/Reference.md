@@ -25,9 +25,3 @@ title: Twee Quick Reference
 - Select unwounded ***Attribute***
 	- Increase its ***Bonus*** by 1
 	- Indicate it as your new ***Vibe***
-- **+1 *Potential***
-
-### Death's Door *(last attribute)*
-- **+1 *Potential***
-- **+2 *Potential* / hit survived**
-- Character deleted if ***Threshold*** is reached

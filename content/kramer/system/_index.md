@@ -21,7 +21,7 @@ These names are critically important, as all three represent your character enti
 Each character must have one ***Attribute*** for each of the three primary pigment colours: **Red**, **Blue**, and **Yellow**. The assignment of these colours is entirely vibes-based. You are strongly encouraged to form questionably grounded and unreasonably convicted justifications for this choice.
 
 ### Bonuses
-Each ***Attribute*** has an associated ***Bonus***, which is added to any roll for which it is used. These bonuses can be increased by taking ***Wounds*** or spending ***Potential*** between sessions.
+Each ***Attribute*** has an associated ***Bonus***, which is added to any roll for which it is used. These bonuses are be increased by taking ***Wounds***.
 
 Initial ***Bonuses*** are determined by a roll of your three attribute dice. Any ***Attribute*** corresponding to the highest value rolled receives a +1 ***Bonus***.
  
@@ -51,10 +51,11 @@ To choose a dice which matches the colour of your target's ***Vibe***, identify 
 - A tie banks the damage and prompts a reroll. This banked damage will be dealt to the losing party along with the value of the winning roll.
 	- *Damage banked by successive tied clashes can stack indefinitely.*
 
+Clashing will reveal the name of hidden ***Attributes*** in use by the facilitator.
+
 #### Success
 When rolling against another character, you will be contesting a roll to die.  
-The ***Roll to Do* must meet or exceed the *Roll to Die*** in order to succeed.  
-Mark a point of ***Potential*** if you deal enough damage to ***Wound*** your target.
+The ***Roll to Do* must meet or exceed the *Roll to Die*** in order to succeed.
 
 In other situations, you may simply roll against a static threshold determined by the facilitator.  
 Such thresholds have a colour and can be clashed with.
@@ -89,23 +90,34 @@ The ***Attribute*** die currently indicating their ***Vibe*** is discarded for t
 - Select an unwounded ***Attribute***
 	- Permanently increase its ***Bonus*** by +1
 	- Indicate it as your new ***Vibe***
-- **Mark a point of *Potential***
-	- *Potential is also gained for dealing a wound.*
 
-#### Yielding
-When a character ***Wounds*** their second last ***Attribute***, they may choose to yield. Such a character may remain present or exit the scene but loses the ability to exchange damage or gain Potential until they are healed.
-#### Death's Door
-A character who continues with only a single remaining ***Attribute*** is said to be on ***Death's Door***. Upon reaching their ***Threshold*** in this state, your character will be narratively obliterated and removed from play.  
-Surviving a hit on ***Death's Door*** grants 2 points of Potential.  
-A character on ***Death's Door*** may not leave a scene in conflict.
+If a character reaches their ***Threshold*** with only one dice remaining, they will be narratively obliterated and removed from play.
 
 ## Progression
-During play, points of ***Potential*** are earned by taking or dealing ***Wounds***. They may also be awarded for progress in or fulfilment of a character arc. These can be spent at the end of session on the following:
+To become more powerful, you must take ***Wounds***.  
+Each ***Wound*** increases an ***Attribute Bonus*** by 1.
 
-| Action | Cost                     | Description                                  |
-| ------ | ------------------------ | -------------------------------------------- |
-| Bulk   | 4, 6, 8...               | Increase ***Threshold*** by 5                |
-| Level  | 2, 4, 6... *(2 x bonus)* | Increase a single ***Attribute Bonus*** by 1 |
+A character's ***Threshold*** may also be increased in exchange for an ***Attribute Bonus***. Subtract the cost from the current ***Bonus*** to increase their ***Threshold*** to the next stage. This cost must be deducted from a single ***Attribute***.
+
+| Cost | Threshold |
+| ---- | --------- |
+| +3   | 15        |
+| +4   | 20        |
+| +5   | 25        |
+
+*This can be performed at any point, including to avoid a **Wound***.
+
+### Renaming an Attribute
+It may sometimes be desired or even necessary to rename an ***Attribute***. Perhaps a character has grown beyond it, lost faith, or you are simply stumped by how to use it in play. This can be a potent representation of a character's arc and a golden opportunity to share with the table in great detail.
+
+In order to do so, all other ***Attributes*** must first be ***Wounded***.  
+Then, you must fail a ***Roll to Do***.
+
+- Discard accumulated damage
+- Half the relevant ***Bonus*** *(rounded down)*
+- Announce the ***Attribute*** name
+
+*An **Attribute** must have a **Bonus** of at least 1 to be renamed.*
 
 ### Retiring a Character
 If you no longer wish to continue playing a character, you can choose to **Retire** them. Redeem half their total lifetime potential *(rounded up)* to spend on a new character. This includes any unspent points plus the amount which would be need to be spent to achieve their ***Threshold*** and ***Bonuses***.
@@ -127,7 +139,7 @@ Certain extraordinary actions may fall at the limit of a character's ability. To
 When one or more dice is exhausted a character may spend an action to ***Breathe*** Describe how your character stops to reset, regaining their composure and restoring all exhausted attributes. A new ***Vibe*** may also be selected.
 
 ### Attribute Compulsion
-Knowing the name of an attribute represents a significant degree of vulnerability between characters; both a weakness and a strength. While the attributes of player characters are shared, those of NPCs must be discovered through play.
+Knowing the name of an attribute represents a significant degree of vulnerability between characters; both a weakness and a strength. While the attributes of player characters are shared, those of NPCs must be discovered through play. *(**Clashing** with an NPC **Attribute** will reveal it's name)*
 #### Bond Tokens
 Sharing a character moment, developing a friendship, stoking a rivalry, or even just a solid role-play scene will grant you a ***Bond Token*** for the relevant character. This includes PCs and NPCs.
 
@@ -162,7 +174,7 @@ Special equipment and character abilities are codified as ***Gifts***.
 
 Especially potent character moments can be crystallized by the facilitator, codifying a mechanical representation of ingenuity, courage, or vulnerability into this form of lasting reusable empowerment. The availability of this option is based on the presence of a compelling idea and it's relevance to your character.
 
-You may spend ***Potential*** to form ***Gifts*** of your own from moments you found important, with costs decided by the facilitator. ***Potential*** may also be spend on certain ***Gifts*** to increase the strength of an effect or mitigate an imposed cost.
+You are welcome to suggest ***Gifts*** of your own from moments you found important. Gifts may also grow in power under narratively appropriate conditions.
 
 #### Examples
 ##### I Know A Guy
