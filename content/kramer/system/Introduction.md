@@ -53,7 +53,9 @@ Selecting which to use is both a mechanical and character choice, the later of w
 
 **Justify MOTIVATION, not Ability**
 
----
+<details>
+    <summary>Example of Play</summary>
+
 Facilitator:
 > The creature turns slowly, then bolts.   
 > It quickly disappears into the night towards your companion.  
@@ -70,16 +72,19 @@ Player:
 
 Facilitator:
 > **re-rolls **Vibe** ([Roll to Die][Die])*  
-> *definitely beats a 3*  
-> *pass me 8 of your damage tokens*
+> *definitely beats a 3.*  
+> *pass me 8 of your damage tokens.*
 
 > A giant hairy hand descends slowly from above at a startlingly consistent pace, gingerly grabbing the brew from your hand between a forefinger and thumb.  
 > The Creation of Adam.
+</details>
 
 #### Double Damage
 Match colours to ***[Clash][Clash]***. Describe a thematic link between the clashing attributes to unlock a potent bonus.
 
----
+<details>
+    <summary>Example of Play</summary>
+
 *Player B has their yellow **Attribute** currently indicated as their **Vibe**, mocking the lecturer and other students who have become engaged in a tech-support tangent.*
 
 Player A:
@@ -103,9 +108,16 @@ Player B:
 > *3 + 1, 4.*
 
 Facilitator:
-> *with the damage doubled from the clash, wound your yellow* as this deadly projectile skips off the dome of your skull, crashing into the drywall at the front of the room.
+> *with the damage doubled from the clash, **Wound** your yellow* as this deadly projectile skips off the dome of your skull, crashing into the drywall at the front of the room.
+</details>
 
 #### Becoming more Powerful
+When you accumulate 10 or more ***[Damage][Damage]***, you get to ***[Wound][Wound]*** an ***Attribute***.  
+This is character development, and will increase the ***Bonus*** of a remaining ***Attribute***.
+
+<details>
+    <summary>Example of Play (ctd. from previous)</summary>
+
 Player B:
 > **discards yellow dice and damage tokens*  
 > **rolls remaining **Attributes** (to help make the decision)*  
@@ -116,12 +128,15 @@ Player B:
 
 > Someone carry me to the nurse's office.  
 > This needs attention!
+</details>
 
 ### Standing your Ground
 If someone rolls *at* you, re-roll your ***Vibe***.  
 This is a ***[Roll to Die][Die]***.
 
----
+<details>
+    <summary>Example of Play</summary>
+
 Facilitator:
 > The ephemeral pressure grows to crushing heights as you press further towards the light at the centre of the greenhouse.  
 > ***Roll to Die***.
@@ -154,6 +169,7 @@ Player:
 > **takes 8 damage tokens*
 
 > A loud slam reverberates through the corrugated wall of the greenhouse as she is bodily propelled from the centre of mass. She struggles to pick herself up, looking for the keys to the truck.
+</details>
 
 ### Feeling Things Out
 If uncertain of character reaction, motivation, or just trying to make a decision:  
@@ -170,4 +186,5 @@ Interpret the values of each as the strength of competing forces internal to you
 [Die]: .#roll-to-die
 [Clash]: .#clashes
 [Discern]: .#roll-to-discern
-[Wound]: .#health-damage-and-wounds
+[Damage]: .#exchanging-damage
+[Wound]: .#wounds

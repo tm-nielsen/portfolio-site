@@ -39,7 +39,7 @@ main {
   margin: auto;
 }
 
-ul, ol , ol details {
+ul, ol {
   padding-left: 2ch;
 }
 
@@ -63,6 +63,11 @@ nav {
 
 label {
   display: grid;
+}
+
+details {
+  border: solid;
+  padding: 0.5ch 1ch;
 }
 
 blockquote, sub {
