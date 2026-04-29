@@ -11,21 +11,25 @@ A high lethality sitcom role-playing game orbiting *Kramer County Community Coll
 
 ## Getting Started
 - [ ] [Create a Character](character-creation)
-- [ ] Read over the [System Introduction](system/introduction)
-- [ ] Schedule a Session
-    - [ ] find 1-3 other players
-    - [ ] confirm with facilitator
+- [ ] Familiarize yourself with the [Secret Codes](safety)
+- [ ] Read over the [Introduction to Play](system/introduction)
 - [ ] Share your Character
     - Name + Pronouns
     - Attributes
     - Connection to the College
 
+### Schedule a Session
+- [ ] Pick a Time
+- [ ] find 1-3 other players
+- [ ] confirm with facilitator
+
 *All gameplay materials will be provided.*
 
 ## Resources
 - [Character Creation](character-creation) *(~3 min + time to stew)*
+- [Safety Procedure / Codes](safety) (~30 s)
 - [System Rules](system) *(~6 min)*
-    - [Introduction to Play](system/introduction) *(~3 min)*
+    - [Introduction to Play](system/introduction) *(~3-6 min)*
     - [Quick Reference](system/reference) *(~1 min)*
 - [Character Sheet](character-sheet.png) *(2 s)*
 
