@@ -68,7 +68,7 @@ Player:
 > *Max isn't afraid. He's a little drunk and looking to share the buzz with a new pal.*
 
 > **rolls relevant **Attribute** Die*  
-> *that's a 5 + 3, 8.*
+> *that's a 5 +3, 8.*
 
 Facilitator:
 > **re-rolls **Vibe** ([Roll to Die][Die])*  
@@ -105,7 +105,7 @@ Player A:
 
 Player B:
 > *re-rolls yellow **Vibe***
-> *3 + 1, 4.*
+> *3 +1, 4.*
 
 Facilitator:
 > *with the damage doubled from the clash, **Wound** your yellow* as this deadly projectile skips off the dome of your skull, crashing into the drywall at the front of the room.
