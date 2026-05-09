@@ -120,7 +120,7 @@ Then, you must fail a ***Roll to Do***.
 *An **Attribute** must have a **Bonus** of at least 1 to be renamed.*
 
 ### Retiring a Character
-If you no longer wish to continue playing a character, you can choose to **Retire** them. Redeem half their total lifetime potential *(rounded up)* to spend on a new character. This includes any unspent points plus the amount which would be need to be spent to achieve their ***Threshold*** and ***Bonuses***.
+If you no longer wish to continue playing a character, you can choose to **Retire** them. Redeem half their lifetime ***Attribute Bonus*** total *(rounded up)* to spend on a new character. This is the sum of current bonuses plus any amount spent to upgrade their ***Threshold***.
 
 *Can only be done after or outside of session.*
 
