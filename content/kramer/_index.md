@@ -17,6 +17,7 @@ A high lethality sitcom role-playing game orbiting *Kramer County Community Coll
     - Name + Pronouns
     - Attributes
     - Connection to the College
+    - Paranormal Angst
 
 ### Schedule a Session
 - [ ] Pick a Time
