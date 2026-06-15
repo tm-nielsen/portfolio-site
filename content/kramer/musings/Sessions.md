@@ -3,6 +3,40 @@ title: Session Log
 ---
 Listed in reverse order *(most recent on top)*, a brief summary and lessons learned from each session so far.
 
+## #8 - Ghost Dad Party Prep
+Having been some time, I was motivated to run another session by a new goal to play at least once a month. Cautiously scheduled with only two players confirmed. It was fantastic. My faith in the game is restored.
+
+The paranormal element took a delightful shape with generous help from my players in-game. Two students were setting up a rave at the old sawmill, hoping the integrate the ghost who haunts the premises. However, the real ghost wasn't the woman who dies there, nor the jealous lover who killed her, but that lover's boss and father who was the safety lead on site.
+
+One big note I had from the last session, but didn't realize immediately, was how important it is to say no. I had been neglecting the so-helpful stick as a tool I have to guide players towards the most fun version of play. Motivated actions compelling enough to convince the facilitator of their practical or emotional viability will be more resonant for everyone in the game. Rejecting uninteresting, repetitive, and distasteful justification makes the game better.
+
+I didn't get to practice that this session. Both players *(one new and one returning)* were simply too good, The course didn't need to be corrected.
+
+A separate goal was also fulfilled by hitting a PC's third wound. The "high-lethality" label can stay. Despite the how juicy and meaningful the moment was, I struggled significantly with making that permanent. Need more practice killing my player's darlings.
+
+Also tried out a new version of the character sheet with updated terminology *(Swing -> Vibe)* and a slot for damage chips.
+
+### Lessons
+- I do, in fact, really love this game
+- Killing PCs is rad and I should do it more
+- Dusk is a crutch I can work without
+
+## #7 - Storage Bores
+This one wasn't great.
+
+I was off my game working with only two players, both with roleplay styles I wasn't prepared to engage with effectively. An excellent showcase of the weaknesses of the game and especially of me as a facilitator and GM.
+
+The theme continues: needing a heavier hand.
+
+### Lessons
+- Run sessions in the evening for easier spooky vibes
+- Provide more guidance in attribute creation
+	- guidelines for what makes a good attribute
+	- tests to determine if your attributes are solid
+	- something vague that you have to justify to use
+- Give players a deadline to share characters
+- Things can still be fun and goofy even if I don't have the sauce
+
 ## #6 - Hairy Omen
 A quick turnaround from both session 5 and 5.5, this was the first time the system felt close. I still have so much to learn and practice as a facilitator but the tools I'm using feel solid. One such thing was forgetting to pay the late gay tax, as we started almost an hour after the scheduled time. It worked out alright.
 

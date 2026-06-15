@@ -1,7 +1,7 @@
 ---
 title: Musings
 ---
-This game and the system it runs on are on ongoing experiment. Over each session, I've tried out new elements or stress-tested existing ones, iterating on my tools and growing as a GM. Every 1-3 hour session is followed by a 2-4 hour period of collaborative analysis and feedback. This page is a place to dump some of the thoughts players and I have had along the way.
+This game and the system it runs on are on ongoing experiment. Over each session, I've tried out new elements or stress-tested existing ones, iterating on my tools and growing as a GM. Most 1-3 hour sessions have been followed by a 2-4 hour period of collaborative analysis and feedback. This page is a place to dump some of the thoughts players and I have had along the way.
 
 > The thing forms itself; I am the medium.
 
